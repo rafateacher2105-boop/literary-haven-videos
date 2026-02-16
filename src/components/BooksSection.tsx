@@ -2,30 +2,30 @@ import BookCard from "./BookCard";
 
 const books = [
   {
-    title: "Sussurros ao Entardecer",
+    title: "Impacto 2070, o Recomeço",
     author: "Você",
     cover: "https://images.unsplash.com/photo-1544947950-fa07a98d237f?w=400&h=600&fit=crop",
-    description: "Uma jornada poética pelos caminhos da memória, onde cada página revela fragmentos de um passado que insiste em florescer.",
+    description: "Uma jornada épica rumo ao futuro, onde a humanidade enfrenta os desafios de recomeçar após um evento que mudou o mundo para sempre.",
     badge: "Novo",
   },
   {
-    title: "O Guardião das Palavras",
+    title: "Os Atribulados",
     author: "Você",
     cover: "https://images.unsplash.com/photo-1543002588-bfa74002ed7e?w=400&h=600&fit=crop",
-    description: "Em um mundo onde as palavras têm poder, um jovem descobre que é o último guardião de uma língua esquecida.",
+    description: "Vidas entrelaçadas por conflitos e esperanças, onde cada personagem carrega suas próprias batalhas internas.",
     badge: "Destaque",
   },
   {
-    title: "Cartas Nunca Enviadas",
+    title: "O Crime Antecipado",
     author: "Você",
     cover: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=400&h=600&fit=crop",
-    description: "Uma coleção de cartas que atravessam décadas, revelando amores, despedidas e reencontros inesperados.",
+    description: "Um thriller envolvente que questiona os limites da justiça quando um crime é previsto antes de acontecer.",
   },
   {
-    title: "Além da Última Página",
+    title: "Blackout 2040",
     author: "Você",
     cover: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=400&h=600&fit=crop",
-    description: "O que acontece quando um personagem descobre que sua história está sendo escrita por alguém?",
+    description: "Quando todas as luzes se apagam, a verdadeira natureza humana se revela em um mundo mergulhado na escuridão.",
   },
 ];
 

@@ -26,7 +26,7 @@ const BookCard = ({ title, author, cover, description, badge }: BookCardProps) =
           {title}
         </h3>
         <p className="font-body text-sm text-muted-foreground mb-3">{author}</p>
-        <p className="font-body text-sm text-muted-foreground leading-relaxed line-clamp-3">
+        <p className="font-body text-sm text-muted-foreground leading-relaxed line-clamp-5">
           {description}
         </p>
       </div>

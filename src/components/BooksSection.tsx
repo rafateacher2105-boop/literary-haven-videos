@@ -7,27 +7,27 @@ import coverBlackout from "@/assets/cover-blackout-2040.jpg";
 const books = [
   {
     title: "Impacto 2070, o Recomeço",
-    author: "Você",
+    author: "Rafael S. L. Aguiar",
     cover: coverImpacto,
     description: "Uma jornada épica rumo ao futuro, onde a humanidade enfrenta os desafios de recomeçar após um evento que mudou o mundo para sempre.",
     badge: "Novo",
   },
   {
     title: "Os Atribulados",
-    author: "Você",
+    author: "Rafael S. L. Aguiar",
     cover: coverAtribulados,
     description: "Vidas entrelaçadas por conflitos e esperanças, onde cada personagem carrega suas próprias batalhas internas.",
     badge: "Destaque",
   },
   {
     title: "O Crime Antecipado",
-    author: "Você",
+    author: "Rafael S. L. Aguiar",
     cover: coverCrime,
     description: "Um thriller envolvente que questiona os limites da justiça quando um crime é previsto antes de acontecer.",
   },
   {
     title: "Blackout 2040",
-    author: "Você",
+    author: "Rafael S. L. Aguiar",
     cover: coverBlackout,
     description: "Quando todas as luzes se apagam, a verdadeira natureza humana se revela em um mundo mergulhado na escuridão.",
   },

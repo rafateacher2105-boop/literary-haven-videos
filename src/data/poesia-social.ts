@@ -2,7 +2,7 @@ import type { Poem } from "./poesia-da-alma";
 
 export const poesiaSocialInfo = {
   title: "Poesia Social",
-  subtitle: "2019",
+  subtitle: "Pílulas de crítica — 2019",
   author: "Rafael Silveira Lima Aguiar",
   authorShort: "Rafael S. L. Aguiar",
   year: "2019",

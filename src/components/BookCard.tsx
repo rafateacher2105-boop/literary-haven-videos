@@ -1,4 +1,7 @@
 import { useState } from "react";
+import { Link } from "react-router-dom";
+import { BookOpen, Download } from "lucide-react";
+import { Button } from "@/components/ui/button";
 
 interface BookCardProps {
   title: string;
@@ -7,9 +10,10 @@ interface BookCardProps {
   backcover?: string;
   description: string;
   badge?: string;
+  slug?: string;
 }
 
-const BookCard = ({ title, author, cover, backcover, description, badge }: BookCardProps) => {
+const BookCard = ({ title, author, cover, backcover, description, badge, slug }: BookCardProps) => {
   const [flipped, setFlipped] = useState(false);
 
   return (
@@ -72,6 +76,16 @@ const BookCard = ({ title, author, cover, backcover, description, badge }: BookC
         <p className="font-body text-sm text-muted-foreground leading-relaxed line-clamp-5">
           {description}
         </p>
+        {slug && (
+          <div className="mt-4 flex gap-2">
+            <Link to={`/livro/${slug}`} className="flex-1">
+              <Button variant="outline" size="sm" className="w-full gap-1.5">
+                <BookOpen className="w-3.5 h-3.5" />
+                Ler online
+              </Button>
+            </Link>
+          </div>
+        )}
       </div>
     </div>
   );

@@ -3,10 +3,14 @@ import coverImpacto from "@/assets/cover-impacto-2070.jpg";
 import coverAtribulados from "@/assets/cover-os-atribulados.jpg";
 import coverCrime from "@/assets/cover-crime-antecipado.jpg";
 import coverBlackout from "@/assets/cover-blackout-2040.jpg";
+import coverPoesiaAlma from "@/assets/cover-poesia-da-alma.jpg";
+import coverPoesiaNatureza from "@/assets/cover-poesia-da-natureza.jpg";
 import backcoverImpacto from "@/assets/backcover-impacto-2070.jpg";
 import backcoverAtribulados from "@/assets/backcover-os-atribulados.jpg";
 import backcoverCrime from "@/assets/backcover-crime-antecipado.jpg";
 import backcoverBlackout from "@/assets/backcover-blackout-2040.jpg";
+import backcoverPoesiaAlma from "@/assets/backcover-poesia-da-alma.jpg";
+import backcoverPoesiaNatureza from "@/assets/backcover-poesia-da-natureza.jpg";
 
 const books = [
   {
@@ -38,6 +42,22 @@ const books = [
     cover: coverBlackout,
     backcover: backcoverBlackout,
     description: "O colapso total da rede elétrica em 2040 apaga não apenas as luzes, mas toda a estrutura econômica da civilização moderna. Sem moedas físicas e com o dinheiro digital evaporado, a humanidade assiste à queda instantânea dos mercados e da ordem social. Em meio à crise financeira absoluta, cidades modernas tornam-se armadilhas de concreto onde o escambo volta a ser a única lei. Homens e mulheres são forçados a reaprender ofícios esquecidos há séculos para garantir o pão de cada dia. No silêncio do blackout, a verdadeira riqueza passa a ser medida pela capacidade de sobreviver ao passado.",
+  },
+  {
+    title: "Poesia da Alma",
+    author: "Rafael S. L. Aguiar",
+    cover: coverPoesiaAlma,
+    backcover: backcoverPoesiaAlma,
+    description: "Uma coletânea de poemas que mergulha nas profundezas do ser humano, explorando sentimentos, reflexões existenciais e a busca pela essência que nos define. Versos que tocam a alma e despertam emoções adormecidas.",
+    badge: "Poesia",
+  },
+  {
+    title: "Poesia da Natureza",
+    author: "Rafael S. L. Aguiar",
+    cover: coverPoesiaNatureza,
+    backcover: backcoverPoesiaNatureza,
+    description: "Uma celebração poética da beleza natural que nos rodeia. Das florestas aos rios, do nascer ao pôr do sol, cada poema é um convite para contemplar a grandiosidade e a delicadeza do mundo natural.",
+    badge: "Poesia",
   },
 ];
 

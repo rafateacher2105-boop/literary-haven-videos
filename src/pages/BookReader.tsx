@@ -4,12 +4,14 @@ import { ArrowLeft, Download, ChevronLeft, ChevronRight, BookOpen, List } from "
 import { Button } from "@/components/ui/button";
 import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";
 import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-natureza";
+import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 import { generateEpub } from "@/lib/epub-generator";
 import type { Poem } from "@/data/poesia-da-alma";
 
 const booksMap: Record<string, { info: typeof poesiaDaAlmaInfo; poems: Poem[] }> = {
   "poesia-da-alma": { info: poesiaDaAlmaInfo, poems: poesiaDaAlmaPoems },
   "poesia-da-natureza": { info: poesiaDaNaturezaInfo, poems: poesiaDaNaturezaPoems },
+  "poesia-social": { info: poesiaSocialInfo, poems: poesiaSocialPoems },
 };
 
 const BookReader = () => {

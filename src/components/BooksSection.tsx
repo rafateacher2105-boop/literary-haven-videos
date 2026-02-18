@@ -11,6 +11,8 @@ import backcoverCrime from "@/assets/backcover-crime-antecipado.jpg";
 import backcoverBlackout from "@/assets/backcover-blackout-2040.jpg";
 import backcoverPoesiaAlma from "@/assets/backcover-poesia-da-alma.jpg";
 import backcoverPoesiaNatureza from "@/assets/backcover-poesia-da-natureza.jpg";
+import coverPoesiaSocial from "@/assets/cover-poesia-social.jpg";
+import backcoverPoesiaSocial from "@/assets/backcover-poesia-social.jpg";
 
 const books = [
   {
@@ -60,6 +62,15 @@ const books = [
     description: "Uma celebração poética da beleza natural que nos rodeia. Das florestas aos rios, do nascer ao pôr do sol, cada poema é um convite para contemplar a grandiosidade e a delicadeza do mundo natural.",
     badge: "Poesia",
     slug: "poesia-da-natureza",
+  },
+  {
+    title: "Poesia Social",
+    author: "Rafael S. L. Aguiar",
+    cover: coverPoesiaSocial,
+    backcover: backcoverPoesiaSocial,
+    description: "Poemas que refletem sobre a sociedade, suas desigualdades, relações humanas e a busca por um mundo mais justo. Da diversidade à ganância, da hipocrisia à esperança, cada verso é um espelho da realidade que nos cerca.",
+    badge: "Poesia",
+    slug: "poesia-social",
   },
 ];
 

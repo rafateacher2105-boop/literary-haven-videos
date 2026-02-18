@@ -6,6 +6,7 @@ import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";
 import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-natureza";
 import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 import { generateEpub } from "@/lib/epub-generator";
+import DownloadGateModal from "@/components/DownloadGateModal";
 import type { Poem } from "@/data/poesia-da-alma";
 
 const booksMap: Record<string, { info: typeof poesiaDaAlmaInfo; poems: Poem[] }> = {
@@ -19,6 +20,7 @@ const BookReader = () => {
   const book = slug ? booksMap[slug] : undefined;
   const [currentPoem, setCurrentPoem] = useState(0);
   const [showToc, setShowToc] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
 
   if (!book) {
     return (
@@ -55,7 +57,7 @@ const BookReader = () => {
             <Button variant="ghost" size="icon" onClick={() => setShowToc(!showToc)} title="Índice">
               <List className="w-4 h-4" />
             </Button>
-            <Button variant="outline" size="sm" onClick={handleDownload} className="gap-1.5">
+            <Button variant="outline" size="sm" onClick={() => setShowDownloadModal(true)} className="gap-1.5">
               <Download className="w-4 h-4" />
               <span className="hidden sm:inline">EPUB</span>
             </Button>
@@ -145,6 +147,15 @@ const BookReader = () => {
           </div>
         </main>
       </div>
+      {slug && (
+        <DownloadGateModal
+          open={showDownloadModal}
+          onOpenChange={setShowDownloadModal}
+          bookTitle={info.title}
+          bookSlug={slug}
+          onDownload={handleDownload}
+        />
+      )}
     </div>
   );
 };

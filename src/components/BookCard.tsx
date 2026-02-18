@@ -2,6 +2,11 @@ import { useState } from "react";
 import { Link } from "react-router-dom";
 import { BookOpen, Download } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import DownloadGateModal from "./DownloadGateModal";
+import { generateEpub } from "@/lib/epub-generator";
+import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";
+import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-natureza";
+import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 
 interface BookCardProps {
   title: string;
@@ -13,8 +18,24 @@ interface BookCardProps {
   slug?: string;
 }
 
+const booksDataMap: Record<string, { info: any; poems: any[] }> = {
+  "poesia-da-alma": { info: poesiaDaAlmaInfo, poems: poesiaDaAlmaPoems },
+  "poesia-da-natureza": { info: poesiaDaNaturezaInfo, poems: poesiaDaNaturezaPoems },
+  "poesia-social": { info: poesiaSocialInfo, poems: poesiaSocialPoems },
+};
+
 const BookCard = ({ title, author, cover, backcover, description, badge, slug }: BookCardProps) => {
   const [flipped, setFlipped] = useState(false);
+  const [showDownloadModal, setShowDownloadModal] = useState(false);
+
+  const handleDownload = async () => {
+    if (!slug || !booksDataMap[slug]) return;
+    const { info, poems } = booksDataMap[slug];
+    await generateEpub(
+      { title: info.title, author: info.author, year: info.year, aboutAuthor: info.aboutAuthor },
+      poems
+    );
+  };
 
   return (
     <div className="group bg-card rounded-lg overflow-hidden border border-border hover:shadow-lg transition-all duration-300">
@@ -84,7 +105,25 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug }:
                 Ler online
               </Button>
             </Link>
+            <Button
+              variant="default"
+              size="sm"
+              className="gap-1.5"
+              onClick={() => setShowDownloadModal(true)}
+            >
+              <Download className="w-3.5 h-3.5" />
+              EPUB
+            </Button>
           </div>
+        )}
+        {slug && (
+          <DownloadGateModal
+            open={showDownloadModal}
+            onOpenChange={setShowDownloadModal}
+            bookTitle={title}
+            bookSlug={slug}
+            onDownload={handleDownload}
+          />
         )}
       </div>
     </div>

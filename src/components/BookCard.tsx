@@ -1,12 +1,14 @@
 import { useState } from "react";
 import { Link } from "react-router-dom";
-import { BookOpen, Download } from "lucide-react";
+import { BookOpen, Download, Eye, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import DownloadGateModal from "./DownloadGateModal";
-import { generateEpub } from "@/lib/epub-generator";
+import PaidDownloadModal from "./PaidDownloadModal";
+import { generateEpub, generateProseEpub } from "@/lib/epub-generator";
 import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";
 import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-natureza";
 import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
+import { osAtribuladosInfo, osAtribuladosChapters } from "@/data/os-atribulados";
 
 interface BookCardProps {
   title: string;
@@ -16,6 +18,8 @@ interface BookCardProps {
   description: string;
   badge?: string;
   slug?: string;
+  price?: string;
+  previewSlug?: string;
 }
 
 const booksDataMap: Record<string, { info: any; poems: any[] }> = {
@@ -24,17 +28,34 @@ const booksDataMap: Record<string, { info: any; poems: any[] }> = {
   "poesia-social": { info: poesiaSocialInfo, poems: poesiaSocialPoems },
 };
 
-const BookCard = ({ title, author, cover, backcover, description, badge, slug }: BookCardProps) => {
+const proseDataMap: Record<string, { info: any; chapters: any[] }> = {
+  "os-atribulados": { info: osAtribuladosInfo, chapters: osAtribuladosChapters },
+};
+
+const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug }: BookCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
+  const [showPaidModal, setShowPaidModal] = useState(false);
 
   const handleDownload = async () => {
-    if (!slug || !booksDataMap[slug]) return;
-    const { info, poems } = booksDataMap[slug];
-    await generateEpub(
-      { title: info.title, author: info.author, year: info.year, aboutAuthor: info.aboutAuthor },
-      poems
-    );
+    if (slug && booksDataMap[slug]) {
+      const { info, poems } = booksDataMap[slug];
+      await generateEpub(
+        { title: info.title, author: info.author, year: info.year, aboutAuthor: info.aboutAuthor },
+        poems
+      );
+    }
+  };
+
+  const handlePaidDownload = async () => {
+    const key = previewSlug || slug;
+    if (key && proseDataMap[key]) {
+      const { info, chapters } = proseDataMap[key];
+      await generateProseEpub(
+        { title: info.title, author: info.author, year: info.year, aboutAuthor: info.aboutAuthor },
+        chapters
+      );
+    }
   };
 
   return (
@@ -97,7 +118,8 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug }:
         <p className="font-body text-sm text-muted-foreground leading-relaxed line-clamp-5">
           {description}
         </p>
-        {slug && (
+        {/* Poetry books: read online + free EPUB */}
+        {slug && !price && (
           <div className="mt-4 flex gap-2">
             <Link to={`/livro/${slug}`} className="flex-1">
               <Button variant="outline" size="sm" className="w-full gap-1.5">
@@ -116,13 +138,43 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug }:
             </Button>
           </div>
         )}
-        {slug && (
+        {/* Paid books: preview + paid download */}
+        {previewSlug && price && (
+          <div className="mt-4 flex gap-2">
+            <Link to={`/livro/${previewSlug}`} className="flex-1">
+              <Button variant="outline" size="sm" className="w-full gap-1.5">
+                <Eye className="w-3.5 h-3.5" />
+                Leitura prévia
+              </Button>
+            </Link>
+            <Button
+              variant="default"
+              size="sm"
+              className="gap-1.5"
+              onClick={() => setShowPaidModal(true)}
+            >
+              <ShoppingCart className="w-3.5 h-3.5" />
+              {price}
+            </Button>
+          </div>
+        )}
+        {slug && !price && (
           <DownloadGateModal
             open={showDownloadModal}
             onOpenChange={setShowDownloadModal}
             bookTitle={title}
             bookSlug={slug}
             onDownload={handleDownload}
+          />
+        )}
+        {previewSlug && price && (
+          <PaidDownloadModal
+            open={showPaidModal}
+            onOpenChange={setShowPaidModal}
+            bookTitle={title}
+            bookSlug={previewSlug}
+            price={price}
+            onDownload={handlePaidDownload}
           />
         )}
       </div>

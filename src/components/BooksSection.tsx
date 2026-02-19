@@ -30,6 +30,8 @@ const books = [
     backcover: backcoverAtribulados,
     description: "O ano é 2045 e o mundo ainda tenta processar o desaparecimento inexplicável de milhões de pessoas em um piscar de olhos. Do vácuo do desespero, emerge um governo global absoluto que promete ordem em troca de submissão total.",
     badge: "Destaque",
+    previewSlug: "os-atribulados",
+    price: "R$ 15,00",
   },
   {
     title: "O Crime Antecipado",

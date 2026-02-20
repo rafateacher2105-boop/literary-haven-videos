@@ -9,6 +9,7 @@ import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";
 import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-natureza";
 import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 import { osAtribuladosInfo, osAtribuladosChapters } from "@/data/os-atribulados";
+import { crimeAntecipadoInfo, crimeAntecipadoChapters } from "@/data/crime-antecipado";
 
 interface BookCardProps {
   title: string;
@@ -30,6 +31,7 @@ const booksDataMap: Record<string, { info: any; poems: any[] }> = {
 
 const proseDataMap: Record<string, { info: any; chapters: any[] }> = {
   "os-atribulados": { info: osAtribuladosInfo, chapters: osAtribuladosChapters },
+  "crime-antecipado": { info: crimeAntecipadoInfo, chapters: crimeAntecipadoChapters },
 };
 
 const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug }: BookCardProps) => {

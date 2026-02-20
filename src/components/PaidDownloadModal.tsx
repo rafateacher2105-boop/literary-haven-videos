@@ -3,9 +3,14 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Mail, Download, Copy, Check, ShoppingCart } from "lucide-react";
+import { Download, Copy, Check, ShoppingCart } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
+
+// Map of book slugs to their static EPUB files (stored in /public)
+const EPUB_FILES: Record<string, string> = {
+  "crime-antecipado": "/O_Crime_Antecipado.epub",
+};
 
 interface PaidDownloadModalProps {
   open: boolean;
@@ -56,7 +61,18 @@ const PaidDownloadModal = ({ open, onOpenChange, bookTitle, bookSlug, price, onD
   };
 
   const handleDownload = () => {
-    onDownload();
+    const staticEpub = EPUB_FILES[bookSlug];
+    if (staticEpub) {
+      // Direct download of the static EPUB file
+      const a = document.createElement("a");
+      a.href = staticEpub;
+      a.download = `${bookTitle}.epub`;
+      document.body.appendChild(a);
+      a.click();
+      document.body.removeChild(a);
+    } else {
+      onDownload();
+    }
     onOpenChange(false);
     setStep("email");
     setEmail("");
@@ -142,7 +158,7 @@ const PaidDownloadModal = ({ open, onOpenChange, bookTitle, bookSlug, price, onD
                     {PIX_KEY}
                   </code>
                   <Button variant="outline" size="icon" onClick={handleCopyPix} title="Copiar chave PIX">
-                    {copied ? <Check className="w-4 h-4 text-green-500" /> : <Copy className="w-4 h-4" />}
+                    {copied ? <Check className="w-4 h-4 text-primary" /> : <Copy className="w-4 h-4" />}
                   </Button>
                 </div>
               </div>

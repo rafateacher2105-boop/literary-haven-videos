@@ -6,6 +6,7 @@ import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";
 import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-natureza";
 import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 import { osAtribuladosInfo, osAtribuladosChapters } from "@/data/os-atribulados";
+import { crimeAntecipadoInfo, crimeAntecipadoChapters } from "@/data/crime-antecipado";
 import { generateEpub, generateProseEpub } from "@/lib/epub-generator";
 import DownloadGateModal from "@/components/DownloadGateModal";
 import PaidDownloadModal from "@/components/PaidDownloadModal";
@@ -29,6 +30,12 @@ const proseBooksMap: Record<string, ProseBook> = {
   "os-atribulados": {
     info: osAtribuladosInfo,
     chapters: osAtribuladosChapters,
+    previewOnly: 1,
+    price: "R$ 15,00",
+  },
+  "crime-antecipado": {
+    info: crimeAntecipadoInfo,
+    chapters: crimeAntecipadoChapters,
     previewOnly: 1,
     price: "R$ 15,00",
   },
@@ -62,6 +69,16 @@ const BookReader = () => {
     const totalPreview = Math.min(previewOnly, chapters.length);
 
     const handleProseDownload = async () => {
+      // For "crime-antecipado", trigger direct EPUB file download
+      if (slug === "crime-antecipado") {
+        const a = document.createElement("a");
+        a.href = "/O_Crime_Antecipado.epub";
+        a.download = `${info.title}.epub`;
+        document.body.appendChild(a);
+        a.click();
+        document.body.removeChild(a);
+        return;
+      }
       await generateProseEpub(
         { title: info.title, author: info.author, year: info.year, aboutAuthor: info.aboutAuthor },
         chapters

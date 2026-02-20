@@ -38,7 +38,10 @@ const books = [
     author: "Rafael S. L. Aguiar",
     cover: coverCrime,
     backcover: backcoverCrime,
-    description: "No Rio de Janeiro de 2050, a violência urbana foi erradicada pela \"Desintoxicação Criminal\", um sistema capaz de prever delitos antes que ocorram. No entanto, a paz custa caro: a liberdade de pensamento torna-se o novo campo de batalha.",
+    description: "No Rio de Janeiro de 2050, a violência urbana foi erradicada pela \"Desistoxicação Criminal\", um sistema capaz de prever delitos antes que ocorram. No entanto, a paz custa caro: a liberdade de pensamento torna-se o novo campo de batalha.",
+    badge: "Destaque",
+    previewSlug: "crime-antecipado",
+    price: "R$ 15,00",
   },
   {
     title: "Blackout 2040",

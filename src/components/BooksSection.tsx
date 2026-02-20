@@ -28,7 +28,7 @@ const books = [
     author: "Rafael S. L. Aguiar",
     cover: coverAtribulados,
     backcover: backcoverAtribulados,
-    description: "O ano é 2045 e o mundo ainda tenta processar o desaparecimento inexplicável de milhões de pessoas em um piscar de olhos. Do vácuo do desespero, emerge um governo global absoluto que promete ordem em troca de submissão total.",
+    description: "Sete anos de caos. Um sistema de controle total. Uma escolha que define o destino da alma. Após o sumiço das 'pessoas justas', o mundo se curva diante de um novo líder, trocando a liberdade pela Marca da Besta. Um médico ateu, um engenheiro corrupto e uma advogada gananciosa terão que escolher de que lado ficarão.",
     badge: "Destaque",
     previewSlug: "os-atribulados",
     price: "R$ 15,00",

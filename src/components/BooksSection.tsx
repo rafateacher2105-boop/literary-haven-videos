@@ -22,6 +22,8 @@ const books = [
     backcover: backcoverImpacto,
     description: "Em 2070, a queda de um meteoro mergulha o planeta em uma era de trevas tecnológicas, forçando a humanidade a sobreviver sem internet. Em meio ao caos, surge uma ameaça ainda mais sombria: a fusão forçada entre homem e máquina que promete \"evoluir\" os sobreviventes.",
     badge: "Novo",
+    previewSlug: "impacto-2070",
+    price: "R$ 15,00",
   },
   {
     title: "Os Atribulados",

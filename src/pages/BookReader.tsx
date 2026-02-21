@@ -7,6 +7,7 @@ import { poesiaDaNaturezaInfo, poesiaDaNaturezaPoems } from "@/data/poesia-da-na
 import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 import { osAtribuladosInfo, osAtribuladosChapters } from "@/data/os-atribulados";
 import { crimeAntecipadoInfo, crimeAntecipadoChapters } from "@/data/crime-antecipado";
+import { impacto2070Info, impacto2070Chapters } from "@/data/impacto-2070";
 import { generateEpub, generateProseEpub } from "@/lib/epub-generator";
 import DownloadGateModal from "@/components/DownloadGateModal";
 import PaidDownloadModal from "@/components/PaidDownloadModal";
@@ -36,6 +37,12 @@ const proseBooksMap: Record<string, ProseBook> = {
   "crime-antecipado": {
     info: crimeAntecipadoInfo,
     chapters: crimeAntecipadoChapters,
+    previewOnly: 1,
+    price: "R$ 15,00",
+  },
+  "impacto-2070": {
+    info: impacto2070Info,
+    chapters: impacto2070Chapters,
     previewOnly: 1,
     price: "R$ 15,00",
   },
@@ -131,7 +138,7 @@ const BookReader = () => {
             <div className="mt-12 bg-card border border-border rounded-lg p-6 text-center">
               <h3 className="font-display text-xl font-bold text-foreground mb-2">Gostou? Adquira o livro completo!</h3>
               <p className="font-body text-sm text-muted-foreground mb-4">
-                São 25 capítulos de uma história envolvente. Garanta o EPUB completo por apenas {price}.
+                São {slug === "impacto-2070" ? "21" : "25"} capítulos de uma história envolvente. Garanta o EPUB completo por apenas {price}.
               </p>
               <Button onClick={() => setShowPaidModal(true)} className="gap-2">
                 <ShoppingCart className="w-4 h-4" />

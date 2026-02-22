@@ -1,4 +1,5 @@
-import { Download, Library } from "lucide-react";
+import { Download, Library, Skull } from "lucide-react";
+import { useState } from "react";
 import {
   Dialog,
   DialogContent,
@@ -8,11 +9,14 @@ import {
 } from "@/components/ui/dialog";
 import { Button } from "@/components/ui/button";
 import { ScrollArea } from "@/components/ui/scroll-area";
+import { Tabs, TabsContent, TabsList, TabsTrigger } from "@/components/ui/tabs";
 
 interface ClassicBook {
   title: string;
   author: string;
-  file?: string; // path to epub in /public, added later
+  year?: string;
+  description?: string;
+  file?: string;
 }
 
 const classicBooks: ClassicBook[] = [
@@ -55,8 +59,20 @@ const classicBooks: ClassicBook[] = [
   { title: "Contos de Edgar Allan Poe", author: "Edgar Allan Poe" },
 ];
 
-// Generate a warm color based on index for placeholder covers
-const coverColors = [
+const dystopiaBooks: ClassicBook[] = [
+  { title: "O Cromossomo de Ferro (O Tacão de Ferro)", author: "Jack London", year: "1908", description: "Uma das primeiras distopias modernas. Retrata a ascensão de uma oligarquia tirânica nos EUA que esmaga a liberdade individual." },
+  { title: "A Máquina Parou", author: "E.M. Forster", year: "1909", description: "A humanidade vive no subsolo, isolada em quartos individuais, comunicando-se apenas por telas. Todas as necessidades são supridas por 'A Máquina'." },
+  { title: "Nós", author: "Yevgeny Zamyatin", year: "1924", description: "No 'Estado Único', as paredes são de vidro para que ninguém tenha privacidade. A individualidade é uma doença." },
+  { title: "O Último Homem", author: "Mary Shelley", year: "1826", description: "O primeiro grande romance pós-apocalíptico. Uma praga imparável varre o mundo no final do século XXI." },
+  { title: "R.U.R. (Robôs Universais de Rossum)", author: "Karel Čapek", year: "1920", description: "A peça onde surgiu o termo 'Robô'. Máquinas orgânicas criadas para servir ganham consciência e decidem exterminar seus criadores." },
+  { title: "A Nuvem Púrpura", author: "M.P. Shiel", year: "1901", description: "Uma névoa tóxica mata toda a vida na Terra, restando apenas um homem vagando por cidades desertas." },
+  { title: "Paris no Século XX", author: "Júlio Verne", year: "1863", description: "Uma Paris tecnológica onde a cultura foi assassinada pelo lucro. Poetas e músicos são párias numa sociedade que só valoriza o que pode ser vendido." },
+  { title: "Kallocain", author: "Karin Boye", year: "1940", description: "Um cientista cria um soro que obriga as pessoas a confessarem seus pensamentos. O Estado passa a punir 'pensamentos proibidos'." },
+  { title: "A Guerra das Salamandras", author: "Karel Čapek", year: "1936", description: "Criaturas marinhas inteligentes armadas pelos humanos acabam explodindo os continentes para criar mais espaço para viver." },
+  { title: "A Máquina do Tempo", author: "H.G. Wells", year: "1895", description: "No futuro distante, a humanidade se degenerou em duas raças: os Eloi e os Morlocks." },
+];
+
+const classicColors = [
   "from-[hsl(15,60%,32%)] to-[hsl(38,70%,50%)]",
   "from-[hsl(350,45%,30%)] to-[hsl(15,60%,42%)]",
   "from-[hsl(24,15%,18%)] to-[hsl(38,50%,40%)]",
@@ -65,12 +81,20 @@ const coverColors = [
   "from-[hsl(280,30%,28%)] to-[hsl(280,25%,45%)]",
 ];
 
+const dystopiaColors = [
+  "from-[hsl(0,50%,15%)] to-[hsl(0,40%,30%)]",
+  "from-[hsl(270,40%,15%)] to-[hsl(300,30%,28%)]",
+  "from-[hsl(210,30%,12%)] to-[hsl(210,40%,25%)]",
+  "from-[hsl(30,20%,10%)] to-[hsl(15,40%,22%)]",
+  "from-[hsl(180,20%,12%)] to-[hsl(160,30%,22%)]",
+];
+
 interface ClassicsModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
 }
 
-const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
+const BookGrid = ({ books, colors }: { books: ClassicBook[]; colors: string[] }) => {
   const handleDownload = (book: ClassicBook) => {
     if (book.file) {
       const a = document.createElement("a");
@@ -81,63 +105,95 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
   };
 
   return (
+    <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2">
+      {books.map((book, idx) => {
+        const gradient = colors[idx % colors.length];
+        return (
+          <div
+            key={idx}
+            className="group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300"
+          >
+            <div
+              className={`aspect-[2/3] bg-gradient-to-br ${gradient} flex flex-col items-center justify-center p-3 text-center`}
+            >
+              <span className="text-[hsl(35,40%,95%)] font-display text-sm font-semibold leading-tight drop-shadow-md">
+                {book.title}
+              </span>
+              <span className="text-[hsl(35,40%,95%)]/70 font-body text-[10px] mt-1.5">
+                {book.author}
+              </span>
+              {book.year && (
+                <span className="text-[hsl(35,40%,95%)]/50 font-body text-[9px] mt-1">
+                  ({book.year})
+                </span>
+              )}
+            </div>
+
+            <div className="p-3 flex flex-col gap-2 flex-1">
+              <h4 className="font-display text-xs font-semibold text-foreground leading-tight line-clamp-2">
+                {book.title}
+              </h4>
+              <p className="font-body text-[10px] text-muted-foreground">
+                {book.author}
+              </p>
+              {book.description && (
+                <p className="font-body text-[10px] text-muted-foreground/80 line-clamp-3 leading-relaxed">
+                  {book.description}
+                </p>
+              )}
+              <Button
+                variant="outline"
+                size="sm"
+                className="mt-auto gap-1.5 text-xs"
+                disabled={!book.file}
+                onClick={() => handleDownload(book)}
+              >
+                <Download className="w-3 h-3" />
+                {book.file ? "Baixar EPUB" : "Em breve"}
+              </Button>
+            </div>
+          </div>
+        );
+      })}
+    </div>
+  );
+};
+
+const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
+  return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[85vh] p-0">
         <DialogHeader className="px-6 pt-6 pb-2">
           <DialogTitle className="flex items-center gap-2 font-display text-2xl">
             <Library className="w-6 h-6 text-primary" />
-            Clássicos da Literatura
+            Biblioteca de Domínio Público
           </DialogTitle>
           <DialogDescription className="font-body text-muted-foreground">
             Obras de domínio público disponíveis para download gratuito em EPUB.
           </DialogDescription>
         </DialogHeader>
 
-        <ScrollArea className="px-6 pb-6 max-h-[65vh]">
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2">
-            {classicBooks.map((book, idx) => {
-              const gradient = coverColors[idx % coverColors.length];
-              return (
-                <div
-                  key={idx}
-                  className="group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300"
-                >
-                  {/* Placeholder cover */}
-                  <div
-                    className={`aspect-[2/3] bg-gradient-to-br ${gradient} flex flex-col items-center justify-center p-3 text-center`}
-                  >
-                    <span className="text-[hsl(35,40%,95%)] font-display text-sm font-semibold leading-tight drop-shadow-md">
-                      {book.title}
-                    </span>
-                    <span className="text-[hsl(35,40%,95%)]/70 font-body text-[10px] mt-1.5">
-                      {book.author}
-                    </span>
-                  </div>
+        <Tabs defaultValue="classicos" className="px-6 pb-6">
+          <TabsList className="w-full mb-4">
+            <TabsTrigger value="classicos" className="flex-1 gap-1.5">
+              <Library className="w-4 h-4" />
+              Clássicos
+            </TabsTrigger>
+            <TabsTrigger value="distopias" className="flex-1 gap-1.5">
+              <Skull className="w-4 h-4" />
+              Distopias Apocalípticas
+            </TabsTrigger>
+          </TabsList>
 
-                  {/* Info + download */}
-                  <div className="p-3 flex flex-col gap-2 flex-1">
-                    <h4 className="font-display text-xs font-semibold text-foreground leading-tight line-clamp-2">
-                      {book.title}
-                    </h4>
-                    <p className="font-body text-[10px] text-muted-foreground">
-                      {book.author}
-                    </p>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="mt-auto gap-1.5 text-xs"
-                      disabled={!book.file}
-                      onClick={() => handleDownload(book)}
-                    >
-                      <Download className="w-3 h-3" />
-                      {book.file ? "Baixar EPUB" : "Em breve"}
-                    </Button>
-                  </div>
-                </div>
-              );
-            })}
-          </div>
-        </ScrollArea>
+          <ScrollArea className="max-h-[58vh]">
+            <TabsContent value="classicos" className="mt-0">
+              <BookGrid books={classicBooks} colors={classicColors} />
+            </TabsContent>
+            <TabsContent value="distopias" className="mt-0">
+              <BookGrid books={dystopiaBooks} colors={dystopiaColors} />
+            </TabsContent>
+          </ScrollArea>
+        </Tabs>
       </DialogContent>
     </Dialog>
   );

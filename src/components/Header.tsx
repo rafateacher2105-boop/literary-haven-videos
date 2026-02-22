@@ -1,8 +1,10 @@
-import { BookOpen, Menu, X } from "lucide-react";
+import { BookOpen, Library, Menu, X } from "lucide-react";
 import { useState } from "react";
+import ClassicsModal from "./ClassicsModal";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
+  const [classicsOpen, setClassicsOpen] = useState(false);
 
   const navItems = [
     { label: "Início", href: "#inicio" },
@@ -32,6 +34,13 @@ const Header = () => {
               {item.label}
             </a>
           ))}
+          <button
+            onClick={() => setClassicsOpen(true)}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Library className="w-4 h-4" />
+            Clássicos
+          </button>
         </nav>
 
         {/* Mobile toggle */}
@@ -57,8 +66,17 @@ const Header = () => {
               {item.label}
             </a>
           ))}
+          <button
+            onClick={() => { setClassicsOpen(true); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Library className="w-4 h-4" />
+            Clássicos
+          </button>
         </nav>
       )}
+
+      <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} />
     </header>
   );
 };

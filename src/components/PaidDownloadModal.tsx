@@ -10,6 +10,7 @@ import { toast } from "sonner";
 // Map of book slugs to their static EPUB files (stored in /public)
 const EPUB_FILES: Record<string, string> = {
   "crime-antecipado": "/O_Crime_Antecipado.epub",
+  "impacto-2070": "/Impacto_2070.epub",
 };
 
 interface PaidDownloadModalProps {

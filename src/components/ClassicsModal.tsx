@@ -1,4 +1,6 @@
-import { Download, Library, Skull } from "lucide-react";
+import { Download, Library, Mail, Skull } from "lucide-react";
+import { supabase } from "@/integrations/supabase/client";
+import { toast } from "sonner";
 import { useState } from "react";
 import {
   Dialog,
@@ -94,16 +96,7 @@ interface ClassicsModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const BookGrid = ({ books, colors }: { books: ClassicBook[]; colors: string[] }) => {
-  const handleDownload = (book: ClassicBook) => {
-    if (book.file) {
-      const a = document.createElement("a");
-      a.href = book.file;
-      a.download = "";
-      a.click();
-    }
-  };
-
+const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; colors: string[]; onRequestDownload: (book: ClassicBook) => void }) => {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2">
       {books.map((book, idx) => {
@@ -145,11 +138,10 @@ const BookGrid = ({ books, colors }: { books: ClassicBook[]; colors: string[] })
                 variant="outline"
                 size="sm"
                 className="mt-auto gap-1.5 text-xs"
-                disabled={!book.file}
-                onClick={() => handleDownload(book)}
+                onClick={() => onRequestDownload(book)}
               >
                 <Download className="w-3 h-3" />
-                {book.file ? "Baixar EPUB" : "Em breve"}
+                Download grátis
               </Button>
             </div>
           </div>
@@ -159,7 +151,93 @@ const BookGrid = ({ books, colors }: { books: ClassicBook[]; colors: string[] })
   );
 };
 
+const LeadCaptureForm = ({ book, onSuccess, onCancel }: { book: ClassicBook; onSuccess: () => void; onCancel: () => void }) => {
+  const [name, setName] = useState("");
+  const [email, setEmail] = useState("");
+  const [loading, setLoading] = useState(false);
+
+  const handleSubmit = async (e: React.FormEvent) => {
+    e.preventDefault();
+    if (!email.trim()) return;
+    setLoading(true);
+    try {
+      const slug = book.title.toLowerCase().replace(/\s+/g, "-").replace(/[^\w-]/g, "");
+      const { error } = await supabase.from("book_leads").insert({
+        email: email.trim(),
+        name: name.trim() || null,
+        book_slug: slug,
+      });
+      if (error) throw error;
+      toast.success("Obrigado! Seu download começará em breve.");
+      onSuccess();
+    } catch {
+      toast.error("Erro ao salvar. Tente novamente.");
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50" onClick={onCancel}>
+      <div className="bg-card rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl border border-border" onClick={(e) => e.stopPropagation()}>
+        <h3 className="font-display text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
+          <Mail className="w-5 h-5 text-primary" />
+          Download grátis
+        </h3>
+        <p className="font-body text-sm text-muted-foreground mb-4">
+          Informe seus dados para baixar <strong>{book.title}</strong>.
+        </p>
+        <form onSubmit={handleSubmit} className="space-y-3">
+          <div className="space-y-1">
+            <label className="font-body text-sm font-medium text-foreground">Nome (opcional)</label>
+            <input
+              className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              placeholder="Seu nome"
+              value={name}
+              onChange={(e) => setName(e.target.value)}
+              maxLength={100}
+            />
+          </div>
+          <div className="space-y-1">
+            <label className="font-body text-sm font-medium text-foreground">E-mail *</label>
+            <input
+              type="email"
+              required
+              className="flex h-9 w-full rounded-md border border-input bg-background px-3 py-1 text-sm ring-offset-background placeholder:text-muted-foreground focus-visible:outline-none focus-visible:ring-2 focus-visible:ring-ring"
+              placeholder="seu@email.com"
+              value={email}
+              onChange={(e) => setEmail(e.target.value)}
+              maxLength={255}
+            />
+          </div>
+          <div className="flex gap-2 pt-1">
+            <Button type="button" variant="outline" size="sm" className="flex-1" onClick={onCancel}>
+              Cancelar
+            </Button>
+            <Button type="submit" size="sm" className="flex-1 gap-1.5" disabled={loading}>
+              <Download className="w-3 h-3" />
+              {loading ? "Enviando..." : "Baixar"}
+            </Button>
+          </div>
+        </form>
+      </div>
+    </div>
+  );
+};
+
 const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
+  const [selectedBook, setSelectedBook] = useState<ClassicBook | null>(null);
+
+  const handleDownloadSuccess = () => {
+    if (selectedBook?.file) {
+      const a = document.createElement("a");
+      a.href = selectedBook.file;
+      a.download = "";
+      a.click();
+    }
+    setSelectedBook(null);
+  };
+
   return (
     <Dialog open={open} onOpenChange={onOpenChange}>
       <DialogContent className="max-w-4xl max-h-[85vh] p-0">
@@ -187,14 +265,22 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
 
           <ScrollArea className="max-h-[58vh]">
             <TabsContent value="classicos" className="mt-0">
-              <BookGrid books={classicBooks} colors={classicColors} />
+              <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} />
             </TabsContent>
             <TabsContent value="distopias" className="mt-0">
-              <BookGrid books={dystopiaBooks} colors={dystopiaColors} />
+              <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} />
             </TabsContent>
           </ScrollArea>
         </Tabs>
       </DialogContent>
+
+      {selectedBook && (
+        <LeadCaptureForm
+          book={selectedBook}
+          onSuccess={handleDownloadSuccess}
+          onCancel={() => setSelectedBook(null)}
+        />
+      )}
     </Dialog>
   );
 };

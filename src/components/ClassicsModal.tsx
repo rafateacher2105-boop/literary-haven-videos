@@ -2,6 +2,7 @@ import { Download, Library, Mail, Skull } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
+import coverViagensGulliver from "@/assets/cover-viagens-gulliver.avif";
 import {
   Dialog,
   DialogContent,
@@ -19,11 +20,12 @@ interface ClassicBook {
   year?: string;
   description?: string;
   file?: string;
+  cover?: string;
 }
 
 const classicBooks: ClassicBook[] = [
   { title: "A Divina Comédia", author: "Dante Alighieri" },
-  { title: "As Viagens de Gulliver", author: "Jonathan Swift" },
+  { title: "As Viagens de Gulliver", author: "Jonathan Swift", cover: coverViagensGulliver, file: "/as-viagens-de-gulliver.pdf" },
   { title: "A Ilha Misteriosa", author: "Júlio Verne" },
   { title: "Viagem ao Centro da Terra", author: "Júlio Verne" },
   { title: "A Volta ao Mundo em 80 Dias", author: "Júlio Verne" },
@@ -106,6 +108,11 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
             key={idx}
             className="group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300"
           >
+            {book.cover ? (
+              <div className="aspect-[2/3] overflow-hidden">
+                <img src={book.cover} alt={book.title} className="w-full h-full object-cover" />
+              </div>
+            ) : (
             <div
               className={`aspect-[2/3] bg-gradient-to-br ${gradient} flex flex-col items-center justify-center p-3 text-center`}
             >
@@ -121,6 +128,7 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
                 </span>
               )}
             </div>
+            )}
 
             <div className="p-3 flex flex-col gap-2 flex-1">
               <h4 className="font-display text-xs font-semibold text-foreground leading-tight line-clamp-2">

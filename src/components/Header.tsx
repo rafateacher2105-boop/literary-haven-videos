@@ -1,10 +1,12 @@
-import { BookOpen, Library, Menu, X } from "lucide-react";
+import { BookOpen, Library, Menu, X, Heart } from "lucide-react";
 import { useState } from "react";
 import ClassicsModal from "./ClassicsModal";
+import SupportAuthorModal from "./SupportAuthorModal";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [classicsOpen, setClassicsOpen] = useState(false);
+  const [supportOpen, setSupportOpen] = useState(false);
 
   const navItems = [
     { label: "Início", href: "#inicio" },
@@ -41,6 +43,13 @@ const Header = () => {
             <Library className="w-4 h-4" />
             Clássicos
           </button>
+          <button
+            onClick={() => setSupportOpen(true)}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Heart className="w-4 h-4" />
+            Apoie o Autor
+          </button>
         </nav>
 
         {/* Mobile toggle */}
@@ -73,10 +82,18 @@ const Header = () => {
             <Library className="w-4 h-4" />
             Clássicos
           </button>
+          <button
+            onClick={() => { setSupportOpen(true); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Heart className="w-4 h-4" />
+            Apoie o Autor
+          </button>
         </nav>
       )}
 
       <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} />
+      <SupportAuthorModal open={supportOpen} onOpenChange={setSupportOpen} />
     </header>
   );
 };

@@ -84,6 +84,8 @@ const classicBooks: ClassicBook[] = [
   { title: "O Cão dos Baskervilles", author: "Arthur Conan Doyle" },
   { title: "Alice no País dos Espelhos", author: "Lewis Carroll" },
   { title: "Contos de Grimm", author: "Irmãos Grimm" },
+  { title: "A Revolução dos Bichos", author: "George Orwell" },
+  { title: "1984", author: "George Orwell" },
 ];
 
 const dystopiaBooks: ClassicBook[] = [

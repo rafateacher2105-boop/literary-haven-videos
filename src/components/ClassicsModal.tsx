@@ -294,14 +294,16 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
             </TabsTrigger>
           </TabsList>
 
-          <ScrollArea className="max-h-[58vh]">
-            <TabsContent value="classicos" className="mt-0">
+          <TabsContent value="classicos" className="mt-0">
+            <ScrollArea className="h-[58vh] pr-3">
               <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} />
-            </TabsContent>
-            <TabsContent value="distopias" className="mt-0">
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="distopias" className="mt-0">
+            <ScrollArea className="h-[58vh] pr-3">
               <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} />
-            </TabsContent>
-          </ScrollArea>
+            </ScrollArea>
+          </TabsContent>
         </Tabs>
       </DialogContent>
 

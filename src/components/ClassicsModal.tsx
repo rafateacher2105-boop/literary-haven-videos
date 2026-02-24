@@ -13,6 +13,8 @@ import coverLusiadas from "@/assets/cover-lusiadas.jpg";
 import coverHamlet from "@/assets/cover-hamlet.jpg";
 import coverRomeuJulieta from "@/assets/cover-romeu-julieta.jpg";
 import coverIlhaTesouro from "@/assets/cover-ilha-tesouro.jpg";
+import coverIlhaMisteriosa from "@/assets/cover-ilha-misteriosa.jpg";
+import coverVinteMilLeguas from "@/assets/cover-vinte-mil-leguas.jpg";
 import {
   Dialog,
   DialogContent,
@@ -36,11 +38,11 @@ interface ClassicBook {
 const classicBooks: ClassicBook[] = [
   { title: "A Divina Comédia", author: "Dante Alighieri", cover: coverDivinaComedia },
   { title: "As Viagens de Gulliver", author: "Jonathan Swift", cover: coverViagensGulliver, file: "/as-viagens-de-gulliver.pdf" },
-  { title: "A Ilha Misteriosa", author: "Júlio Verne" },
+  { title: "A Ilha Misteriosa", author: "Júlio Verne", cover: coverIlhaMisteriosa },
   { title: "Viagem ao Centro da Terra", author: "Júlio Verne", cover: coverViagemCentroTerra },
   { title: "A Volta ao Mundo em 80 Dias", author: "Júlio Verne", cover: coverVoltaMundo },
   { title: "Frankenstein", author: "Mary Shelley", cover: coverFrankenstein },
-  { title: "Vinte Mil Léguas Submarinas", author: "Júlio Verne" },
+  { title: "Vinte Mil Léguas Submarinas", author: "Júlio Verne", cover: coverVinteMilLeguas },
   { title: "Drácula", author: "Bram Stoker", cover: coverDracula },
   { title: "O Retrato de Dorian Gray", author: "Oscar Wilde", cover: coverDorianGray },
   { title: "Os Lusíadas", author: "Luís de Camões", cover: coverLusiadas },

@@ -3,6 +3,16 @@ import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
 import coverViagensGulliver from "@/assets/cover-viagens-gulliver.avif";
+import coverDivinaComedia from "@/assets/cover-divina-comedia.jpg";
+import coverViagemCentroTerra from "@/assets/cover-viagem-centro-terra.jpg";
+import coverVoltaMundo from "@/assets/cover-volta-mundo-80-dias.jpg";
+import coverFrankenstein from "@/assets/cover-frankenstein.jpg";
+import coverDracula from "@/assets/cover-dracula.jpg";
+import coverDorianGray from "@/assets/cover-dorian-gray.jpg";
+import coverLusiadas from "@/assets/cover-lusiadas.jpg";
+import coverHamlet from "@/assets/cover-hamlet.jpg";
+import coverRomeuJulieta from "@/assets/cover-romeu-julieta.jpg";
+import coverIlhaTesouro from "@/assets/cover-ilha-tesouro.jpg";
 import {
   Dialog,
   DialogContent,
@@ -24,19 +34,19 @@ interface ClassicBook {
 }
 
 const classicBooks: ClassicBook[] = [
-  { title: "A Divina Comédia", author: "Dante Alighieri" },
+  { title: "A Divina Comédia", author: "Dante Alighieri", cover: coverDivinaComedia },
   { title: "As Viagens de Gulliver", author: "Jonathan Swift", cover: coverViagensGulliver, file: "/as-viagens-de-gulliver.pdf" },
   { title: "A Ilha Misteriosa", author: "Júlio Verne" },
-  { title: "Viagem ao Centro da Terra", author: "Júlio Verne" },
-  { title: "A Volta ao Mundo em 80 Dias", author: "Júlio Verne" },
-  { title: "Frankenstein", author: "Mary Shelley" },
+  { title: "Viagem ao Centro da Terra", author: "Júlio Verne", cover: coverViagemCentroTerra },
+  { title: "A Volta ao Mundo em 80 Dias", author: "Júlio Verne", cover: coverVoltaMundo },
+  { title: "Frankenstein", author: "Mary Shelley", cover: coverFrankenstein },
   { title: "Vinte Mil Léguas Submarinas", author: "Júlio Verne" },
-  { title: "Drácula", author: "Bram Stoker" },
-  { title: "O Retrato de Dorian Gray", author: "Oscar Wilde" },
-  { title: "Os Lusíadas", author: "Luís de Camões" },
-  { title: "Hamlet", author: "William Shakespeare" },
-  { title: "Romeu e Julieta", author: "William Shakespeare" },
-  { title: "A Ilha do Tesouro", author: "Robert L. Stevenson" },
+  { title: "Drácula", author: "Bram Stoker", cover: coverDracula },
+  { title: "O Retrato de Dorian Gray", author: "Oscar Wilde", cover: coverDorianGray },
+  { title: "Os Lusíadas", author: "Luís de Camões", cover: coverLusiadas },
+  { title: "Hamlet", author: "William Shakespeare", cover: coverHamlet },
+  { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulieta },
+  { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro },
   { title: "Iracema", author: "José de Alencar" },
   { title: "Dom Casmurro", author: "Machado de Assis" },
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis" },

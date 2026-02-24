@@ -73,6 +73,17 @@ const classicBooks: ClassicBook[] = [
   { title: "O Médico e o Monstro", author: "Robert L. Stevenson" },
   { title: "A Odisseia", author: "Homero" },
   { title: "Contos de Edgar Allan Poe", author: "Edgar Allan Poe" },
+  { title: "Dom Quixote", author: "Miguel de Cervantes" },
+  { title: "Alice no País das Maravilhas", author: "Lewis Carroll" },
+  { title: "O Mágico de Oz", author: "L. Frank Baum" },
+  { title: "Fausto", author: "Johann W. von Goethe" },
+  { title: "Robinson Crusoé", author: "Daniel Defoe" },
+  { title: "Os Miseráveis", author: "Victor Hugo" },
+  { title: "Os Três Mosqueteiros", author: "Alexandre Dumas" },
+  { title: "O Fantasma da Ópera", author: "Gaston Leroux" },
+  { title: "O Cão dos Baskervilles", author: "Arthur Conan Doyle" },
+  { title: "Alice no País dos Espelhos", author: "Lewis Carroll" },
+  { title: "Contos de Grimm", author: "Irmãos Grimm" },
 ];
 
 const dystopiaBooks: ClassicBook[] = [

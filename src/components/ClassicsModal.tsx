@@ -25,6 +25,8 @@ import coverParisSeculoXX from "@/assets/cover-paris-seculo-xx.jpg";
 import coverKallocain from "@/assets/cover-kallocain.jpg";
 import coverGuerraSalamandras from "@/assets/cover-guerra-salamandras.jpg";
 import coverMaquinaTempo from "@/assets/cover-maquina-tempo.jpg";
+import cover1984 from "@/assets/cover-1984.jpg";
+import coverRevolucaoBichos from "@/assets/cover-revolucao-bichos.jpg";
 import {
   Dialog,
   DialogContent,
@@ -94,8 +96,8 @@ const classicBooks: ClassicBook[] = [
   { title: "O Cão dos Baskervilles", author: "Arthur Conan Doyle" },
   { title: "Alice no País dos Espelhos", author: "Lewis Carroll" },
   { title: "Contos de Grimm", author: "Irmãos Grimm" },
-  { title: "A Revolução dos Bichos", author: "George Orwell" },
-  { title: "1984", author: "George Orwell" },
+  { title: "A Revolução dos Bichos", author: "George Orwell", cover: coverRevolucaoBichos, file: "/revolucao-dos-bichos.pdf" },
+  { title: "1984", author: "George Orwell", cover: cover1984, file: "/e-book-1984.pdf" },
 ];
 
 const dystopiaBooks: ClassicBook[] = [

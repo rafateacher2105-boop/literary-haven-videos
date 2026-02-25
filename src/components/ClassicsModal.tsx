@@ -21,6 +21,10 @@ import coverMaquinaParou from "@/assets/cover-maquina-parou.jpg";
 import coverNos from "@/assets/cover-nos.jpg";
 import coverUltimoHomem from "@/assets/cover-ultimo-homem.jpg";
 import coverRur from "@/assets/cover-rur.jpg";
+import coverParisSeculoXX from "@/assets/cover-paris-seculo-xx.jpg";
+import coverKallocain from "@/assets/cover-kallocain.jpg";
+import coverGuerraSalamandras from "@/assets/cover-guerra-salamandras.jpg";
+import coverMaquinaTempo from "@/assets/cover-maquina-tempo.jpg";
 import {
   Dialog,
   DialogContent,
@@ -101,10 +105,10 @@ const dystopiaBooks: ClassicBook[] = [
   { title: "O Último Homem", author: "Mary Shelley", year: "1826", description: "O primeiro grande romance pós-apocalíptico. Uma praga imparável varre o mundo no final do século XXI.", cover: coverUltimoHomem },
   { title: "R.U.R. (Robôs Universais de Rossum)", author: "Karel Čapek", year: "1920", description: "A peça onde surgiu o termo 'Robô'. Máquinas orgânicas criadas para servir ganham consciência e decidem exterminar seus criadores.", cover: coverRur },
   { title: "A Nuvem Púrpura", author: "M.P. Shiel", year: "1901", description: "Uma névoa tóxica mata toda a vida na Terra, restando apenas um homem vagando por cidades desertas.", cover: coverNuvemPurpura },
-  { title: "Paris no Século XX", author: "Júlio Verne", year: "1863", description: "Uma Paris tecnológica onde a cultura foi assassinada pelo lucro. Poetas e músicos são párias numa sociedade que só valoriza o que pode ser vendido." },
-  { title: "Kallocain", author: "Karin Boye", year: "1940", description: "Um cientista cria um soro que obriga as pessoas a confessarem seus pensamentos. O Estado passa a punir 'pensamentos proibidos'." },
-  { title: "A Guerra das Salamandras", author: "Karel Čapek", year: "1936", description: "Criaturas marinhas inteligentes armadas pelos humanos acabam explodindo os continentes para criar mais espaço para viver." },
-  { title: "A Máquina do Tempo", author: "H.G. Wells", year: "1895", description: "No futuro distante, a humanidade se degenerou em duas raças: os Eloi e os Morlocks." },
+  { title: "Paris no Século XX", author: "Júlio Verne", year: "1863", description: "Uma Paris tecnológica onde a cultura foi assassinada pelo lucro. Poetas e músicos são párias numa sociedade que só valoriza o que pode ser vendido.", cover: coverParisSeculoXX },
+  { title: "Kallocain", author: "Karin Boye", year: "1940", description: "Um cientista cria um soro que obriga as pessoas a confessarem seus pensamentos. O Estado passa a punir 'pensamentos proibidos'.", cover: coverKallocain },
+  { title: "A Guerra das Salamandras", author: "Karel Čapek", year: "1936", description: "Criaturas marinhas inteligentes armadas pelos humanos acabam explodindo os continentes para criar mais espaço para viver.", cover: coverGuerraSalamandras },
+  { title: "A Máquina do Tempo", author: "H.G. Wells", year: "1895", description: "No futuro distante, a humanidade se degenerou em duas raças: os Eloi e os Morlocks.", cover: coverMaquinaTempo },
 ];
 
 const classicColors = [

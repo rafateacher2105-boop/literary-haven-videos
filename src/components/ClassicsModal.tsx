@@ -1,4 +1,4 @@
-import { Download, Library, Mail, Skull } from "lucide-react";
+import { Download, Library, Mail, Skull, BookOpenText } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -84,20 +84,27 @@ const classicBooks: ClassicBook[] = [
   { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry" },
   { title: "O Médico e o Monstro", author: "Robert L. Stevenson" },
   { title: "A Odisseia", author: "Homero" },
-  { title: "Contos de Edgar Allan Poe", author: "Edgar Allan Poe" },
   { title: "Dom Quixote", author: "Miguel de Cervantes" },
-  { title: "Alice no País das Maravilhas", author: "Lewis Carroll" },
-  { title: "O Mágico de Oz", author: "L. Frank Baum" },
-  { title: "Fausto", author: "Johann W. von Goethe" },
-  { title: "Robinson Crusoé", author: "Daniel Defoe" },
-  { title: "Os Miseráveis", author: "Victor Hugo" },
-  { title: "Os Três Mosqueteiros", author: "Alexandre Dumas" },
-  { title: "O Fantasma da Ópera", author: "Gaston Leroux" },
-  { title: "O Cão dos Baskervilles", author: "Arthur Conan Doyle" },
-  { title: "Alice no País dos Espelhos", author: "Lewis Carroll" },
-  { title: "Contos de Grimm", author: "Irmãos Grimm" },
   { title: "A Revolução dos Bichos", author: "George Orwell", cover: coverRevolucaoBichos, file: "/revolucao-dos-bichos.pdf" },
   { title: "1984", author: "George Orwell", cover: cover1984, file: "/e-book-1984.pdf" },
+];
+
+const talesBooks: ClassicBook[] = [
+  { title: "Contos de Edgar Allan Poe", author: "Edgar Allan Poe", description: "Mestre do terror e do mistério, Poe nos leva a labirintos psicológicos sombrios com contos como 'O Gato Preto', 'O Coração Delator' e 'A Queda da Casa de Usher'." },
+  { title: "Contos de Grimm", author: "Irmãos Grimm", description: "A coletânea que definiu os contos de fadas modernos: Branca de Neve, Cinderela, Rapunzel, João e Maria e dezenas de outros clássicos imortais." },
+  { title: "Contos de Andersen", author: "Hans Christian Andersen", description: "O Patinho Feio, A Pequena Sereia, A Rainha da Neve — histórias encantadoras que misturam fantasia, melancolia e lições atemporais." },
+  { title: "Contos de Perrault", author: "Charles Perrault", description: "O Gato de Botas, A Bela Adormecida, Chapeuzinho Vermelho — os contos que inauguraram a tradição literária dos contos de fadas na Europa." },
+  { title: "Lendas Indígenas", author: "Tradição Oral", description: "Narrativas ancestrais dos povos originários do Brasil: o Curupira, o Boto, a Iara, o Saci-Pererê e outras histórias que explicam o mundo pela sabedoria da floresta." },
+  { title: "Lendas Africanas", author: "Tradição Oral", description: "Contos que atravessaram o Atlântico: Anansi, a aranha sábia, os orixás, e narrativas que celebram a riqueza cultural e espiritual do continente africano." },
+  { title: "Lendas Urbanas", author: "Folclore Contemporâneo", description: "A Loira do Banheiro, o Homem do Saco, a Maria Sangrenta — histórias que nascem nas cidades e se espalham de boca em boca, alimentando nossos medos modernos." },
+];
+
+const talesColors = [
+  "from-[hsl(270,35%,20%)] to-[hsl(280,40%,35%)]",
+  "from-[hsl(140,30%,20%)] to-[hsl(120,35%,35%)]",
+  "from-[hsl(200,40%,22%)] to-[hsl(210,35%,38%)]",
+  "from-[hsl(30,50%,22%)] to-[hsl(40,45%,38%)]",
+  "from-[hsl(100,35%,18%)] to-[hsl(80,40%,32%)]",
 ];
 
 const dystopiaBooks: ClassicBook[] = [
@@ -298,13 +305,17 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
 
         <Tabs defaultValue="classicos" className="px-6 pb-6">
           <TabsList className="w-full mb-4">
-            <TabsTrigger value="classicos" className="flex-1 gap-1.5">
+            <TabsTrigger value="classicos" className="flex-1 gap-1.5 text-xs sm:text-sm">
               <Library className="w-4 h-4" />
               Clássicos
             </TabsTrigger>
-            <TabsTrigger value="distopias" className="flex-1 gap-1.5">
+            <TabsTrigger value="distopias" className="flex-1 gap-1.5 text-xs sm:text-sm">
               <Skull className="w-4 h-4" />
-              Distopias Apocalípticas
+              Distopias
+            </TabsTrigger>
+            <TabsTrigger value="contos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+              <BookOpenText className="w-4 h-4" />
+              Contos e Lendas
             </TabsTrigger>
           </TabsList>
 
@@ -316,6 +327,11 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
           <TabsContent value="distopias" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
               <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} />
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="contos" className="mt-0">
+            <ScrollArea className="h-[58vh] pr-3">
+              <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} />
             </ScrollArea>
           </TabsContent>
         </Tabs>

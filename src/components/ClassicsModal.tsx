@@ -97,10 +97,10 @@ const classicBooks: ClassicBook[] = [
 ];
 
 const talesBooks: ClassicBook[] = [
-  { title: "Contos de Edgar Allan Poe", author: "Edgar Allan Poe", cover: coverContosPoe, description: "Mestre do terror e do mistério, Poe nos leva a labirintos psicológicos sombrios com contos como 'O Gato Preto', 'O Coração Delator' e 'A Queda da Casa de Usher'." },
+  { title: "Contos de Poe", author: "Edgar Allan Poe", cover: coverContosPoe, description: "Mestre do terror e do mistério, Poe nos leva a labirintos psicológicos sombrios com contos como 'O Gato Preto', 'O Coração Delator' e 'A Queda da Casa de Usher'." },
   { title: "Contos de Grimm", author: "Irmãos Grimm", cover: coverContosGrimm, description: "A coletânea que definiu os contos de fadas modernos: Branca de Neve, Cinderela, Rapunzel, João e Maria e dezenas de outros clássicos imortais." },
   { title: "Contos de Andersen", author: "Hans Christian Andersen", cover: coverContosAndersen, description: "O Patinho Feio, A Pequena Sereia, A Rainha da Neve — histórias encantadoras que misturam fantasia, melancolia e lições atemporais." },
-  { title: "Contos de Perrault", author: "Charles Perrault", cover: coverContosPerrault, description: "O Gato de Botas, A Bela Adormecida, Chapeuzinho Vermelho — os contos que inauguraram a tradição literária dos contos de fadas na Europa." },
+  { title: "Contos de Perrout", author: "Charles Perrault", cover: coverContosPerrault, description: "O Gato de Botas, A Bela Adormecida, Chapeuzinho Vermelho — os contos que inauguraram a tradição literária dos contos de fadas na Europa." },
   { title: "Lendas Indígenas", author: "Tradição Oral", cover: coverLendasIndigenas, description: "Narrativas ancestrais dos povos originários do Brasil: o Curupira, o Boto, a Iara, o Saci-Pererê e outras histórias que explicam o mundo pela sabedoria da floresta." },
   { title: "Lendas Africanas", author: "Tradição Oral", cover: coverLendasAfricanas, description: "Contos que atravessaram o Atlântico: Anansi, a aranha sábia, os orixás, e narrativas que celebram a riqueza cultural e espiritual do continente africano." },
   { title: "Lendas Urbanas", author: "Folclore Contemporâneo", cover: coverLendasUrbanas, description: "A Loira do Banheiro, o Homem do Saco, a Maria Sangrenta — histórias que nascem nas cidades e se espalham de boca em boca, alimentando nossos medos modernos." },

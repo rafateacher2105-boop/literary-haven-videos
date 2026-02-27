@@ -1,5 +1,6 @@
-import { BookOpen, Library, Menu, X, Heart } from "lucide-react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag } from "lucide-react";
 import { useState } from "react";
+import { useNavigate } from "react-router-dom";
 import ClassicsModal from "./ClassicsModal";
 import SupportAuthorModal from "./SupportAuthorModal";
 
@@ -7,6 +8,7 @@ const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [classicsOpen, setClassicsOpen] = useState(false);
   const [supportOpen, setSupportOpen] = useState(false);
+  const navigate = useNavigate();
 
   const navItems = [
     { label: "Início", href: "#inicio" },
@@ -50,6 +52,13 @@ const Header = () => {
             <Heart className="w-4 h-4" />
             Apoie o Autor
           </button>
+          <button
+            onClick={() => navigate("/indicacoes")}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ShoppingBag className="w-4 h-4" />
+            Minhas Indicações
+          </button>
         </nav>
 
         {/* Mobile toggle */}
@@ -88,6 +97,13 @@ const Header = () => {
           >
             <Heart className="w-4 h-4" />
             Apoie o Autor
+          </button>
+          <button
+            onClick={() => { navigate("/indicacoes"); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <ShoppingBag className="w-4 h-4" />
+            Minhas Indicações
           </button>
         </nav>
       )}

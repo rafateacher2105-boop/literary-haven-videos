@@ -6,7 +6,8 @@ const HeroSection = () => {
     <section id="inicio" className="relative min-h-screen flex items-end">
       <img
         src={heroImage}
-        alt="Estante aconchegante de livros"
+        alt="Estante aconchegante de livros — Blog Letras e Páginas"
+        loading="eager"
         className="absolute inset-0 w-full h-full object-cover"
       />
       <div className="absolute inset-0 bg-warm-overlay" />

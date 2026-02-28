@@ -11,6 +11,7 @@ import { poesiaSocialInfo, poesiaSocialPoems } from "@/data/poesia-social";
 import { osAtribuladosInfo, osAtribuladosChapters } from "@/data/os-atribulados";
 import { crimeAntecipadoInfo, crimeAntecipadoChapters } from "@/data/crime-antecipado";
 import { impacto2070Info, impacto2070Chapters } from "@/data/impacto-2070";
+import { atividadesInglesInfo, atividadesInglesChapters } from "@/data/atividades-ingles";
 
 interface BookCardProps {
   title: string;
@@ -34,6 +35,7 @@ const proseDataMap: Record<string, { info: any; chapters: any[] }> = {
   "os-atribulados": { info: osAtribuladosInfo, chapters: osAtribuladosChapters },
   "crime-antecipado": { info: crimeAntecipadoInfo, chapters: crimeAntecipadoChapters },
   "impacto-2070": { info: impacto2070Info, chapters: impacto2070Chapters },
+  "atividades-ingles": { info: atividadesInglesInfo, chapters: atividadesInglesChapters },
 };
 
 const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug }: BookCardProps) => {

@@ -26,7 +26,7 @@ const AboutSection = () => {
                 Rafael Aguiar
               </p>
               <p className="font-body text-muted-foreground leading-relaxed">
-                Professor de Português e Música, escritor e criador do blog <strong className="text-foreground">Letras &amp; Páginas</strong> — um espaço dedicado à literatura, à poesia e à ficção especulativa.
+                Professor de Português, Inglês e Música, escritor e criador do blog <strong className="text-foreground">Letras &amp; Páginas</strong> — um espaço dedicado à literatura, à poesia e à ficção especulativa. Também é criador do método <strong className="text-foreground">Easy English — Inglês Lúdico para Crianças</strong>, com o livro <em>Activity</em>, que reúne mais de 300 atividades com jogos, músicas e exercícios de vocabulário.
               </p>
               <p className="font-body text-muted-foreground leading-relaxed">
                 Leciono em duas escolas, onde exploro diariamente o poder da linguagem e da arte com meus alunos. Acredito que a palavra e a música caminham juntas: ambas buscam a harmonia e a expressão do que há de mais profundo no ser humano.

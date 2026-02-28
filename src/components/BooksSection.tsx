@@ -13,6 +13,7 @@ import backcoverPoesiaAlma from "@/assets/backcover-poesia-da-alma.jpg";
 import backcoverPoesiaNatureza from "@/assets/backcover-poesia-da-natureza.jpg";
 import coverPoesiaSocial from "@/assets/cover-poesia-social.jpg";
 import backcoverPoesiaSocial from "@/assets/backcover-poesia-social.jpg";
+import coverAtividadesIngles from "@/assets/cover-atividades-ingles.jpg";
 
 const books = [
   {
@@ -78,6 +79,15 @@ const books = [
     description: "Poemas que refletem sobre a sociedade, suas desigualdades, relações humanas e a busca por um mundo mais justo. Da diversidade à ganância, da hipocrisia à esperança, cada verso é um espelho da realidade que nos cerca.",
     badge: "Poesia",
     slug: "poesia-social",
+  },
+  {
+    title: "Atividades de Inglês para Crianças",
+    author: "Rafael S. L. Aguiar",
+    cover: coverAtividadesIngles,
+    description: "Um livro repleto de jogos, músicas e atividades de vocabulário para ensinar inglês de forma divertida e interativa para crianças. Aprenda brincando!",
+    badge: "Novo",
+    price: "R$ 20,00",
+    previewSlug: "atividades-ingles",
   },
 ];
 

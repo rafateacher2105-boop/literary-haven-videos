@@ -143,7 +143,7 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
           </div>
         )}
         {/* Paid books: preview + paid download */}
-        {previewSlug && price && (
+        {previewSlug && price && proseDataMap[previewSlug] && (
           <div className="mt-4 flex gap-2">
             <Link to={`/livro/${previewSlug}`} className="flex-1">
               <Button variant="outline" size="sm" className="w-full gap-1.5">
@@ -162,6 +162,20 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
             </Button>
           </div>
         )}
+        {/* Paid books without preview */}
+        {price && (!previewSlug || !proseDataMap[previewSlug || '']) && !slug && (
+          <div className="mt-4">
+            <Button
+              variant="default"
+              size="sm"
+              className="w-full gap-1.5"
+              onClick={() => setShowPaidModal(true)}
+            >
+              <ShoppingCart className="w-3.5 h-3.5" />
+              {price}
+            </Button>
+          </div>
+        )}
         {slug && !price && (
           <DownloadGateModal
             open={showDownloadModal}
@@ -171,7 +185,7 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
             onDownload={handleDownload}
           />
         )}
-        {previewSlug && price && (
+        {price && (
           <PaidDownloadModal
             open={showPaidModal}
             onOpenChange={setShowPaidModal}

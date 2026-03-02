@@ -1,9 +1,10 @@
 import VideoCard from "./VideoCard";
+import thumbResenhaJekyll from "@/assets/thumb-resenha-jekyll.png";
 
 const videos = [
   {
     title: "Resenha do Clássico: O médico e o monstro de Louis Stevenson",
-    thumbnail: "https://img.youtube.com/vi/pzSPEXzLino/maxresdefault.jpg",
+    thumbnail: thumbResenhaJekyll,
     duration: "12:34",
     category: "Resenha",
     url: "https://youtu.be/pzSPEXzLino?si=GsxS3gs8R5E4t70z",

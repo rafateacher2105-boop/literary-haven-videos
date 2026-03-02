@@ -2,12 +2,11 @@ import VideoCard from "./VideoCard";
 
 const videos = [
   {
-    title: "Resenha: 'O Crime Antecipado' — Por que esse livro vai te emocionar",
+    title: "Resenha do Clássico: O médico e o monstro de Louis Stevenson",
     thumbnail: "https://img.youtube.com/vi/pzSPEXzLino/maxresdefault.jpg",
     duration: "12:34",
-    category: "Meus Livros",
+    category: "Resenha",
     url: "https://youtu.be/pzSPEXzLino?si=GsxS3gs8R5E4t70z",
-    caption: "Resenha do Clássico: O médico e o monstro de Louis Stevenson",
   },
   {
     title: "5 Livros de Literatura Brasileira que Todo Leitor Precisa Conhecer",

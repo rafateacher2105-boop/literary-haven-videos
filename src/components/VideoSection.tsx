@@ -2,10 +2,11 @@ import VideoCard from "./VideoCard";
 
 const videos = [
   {
-    title: "Resenha: 'Sussurros ao Entardecer' — Por que esse livro vai te emocionar",
-    thumbnail: "https://images.unsplash.com/photo-1457369804613-52c61a468e7d?w=640&h=360&fit=crop",
+    title: "Resenha: 'O Crime Antecipado' — Por que esse livro vai te emocionar",
+    thumbnail: "https://img.youtube.com/vi/pzSPEXzLino/maxresdefault.jpg",
     duration: "12:34",
     category: "Meus Livros",
+    url: "https://youtu.be/pzSPEXzLino?si=GsxS3gs8R5E4t70z",
   },
   {
     title: "5 Livros de Literatura Brasileira que Todo Leitor Precisa Conhecer",

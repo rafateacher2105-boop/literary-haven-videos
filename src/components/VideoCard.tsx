@@ -5,11 +5,15 @@ interface VideoCardProps {
   thumbnail: string;
   duration: string;
   category: string;
+  url?: string;
 }
 
-const VideoCard = ({ title, thumbnail, duration, category }: VideoCardProps) => {
+const VideoCard = ({ title, thumbnail, duration, category, url }: VideoCardProps) => {
+  const Wrapper = url ? 'a' : 'div';
+  const wrapperProps = url ? { href: url, target: "_blank", rel: "noopener noreferrer" } : {};
+
   return (
-    <div className="group cursor-pointer">
+    <Wrapper {...wrapperProps} className="group cursor-pointer block">
       <div className="relative aspect-video rounded-lg overflow-hidden mb-4">
         <img
           src={thumbnail}
@@ -31,7 +35,7 @@ const VideoCard = ({ title, thumbnail, duration, category }: VideoCardProps) => 
       <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
         {title}
       </h3>
-    </div>
+    </Wrapper>
   );
 };
 

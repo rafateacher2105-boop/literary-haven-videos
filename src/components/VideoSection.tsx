@@ -7,6 +7,7 @@ const videos = [
     duration: "12:34",
     category: "Meus Livros",
     url: "https://youtu.be/pzSPEXzLino?si=GsxS3gs8R5E4t70z",
+    caption: "Resenha do Clássico: O médico e o monstro de Louis Stevenson",
   },
   {
     title: "5 Livros de Literatura Brasileira que Todo Leitor Precisa Conhecer",

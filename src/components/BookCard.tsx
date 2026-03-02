@@ -148,12 +148,21 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
         {/* Paid books: preview + paid download */}
         {previewSlug && price && proseDataMap[previewSlug] && (
           <div className="mt-4 flex gap-2">
-            <Link to={`/livro/${previewSlug}`} className="flex-1">
-              <Button variant="outline" size="sm" className="w-full gap-1.5">
-                <Eye className="w-3.5 h-3.5" />
-                Leitura prévia
-              </Button>
-            </Link>
+            {externalUrl ? (
+              <a href={externalUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
+                <Button variant="outline" size="sm" className="w-full gap-1.5">
+                  <Eye className="w-3.5 h-3.5" />
+                  Leitura prévia
+                </Button>
+              </a>
+            ) : (
+              <Link to={`/livro/${previewSlug}`} className="flex-1">
+                <Button variant="outline" size="sm" className="w-full gap-1.5">
+                  <Eye className="w-3.5 h-3.5" />
+                  Leitura prévia
+                </Button>
+              </Link>
+            )}
             {externalUrl ? (
               <a href={externalUrl} target="_blank" rel="noopener noreferrer">
                 <Button variant="default" size="sm" className="gap-1.5">

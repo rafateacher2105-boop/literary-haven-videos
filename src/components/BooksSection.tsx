@@ -88,6 +88,7 @@ const books = [
     badge: "Novo",
     price: "R$ 20,00",
     previewSlug: "atividades-ingles",
+    externalUrl: "https://drive.google.com/file/d/1ngu3MF-eZ1vZ-J14DwKCXJq7GgS7VC-L/view?usp=drivesdk",
   },
 ];
 

@@ -23,6 +23,7 @@ interface BookCardProps {
   slug?: string;
   price?: string;
   previewSlug?: string;
+  externalUrl?: string;
 }
 
 const booksDataMap: Record<string, { info: any; poems: any[] }> = {
@@ -38,7 +39,7 @@ const proseDataMap: Record<string, { info: any; chapters: any[] }> = {
   "atividades-ingles": { info: atividadesInglesInfo, chapters: atividadesInglesChapters },
 };
 
-const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug }: BookCardProps) => {
+const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug, externalUrl }: BookCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [showPaidModal, setShowPaidModal] = useState(false);
@@ -153,15 +154,24 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
                 Leitura prévia
               </Button>
             </Link>
-            <Button
-              variant="default"
-              size="sm"
-              className="gap-1.5"
-              onClick={() => setShowPaidModal(true)}
-            >
-              <ShoppingCart className="w-3.5 h-3.5" />
-              {price}
-            </Button>
+            {externalUrl ? (
+              <a href={externalUrl} target="_blank" rel="noopener noreferrer">
+                <Button variant="default" size="sm" className="gap-1.5">
+                  <ShoppingCart className="w-3.5 h-3.5" />
+                  {price}
+                </Button>
+              </a>
+            ) : (
+              <Button
+                variant="default"
+                size="sm"
+                className="gap-1.5"
+                onClick={() => setShowPaidModal(true)}
+              >
+                <ShoppingCart className="w-3.5 h-3.5" />
+                {price}
+              </Button>
+            )}
           </div>
         )}
         {/* Paid books without preview */}

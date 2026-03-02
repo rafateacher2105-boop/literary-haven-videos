@@ -6,9 +6,10 @@ interface VideoCardProps {
   duration: string;
   category: string;
   url?: string;
+  caption?: string;
 }
 
-const VideoCard = ({ title, thumbnail, duration, category, url }: VideoCardProps) => {
+const VideoCard = ({ title, thumbnail, duration, category, url, caption }: VideoCardProps) => {
   const Wrapper = url ? 'a' : 'div';
   const wrapperProps = url ? { href: url, target: "_blank", rel: "noopener noreferrer" } : {};
 
@@ -35,6 +36,9 @@ const VideoCard = ({ title, thumbnail, duration, category, url }: VideoCardProps
       <h3 className="font-display text-lg font-semibold text-foreground group-hover:text-primary transition-colors line-clamp-2">
         {title}
       </h3>
+      {caption && (
+        <p className="font-body text-sm text-muted-foreground mt-1">{caption}</p>
+      )}
     </Wrapper>
   );
 };

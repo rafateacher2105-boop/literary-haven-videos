@@ -7,6 +7,7 @@ import thumbResenha1984 from "@/assets/thumb-resenha-1984.png";
 import thumbResenhaAdmiravelMundoNovo from "@/assets/thumb-resenha-admiravel-mundo-novo.png";
 import thumbResenhaIracema from "@/assets/thumb-resenha-iracema.png";
 import thumbResenhaFrankenstein from "@/assets/thumb-resenha-frankenstein.png";
+import thumbResenhaHamlet from "@/assets/thumb-resenha-hamlet.png";
 
 const videos = [
   {
@@ -60,7 +61,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: Hamlet de William Shakespeare",
-    thumbnail: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaHamlet,
     duration: "Em breve",
     category: "Resenha",
   },

@@ -61,7 +61,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: Hamlet de William Shakespeare",
-    thumbnail: "https://images.unsplash.com/photo-1512820790803-83ca734da794?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaHamlet,
     duration: "Em breve",
     category: "Resenha",
   },

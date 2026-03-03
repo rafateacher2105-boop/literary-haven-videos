@@ -3,6 +3,8 @@ import thumbResenhaJekyll from "@/assets/thumb-resenha-jekyll.png";
 import thumbResenhaMetamorfose from "@/assets/thumb-resenha-metamorfose.png";
 import thumbResenhaRevolucaoBichos from "@/assets/thumb-resenha-revolucao-bichos.png";
 import thumbResenhaDorianGray from "@/assets/thumb-resenha-dorian-gray.png";
+import thumbResenha1984 from "@/assets/thumb-resenha-1984.png";
+import thumbResenhaAdmiravelMundoNovo from "@/assets/thumb-resenha-admiravel-mundo-novo.png";
 
 const videos = [
   {
@@ -32,7 +34,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: Admirável Mundo Novo de Aldous Huxley",
-    thumbnail: "https://images.unsplash.com/photo-1495446815901-a7297e633e8d?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaAdmiravelMundoNovo,
     duration: "Em breve",
     category: "Resenha",
   },
@@ -50,7 +52,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: 1984 de George Orwell",
-    thumbnail: "https://images.unsplash.com/photo-1532012197267-da84d127e765?w=640&h=360&fit=crop",
+    thumbnail: thumbResenha1984,
     duration: "Em breve",
     category: "Resenha",
   },

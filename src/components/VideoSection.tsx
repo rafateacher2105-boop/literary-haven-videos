@@ -1,5 +1,8 @@
 import VideoCard from "./VideoCard";
 import thumbResenhaJekyll from "@/assets/thumb-resenha-jekyll.png";
+import thumbResenhaMetamorfose from "@/assets/thumb-resenha-metamorfose.png";
+import thumbResenhaRevolucaoBichos from "@/assets/thumb-resenha-revolucao-bichos.png";
+import thumbResenhaDorianGray from "@/assets/thumb-resenha-dorian-gray.png";
 
 const videos = [
   {
@@ -11,13 +14,13 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: A Metamorfose de Franz Kafka",
-    thumbnail: "https://images.unsplash.com/photo-1481627834876-b7833e8f5570?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaMetamorfose,
     duration: "Em breve",
     category: "Resenha",
   },
   {
     title: "Resenha do Clássico: Revolução dos Bichos de George Orwell",
-    thumbnail: "https://images.unsplash.com/photo-1506880018603-83d5b814b5a6?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaRevolucaoBichos,
     duration: "Em breve",
     category: "Resenha",
   },
@@ -41,7 +44,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: O Retrato de Dorian Gray de Oscar Wilde",
-    thumbnail: "https://images.unsplash.com/photo-1476275466078-4007374efbbe?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaDorianGray,
     duration: "Em breve",
     category: "Resenha",
   },

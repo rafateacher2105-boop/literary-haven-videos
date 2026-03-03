@@ -30,7 +30,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: Iracema de José de Alencar",
-    thumbnail: "https://images.unsplash.com/photo-1524995997946-a1c2e315a42f?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaIracema,
     duration: "Em breve",
     category: "Resenha",
   },
@@ -42,7 +42,7 @@ const videos = [
   },
   {
     title: "Resenha do Clássico: Frankenstein de Mary Shelley",
-    thumbnail: "https://images.unsplash.com/photo-1455390582262-044cdead277a?w=640&h=360&fit=crop",
+    thumbnail: thumbResenhaFrankenstein,
     duration: "Em breve",
     category: "Resenha",
   },

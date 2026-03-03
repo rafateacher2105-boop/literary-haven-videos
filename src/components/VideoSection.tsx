@@ -7,6 +7,7 @@ import thumbResenha1984 from "@/assets/thumb-resenha-1984.png";
 import thumbResenhaAdmiravelMundoNovo from "@/assets/thumb-resenha-admiravel-mundo-novo.png";
 import thumbResenhaIracema from "@/assets/thumb-resenha-iracema.png";
 import thumbResenhaFrankenstein from "@/assets/thumb-resenha-frankenstein.png";
+import thumbResenhaHamlet from "@/assets/thumb-resenha-hamlet.png";
 
 const videos = [
   {

@@ -15,6 +15,9 @@ import thumbResenhaViagensGulliver from "@/assets/thumb-resenha-viagens-gulliver
 import thumbResenhaCrimeCastigo from "@/assets/thumb-resenha-crime-castigo.png";
 import thumbResenhaVoltaMundo80Dias from "@/assets/thumb-resenha-volta-mundo-80-dias.png";
 import thumbResenhaAlice from "@/assets/thumb-resenha-alice.png";
+import thumbResenhaHobbit from "@/assets/thumb-resenha-hobbit.png";
+import thumbResenhaDonQuixote from "@/assets/thumb-resenha-don-quixote.png";
+import thumbResenhaEuRobo from "@/assets/thumb-resenha-eu-robo.png";
 
 const videos = [
   {
@@ -111,6 +114,24 @@ const videos = [
   {
     title: "Resenha do Clássico: E Não Sobrou Nenhum de Agatha Christie",
     thumbnail: thumbResenhaNaoSobrouNenhum,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Hobbit de J.R.R. Tolkien",
+    thumbnail: thumbResenhaHobbit,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Don Quixote de Miguel de Cervantes",
+    thumbnail: thumbResenhaDonQuixote,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Eu, Robô de Isaac Asimov",
+    thumbnail: thumbResenhaEuRobo,
     duration: "Em breve",
     category: "Resenha",
   },

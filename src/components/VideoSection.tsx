@@ -173,6 +173,24 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: Vidas Secas de Graciliano Ramos",
+    thumbnail: thumbResenhaVidasSecas,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Oliver Twist de Charles Dickens",
+    thumbnail: thumbResenhaOliverTwist,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Odisseia de Homero",
+    thumbnail: thumbResenhaOdisseia,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

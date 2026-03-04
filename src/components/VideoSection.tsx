@@ -140,6 +140,36 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: Os Miseráveis de Victor Hugo",
+    thumbnail: thumbResenhaOsMiseraveis,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Moby Dick de Herman Melville",
+    thumbnail: thumbResenhaMobyDick,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Memórias Póstumas de Brás Cubas de Machado de Assis",
+    thumbnail: thumbResenhaBrasCubas,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Cortiço de Aluísio Azevedo",
+    thumbnail: thumbResenhaOCortico,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Dom Casmurro de Machado de Assis",
+    thumbnail: thumbResenhaDomCasmurro,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

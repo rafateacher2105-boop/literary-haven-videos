@@ -23,6 +23,9 @@ import thumbResenhaMobyDick from "@/assets/thumb-resenha-moby-dick.png";
 import thumbResenhaBrasCubas from "@/assets/thumb-resenha-bras-cubas.png";
 import thumbResenhaOCortico from "@/assets/thumb-resenha-o-cortico.png";
 import thumbResenhaDomCasmurro from "@/assets/thumb-resenha-dom-casmurro.png";
+import thumbResenhaVidasSecas from "@/assets/thumb-resenha-vidas-secas.png";
+import thumbResenhaOliverTwist from "@/assets/thumb-resenha-oliver-twist.png";
+import thumbResenhaOdisseia from "@/assets/thumb-resenha-odisseia.png";
 
 const videos = [
   {
@@ -167,6 +170,24 @@ const videos = [
   {
     title: "Resenha do Clássico: Dom Casmurro de Machado de Assis",
     thumbnail: thumbResenhaDomCasmurro,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Vidas Secas de Graciliano Ramos",
+    thumbnail: thumbResenhaVidasSecas,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Oliver Twist de Charles Dickens",
+    thumbnail: thumbResenhaOliverTwist,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Odisseia de Homero",
+    thumbnail: thumbResenhaOdisseia,
     duration: "Em breve",
     category: "Resenha",
   },

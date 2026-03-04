@@ -117,6 +117,24 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: O Hobbit de J.R.R. Tolkien",
+    thumbnail: thumbResenhaHobbit,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Don Quixote de Miguel de Cervantes",
+    thumbnail: thumbResenhaDonQuixote,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Eu, Robô de Isaac Asimov",
+    thumbnail: thumbResenhaEuRobo,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

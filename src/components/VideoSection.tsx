@@ -18,6 +18,11 @@ import thumbResenhaAlice from "@/assets/thumb-resenha-alice.png";
 import thumbResenhaHobbit from "@/assets/thumb-resenha-hobbit.png";
 import thumbResenhaDonQuixote from "@/assets/thumb-resenha-don-quixote.png";
 import thumbResenhaEuRobo from "@/assets/thumb-resenha-eu-robo.png";
+import thumbResenhaOsMiseraveis from "@/assets/thumb-resenha-os-miseraveis.png";
+import thumbResenhaMobyDick from "@/assets/thumb-resenha-moby-dick.png";
+import thumbResenhaBrasCubas from "@/assets/thumb-resenha-bras-cubas.png";
+import thumbResenhaOCortico from "@/assets/thumb-resenha-o-cortico.png";
+import thumbResenhaDomCasmurro from "@/assets/thumb-resenha-dom-casmurro.png";
 
 const videos = [
   {
@@ -132,6 +137,36 @@ const videos = [
   {
     title: "Resenha do Clássico: Eu, Robô de Isaac Asimov",
     thumbnail: thumbResenhaEuRobo,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Os Miseráveis de Victor Hugo",
+    thumbnail: thumbResenhaOsMiseraveis,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Moby Dick de Herman Melville",
+    thumbnail: thumbResenhaMobyDick,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Memórias Póstumas de Brás Cubas de Machado de Assis",
+    thumbnail: thumbResenhaBrasCubas,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Cortiço de Aluísio Azevedo",
+    thumbnail: thumbResenhaOCortico,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Dom Casmurro de Machado de Assis",
+    thumbnail: thumbResenhaDomCasmurro,
     duration: "Em breve",
     category: "Resenha",
   },

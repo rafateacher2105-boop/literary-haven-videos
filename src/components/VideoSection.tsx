@@ -11,6 +11,9 @@ import thumbResenhaHamlet from "@/assets/thumb-resenha-hamlet.png";
 import thumbResenhaDracula from "@/assets/thumb-resenha-dracula.png";
 import thumbResenhaIlhaTesouro from "@/assets/thumb-resenha-ilha-tesouro.png";
 import thumbResenhaNaoSobrouNenhum from "@/assets/thumb-resenha-nao-sobrou-nenhum.png";
+import thumbResenhaViagensGulliver from "@/assets/thumb-resenha-viagens-gulliver.png";
+import thumbResenhaCrimeCastigo from "@/assets/thumb-resenha-crime-castigo.png";
+import thumbResenhaVoltaMundo80Dias from "@/assets/thumb-resenha-volta-mundo-80-dias.png";
 
 const videos = [
   {
@@ -77,6 +80,24 @@ const videos = [
   {
     title: "Resenha do Clássico: A Ilha do Tesouro de Robert Louis Stevenson",
     thumbnail: thumbResenhaIlhaTesouro,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: As Viagens de Gulliver de Jonathan Swift",
+    thumbnail: thumbResenhaViagensGulliver,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Crime e Castigo de Fiódor Dostoiévski",
+    thumbnail: thumbResenhaCrimeCastigo,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Volta ao Mundo em 80 Dias de Júlio Verne",
+    thumbnail: thumbResenhaVoltaMundo80Dias,
     duration: "Em breve",
     category: "Resenha",
   },

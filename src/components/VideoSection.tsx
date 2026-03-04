@@ -11,6 +11,9 @@ import thumbResenhaHamlet from "@/assets/thumb-resenha-hamlet.png";
 import thumbResenhaDracula from "@/assets/thumb-resenha-dracula.png";
 import thumbResenhaIlhaTesouro from "@/assets/thumb-resenha-ilha-tesouro.png";
 import thumbResenhaNaoSobrouNenhum from "@/assets/thumb-resenha-nao-sobrou-nenhum.png";
+import thumbResenhaViagensGulliver from "@/assets/thumb-resenha-viagens-gulliver.png";
+import thumbResenhaCrimeCastigo from "@/assets/thumb-resenha-crime-castigo.png";
+import thumbResenhaVoltaMundo80Dias from "@/assets/thumb-resenha-volta-mundo-80-dias.png";
 
 const videos = [
   {

@@ -84,6 +84,24 @@ const videos = [
     category: "Resenha",
   },
   {
+    title: "Resenha do Clássico: As Viagens de Gulliver de Jonathan Swift",
+    thumbnail: thumbResenhaViagensGulliver,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Crime e Castigo de Fiódor Dostoiévski",
+    thumbnail: thumbResenhaCrimeCastigo,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Volta ao Mundo em 80 Dias de Júlio Verne",
+    thumbnail: thumbResenhaVoltaMundo80Dias,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
     title: "Resenha do Clássico: E Não Sobrou Nenhum de Agatha Christie",
     thumbnail: thumbResenhaNaoSobrouNenhum,
     duration: "Em breve",

@@ -8,6 +8,9 @@ import thumbResenhaAdmiravelMundoNovo from "@/assets/thumb-resenha-admiravel-mun
 import thumbResenhaIracema from "@/assets/thumb-resenha-iracema.png";
 import thumbResenhaFrankenstein from "@/assets/thumb-resenha-frankenstein.png";
 import thumbResenhaHamlet from "@/assets/thumb-resenha-hamlet.png";
+import thumbResenhaDracula from "@/assets/thumb-resenha-dracula.png";
+import thumbResenhaIlhaTesouro from "@/assets/thumb-resenha-ilha-tesouro.png";
+import thumbResenhaNaoSobrouNenhum from "@/assets/thumb-resenha-nao-sobrou-nenhum.png";
 
 const videos = [
   {
@@ -62,6 +65,24 @@ const videos = [
   {
     title: "Resenha do Clássico: Hamlet de William Shakespeare",
     thumbnail: thumbResenhaHamlet,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Drácula de Bram Stoker",
+    thumbnail: thumbResenhaDracula,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Ilha do Tesouro de Robert Louis Stevenson",
+    thumbnail: thumbResenhaIlhaTesouro,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: E Não Sobrou Nenhum de Agatha Christie",
+    thumbnail: thumbResenhaNaoSobrouNenhum,
     duration: "Em breve",
     category: "Resenha",
   },

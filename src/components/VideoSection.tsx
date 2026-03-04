@@ -23,6 +23,9 @@ import thumbResenhaMobyDick from "@/assets/thumb-resenha-moby-dick.png";
 import thumbResenhaBrasCubas from "@/assets/thumb-resenha-bras-cubas.png";
 import thumbResenhaOCortico from "@/assets/thumb-resenha-o-cortico.png";
 import thumbResenhaDomCasmurro from "@/assets/thumb-resenha-dom-casmurro.png";
+import thumbResenhaVidasSecas from "@/assets/thumb-resenha-vidas-secas.png";
+import thumbResenhaOliverTwist from "@/assets/thumb-resenha-oliver-twist.png";
+import thumbResenhaOdisseia from "@/assets/thumb-resenha-odisseia.png";
 
 const videos = [
   {

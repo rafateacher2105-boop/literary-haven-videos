@@ -13,15 +13,14 @@ const HeroSection = () => {
       <div className="absolute inset-0 bg-warm-overlay" />
       <div className="relative container mx-auto px-6 pb-24 pt-40">
         <div className="max-w-2xl animate-fade-in-up">
-          <p className="font-body text-sm uppercase tracking-[0.3em] text-muted-foreground mb-4">
+          <p className="font-body text-base md:text-lg uppercase tracking-[0.3em] text-primary font-semibold mb-4">
             Blog Literário
           </p>
           <h1 className="font-display text-5xl md:text-6xl lg:text-7xl font-bold leading-tight mb-6 text-gradient-warm">
             Letras & Páginas
           </h1>
           <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-lg mb-10">
-            Um refúgio para amantes da literatura. Descubra novos mundos através de livros,
-            resenhas em vídeo e histórias que transformam.
+            Cada livro provoca uma nova emoção e reflexão, fazendo entender melhor o mundo e a sociedade que nos rodeia.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a

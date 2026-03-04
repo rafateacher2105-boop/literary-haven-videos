@@ -8,6 +8,9 @@ import thumbResenhaAdmiravelMundoNovo from "@/assets/thumb-resenha-admiravel-mun
 import thumbResenhaIracema from "@/assets/thumb-resenha-iracema.png";
 import thumbResenhaFrankenstein from "@/assets/thumb-resenha-frankenstein.png";
 import thumbResenhaHamlet from "@/assets/thumb-resenha-hamlet.png";
+import thumbResenhaDracula from "@/assets/thumb-resenha-dracula.png";
+import thumbResenhaIlhaTesouro from "@/assets/thumb-resenha-ilha-tesouro.png";
+import thumbResenhaNaoSobrouNenhum from "@/assets/thumb-resenha-nao-sobrou-nenhum.png";
 
 const videos = [
   {

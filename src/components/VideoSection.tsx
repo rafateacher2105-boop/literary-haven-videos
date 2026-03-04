@@ -68,6 +68,24 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: Drácula de Bram Stoker",
+    thumbnail: thumbResenhaDracula,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Ilha do Tesouro de Robert Louis Stevenson",
+    thumbnail: thumbResenhaIlhaTesouro,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: E Não Sobrou Nenhum de Agatha Christie",
+    thumbnail: thumbResenhaNaoSobrouNenhum,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

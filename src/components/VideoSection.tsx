@@ -14,6 +14,7 @@ import thumbResenhaNaoSobrouNenhum from "@/assets/thumb-resenha-nao-sobrou-nenhu
 import thumbResenhaViagensGulliver from "@/assets/thumb-resenha-viagens-gulliver.png";
 import thumbResenhaCrimeCastigo from "@/assets/thumb-resenha-crime-castigo.png";
 import thumbResenhaVoltaMundo80Dias from "@/assets/thumb-resenha-volta-mundo-80-dias.png";
+import thumbResenhaAlice from "@/assets/thumb-resenha-alice.png";
 
 const videos = [
   {
@@ -98,6 +99,12 @@ const videos = [
   {
     title: "Resenha do Clássico: A Volta ao Mundo em 80 Dias de Júlio Verne",
     thumbnail: thumbResenhaVoltaMundo80Dias,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Alice no País das Maravilhas de Lewis Carroll",
+    thumbnail: thumbResenhaAlice,
     duration: "Em breve",
     category: "Resenha",
   },

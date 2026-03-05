@@ -203,6 +203,36 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: Romeu e Julieta de William Shakespeare",
+    thumbnail: thumbResenhaRomeuJulieta,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Robinson Crusoé de Daniel Defoe",
+    thumbnail: thumbResenhaRobinsonCrusoe,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Fausto de Goethe",
+    thumbnail: thumbResenhaFausto,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Ensaio sobre a Cegueira de José Saramago",
+    thumbnail: thumbResenhaEnsaioCegueira,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Velho e o Mar de Ernest Hemingway",
+    thumbnail: thumbResenhaVelhoMar,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

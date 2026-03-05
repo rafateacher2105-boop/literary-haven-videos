@@ -36,7 +36,7 @@ import thumbResenhaHoraDaEstrela from "@/assets/thumb-resenha-hora-da-estrela.pn
 import thumbResenhaNarnia from "@/assets/thumb-resenha-narnia.png";
 import thumbResenhaFantasmaCanterville from "@/assets/thumb-resenha-fantasma-canterville.png";
 import thumbResenhaIliada from "@/assets/thumb-resenha-iliada.png";
-import thumbResenhaIliadaParodia from "@/assets/thumb-resenha-iliada-parodia.png";
+import thumbResenhaEdipoRei from "@/assets/thumb-resenha-edipo-rei.png";
 
 const videos = [
   {
@@ -263,8 +263,8 @@ const videos = [
     category: "Resenha",
   },
   {
-    title: "A Ilíada de Homero: Paródia da Guerra Lendária",
-    thumbnail: thumbResenhaIliadaParodia,
+    title: "Resenha do Clássico: Édipo Rei de Sófocles",
+    thumbnail: thumbResenhaEdipoRei,
     duration: "Em breve",
     category: "Resenha",
   },

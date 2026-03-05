@@ -33,6 +33,10 @@ import thumbResenhaFausto from "@/assets/thumb-resenha-fausto.png";
 import thumbResenhaEnsaioCegueira from "@/assets/thumb-resenha-ensaio-cegueira.png";
 import thumbResenhaVelhoMar from "@/assets/thumb-resenha-velho-e-o-mar.png";
 import thumbResenhaHoraDaEstrela from "@/assets/thumb-resenha-hora-da-estrela.png";
+import thumbResenhaNarnia from "@/assets/thumb-resenha-narnia.png";
+import thumbResenhaFantasmaCanterville from "@/assets/thumb-resenha-fantasma-canterville.png";
+import thumbResenhaIliada from "@/assets/thumb-resenha-iliada.png";
+import thumbResenhaIliadaParodia from "@/assets/thumb-resenha-iliada-parodia.png";
 
 const videos = [
   {
@@ -237,6 +241,30 @@ const videos = [
   {
     title: "Resenha do Clássico: A Hora da Estrela de Clarice Lispector",
     thumbnail: thumbResenhaHoraDaEstrela,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: As Crônicas de Nárnia de C.S. Lewis",
+    thumbnail: thumbResenhaNarnia,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Fantasma de Canterville de Oscar Wilde",
+    thumbnail: thumbResenhaFantasmaCanterville,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha Crítica: A Ilíada de Homero",
+    thumbnail: thumbResenhaIliada,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "A Ilíada de Homero: Paródia da Guerra Lendária",
+    thumbnail: thumbResenhaIliadaParodia,
     duration: "Em breve",
     category: "Resenha",
   },

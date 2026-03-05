@@ -26,6 +26,7 @@ import thumbResenhaDomCasmurro from "@/assets/thumb-resenha-dom-casmurro.png";
 import thumbResenhaVidasSecas from "@/assets/thumb-resenha-vidas-secas.png";
 import thumbResenhaOliverTwist from "@/assets/thumb-resenha-oliver-twist.png";
 import thumbResenhaOdisseia from "@/assets/thumb-resenha-odisseia.png";
+import thumbResenhaPequenoPrincipe from "@/assets/thumb-resenha-pequeno-principe.png";
 
 const videos = [
   {

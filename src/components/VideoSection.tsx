@@ -27,6 +27,11 @@ import thumbResenhaVidasSecas from "@/assets/thumb-resenha-vidas-secas.png";
 import thumbResenhaOliverTwist from "@/assets/thumb-resenha-oliver-twist.png";
 import thumbResenhaOdisseia from "@/assets/thumb-resenha-odisseia.png";
 import thumbResenhaPequenoPrincipe from "@/assets/thumb-resenha-pequeno-principe.png";
+import thumbResenhaRomeuJulieta from "@/assets/thumb-resenha-romeu-julieta.png";
+import thumbResenhaRobinsonCrusoe from "@/assets/thumb-resenha-robinson-crusoe.png";
+import thumbResenhaFausto from "@/assets/thumb-resenha-fausto.png";
+import thumbResenhaEnsaioCegueira from "@/assets/thumb-resenha-ensaio-cegueira.png";
+import thumbResenhaVelhoMar from "@/assets/thumb-resenha-velho-e-o-mar.png";
 
 const videos = [
   {

@@ -192,6 +192,12 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: O Pequeno Príncipe de Antoine de Saint-Exupéry",
+    thumbnail: thumbResenhaPequenoPrincipe,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

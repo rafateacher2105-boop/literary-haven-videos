@@ -27,6 +27,11 @@ import thumbResenhaVidasSecas from "@/assets/thumb-resenha-vidas-secas.png";
 import thumbResenhaOliverTwist from "@/assets/thumb-resenha-oliver-twist.png";
 import thumbResenhaOdisseia from "@/assets/thumb-resenha-odisseia.png";
 import thumbResenhaPequenoPrincipe from "@/assets/thumb-resenha-pequeno-principe.png";
+import thumbResenhaRomeuJulieta from "@/assets/thumb-resenha-romeu-julieta.png";
+import thumbResenhaRobinsonCrusoe from "@/assets/thumb-resenha-robinson-crusoe.png";
+import thumbResenhaFausto from "@/assets/thumb-resenha-fausto.png";
+import thumbResenhaEnsaioCegueira from "@/assets/thumb-resenha-ensaio-cegueira.png";
+import thumbResenhaVelhoMar from "@/assets/thumb-resenha-velho-e-o-mar.png";
 
 const videos = [
   {
@@ -195,6 +200,36 @@ const videos = [
   {
     title: "Resenha do Clássico: O Pequeno Príncipe de Antoine de Saint-Exupéry",
     thumbnail: thumbResenhaPequenoPrincipe,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Romeu e Julieta de William Shakespeare",
+    thumbnail: thumbResenhaRomeuJulieta,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Robinson Crusoé de Daniel Defoe",
+    thumbnail: thumbResenhaRobinsonCrusoe,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Fausto de Goethe",
+    thumbnail: thumbResenhaFausto,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: Ensaio sobre a Cegueira de José Saramago",
+    thumbnail: thumbResenhaEnsaioCegueira,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Velho e o Mar de Ernest Hemingway",
+    thumbnail: thumbResenhaVelhoMar,
     duration: "Em breve",
     category: "Resenha",
   },

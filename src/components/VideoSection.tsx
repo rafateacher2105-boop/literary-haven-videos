@@ -32,6 +32,7 @@ import thumbResenhaRobinsonCrusoe from "@/assets/thumb-resenha-robinson-crusoe.p
 import thumbResenhaFausto from "@/assets/thumb-resenha-fausto.png";
 import thumbResenhaEnsaioCegueira from "@/assets/thumb-resenha-ensaio-cegueira.png";
 import thumbResenhaVelhoMar from "@/assets/thumb-resenha-velho-e-o-mar.png";
+import thumbResenhaHoraDaEstrela from "@/assets/thumb-resenha-hora-da-estrela.png";
 
 const videos = [
   {
@@ -230,6 +231,12 @@ const videos = [
   {
     title: "Resenha do Clássico: O Velho e o Mar de Ernest Hemingway",
     thumbnail: thumbResenhaVelhoMar,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: A Hora da Estrela de Clarice Lispector",
+    thumbnail: thumbResenhaHoraDaEstrela,
     duration: "Em breve",
     category: "Resenha",
   },

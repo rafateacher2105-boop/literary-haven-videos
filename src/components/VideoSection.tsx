@@ -234,6 +234,12 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: A Hora da Estrela de Clarice Lispector",
+    thumbnail: thumbResenhaHoraDaEstrela,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

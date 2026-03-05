@@ -244,6 +244,30 @@ const videos = [
     duration: "Em breve",
     category: "Resenha",
   },
+  {
+    title: "Resenha do Clássico: As Crônicas de Nárnia de C.S. Lewis",
+    thumbnail: thumbResenhaNarnia,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Fantasma de Canterville de Oscar Wilde",
+    thumbnail: thumbResenhaFantasmaCanterville,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha Crítica: A Ilíada de Homero",
+    thumbnail: thumbResenhaIliada,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "A Ilíada de Homero: Paródia da Guerra Lendária",
+    thumbnail: thumbResenhaIliadaParodia,
+    duration: "Em breve",
+    category: "Resenha",
+  },
 ];
 
 const VideoSection = () => {

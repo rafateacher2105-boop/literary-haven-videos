@@ -32,6 +32,7 @@ import thumbResenhaRobinsonCrusoe from "@/assets/thumb-resenha-robinson-crusoe.p
 import thumbResenhaFausto from "@/assets/thumb-resenha-fausto.png";
 import thumbResenhaEnsaioCegueira from "@/assets/thumb-resenha-ensaio-cegueira.png";
 import thumbResenhaVelhoMar from "@/assets/thumb-resenha-velho-e-o-mar.png";
+import thumbResenhaHoraDaEstrela from "@/assets/thumb-resenha-hora-da-estrela.png";
 
 const videos = [
   {

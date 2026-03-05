@@ -26,6 +26,7 @@ import thumbResenhaDomCasmurro from "@/assets/thumb-resenha-dom-casmurro.png";
 import thumbResenhaVidasSecas from "@/assets/thumb-resenha-vidas-secas.png";
 import thumbResenhaOliverTwist from "@/assets/thumb-resenha-oliver-twist.png";
 import thumbResenhaOdisseia from "@/assets/thumb-resenha-odisseia.png";
+import thumbResenhaPequenoPrincipe from "@/assets/thumb-resenha-pequeno-principe.png";
 
 const videos = [
   {
@@ -188,6 +189,12 @@ const videos = [
   {
     title: "Resenha do Clássico: A Odisseia de Homero",
     thumbnail: thumbResenhaOdisseia,
+    duration: "Em breve",
+    category: "Resenha",
+  },
+  {
+    title: "Resenha do Clássico: O Pequeno Príncipe de Antoine de Saint-Exupéry",
+    thumbnail: thumbResenhaPequenoPrincipe,
     duration: "Em breve",
     category: "Resenha",
   },

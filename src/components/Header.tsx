@@ -1,4 +1,4 @@
-import { BookOpen, Library, Menu, X, Heart, ShoppingBag } from "lucide-react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ClassicsModal from "./ClassicsModal";
@@ -59,6 +59,13 @@ const Header = () => {
             <ShoppingBag className="w-4 h-4" />
             Minhas Indicações
           </button>
+          <button
+            onClick={() => navigate("/infograficos")}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Image className="w-4 h-4" />
+            Infográficos
+          </button>
         </nav>
 
         {/* Mobile toggle */}
@@ -104,6 +111,13 @@ const Header = () => {
           >
             <ShoppingBag className="w-4 h-4" />
             Minhas Indicações
+          </button>
+          <button
+            onClick={() => { navigate("/infograficos"); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <Image className="w-4 h-4" />
+            Infográficos
           </button>
         </nav>
       )}

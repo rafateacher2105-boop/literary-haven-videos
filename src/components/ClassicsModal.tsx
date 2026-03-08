@@ -57,7 +57,7 @@ interface ClassicBook {
 const classicBooks: ClassicBook[] = [
   { title: "A Divina Comédia", author: "Dante Alighieri", cover: coverDivinaComedia, file: "/divina-comedia.pdf" },
   { title: "As Viagens de Gulliver", author: "Jonathan Swift", cover: coverViagensGulliver, file: "/as-viagens-de-gulliver.pdf" },
-  { title: "A Ilha Misteriosa", author: "Júlio Verne", cover: coverIlhaMisteriosa },
+  { title: "A Ilha Misteriosa", author: "Júlio Verne", cover: coverIlhaMisteriosa, file: "/a-ilha-misteriosa.pdf" },
   { title: "Viagem ao Centro da Terra", author: "Júlio Verne", cover: coverViagemCentroTerra, file: "/viagem-centro-terra.pdf" },
   { title: "A Volta ao Mundo em 80 Dias", author: "Júlio Verne", cover: coverVoltaMundo, file: "/volta-mundo-80-dias.pdf" },
   { title: "Frankenstein", author: "Mary Shelley", cover: coverFrankenstein, file: "/frankenstein.pdf" },

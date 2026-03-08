@@ -74,7 +74,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", file: "/memorias-postumas-bras-cubas.pdf" },
   { title: "O Cortiço", author: "Aluísio Azevedo", file: "/o-cortico.pdf" },
   { title: "Memórias de um Sargento de Milícias", author: "Manuel A. de Almeida", file: "/memorias-sargento-milicias.pdf" },
-  { title: "Papéis Avulsos", author: "Machado de Assis" },
+  { title: "Papéis Avulsos", author: "Machado de Assis", file: "/papeis-avulsos.pdf" },
   { title: "A Máquina do Tempo", author: "H.G. Wells", file: "/a-maquina-do-tempo.pdf" },
   { title: "A Guerra dos Mundos", author: "H.G. Wells", file: "/a-guerra-dos-mundos.pdf" },
   { title: "O Homem Invisível", author: "H.G. Wells", file: "/o-homem-invisivel.pdf" },

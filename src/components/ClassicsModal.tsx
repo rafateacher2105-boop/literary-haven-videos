@@ -73,6 +73,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Dom Casmurro", author: "Machado de Assis", file: "/dom-casmurro.pdf" },
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis" },
   { title: "O Cortiço", author: "Aluísio Azevedo" },
+  { title: "Memórias de um Sargento de Milícias", author: "Manuel A. de Almeida", file: "/memorias-sargento-milicias.pdf" },
   { title: "Papéis Avulsos", author: "Machado de Assis" },
   { title: "A Máquina do Tempo", author: "H.G. Wells", file: "/a-maquina-do-tempo.pdf" },
   { title: "A Guerra dos Mundos", author: "H.G. Wells", file: "/a-guerra-dos-mundos.pdf" },

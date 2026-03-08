@@ -194,15 +194,21 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
                   {book.description}
                 </p>
               )}
-              <Button
-                variant="outline"
-                size="sm"
-                className="mt-auto gap-1.5 text-xs"
-                onClick={() => onRequestDownload(book)}
-              >
-                <Download className="w-3 h-3" />
-                Download grátis
-              </Button>
+              {book.file ? (
+                <Button
+                  variant="outline"
+                  size="sm"
+                  className="mt-auto gap-1.5 text-xs"
+                  onClick={() => onRequestDownload(book)}
+                >
+                  <Download className="w-3 h-3" />
+                  Download grátis
+                </Button>
+              ) : (
+                <p className="mt-auto font-body text-[10px] text-muted-foreground italic text-center">
+                  Em breve
+                </p>
+              )}
             </div>
           </div>
         );

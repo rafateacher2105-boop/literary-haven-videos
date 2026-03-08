@@ -85,7 +85,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Papéis Avulsos", author: "Machado de Assis", file: "/papeis-avulsos.pdf" },
   { title: "A Máquina do Tempo", author: "H.G. Wells", cover: coverMaquinaTempoClassic, file: "/a-maquina-do-tempo.pdf" },
   { title: "A Guerra dos Mundos", author: "H.G. Wells", file: "/a-guerra-dos-mundos.pdf" },
-  { title: "O Homem Invisível", author: "H.G. Wells", file: "/o-homem-invisivel.pdf" },
+  { title: "O Homem Invisível", author: "H.G. Wells", cover: coverHomemInvisivel, file: "/o-homem-invisivel.pdf" },
   { title: "A Ilha do Doutor Moreau", author: "H.G. Wells", file: "/a-ilha-do-dr-moreau.pdf" },
   { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", file: "/os-primeiros-homens-na-lua.pdf" },
   { title: "Admirável Mundo Novo", author: "Aldous Huxley", file: "/admiravel-mundo-novo.pdf" },

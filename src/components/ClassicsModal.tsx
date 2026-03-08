@@ -27,6 +27,14 @@ import coverGuerraSalamandras from "@/assets/cover-guerra-salamandras.jpg";
 import coverMaquinaTempo from "@/assets/cover-maquina-tempo.jpg";
 import cover1984 from "@/assets/cover-1984.jpg";
 import coverRevolucaoBichos from "@/assets/cover-revolucao-bichos.jpg";
+import coverIlhaDrMoreau from "@/assets/cover-ilha-dr-moreau.png";
+import coverHomemInvisivel from "@/assets/cover-homem-invisivel.png";
+import coverMaquinaTempoClassic from "@/assets/cover-maquina-tempo-classic.png";
+import coverOCortico from "@/assets/cover-o-cortico.png";
+import coverIracema from "@/assets/cover-iracema.png";
+import coverBrasCubas from "@/assets/cover-bras-cubas.png";
+import coverSargentoMilicias from "@/assets/cover-sargento-milicias.png";
+import coverDomCasmurro from "@/assets/cover-dom-casmurro.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
 import coverContosGrimm from "@/assets/cover-contos-grimm.jpg";
 import coverContosAndersen from "@/assets/cover-contos-andersen.jpg";
@@ -69,16 +77,16 @@ const classicBooks: ClassicBook[] = [
   { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulieta, file: "/romeu-e-julieta.pdf" },
   { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro, file: "/a-ilha-do-tesouro.pdf" },
   { title: "Alice no País das Maravilhas", author: "Lewis Carroll", file: "/alice-pais-maravilhas.pdf" },
-  { title: "Iracema", author: "José de Alencar", file: "/iracema.pdf" },
-  { title: "Dom Casmurro", author: "Machado de Assis", file: "/dom-casmurro.pdf" },
-  { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", file: "/memorias-postumas-bras-cubas.pdf" },
-  { title: "O Cortiço", author: "Aluísio Azevedo", file: "/o-cortico.pdf" },
-  { title: "Memórias de um Sargento de Milícias", author: "Manuel A. de Almeida", file: "/memorias-sargento-milicias.pdf" },
+  { title: "Iracema", author: "José de Alencar", cover: coverIracema, file: "/iracema.pdf" },
+  { title: "Dom Casmurro", author: "Machado de Assis", cover: coverDomCasmurro, file: "/dom-casmurro.pdf" },
+  { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", cover: coverBrasCubas, file: "/memorias-postumas-bras-cubas.pdf" },
+  { title: "O Cortiço", author: "Aluísio Azevedo", cover: coverOCortico, file: "/o-cortico.pdf" },
+  { title: "Memórias de um Sargento de Milícias", author: "Manuel A. de Almeida", cover: coverSargentoMilicias, file: "/memorias-sargento-milicias.pdf" },
   { title: "Papéis Avulsos", author: "Machado de Assis", file: "/papeis-avulsos.pdf" },
-  { title: "A Máquina do Tempo", author: "H.G. Wells", file: "/a-maquina-do-tempo.pdf" },
+  { title: "A Máquina do Tempo", author: "H.G. Wells", cover: coverMaquinaTempoClassic, file: "/a-maquina-do-tempo.pdf" },
   { title: "A Guerra dos Mundos", author: "H.G. Wells", file: "/a-guerra-dos-mundos.pdf" },
-  { title: "O Homem Invisível", author: "H.G. Wells", file: "/o-homem-invisivel.pdf" },
-  { title: "A Ilha do Doutor Moreau", author: "H.G. Wells", file: "/a-ilha-do-dr-moreau.pdf" },
+  { title: "O Homem Invisível", author: "H.G. Wells", cover: coverHomemInvisivel, file: "/o-homem-invisivel.pdf" },
+  { title: "A Ilha do Doutor Moreau", author: "H.G. Wells", cover: coverIlhaDrMoreau, file: "/a-ilha-do-dr-moreau.pdf" },
   { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", file: "/os-primeiros-homens-na-lua.pdf" },
   { title: "Admirável Mundo Novo", author: "Aldous Huxley", file: "/admiravel-mundo-novo.pdf" },
   { title: "Orgulho e Preconceito", author: "Jane Austen", file: "/orgulho-e-preconceito.pdf" },

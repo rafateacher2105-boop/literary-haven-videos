@@ -69,7 +69,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulieta, file: "/romeu-e-julieta.pdf" },
   { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro, file: "/a-ilha-do-tesouro.pdf" },
   { title: "Alice no País das Maravilhas", author: "Lewis Carroll", file: "/alice-pais-maravilhas.pdf" },
-  { title: "Iracema", author: "José de Alencar" },
+  { title: "Iracema", author: "José de Alencar", file: "/iracema.pdf" },
   { title: "Dom Casmurro", author: "Machado de Assis", file: "/dom-casmurro.pdf" },
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", file: "/memorias-postumas-bras-cubas.pdf" },
   { title: "O Cortiço", author: "Aluísio Azevedo", file: "/o-cortico.pdf" },

@@ -49,8 +49,9 @@ const videos = [
   {
     title: "Resenha do Clássico: A Metamorfose de Franz Kafka",
     thumbnail: thumbResenhaMetamorfose,
-    duration: "Em breve",
+    duration: "12:45",
     category: "Resenha",
+    url: "https://www.youtube.com/watch?v=MGL_DhMl_KY",
   },
   {
     title: "Resenha do Clássico: Revolução dos Bichos de George Orwell",

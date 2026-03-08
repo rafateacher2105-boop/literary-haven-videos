@@ -24,6 +24,7 @@ import coverRur from "@/assets/cover-rur.jpg";
 import coverParisSeculoXX from "@/assets/cover-paris-seculo-xx.jpg";
 import coverKallocain from "@/assets/cover-kallocain.jpg";
 import coverGuerraSalamandras from "@/assets/cover-guerra-salamandras.jpg";
+import coverGuerraMundos from "@/assets/cover-guerra-mundos.png";
 import coverMaquinaTempo from "@/assets/cover-maquina-tempo.jpg";
 import cover1984 from "@/assets/cover-1984.jpg";
 import coverRevolucaoBichos from "@/assets/cover-revolucao-bichos.jpg";

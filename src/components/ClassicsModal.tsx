@@ -200,10 +200,12 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
                   variant="outline"
                   size="sm"
                   className="mt-auto gap-1.5 text-xs"
-                  onClick={() => onRequestDownload(book)}
+                  asChild
                 >
-                  <Download className="w-3 h-3" />
-                  Download grátis
+                  <a href={book.file} download>
+                    <Download className="w-3 h-3" />
+                    Download grátis
+                  </a>
                 </Button>
               ) : (
                 <p className="mt-auto font-body text-[10px] text-muted-foreground italic text-center">

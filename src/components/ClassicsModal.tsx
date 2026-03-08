@@ -78,7 +78,7 @@ const classicBooks: ClassicBook[] = [
   { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro, file: "/a-ilha-do-tesouro.pdf" },
   { title: "Alice no País das Maravilhas", author: "Lewis Carroll", file: "/alice-pais-maravilhas.pdf" },
   { title: "Iracema", author: "José de Alencar", cover: coverIracema, file: "/iracema.pdf" },
-  { title: "Dom Casmurro", author: "Machado de Assis", file: "/dom-casmurro.pdf" },
+  { title: "Dom Casmurro", author: "Machado de Assis", cover: coverDomCasmurro, file: "/dom-casmurro.pdf" },
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", file: "/memorias-postumas-bras-cubas.pdf" },
   { title: "O Cortiço", author: "Aluísio Azevedo", file: "/o-cortico.pdf" },
   { title: "Memórias de um Sargento de Milícias", author: "Manuel A. de Almeida", file: "/memorias-sargento-milicias.pdf" },

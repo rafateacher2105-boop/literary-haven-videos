@@ -64,7 +64,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Vinte Mil Léguas Submarinas", author: "Júlio Verne", cover: coverVinteMilLeguas },
   { title: "Drácula", author: "Bram Stoker", cover: coverDracula },
   { title: "O Retrato de Dorian Gray", author: "Oscar Wilde", cover: coverDorianGray },
-  { title: "Os Lusíadas", author: "Luís de Camões", cover: coverLusiadas },
+  { title: "Os Lusíadas", author: "Luís de Camões", cover: coverLusiadas, file: "/os-lusiadas.pdf" },
   { title: "Hamlet", author: "William Shakespeare", cover: coverHamlet },
   { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulieta },
   { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro },

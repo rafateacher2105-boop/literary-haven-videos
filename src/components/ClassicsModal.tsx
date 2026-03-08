@@ -36,6 +36,10 @@ import coverIracema from "@/assets/cover-iracema.png";
 import coverBrasCubas from "@/assets/cover-bras-cubas.png";
 import coverSargentoMilicias from "@/assets/cover-sargento-milicias.png";
 import coverDomCasmurro from "@/assets/cover-dom-casmurro.png";
+import coverOrgulhoPreconceito from "@/assets/cover-orgulho-preconceito.png";
+import coverRazaoSensibilidade from "@/assets/cover-razao-sensibilidade.png";
+import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
+import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
 import coverContosGrimm from "@/assets/cover-contos-grimm.jpg";
 import coverContosAndersen from "@/assets/cover-contos-andersen.jpg";
@@ -90,10 +94,10 @@ const classicBooks: ClassicBook[] = [
   { title: "A Ilha do Doutor Moreau", author: "H.G. Wells", cover: coverIlhaDrMoreau, file: "/a-ilha-do-dr-moreau.pdf" },
   { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", file: "/os-primeiros-homens-na-lua.pdf" },
   { title: "Admirável Mundo Novo", author: "Aldous Huxley", file: "/admiravel-mundo-novo.pdf" },
-  { title: "Orgulho e Preconceito", author: "Jane Austen", file: "/orgulho-e-preconceito.pdf" },
-  { title: "Razão e Sensibilidade", author: "Jane Austen", file: "/razao-e-sensibilidade.pdf" },
-  { title: "Crime e Castigo", author: "Fiódor Dostoiévski", file: "/crime-e-castigo.pdf" },
-  { title: "Os Irmãos Karamazov", author: "Fiódor Dostoiévski", file: "/os-irmaos-karamazov.pdf" },
+  { title: "Orgulho e Preconceito", author: "Jane Austen", cover: coverOrgulhoPreconceito, file: "/orgulho-e-preconceito.pdf" },
+  { title: "Razão e Sensibilidade", author: "Jane Austen", cover: coverRazaoSensibilidade, file: "/razao-e-sensibilidade.pdf" },
+  { title: "Crime e Castigo", author: "Fiódor Dostoiévski", cover: coverCrimeCastigo, file: "/crime-e-castigo.pdf" },
+  { title: "Os Irmãos Karamazov", author: "Fiódor Dostoiévski", cover: coverIrmaosKaramazov, file: "/os-irmaos-karamazov.pdf" },
   { title: "O Idiota", author: "Fiódor Dostoiévski", file: "/o-idiota.pdf" },
   { title: "O Livro da Selva", author: "Rudyard Kipling", file: "/livro-da-selva.pdf" },
   { title: "Peter Pan", author: "J.M. Barrie", file: "/peter-pan.pdf" },

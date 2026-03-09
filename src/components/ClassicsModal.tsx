@@ -45,6 +45,8 @@ import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
 import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
 import coverMedicoMonstro from "@/assets/cover-medico-monstro.png";
+import coverAdmiravelMundoNovo from "@/assets/cover-admiravel-mundo-novo.jpg";
+import coverOIdiota from "@/assets/cover-o-idiota.jpg";
 import coverContosGrimm from "@/assets/cover-contos-grimm.jpg";
 import coverContosAndersen from "@/assets/cover-contos-andersen.jpg";
 import coverContosPerrault from "@/assets/cover-contos-perrault.jpg";

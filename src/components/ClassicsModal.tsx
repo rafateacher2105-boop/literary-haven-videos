@@ -41,6 +41,7 @@ import coverSargentoMilicias from "@/assets/cover-sargento-milicias.png";
 import coverDomCasmurro from "@/assets/cover-dom-casmurro.png";
 import coverOrgulhoPreconceito from "@/assets/cover-orgulho-preconceito.png";
 import coverRazaoSensibilidade from "@/assets/cover-razao-sensibilidade.png";
+import coverPapeisAvulsos from "@/assets/cover-papeis-avulsos.jpg";
 import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
 import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
@@ -102,7 +103,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", cover: coverBrasCubas, file: "/memorias-postumas-bras-cubas.pdf" },
   { title: "O Cortiço", author: "Aluísio Azevedo", cover: coverOCortico, file: "/o-cortico.pdf" },
   { title: "Memórias de um Sargento de Milícias", author: "Manuel A. de Almeida", cover: coverSargentoMilicias, file: "/memorias-sargento-milicias.pdf" },
-  { title: "Papéis Avulsos", author: "Machado de Assis", file: "/papeis-avulsos.pdf" },
+  { title: "Papéis Avulsos", author: "Machado de Assis", cover: coverPapeisAvulsos, file: "/papeis-avulsos.pdf" },
   { title: "A Máquina do Tempo", author: "H.G. Wells", cover: coverMaquinaTempoClassic, file: "/a-maquina-do-tempo.pdf" },
   { title: "A Guerra dos Mundos", author: "H.G. Wells", cover: coverGuerraMundos, file: "/a-guerra-dos-mundos.pdf" },
   { title: "O Homem Invisível", author: "H.G. Wells", cover: coverHomemInvisivel, file: "/o-homem-invisivel.pdf" },

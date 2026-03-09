@@ -151,6 +151,14 @@ const classicBooks: ClassicBook[] = [
   { title: "Capitães da Areia", author: "Jorge Amado", cover: coverCapitaesAreia },
   { title: "A Hora da Estrela", author: "Clarice Lispector", cover: coverHoraEstrela },
   { title: "O Velho e o Mar", author: "Ernest Hemingway", cover: coverVelhoMar },
+  { title: "O Fantasma da Ópera", author: "Gaston Leroux", cover: coverFantasmaOpera, file: "/o-fantasma-da-opera.pdf" },
+  { title: "O Corcunda de Notre-Dame", author: "Victor Hugo", cover: coverCorcundaNotreDame, file: "/o-corcunda-de-notre-dame.pdf" },
+  { title: "Ivanhoé", author: "Sir Walter Scott", cover: coverIvanhoe },
+  { title: "Tristão e Isolda", author: "Joseph Bédier", cover: coverTristaoIsolda, file: "/tristao-e-isolda.pdf" },
+  { title: "O Conde de Monte Cristo", author: "Alexandre Dumas", cover: coverCondeMonteCristo },
+  { title: "Os Três Mosqueteiros", author: "Alexandre Dumas", cover: coverTresMosqueteiros },
+  { title: "Ana Karenina", author: "Liev Tolstói", cover: coverAnaKarenina, file: "/ana-karenina.pdf" },
+  { title: "Guerra e Paz", author: "Liev Tolstói", cover: coverGuerraEPaz, file: "/guerra-e-paz.pdf" },
 ];
 
 const talesBooks: ClassicBook[] = [

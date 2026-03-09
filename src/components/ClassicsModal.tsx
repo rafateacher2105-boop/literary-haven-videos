@@ -109,7 +109,7 @@ const classicBooks: ClassicBook[] = [
   { title: "O Livro da Selva", author: "Rudyard Kipling", cover: coverLivroSelva, file: "/livro-da-selva.pdf" },
   { title: "Peter Pan", author: "J.M. Barrie", cover: coverPeterPan, file: "/peter-pan.pdf" },
   { title: "Pinóquio", author: "Carlo Collodi", cover: coverPinoquio, file: "/pinoquio.pdf" },
-  { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", file: "/o-pequeno-principe.pdf" },
+  { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", cover: coverPequenoPrincipe, file: "/o-pequeno-principe.pdf" },
   { title: "O Médico e o Monstro", author: "Robert L. Stevenson", cover: coverMedicoMonstro, file: "/o-medico-e-o-monstro.pdf" },
   { title: "A Metamorfose", author: "Franz Kafka", file: "/a-metamorfose.pdf" },
   { title: "A Odisseia", author: "Homero", file: "/a-odisseia.pdf" },

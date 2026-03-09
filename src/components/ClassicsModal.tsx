@@ -41,6 +41,7 @@ import coverRazaoSensibilidade from "@/assets/cover-razao-sensibilidade.png";
 import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
 import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
+import coverMedicoMonstro from "@/assets/cover-medico-monstro.png";
 import coverContosGrimm from "@/assets/cover-contos-grimm.jpg";
 import coverContosAndersen from "@/assets/cover-contos-andersen.jpg";
 import coverContosPerrault from "@/assets/cover-contos-perrault.jpg";

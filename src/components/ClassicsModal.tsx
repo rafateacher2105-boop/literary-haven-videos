@@ -26,8 +26,11 @@ import coverKallocain from "@/assets/cover-kallocain.jpg";
 import coverGuerraSalamandras from "@/assets/cover-guerra-salamandras.jpg";
 import coverGuerraMundos from "@/assets/cover-guerra-mundos.png";
 import coverMaquinaTempo from "@/assets/cover-maquina-tempo.jpg";
-import cover1984 from "@/assets/cover-1984.jpg";
-import coverRevolucaoBichos from "@/assets/cover-revolucao-bichos.jpg";
+import cover1984 from "@/assets/cover-1984.png";
+import coverRevolucaoBichos from "@/assets/cover-revolucao-bichos.png";
+import coverDomQuixote from "@/assets/cover-dom-quixote.png";
+import coverPrimeirosHomensLua from "@/assets/cover-primeiros-homens-lua.png";
+import coverPequenoPrincipe from "@/assets/cover-pequeno-principe.png";
 import coverIlhaDrMoreau from "@/assets/cover-ilha-dr-moreau.png";
 import coverHomemInvisivel from "@/assets/cover-homem-invisivel.png";
 import coverMaquinaTempoClassic from "@/assets/cover-maquina-tempo-classic.png";
@@ -96,7 +99,7 @@ const classicBooks: ClassicBook[] = [
   { title: "A Guerra dos Mundos", author: "H.G. Wells", cover: coverGuerraMundos, file: "/a-guerra-dos-mundos.pdf" },
   { title: "O Homem Invisível", author: "H.G. Wells", cover: coverHomemInvisivel, file: "/o-homem-invisivel.pdf" },
   { title: "A Ilha do Doutor Moreau", author: "H.G. Wells", cover: coverIlhaDrMoreau, file: "/a-ilha-do-dr-moreau.pdf" },
-  { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", file: "/os-primeiros-homens-na-lua.pdf" },
+  { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", cover: coverPrimeirosHomensLua, file: "/os-primeiros-homens-na-lua.pdf" },
   { title: "Admirável Mundo Novo", author: "Aldous Huxley", file: "/admiravel-mundo-novo.pdf" },
   { title: "Orgulho e Preconceito", author: "Jane Austen", cover: coverOrgulhoPreconceito, file: "/orgulho-e-preconceito.pdf" },
   { title: "Razão e Sensibilidade", author: "Jane Austen", cover: coverRazaoSensibilidade, file: "/razao-e-sensibilidade.pdf" },
@@ -106,11 +109,11 @@ const classicBooks: ClassicBook[] = [
   { title: "O Livro da Selva", author: "Rudyard Kipling", cover: coverLivroSelva, file: "/livro-da-selva.pdf" },
   { title: "Peter Pan", author: "J.M. Barrie", cover: coverPeterPan, file: "/peter-pan.pdf" },
   { title: "Pinóquio", author: "Carlo Collodi", cover: coverPinoquio, file: "/pinoquio.pdf" },
-  { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", file: "/o-pequeno-principe.pdf" },
+  { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", cover: coverPequenoPrincipe, file: "/o-pequeno-principe.pdf" },
   { title: "O Médico e o Monstro", author: "Robert L. Stevenson", cover: coverMedicoMonstro, file: "/o-medico-e-o-monstro.pdf" },
   { title: "A Metamorfose", author: "Franz Kafka", file: "/a-metamorfose.pdf" },
   { title: "A Odisseia", author: "Homero", file: "/a-odisseia.pdf" },
-  { title: "Dom Quixote", author: "Miguel de Cervantes", file: "/dom-quixote.pdf" },
+  { title: "Dom Quixote", author: "Miguel de Cervantes", cover: coverDomQuixote, file: "/dom-quixote.pdf" },
   { title: "A Revolução dos Bichos", author: "George Orwell", cover: coverRevolucaoBichos, file: "/revolucao-dos-bichos.pdf" },
   { title: "1984", author: "George Orwell", cover: cover1984, file: "/e-book-1984.pdf" },
 ];

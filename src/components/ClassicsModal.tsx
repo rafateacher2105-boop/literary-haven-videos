@@ -45,6 +45,11 @@ import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
 import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
 import coverMedicoMonstro from "@/assets/cover-medico-monstro.png";
+import coverOdisseia from "@/assets/cover-odisseia.jpg";
+import coverMetamorfose from "@/assets/cover-metamorfose.jpg";
+import coverIlhaTesouroNew from "@/assets/cover-ilha-tesouro-new.jpg";
+import coverHamletNew from "@/assets/cover-hamlet.jpg";
+import coverRomeuJulietaNew from "@/assets/cover-romeu-julieta.jpg";
 import coverAdmiravelMundoNovo from "@/assets/cover-admiravel-mundo-novo.jpg";
 import coverOIdiota from "@/assets/cover-o-idiota.jpg";
 import coverContosGrimm from "@/assets/cover-contos-grimm.jpg";
@@ -88,9 +93,9 @@ const classicBooks: ClassicBook[] = [
   { title: "Drácula", author: "Bram Stoker", cover: coverDracula, file: "/dracula.pdf" },
   { title: "O Retrato de Dorian Gray", author: "Oscar Wilde", cover: coverDorianGray, file: "/retrato-dorian-gray.pdf" },
   { title: "Os Lusíadas", author: "Luís de Camões", cover: coverLusiadas, file: "/os-lusiadas.pdf" },
-  { title: "Hamlet", author: "William Shakespeare", cover: coverHamlet, file: "/hamlet.pdf" },
-  { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulieta, file: "/romeu-e-julieta.pdf" },
-  { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro, file: "/a-ilha-do-tesouro.pdf" },
+  { title: "Hamlet", author: "William Shakespeare", cover: coverHamletNew, file: "/hamlet.pdf" },
+  { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulietaNew, file: "/romeu-e-julieta.pdf" },
+  { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouroNew, file: "/a-ilha-do-tesouro.pdf" },
   { title: "Alice no País das Maravilhas", author: "Lewis Carroll", cover: coverAlice, file: "/alice-pais-maravilhas.pdf" },
   { title: "Iracema", author: "José de Alencar", cover: coverIracema, file: "/iracema.pdf" },
   { title: "Dom Casmurro", author: "Machado de Assis", cover: coverDomCasmurro, file: "/dom-casmurro.pdf" },
@@ -114,8 +119,8 @@ const classicBooks: ClassicBook[] = [
   { title: "Pinóquio", author: "Carlo Collodi", cover: coverPinoquio, file: "/pinoquio.pdf" },
   { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", cover: coverPequenoPrincipe, file: "/o-pequeno-principe.pdf" },
   { title: "O Médico e o Monstro", author: "Robert L. Stevenson", cover: coverMedicoMonstro, file: "/o-medico-e-o-monstro.pdf" },
-  { title: "A Metamorfose", author: "Franz Kafka", file: "/a-metamorfose.pdf" },
-  { title: "A Odisseia", author: "Homero", file: "/a-odisseia.pdf" },
+  { title: "A Metamorfose", author: "Franz Kafka", cover: coverMetamorfose, file: "/a-metamorfose.pdf" },
+  { title: "A Odisseia", author: "Homero", cover: coverOdisseia, file: "/a-odisseia.pdf" },
   { title: "Dom Quixote", author: "Miguel de Cervantes", cover: coverDomQuixote, file: "/dom-quixote.pdf" },
   { title: "A Revolução dos Bichos", author: "George Orwell", cover: coverRevolucaoBichos, file: "/revolucao-dos-bichos.pdf" },
   { title: "1984", author: "George Orwell", cover: cover1984, file: "/e-book-1984.pdf" },

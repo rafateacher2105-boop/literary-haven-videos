@@ -63,6 +63,14 @@ import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
 import coverAlice from "@/assets/cover-alice.png";
+import coverHoraEstrela from "@/assets/cover-hora-da-estrela.jpg";
+import coverSaoBernardo from "@/assets/cover-sao-bernardo.jpg";
+import coverMobyDick from "@/assets/cover-moby-dick.jpg";
+import coverFausto from "@/assets/cover-fausto.jpg";
+import coverVelhoMar from "@/assets/cover-velho-e-o-mar.jpg";
+import coverIliada from "@/assets/cover-iliada.jpg";
+import coverCapitaesAreia from "@/assets/cover-capitaes-areia.jpg";
+import coverVidasSecas from "@/assets/cover-vidas-secas.jpg";
 import {
   Dialog,
   DialogContent,
@@ -126,12 +134,14 @@ const classicBooks: ClassicBook[] = [
   { title: "A Revolução dos Bichos", author: "George Orwell", cover: coverRevolucaoBichos, file: "/revolucao-dos-bichos.pdf" },
   { title: "1984", author: "George Orwell", cover: cover1984, file: "/e-book-1984.pdf" },
   { title: "O Fantasma de Canterville", author: "Oscar Wilde" },
-  { title: "Moby Dick", author: "Herman Melville" },
-  { title: "Fausto", author: "Johann W. von Goethe" },
-  { title: "A Ilíada", author: "Homero" },
-  { title: "Vidas Secas", author: "Graciliano Ramos" },
-  { title: "São Bernardo", author: "Graciliano Ramos" },
-  { title: "Capitães da Areia", author: "Jorge Amado" },
+  { title: "Moby Dick", author: "Herman Melville", cover: coverMobyDick },
+  { title: "Fausto", author: "Johann W. von Goethe", cover: coverFausto },
+  { title: "A Ilíada", author: "Homero", cover: coverIliada },
+  { title: "Vidas Secas", author: "Graciliano Ramos", cover: coverVidasSecas },
+  { title: "São Bernardo", author: "Graciliano Ramos", cover: coverSaoBernardo },
+  { title: "Capitães da Areia", author: "Jorge Amado", cover: coverCapitaesAreia },
+  { title: "A Hora da Estrela", author: "Clarice Lispector", cover: coverHoraEstrela },
+  { title: "O Velho e o Mar", author: "Ernest Hemingway", cover: coverVelhoMar },
 ];
 
 const talesBooks: ClassicBook[] = [

@@ -54,6 +54,7 @@ import coverLendasUrbanas from "@/assets/cover-lendas-urbanas.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
+import coverAlice from "@/assets/cover-alice.png";
 import {
   Dialog,
   DialogContent,
@@ -88,7 +89,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Hamlet", author: "William Shakespeare", cover: coverHamlet, file: "/hamlet.pdf" },
   { title: "Romeu e Julieta", author: "William Shakespeare", cover: coverRomeuJulieta, file: "/romeu-e-julieta.pdf" },
   { title: "A Ilha do Tesouro", author: "Robert L. Stevenson", cover: coverIlhaTesouro, file: "/a-ilha-do-tesouro.pdf" },
-  { title: "Alice no País das Maravilhas", author: "Lewis Carroll", file: "/alice-pais-maravilhas.pdf" },
+  { title: "Alice no País das Maravilhas", author: "Lewis Carroll", cover: coverAlice, file: "/alice-pais-maravilhas.pdf" },
   { title: "Iracema", author: "José de Alencar", cover: coverIracema, file: "/iracema.pdf" },
   { title: "Dom Casmurro", author: "Machado de Assis", cover: coverDomCasmurro, file: "/dom-casmurro.pdf" },
   { title: "Memórias Póstumas de Brás Cubas", author: "Machado de Assis", cover: coverBrasCubas, file: "/memorias-postumas-bras-cubas.pdf" },

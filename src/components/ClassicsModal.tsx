@@ -99,7 +99,7 @@ const classicBooks: ClassicBook[] = [
   { title: "A Guerra dos Mundos", author: "H.G. Wells", cover: coverGuerraMundos, file: "/a-guerra-dos-mundos.pdf" },
   { title: "O Homem Invisível", author: "H.G. Wells", cover: coverHomemInvisivel, file: "/o-homem-invisivel.pdf" },
   { title: "A Ilha do Doutor Moreau", author: "H.G. Wells", cover: coverIlhaDrMoreau, file: "/a-ilha-do-dr-moreau.pdf" },
-  { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", file: "/os-primeiros-homens-na-lua.pdf" },
+  { title: "Os Primeiros Homens na Lua", author: "H.G. Wells", cover: coverPrimeirosHomensLua, file: "/os-primeiros-homens-na-lua.pdf" },
   { title: "Admirável Mundo Novo", author: "Aldous Huxley", file: "/admiravel-mundo-novo.pdf" },
   { title: "Orgulho e Preconceito", author: "Jane Austen", cover: coverOrgulhoPreconceito, file: "/orgulho-e-preconceito.pdf" },
   { title: "Razão e Sensibilidade", author: "Jane Austen", cover: coverRazaoSensibilidade, file: "/razao-e-sensibilidade.pdf" },

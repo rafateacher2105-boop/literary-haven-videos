@@ -104,7 +104,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Peter Pan", author: "J.M. Barrie", file: "/peter-pan.pdf" },
   { title: "Pinóquio", author: "Carlo Collodi", file: "/pinoquio.pdf" },
   { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", file: "/o-pequeno-principe.pdf" },
-  { title: "O Médico e o Monstro", author: "Robert L. Stevenson", file: "/o-medico-e-o-monstro.pdf" },
+  { title: "O Médico e o Monstro", author: "Robert L. Stevenson", cover: coverMedicoMonstro, file: "/o-medico-e-o-monstro.pdf" },
   { title: "A Metamorfose", author: "Franz Kafka", file: "/a-metamorfose.pdf" },
   { title: "A Odisseia", author: "Homero", file: "/a-odisseia.pdf" },
   { title: "Dom Quixote", author: "Miguel de Cervantes", file: "/dom-quixote.pdf" },

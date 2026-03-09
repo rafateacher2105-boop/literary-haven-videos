@@ -63,6 +63,14 @@ import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
 import coverAlice from "@/assets/cover-alice.png";
+import coverHoraEstrela from "@/assets/cover-hora-da-estrela.jpg";
+import coverSaoBernardo from "@/assets/cover-sao-bernardo.jpg";
+import coverMobyDick from "@/assets/cover-moby-dick.jpg";
+import coverFausto from "@/assets/cover-fausto.jpg";
+import coverVelhoMar from "@/assets/cover-velho-e-o-mar.jpg";
+import coverIliada from "@/assets/cover-iliada.jpg";
+import coverCapitaesAreia from "@/assets/cover-capitaes-areia.jpg";
+import coverVidasSecas from "@/assets/cover-vidas-secas.jpg";
 import {
   Dialog,
   DialogContent,

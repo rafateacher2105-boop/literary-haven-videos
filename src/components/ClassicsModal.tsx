@@ -72,6 +72,14 @@ import coverVelhoMar from "@/assets/cover-velho-e-o-mar.jpg";
 import coverIliada from "@/assets/cover-iliada.jpg";
 import coverCapitaesAreia from "@/assets/cover-capitaes-areia.jpg";
 import coverVidasSecas from "@/assets/cover-vidas-secas.jpg";
+import coverFantasmaOpera from "@/assets/cover-fantasma-opera.jpg";
+import coverCorcundaNotreDame from "@/assets/cover-corcunda-notre-dame.jpg";
+import coverIvanhoe from "@/assets/cover-ivanhoe.jpg";
+import coverTristaoIsolda from "@/assets/cover-tristao-isolda.jpg";
+import coverCondeMonteCristo from "@/assets/cover-conde-monte-cristo.jpg";
+import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros.jpg";
+import coverAnaKarenina from "@/assets/cover-ana-karenina.jpg";
+import coverGuerraEPaz from "@/assets/cover-guerra-e-paz.jpg";
 import {
   Dialog,
   DialogContent,
@@ -143,6 +151,14 @@ const classicBooks: ClassicBook[] = [
   { title: "Capitães da Areia", author: "Jorge Amado", cover: coverCapitaesAreia },
   { title: "A Hora da Estrela", author: "Clarice Lispector", cover: coverHoraEstrela },
   { title: "O Velho e o Mar", author: "Ernest Hemingway", cover: coverVelhoMar },
+  { title: "O Fantasma da Ópera", author: "Gaston Leroux", cover: coverFantasmaOpera, file: "/o-fantasma-da-opera.pdf" },
+  { title: "O Corcunda de Notre-Dame", author: "Victor Hugo", cover: coverCorcundaNotreDame, file: "/o-corcunda-de-notre-dame.pdf" },
+  { title: "Ivanhoé", author: "Sir Walter Scott", cover: coverIvanhoe },
+  { title: "Tristão e Isolda", author: "Joseph Bédier", cover: coverTristaoIsolda, file: "/tristao-e-isolda.pdf" },
+  { title: "O Conde de Monte Cristo", author: "Alexandre Dumas", cover: coverCondeMonteCristo },
+  { title: "Os Três Mosqueteiros", author: "Alexandre Dumas", cover: coverTresMosqueteiros },
+  { title: "Ana Karenina", author: "Liev Tolstói", cover: coverAnaKarenina, file: "/ana-karenina.pdf" },
+  { title: "Guerra e Paz", author: "Liev Tolstói", cover: coverGuerraEPaz, file: "/guerra-e-paz.pdf" },
 ];
 
 const talesBooks: ClassicBook[] = [

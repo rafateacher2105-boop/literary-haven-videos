@@ -72,6 +72,14 @@ import coverVelhoMar from "@/assets/cover-velho-e-o-mar.jpg";
 import coverIliada from "@/assets/cover-iliada.jpg";
 import coverCapitaesAreia from "@/assets/cover-capitaes-areia.jpg";
 import coverVidasSecas from "@/assets/cover-vidas-secas.jpg";
+import coverFantasmaOpera from "@/assets/cover-fantasma-opera.jpg";
+import coverCorcundaNotreDame from "@/assets/cover-corcunda-notre-dame.jpg";
+import coverIvanhoe from "@/assets/cover-ivanhoe.jpg";
+import coverTristaoIsolda from "@/assets/cover-tristao-isolda.jpg";
+import coverCondeMonteCristo from "@/assets/cover-conde-monte-cristo.jpg";
+import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros.jpg";
+import coverAnaKarenina from "@/assets/cover-ana-karenina.jpg";
+import coverGuerraEPaz from "@/assets/cover-guerra-e-paz.jpg";
 import {
   Dialog,
   DialogContent,

@@ -134,7 +134,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Dom Quixote", author: "Miguel de Cervantes", cover: coverDomQuixote, file: "/dom-quixote.pdf" },
   { title: "A Revolução dos Bichos", author: "George Orwell", cover: coverRevolucaoBichos, file: "/revolucao-dos-bichos.pdf" },
   { title: "1984", author: "George Orwell", cover: cover1984, file: "/e-book-1984.pdf" },
-  { title: "O Fantasma de Canterville", author: "Oscar Wilde" },
+  { title: "O Fantasma de Canterville", author: "Oscar Wilde", cover: coverFantasmaCanterville },
   { title: "Moby Dick", author: "Herman Melville", cover: coverMobyDick },
   { title: "Fausto", author: "Johann W. von Goethe", cover: coverFausto },
   { title: "A Ilíada", author: "Homero", cover: coverIliada },

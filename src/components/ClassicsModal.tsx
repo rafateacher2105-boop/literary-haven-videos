@@ -2,16 +2,16 @@ import { Download, Library, Mail, Skull, BookOpenText } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
-import coverViagensGulliver from "@/assets/cover-viagens-gulliver.avif";
-import coverDivinaComedia from "@/assets/cover-divina-comedia.jpg";
+import coverViagensGulliver from "@/assets/cover-viagens-gulliver.png";
+import coverDivinaComedia from "@/assets/cover-divina-comedia.png";
 import coverViagemCentroTerra from "@/assets/cover-viagem-centro-terra.jpg";
 import coverVoltaMundo from "@/assets/cover-volta-mundo-80-dias.jpg";
-import coverFrankenstein from "@/assets/cover-frankenstein.jpg";
-import coverDracula from "@/assets/cover-dracula.jpg";
-import coverDorianGray from "@/assets/cover-dorian-gray.jpg";
+import coverFrankenstein from "@/assets/cover-frankenstein.png";
+import coverDracula from "@/assets/cover-dracula.png";
+import coverDorianGray from "@/assets/cover-dorian-gray.png";
 import coverLusiadas from "@/assets/cover-lusiadas.jpg";
-import coverHamlet from "@/assets/cover-hamlet.jpg";
-import coverRomeuJulieta from "@/assets/cover-romeu-julieta.jpg";
+import coverHamlet from "@/assets/cover-hamlet.png";
+import coverRomeuJulieta from "@/assets/cover-romeu-julieta.png";
 import coverIlhaTesouro from "@/assets/cover-ilha-tesouro.jpg";
 import coverIlhaMisteriosa from "@/assets/cover-ilha-misteriosa.jpg";
 import coverVinteMilLeguas from "@/assets/cover-vinte-mil-leguas.jpg";
@@ -41,6 +41,7 @@ import coverRazaoSensibilidade from "@/assets/cover-razao-sensibilidade.png";
 import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
 import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";
+import coverMedicoMonstro from "@/assets/cover-medico-monstro.png";
 import coverContosGrimm from "@/assets/cover-contos-grimm.jpg";
 import coverContosAndersen from "@/assets/cover-contos-andersen.jpg";
 import coverContosPerrault from "@/assets/cover-contos-perrault.jpg";
@@ -103,7 +104,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Peter Pan", author: "J.M. Barrie", file: "/peter-pan.pdf" },
   { title: "Pinóquio", author: "Carlo Collodi", file: "/pinoquio.pdf" },
   { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", file: "/o-pequeno-principe.pdf" },
-  { title: "O Médico e o Monstro", author: "Robert L. Stevenson", file: "/o-medico-e-o-monstro.pdf" },
+  { title: "O Médico e o Monstro", author: "Robert L. Stevenson", cover: coverMedicoMonstro, file: "/o-medico-e-o-monstro.pdf" },
   { title: "A Metamorfose", author: "Franz Kafka", file: "/a-metamorfose.pdf" },
   { title: "A Odisseia", author: "Homero", file: "/a-odisseia.pdf" },
   { title: "Dom Quixote", author: "Miguel de Cervantes", file: "/dom-quixote.pdf" },

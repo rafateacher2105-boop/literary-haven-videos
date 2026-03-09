@@ -54,6 +54,7 @@ import coverLendasUrbanas from "@/assets/cover-lendas-urbanas.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
+import coverAlice from "@/assets/cover-alice.png";
 import {
   Dialog,
   DialogContent,

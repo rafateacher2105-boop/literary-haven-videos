@@ -48,6 +48,9 @@ import coverContosPerrault from "@/assets/cover-contos-perrault.jpg";
 import coverLendasIndigenas from "@/assets/cover-lendas-indigenas.jpg";
 import coverLendasAfricanas from "@/assets/cover-lendas-africanas.jpg";
 import coverLendasUrbanas from "@/assets/cover-lendas-urbanas.jpg";
+import coverPeterPan from "@/assets/cover-peter-pan.png";
+import coverLivroSelva from "@/assets/cover-livro-selva.png";
+import coverPinoquio from "@/assets/cover-pinoquio.png";
 import {
   Dialog,
   DialogContent,
@@ -100,9 +103,9 @@ const classicBooks: ClassicBook[] = [
   { title: "Crime e Castigo", author: "Fiódor Dostoiévski", cover: coverCrimeCastigo, file: "/crime-e-castigo.pdf" },
   { title: "Os Irmãos Karamazov", author: "Fiódor Dostoiévski", cover: coverIrmaosKaramazov, file: "/os-irmaos-karamazov.pdf" },
   { title: "O Idiota", author: "Fiódor Dostoiévski", file: "/o-idiota.pdf" },
-  { title: "O Livro da Selva", author: "Rudyard Kipling", file: "/livro-da-selva.pdf" },
-  { title: "Peter Pan", author: "J.M. Barrie", file: "/peter-pan.pdf" },
-  { title: "Pinóquio", author: "Carlo Collodi", file: "/pinoquio.pdf" },
+  { title: "O Livro da Selva", author: "Rudyard Kipling", cover: coverLivroSelva, file: "/livro-da-selva.pdf" },
+  { title: "Peter Pan", author: "J.M. Barrie", cover: coverPeterPan, file: "/peter-pan.pdf" },
+  { title: "Pinóquio", author: "Carlo Collodi", cover: coverPinoquio, file: "/pinoquio.pdf" },
   { title: "O Pequeno Príncipe", author: "Antoine de Saint-Exupéry", file: "/o-pequeno-principe.pdf" },
   { title: "O Médico e o Monstro", author: "Robert L. Stevenson", cover: coverMedicoMonstro, file: "/o-medico-e-o-monstro.pdf" },
   { title: "A Metamorfose", author: "Franz Kafka", file: "/a-metamorfose.pdf" },

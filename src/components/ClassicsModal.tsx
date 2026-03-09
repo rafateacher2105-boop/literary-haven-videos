@@ -363,7 +363,7 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
             Biblioteca de Domínio Público
           </DialogTitle>
           <DialogDescription className="font-body text-muted-foreground">
-            Obras de domínio público disponíveis para download gratuito em EPUB.
+            Obras de domínio público disponíveis para download gratuito em PDF.
           </DialogDescription>
         </DialogHeader>
 

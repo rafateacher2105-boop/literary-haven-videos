@@ -27,6 +27,7 @@ import coverGuerraSalamandras from "@/assets/cover-guerra-salamandras.jpg";
 import coverGuerraMundos from "@/assets/cover-guerra-mundos.png";
 import coverMaquinaTempo from "@/assets/cover-maquina-tempo.jpg";
 import cover1984 from "@/assets/cover-1984.png";
+import coverFantasmaCanterville from "@/assets/cover-fantasma-canterville.jpg";
 import coverRevolucaoBichos from "@/assets/cover-revolucao-bichos.png";
 import coverDomQuixote from "@/assets/cover-dom-quixote.png";
 import coverPrimeirosHomensLua from "@/assets/cover-primeiros-homens-lua.png";

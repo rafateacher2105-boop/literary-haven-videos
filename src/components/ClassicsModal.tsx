@@ -41,6 +41,7 @@ import coverSargentoMilicias from "@/assets/cover-sargento-milicias.png";
 import coverDomCasmurro from "@/assets/cover-dom-casmurro.png";
 import coverOrgulhoPreconceito from "@/assets/cover-orgulho-preconceito.png";
 import coverRazaoSensibilidade from "@/assets/cover-razao-sensibilidade.png";
+import coverPapeisAvulsos from "@/assets/cover-papeis-avulsos.jpg";
 import coverCrimeCastigo from "@/assets/cover-crime-castigo.png";
 import coverIrmaosKaramazov from "@/assets/cover-irmaos-karamazov.png";
 import coverContosPoe from "@/assets/cover-contos-poe.jpg";

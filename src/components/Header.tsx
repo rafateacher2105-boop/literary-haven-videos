@@ -1,7 +1,7 @@
 import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image } from "lucide-react";
-import { useState } from "react";
+import { useState, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
-import ClassicsModal from "./ClassicsModal";
+const ClassicsModal = lazy(() => import("./ClassicsModal"));
 import SupportAuthorModal from "./SupportAuthorModal";
 
 const Header = () => {

@@ -81,6 +81,16 @@ import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros-new.png";
 import coverAnaKarenina from "@/assets/cover-ana-karenina-new.png";
 import coverGuerraEPaz from "@/assets/cover-guerra-e-paz-new.jpg";
 import coverRobinHood from "@/assets/cover-robin-hood-new.png";
+import coverOliverTwist from "@/assets/cover-oliver-twist.jpg";
+import coverJaneEyre from "@/assets/cover-jane-eyre.jpg";
+import coverMorroVentosUivantes from "@/assets/cover-morro-ventos-uivantes.jpg";
+import coverDavidCopperfield from "@/assets/cover-david-copperfield.jpg";
+import coverGrandeGatsby from "@/assets/cover-grande-gatsby.jpg";
+import coverCaoBaskervilles from "@/assets/cover-cao-baskervilles.jpg";
+import coverParaisoPerdido from "@/assets/cover-paraiso-perdido.jpg";
+import coverHuckleberryFinn from "@/assets/cover-huckleberry-finn.jpg";
+import coverTomSawyer from "@/assets/cover-tom-sawyer.jpg";
+import coverLetraEscarlate from "@/assets/cover-letra-escarlate.jpg";
 import {
   Dialog,
   DialogContent,

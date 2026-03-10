@@ -91,6 +91,16 @@ import coverParaisoPerdido from "@/assets/cover-paraiso-perdido.jpg";
 import coverHuckleberryFinn from "@/assets/cover-huckleberry-finn.jpg";
 import coverTomSawyer from "@/assets/cover-tom-sawyer.jpg";
 import coverLetraEscarlate from "@/assets/cover-letra-escarlate.jpg";
+import coverReinacoesNarizinho from "@/assets/cover-reinacoes-narizinho.jpg";
+import coverOSaci from "@/assets/cover-o-saci.jpg";
+import coverCacadasPedrinho from "@/assets/cover-cacadas-pedrinho.jpg";
+import coverMarquesRabico from "@/assets/cover-marques-rabico.jpg";
+import coverEmiliaGramatica from "@/assets/cover-emilia-gramatica.jpg";
+import coverMemoriasEmilia from "@/assets/cover-memorias-emilia.jpg";
+import coverPocoVisconde from "@/assets/cover-poco-visconde.jpg";
+import coverPicapauAmarelo from "@/assets/cover-picapau-amarelo.jpg";
+import coverReformaNatureza from "@/assets/cover-reforma-natureza.jpg";
+import coverChaveTamanho from "@/assets/cover-chave-tamanho.jpg";
 import {
   Dialog,
   DialogContent,

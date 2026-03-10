@@ -122,7 +122,11 @@ const Header = () => {
         </nav>
       )}
 
-      <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} />
+      {classicsOpen && (
+        <Suspense fallback={null}>
+          <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} />
+        </Suspense>
+      )}
       <SupportAuthorModal open={supportOpen} onOpenChange={setSupportOpen} />
     </header>
   );

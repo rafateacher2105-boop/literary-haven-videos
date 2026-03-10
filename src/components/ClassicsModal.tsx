@@ -191,6 +191,16 @@ const classicBooks: ClassicBook[] = [
   { title: "As Aventuras de Huckleberry Finn", author: "Mark Twain", cover: coverHuckleberryFinn },
   { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer },
   { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate },
+  { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho },
+  { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci },
+  { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho },
+  { title: "O Marquês de Rabicó", author: "Monteiro Lobato", cover: coverMarquesRabico },
+  { title: "Emília no País da Gramática", author: "Monteiro Lobato", cover: coverEmiliaGramatica },
+  { title: "Memórias da Emília", author: "Monteiro Lobato", cover: coverMemoriasEmilia },
+  { title: "O Poço do Visconde", author: "Monteiro Lobato", cover: coverPocoVisconde },
+  { title: "O Picapau Amarelo", author: "Monteiro Lobato", cover: coverPicapauAmarelo },
+  { title: "A Reforma da Natureza", author: "Monteiro Lobato", cover: coverReformaNatureza },
+  { title: "A Chave do Tamanho", author: "Monteiro Lobato", cover: coverChaveTamanho },
 ];
 
 const talesBooks: ClassicBook[] = [

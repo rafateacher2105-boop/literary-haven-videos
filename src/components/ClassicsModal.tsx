@@ -81,6 +81,16 @@ import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros-new.png";
 import coverAnaKarenina from "@/assets/cover-ana-karenina-new.png";
 import coverGuerraEPaz from "@/assets/cover-guerra-e-paz-new.jpg";
 import coverRobinHood from "@/assets/cover-robin-hood-new.png";
+import coverOliverTwist from "@/assets/cover-oliver-twist.jpg";
+import coverJaneEyre from "@/assets/cover-jane-eyre.jpg";
+import coverMorroVentosUivantes from "@/assets/cover-morro-ventos-uivantes.jpg";
+import coverDavidCopperfield from "@/assets/cover-david-copperfield.jpg";
+import coverGrandeGatsby from "@/assets/cover-grande-gatsby.jpg";
+import coverCaoBaskervilles from "@/assets/cover-cao-baskervilles.jpg";
+import coverParaisoPerdido from "@/assets/cover-paraiso-perdido.jpg";
+import coverHuckleberryFinn from "@/assets/cover-huckleberry-finn.jpg";
+import coverTomSawyer from "@/assets/cover-tom-sawyer.jpg";
+import coverLetraEscarlate from "@/assets/cover-letra-escarlate.jpg";
 import {
   Dialog,
   DialogContent,
@@ -161,6 +171,16 @@ const classicBooks: ClassicBook[] = [
   { title: "Robin Hood", author: "Alexandre Dumas", cover: coverRobinHood, file: "/robin-hood.pdf" },
   { title: "Ana Karenina", author: "Liev Tolstói", cover: coverAnaKarenina, file: "/ana-karenina.pdf" },
   { title: "Guerra e Paz", author: "Liev Tolstói", cover: coverGuerraEPaz, file: "/guerra-e-paz.pdf" },
+  { title: "Oliver Twist", author: "Charles Dickens", cover: coverOliverTwist },
+  { title: "Jane Eyre", author: "Charlotte Brontë", cover: coverJaneEyre },
+  { title: "O Morro dos Ventos Uivantes", author: "Emily Brontë", cover: coverMorroVentosUivantes },
+  { title: "David Copperfield", author: "Charles Dickens", cover: coverDavidCopperfield },
+  { title: "O Grande Gatsby", author: "F. Scott Fitzgerald", cover: coverGrandeGatsby },
+  { title: "O Cão dos Baskervilles", author: "Arthur Conan Doyle", cover: coverCaoBaskervilles },
+  { title: "O Paraíso Perdido", author: "John Milton", cover: coverParaisoPerdido },
+  { title: "As Aventuras de Huckleberry Finn", author: "Mark Twain", cover: coverHuckleberryFinn },
+  { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer },
+  { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate },
 ];
 
 const talesBooks: ClassicBook[] = [

@@ -158,6 +158,7 @@ const classicBooks: ClassicBook[] = [
   { title: "Tristão e Isolda", author: "Joseph Bédier", cover: coverTristaoIsolda, file: "/tristao-e-isolda.pdf" },
   { title: "O Conde de Monte Cristo", author: "Alexandre Dumas", cover: coverCondeMonteCristo },
   { title: "Os Três Mosqueteiros", author: "Alexandre Dumas", cover: coverTresMosqueteiros },
+  { title: "Robin Hood", author: "Alexandre Dumas", cover: coverRobinHood },
   { title: "Ana Karenina", author: "Liev Tolstói", cover: coverAnaKarenina, file: "/ana-karenina.pdf" },
   { title: "Guerra e Paz", author: "Liev Tolstói", cover: coverGuerraEPaz, file: "/guerra-e-paz.pdf" },
 ];

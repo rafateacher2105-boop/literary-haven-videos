@@ -80,6 +80,7 @@ import coverCondeMonteCristo from "@/assets/cover-conde-monte-cristo.jpg";
 import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros.jpg";
 import coverAnaKarenina from "@/assets/cover-ana-karenina.jpg";
 import coverGuerraEPaz from "@/assets/cover-guerra-e-paz.jpg";
+import coverRobinHood from "@/assets/cover-robin-hood.jpg";
 import {
   Dialog,
   DialogContent,

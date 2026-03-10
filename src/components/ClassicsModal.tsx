@@ -79,7 +79,7 @@ import coverTristaoIsolda from "@/assets/cover-tristao-isolda.jpg";
 import coverCondeMonteCristo from "@/assets/cover-conde-monte-cristo.jpg";
 import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros-new.png";
 import coverAnaKarenina from "@/assets/cover-ana-karenina-new.png";
-import coverGuerraEPaz from "@/assets/cover-guerra-e-paz.jpg";
+import coverGuerraEPaz from "@/assets/cover-guerra-e-paz-new.jpg";
 import coverRobinHood from "@/assets/cover-robin-hood-new.png";
 import {
   Dialog,

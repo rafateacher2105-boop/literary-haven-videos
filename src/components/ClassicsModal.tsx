@@ -91,6 +91,7 @@ import coverParaisoPerdido from "@/assets/cover-paraiso-perdido.jpg";
 import coverHuckleberryFinn from "@/assets/cover-huckleberry-finn.jpg";
 import coverTomSawyer from "@/assets/cover-tom-sawyer.jpg";
 import coverLetraEscarlate from "@/assets/cover-letra-escarlate.jpg";
+import coverCavaleiroSemCabeca from "@/assets/cover-cavaleiro-sem-cabeca.jpg";
 import coverReinacoesNarizinho from "@/assets/cover-reinacoes-narizinho.jpg";
 import coverOSaci from "@/assets/cover-o-saci.jpg";
 import coverCacadasPedrinho from "@/assets/cover-cacadas-pedrinho.jpg";

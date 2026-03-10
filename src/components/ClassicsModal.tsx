@@ -154,7 +154,7 @@ const classicBooks: ClassicBook[] = [
   { title: "O Velho e o Mar", author: "Ernest Hemingway", cover: coverVelhoMar, file: "/o-velho-e-o-mar.pdf" },
   { title: "O Fantasma da Ópera", author: "Gaston Leroux", cover: coverFantasmaOpera, file: "/o-fantasma-da-opera.pdf" },
   { title: "O Corcunda de Notre-Dame", author: "Victor Hugo", cover: coverCorcundaNotreDame, file: "/o-corcunda-de-notre-dame.pdf" },
-  { title: "Ivanhoé", author: "Sir Walter Scott", cover: coverIvanhoe },
+  { title: "Ivanhoé", author: "Sir Walter Scott", cover: coverIvanhoe, file: "/ivanhoe.pdf" },
   { title: "Tristão e Isolda", author: "Joseph Bédier", cover: coverTristaoIsolda, file: "/tristao-e-isolda.pdf" },
   { title: "O Conde de Monte Cristo", author: "Alexandre Dumas", cover: coverCondeMonteCristo },
   { title: "Os Três Mosqueteiros", author: "Alexandre Dumas", cover: coverTresMosqueteiros },

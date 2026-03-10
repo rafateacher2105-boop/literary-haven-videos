@@ -270,7 +270,7 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
           >
             {book.cover ? (
               <div className="aspect-[2/3] overflow-hidden">
-                <img src={book.cover} alt={book.title} className="w-full h-full object-cover" />
+                <img src={book.cover} alt={book.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
               </div>
             ) : (
             <div

@@ -102,6 +102,11 @@ import coverPocoVisconde from "@/assets/cover-poco-visconde.jpg";
 import coverPicapauAmarelo from "@/assets/cover-picapau-amarelo.jpg";
 import coverReformaNatureza from "@/assets/cover-reforma-natureza.jpg";
 import coverChaveTamanho from "@/assets/cover-chave-tamanho.jpg";
+import coverOMinotauro from "@/assets/cover-o-minotauro.jpg";
+import coverIdeiasJecaTatu from "@/assets/cover-ideias-jeca-tatu.jpg";
+import coverDomQuixoteCriancas from "@/assets/cover-dom-quixote-criancas.jpg";
+import coverAritmeticaEmilia from "@/assets/cover-aritmetica-emilia.jpg";
+import coverViagemAoCeu from "@/assets/cover-viagem-ao-ceu.jpg";
 import {
   Dialog,
   DialogContent,
@@ -193,16 +198,21 @@ const classicBooks: ClassicBook[] = [
   { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer },
   { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate },
   { title: "A Lenda do Cavaleiro sem Cabeça", author: "Washington Irving", cover: coverCavaleiroSemCabeca },
-  { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho },
+  { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho, file: "/reinacoes-de-narizinho.pdf" },
   { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci },
-  { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho },
+  { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho, file: "/cacadas-de-pedrinho.pdf" },
   { title: "O Marquês de Rabicó", author: "Monteiro Lobato", cover: coverMarquesRabico },
-  { title: "Emília no País da Gramática", author: "Monteiro Lobato", cover: coverEmiliaGramatica },
-  { title: "Memórias da Emília", author: "Monteiro Lobato", cover: coverMemoriasEmilia },
+  { title: "Emília no País da Gramática", author: "Monteiro Lobato", cover: coverEmiliaGramatica, file: "/emilia-no-pais-da-gramatica.pdf" },
+  { title: "Memórias da Emília", author: "Monteiro Lobato", cover: coverMemoriasEmilia, file: "/memorias-da-emilia.pdf" },
   { title: "O Poço do Visconde", author: "Monteiro Lobato", cover: coverPocoVisconde },
-  { title: "O Picapau Amarelo", author: "Monteiro Lobato", cover: coverPicapauAmarelo },
+  { title: "O Picapau Amarelo", author: "Monteiro Lobato", cover: coverPicapauAmarelo, file: "/o-picapau-amarelo.pdf" },
   { title: "A Reforma da Natureza", author: "Monteiro Lobato", cover: coverReformaNatureza },
   { title: "A Chave do Tamanho", author: "Monteiro Lobato", cover: coverChaveTamanho },
+  { title: "O Minotauro", author: "Monteiro Lobato", cover: coverOMinotauro, file: "/o-minotauro.pdf" },
+  { title: "Ideias do Jeca Tatu", author: "Monteiro Lobato", cover: coverIdeiasJecaTatu, file: "/ideias-do-jeca-tatu.pdf" },
+  { title: "Dom Quixote das Crianças", author: "Monteiro Lobato", cover: coverDomQuixoteCriancas, file: "/dom-quixote-das-criancas.pdf" },
+  { title: "Aritmética da Emília", author: "Monteiro Lobato", cover: coverAritmeticaEmilia, file: "/aritmetica-da-emilia.pdf" },
+  { title: "Viagem ao Céu", author: "Monteiro Lobato", cover: coverViagemAoCeu, file: "/viagem-ao-ceu.pdf" },
 ];
 
 const talesBooks: ClassicBook[] = [

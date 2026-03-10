@@ -192,6 +192,7 @@ const classicBooks: ClassicBook[] = [
   { title: "As Aventuras de Huckleberry Finn", author: "Mark Twain", cover: coverHuckleberryFinn },
   { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer },
   { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate },
+  { title: "A Lenda do Cavaleiro sem Cabeça", author: "Washington Irving", cover: coverCavaleiroSemCabeca },
   { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho },
   { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci },
   { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho },

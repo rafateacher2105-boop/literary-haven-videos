@@ -199,7 +199,7 @@ const classicBooks: ClassicBook[] = [
   { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate, file: "/a-letra-escarlate.pdf" },
   { title: "A Lenda do Cavaleiro sem Cabeça", author: "Washington Irving", cover: coverCavaleiroSemCabeca },
   { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho, file: "/reinacoes-de-narizinho.pdf" },
-  { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci },
+  { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci, file: "/o-saci.pdf" },
   { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho, file: "/cacadas-de-pedrinho.pdf" },
   { title: "O Marquês de Rabicó", author: "Monteiro Lobato", cover: coverMarquesRabico },
   { title: "Emília no País da Gramática", author: "Monteiro Lobato", cover: coverEmiliaGramatica, file: "/emilia-no-pais-da-gramatica.pdf" },

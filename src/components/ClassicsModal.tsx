@@ -204,7 +204,7 @@ const classicBooks: ClassicBook[] = [
   { title: "O Marquês de Rabicó", author: "Monteiro Lobato", cover: coverMarquesRabico, file: "/marques-de-rabico.pdf" },
   { title: "Emília no País da Gramática", author: "Monteiro Lobato", cover: coverEmiliaGramatica, file: "/emilia-no-pais-da-gramatica.pdf" },
   { title: "Memórias da Emília", author: "Monteiro Lobato", cover: coverMemoriasEmilia, file: "/memorias-da-emilia.pdf" },
-  { title: "O Poço do Visconde", author: "Monteiro Lobato", cover: coverPocoVisconde },
+  { title: "O Poço do Visconde", author: "Monteiro Lobato", cover: coverPocoVisconde, file: "/o-poco-do-visconde.pdf" },
   { title: "O Picapau Amarelo", author: "Monteiro Lobato", cover: coverPicapauAmarelo, file: "/o-picapau-amarelo.pdf" },
   { title: "A Reforma da Natureza", author: "Monteiro Lobato", cover: coverReformaNatureza },
   { title: "A Chave do Tamanho", author: "Monteiro Lobato", cover: coverChaveTamanho },

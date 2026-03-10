@@ -171,6 +171,16 @@ const classicBooks: ClassicBook[] = [
   { title: "Robin Hood", author: "Alexandre Dumas", cover: coverRobinHood, file: "/robin-hood.pdf" },
   { title: "Ana Karenina", author: "Liev Tolstói", cover: coverAnaKarenina, file: "/ana-karenina.pdf" },
   { title: "Guerra e Paz", author: "Liev Tolstói", cover: coverGuerraEPaz, file: "/guerra-e-paz.pdf" },
+  { title: "Oliver Twist", author: "Charles Dickens", cover: coverOliverTwist },
+  { title: "Jane Eyre", author: "Charlotte Brontë", cover: coverJaneEyre },
+  { title: "O Morro dos Ventos Uivantes", author: "Emily Brontë", cover: coverMorroVentosUivantes },
+  { title: "David Copperfield", author: "Charles Dickens", cover: coverDavidCopperfield },
+  { title: "O Grande Gatsby", author: "F. Scott Fitzgerald", cover: coverGrandeGatsby },
+  { title: "O Cão dos Baskervilles", author: "Arthur Conan Doyle", cover: coverCaoBaskervilles },
+  { title: "O Paraíso Perdido", author: "John Milton", cover: coverParaisoPerdido },
+  { title: "As Aventuras de Huckleberry Finn", author: "Mark Twain", cover: coverHuckleberryFinn },
+  { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer },
+  { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate },
 ];
 
 const talesBooks: ClassicBook[] = [

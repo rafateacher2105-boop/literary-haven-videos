@@ -77,10 +77,10 @@ import coverCorcundaNotreDame from "@/assets/cover-corcunda-notre-dame.jpg";
 import coverIvanhoe from "@/assets/cover-ivanhoe.jpg";
 import coverTristaoIsolda from "@/assets/cover-tristao-isolda.jpg";
 import coverCondeMonteCristo from "@/assets/cover-conde-monte-cristo.jpg";
-import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros.jpg";
-import coverAnaKarenina from "@/assets/cover-ana-karenina.jpg";
+import coverTresMosqueteiros from "@/assets/cover-tres-mosqueteiros-new.png";
+import coverAnaKarenina from "@/assets/cover-ana-karenina-new.png";
 import coverGuerraEPaz from "@/assets/cover-guerra-e-paz.jpg";
-import coverRobinHood from "@/assets/cover-robin-hood.jpg";
+import coverRobinHood from "@/assets/cover-robin-hood-new.png";
 import {
   Dialog,
   DialogContent,

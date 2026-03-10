@@ -91,6 +91,7 @@ import coverParaisoPerdido from "@/assets/cover-paraiso-perdido.jpg";
 import coverHuckleberryFinn from "@/assets/cover-huckleberry-finn.jpg";
 import coverTomSawyer from "@/assets/cover-tom-sawyer.jpg";
 import coverLetraEscarlate from "@/assets/cover-letra-escarlate.jpg";
+import coverCavaleiroSemCabeca from "@/assets/cover-cavaleiro-sem-cabeca.jpg";
 import coverReinacoesNarizinho from "@/assets/cover-reinacoes-narizinho.jpg";
 import coverOSaci from "@/assets/cover-o-saci.jpg";
 import coverCacadasPedrinho from "@/assets/cover-cacadas-pedrinho.jpg";
@@ -191,6 +192,7 @@ const classicBooks: ClassicBook[] = [
   { title: "As Aventuras de Huckleberry Finn", author: "Mark Twain", cover: coverHuckleberryFinn },
   { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer },
   { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate },
+  { title: "A Lenda do Cavaleiro sem Cabeça", author: "Washington Irving", cover: coverCavaleiroSemCabeca },
   { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho },
   { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci },
   { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho },

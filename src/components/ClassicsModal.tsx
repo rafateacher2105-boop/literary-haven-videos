@@ -156,9 +156,9 @@ const classicBooks: ClassicBook[] = [
   { title: "O Corcunda de Notre-Dame", author: "Victor Hugo", cover: coverCorcundaNotreDame, file: "/o-corcunda-de-notre-dame.pdf" },
   { title: "Ivanhoé", author: "Sir Walter Scott", cover: coverIvanhoe, file: "/ivanhoe.pdf" },
   { title: "Tristão e Isolda", author: "Joseph Bédier", cover: coverTristaoIsolda, file: "/tristao-e-isolda.pdf" },
-  { title: "O Conde de Monte Cristo", author: "Alexandre Dumas", cover: coverCondeMonteCristo },
-  { title: "Os Três Mosqueteiros", author: "Alexandre Dumas", cover: coverTresMosqueteiros },
-  { title: "Robin Hood", author: "Alexandre Dumas", cover: coverRobinHood },
+  { title: "O Conde de Monte Cristo", author: "Alexandre Dumas", cover: coverCondeMonteCristo, file: "/o-conde-de-monte-cristo.pdf" },
+  { title: "Os Três Mosqueteiros", author: "Alexandre Dumas", cover: coverTresMosqueteiros, file: "/os-tres-mosqueteiros.pdf" },
+  { title: "Robin Hood", author: "Alexandre Dumas", cover: coverRobinHood, file: "/robin-hood.pdf" },
   { title: "Ana Karenina", author: "Liev Tolstói", cover: coverAnaKarenina, file: "/ana-karenina.pdf" },
   { title: "Guerra e Paz", author: "Liev Tolstói", cover: coverGuerraEPaz, file: "/guerra-e-paz.pdf" },
 ];

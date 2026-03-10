@@ -102,6 +102,11 @@ import coverPocoVisconde from "@/assets/cover-poco-visconde.jpg";
 import coverPicapauAmarelo from "@/assets/cover-picapau-amarelo.jpg";
 import coverReformaNatureza from "@/assets/cover-reforma-natureza.jpg";
 import coverChaveTamanho from "@/assets/cover-chave-tamanho.jpg";
+import coverOMinotauro from "@/assets/cover-o-minotauro.jpg";
+import coverIdeiasJecaTatu from "@/assets/cover-ideias-jeca-tatu.jpg";
+import coverDomQuixoteCriancas from "@/assets/cover-dom-quixote-criancas.jpg";
+import coverAritmeticaEmilia from "@/assets/cover-aritmetica-emilia.jpg";
+import coverViagemAoCeu from "@/assets/cover-viagem-ao-ceu.jpg";
 import {
   Dialog,
   DialogContent,

@@ -197,7 +197,7 @@ const classicBooks: ClassicBook[] = [
   { title: "As Aventuras de Huckleberry Finn", author: "Mark Twain", cover: coverHuckleberryFinn, file: "/huckleberry-finn.pdf" },
   { title: "As Aventuras de Tom Sawyer", author: "Mark Twain", cover: coverTomSawyer, file: "/tom-sawyer.pdf" },
   { title: "A Letra Escarlate", author: "Nathaniel Hawthorne", cover: coverLetraEscarlate, file: "/a-letra-escarlate.pdf" },
-  { title: "A Lenda do Cavaleiro sem Cabeça", author: "Washington Irving", cover: coverCavaleiroSemCabeca },
+  { title: "A Lenda do Cavaleiro sem Cabeça", author: "Washington Irving", cover: coverCavaleiroSemCabeca, file: "/cavaleiro-sem-cabeca.pdf" },
   { title: "Reinações de Narizinho", author: "Monteiro Lobato", cover: coverReinacoesNarizinho, file: "/reinacoes-de-narizinho.pdf" },
   { title: "O Saci", author: "Monteiro Lobato", cover: coverOSaci, file: "/o-saci.pdf" },
   { title: "Caçadas de Pedrinho", author: "Monteiro Lobato", cover: coverCacadasPedrinho, file: "/cacadas-de-pedrinho.pdf" },

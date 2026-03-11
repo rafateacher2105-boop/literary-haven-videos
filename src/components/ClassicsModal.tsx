@@ -222,7 +222,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos de Perrout", author: "Charles Perrault", cover: coverContosPerrault, description: "O Gato de Botas, A Bela Adormecida, Chapeuzinho Vermelho — os contos que inauguraram a tradição literária dos contos de fadas na Europa." },
   { title: "Lendas Indígenas", author: "Tradição Oral", cover: coverLendasIndigenas, file: "/lendas-indigenas.pdf", description: "Narrativas ancestrais dos povos originários do Brasil: o Curupira, o Boto, a Iara, o Saci-Pererê e outras histórias que explicam o mundo pela sabedoria da floresta." },
   { title: "Lendas Africanas", author: "Tradição Oral", cover: coverLendasAfricanas, description: "Contos que atravessaram o Atlântico: Anansi, a aranha sábia, os orixás, e narrativas que celebram a riqueza cultural e espiritual do continente africano." },
-  { title: "Lendas Urbanas", author: "Folclore Contemporâneo", cover: coverLendasUrbanas, description: "A Loira do Banheiro, o Homem do Saco, a Maria Sangrenta — histórias que nascem nas cidades e se espalham de boca em boca, alimentando nossos medos modernos." },
+  { title: "Lendas Urbanas", author: "Folclore Contemporâneo", cover: coverLendasUrbanas, file: "/lendas-urbanas.pdf", description: "A Loira do Banheiro, o Homem do Saco, a Maria Sangrenta — histórias que nascem nas cidades e se espalham de boca em boca, alimentando nossos medos modernos." },
 ];
 
 const talesColors = [

@@ -61,6 +61,7 @@ import coverLendasIndigenas from "@/assets/cover-lendas-indigenas.jpg";
 import coverLendasAfricanas from "@/assets/cover-lendas-africanas.jpg";
 import coverLendasUrbanas from "@/assets/cover-lendas-urbanas.jpg";
 import coverLendasFolclore from "@/assets/cover-lendas-folclore.jpg";
+import coverLendasChina from "@/assets/cover-lendas-china.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";

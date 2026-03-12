@@ -65,6 +65,7 @@ import coverLendasChina from "@/assets/cover-lendas-china.jpg";
 import coverMilUmaNoites from "@/assets/cover-mil-uma-noites.png";
 import coverLendasJapao from "@/assets/cover-lendas-japao.png";
 import coverMitosNordicos from "@/assets/cover-mitos-nordicos.png";
+import coverLendasBrasil from "@/assets/cover-lendas-brasil.png";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
@@ -233,6 +234,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos das Mil e Uma Noites", author: "Coletânea Especial", cover: coverMilUmaNoites, file: "/contos-mil-uma-noites.pdf", description: "Aladim, Ali Babá, Simbad e muito mais — uma edição especial das histórias mais encantadoras das Mil e Uma Noites. Edição especial Letras e Páginas." },
   { title: "Mitos e Lendas Ancestrais do Japão", author: "Coletânea Especial", cover: coverLendasJapao, file: "/lendas-japao.pdf", description: "Amaterasu, Kitsune, Tanuki, Raijin e muito mais — uma edição especial de luxo das lendas e mitos mais fascinantes do Japão ancestral. Edição especial Letras e Páginas." },
   { title: "Mitos Nórdicos — Edição Especial", author: "Coletânea Especial", cover: coverMitosNordicos, file: "/mitos-nordicos.pdf", description: "Odin, Thor, Loki, Fenrir e muito mais — uma edição de luxo das lendas e mitos mais épicos da mitologia nórdica. Edição especial Letras e Páginas." },
+  { title: "Lendas do Brasil — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasBrasil, file: "/lendas-brasil.pdf", description: "Uma viagem fascinante pelas lendas de cada região do Brasil: do Saci-Pererê e Curupira no Sudeste, ao Boto Cor-de-Rosa e Iara na Amazônia, passando pela Comadre Florzinha e o Papa-Figo no Nordeste, o Negrinho do Pastoreio no Sul e o Pé de Garrafa no Centro-Oeste. Edição especial de luxo Letras e Páginas." },
 ];
 
 const talesColors = [

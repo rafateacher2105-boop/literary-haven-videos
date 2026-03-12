@@ -61,6 +61,7 @@ import coverLendasIndigenas from "@/assets/cover-lendas-indigenas.jpg";
 import coverLendasAfricanas from "@/assets/cover-lendas-africanas.jpg";
 import coverLendasUrbanas from "@/assets/cover-lendas-urbanas.jpg";
 import coverLendasFolclore from "@/assets/cover-lendas-folclore.jpg";
+import coverLendasChina from "@/assets/cover-lendas-china.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
@@ -225,6 +226,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Lendas Africanas", author: "Tradição Oral", cover: coverLendasAfricanas, file: "/lendas-africanas.pdf", description: "Contos que atravessaram o Atlântico: Anansi, a aranha sábia, os orixás, e narrativas que celebram a riqueza cultural e espiritual do continente africano." },
   { title: "Lendas Urbanas", author: "Folclore Contemporâneo", cover: coverLendasUrbanas, file: "/lendas-urbanas.pdf", description: "A Loira do Banheiro, o Homem do Saco, a Maria Sangrenta — histórias que nascem nas cidades e se espalham de boca em boca, alimentando nossos medos modernos." },
   { title: "Lendas do Folclore Brasileiro", author: "Coletânea Especial", cover: coverLendasFolclore, file: "/lendas-folclore-brasileiro.pdf", description: "Curupira, Saci-Pererê, Iara, Boto Cor-de-Rosa e muito mais — uma coletânea especial das lendas mais fascinantes do folclore brasileiro. Edição especial Letras e Páginas." },
+  { title: "Lendas Essenciais da China", author: "Coletânea Especial", cover: coverLendasChina, file: "/lendas-essenciais-china.pdf", description: "Dragões, fênix, o Rei Macaco e muito mais — uma coletânea especial das lendas mais fascinantes da mitologia chinesa. Edição especial Letras e Páginas." },
 ];
 
 const talesColors = [

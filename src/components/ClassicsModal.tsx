@@ -216,7 +216,7 @@ const classicBooks: ClassicBook[] = [
 ];
 
 const talesBooks: ClassicBook[] = [
-  { title: "Contos de Poe", author: "Edgar Allan Poe", cover: coverContosPoe, description: "Mestre do terror e do mistério, Poe nos leva a labirintos psicológicos sombrios com contos como 'O Gato Preto', 'O Coração Delator' e 'A Queda da Casa de Usher'." },
+  { title: "Contos de Poe", author: "Edgar Allan Poe", cover: coverContosPoe, file: "/contos-poe.pdf", description: "Mestre do terror e do mistério, Poe nos leva a labirintos psicológicos sombrios com contos como 'O Gato Preto', 'O Coração Delator' e 'A Queda da Casa de Usher'. Edição especial para o Blog Letras e Páginas." },
   { title: "Contos de Grimm", author: "Irmãos Grimm", cover: coverContosGrimm, file: "/contos-grimm.pdf", description: "A coletânea que definiu os contos de fadas modernos: Branca de Neve, Cinderela, Rapunzel, João e Maria e dezenas de outros clássicos imortais." },
   { title: "Contos de Andersen", author: "Hans Christian Andersen", cover: coverContosAndersen, file: "/contos-andersen.pdf", description: "O Patinho Feio, A Pequena Sereia, A Rainha da Neve — histórias encantadoras que misturam fantasia, melancolia e lições atemporais. Edição especial para o Blog Letras e Páginas." },
   { title: "Contos de Perrout", author: "Charles Perrault", cover: coverContosPerrault, description: "O Gato de Botas, A Bela Adormecida, Chapeuzinho Vermelho — os contos que inauguraram a tradição literária dos contos de fadas na Europa." },

@@ -230,6 +230,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Lendas do Folclore Brasileiro", author: "Coletânea Especial", cover: coverLendasFolclore, file: "/lendas-folclore-brasileiro.pdf", description: "Curupira, Saci-Pererê, Iara, Boto Cor-de-Rosa e muito mais — uma coletânea especial das lendas mais fascinantes do folclore brasileiro. Edição especial Letras e Páginas." },
   { title: "Lendas Essenciais da China", author: "Coletânea Especial", cover: coverLendasChina, file: "/lendas-essenciais-china.pdf", description: "Dragões, fênix, o Rei Macaco e muito mais — uma coletânea especial das lendas mais fascinantes da mitologia chinesa. Edição especial Letras e Páginas." },
   { title: "Contos das Mil e Uma Noites", author: "Coletânea Especial", cover: coverMilUmaNoites, file: "/contos-mil-uma-noites.pdf", description: "Aladim, Ali Babá, Simbad e muito mais — uma edição especial das histórias mais encantadoras das Mil e Uma Noites. Edição especial Letras e Páginas." },
+  { title: "Mitos e Lendas Ancestrais do Japão", author: "Coletânea Especial", cover: coverLendasJapao, file: "/lendas-japao.pdf", description: "Amaterasu, Kitsune, Tanuki, Raijin e muito mais — uma edição especial de luxo das lendas e mitos mais fascinantes do Japão ancestral. Edição especial Letras e Páginas." },
 ];
 
 const talesColors = [

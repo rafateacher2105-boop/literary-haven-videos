@@ -70,6 +70,7 @@ import coverLendasBrasilIlustrado from "@/assets/cover-lendas-brasil-ilustrado.j
 import coverMitosGregos from "@/assets/cover-mitos-gregos.jpg";
 import coverLendasMedievais from "@/assets/cover-lendas-medievais.jpg";
 import coverLendasRussas from "@/assets/cover-lendas-russas.jpg";
+import coverContosJudaicos from "@/assets/cover-contos-judaicos.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
@@ -247,6 +248,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos de Criaturas Fantásticas", author: "Coletânea Especial", cover: coverContosCriaturasFantasticas, file: "/contos-criaturas-fantasticas.pdf", description: "Dragões, fênix, unicórnios, grifos e outras criaturas lendárias ganham vida nesta coletânea encantadora de contos fantásticos. Uma viagem pelo imaginário de civilizações antigas e modernas. Edição especial Letras e Páginas." },
   { title: "Contos da Carochinha — Versão Especial", author: "Rafael S. L. Aguiar", cover: coverContosCarochinha, file: "/contos-carochinha.pdf", description: "Uma versão especial dos clássicos Contos da Carochinha, com histórias encantadoras que atravessam gerações. Fábulas, contos de fadas e narrativas populares reunidas em uma edição de luxo ilustrada. Edição especial Letras e Páginas." },
   { title: "Lendas Russas — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasRussas, file: "/lendas-russas.pdf", description: "Uma coletânea encantadora de lendas e contos populares russos, com histórias de Baba Yaga, o Pássaro de Fogo, cavaleiros e princesas. Ilustrações em aquarela trazem vida ao rico folclore eslavo. Edição especial Letras e Páginas." },
+  { title: "Contos Judaicos Antigos e Ilustrados", author: "Rafael S. L. Aguiar", cover: coverContosJudaicos, file: "/contos-judaicos.pdf", description: "Uma coletânea encantadora de contos judaicos antigos, com histórias de sabedoria, fé e tradição. Edição especial com ilustrações exclusivas. Edição Letras e Páginas por Rafael S. L. Aguiar." },
 ];
 
 const talesColors = [

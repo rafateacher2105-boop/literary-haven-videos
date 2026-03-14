@@ -69,6 +69,7 @@ import coverLendasBrasil from "@/assets/cover-lendas-brasil.png";
 import coverLendasBrasilIlustrado from "@/assets/cover-lendas-brasil-ilustrado.jpg";
 import coverMitosGregos from "@/assets/cover-mitos-gregos.jpg";
 import coverLendasMedievais from "@/assets/cover-lendas-medievais.jpg";
+import coverLendasRussas from "@/assets/cover-lendas-russas.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";

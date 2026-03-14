@@ -69,6 +69,7 @@ import coverLendasBrasil from "@/assets/cover-lendas-brasil.png";
 import coverLendasBrasilIlustrado from "@/assets/cover-lendas-brasil-ilustrado.jpg";
 import coverMitosGregos from "@/assets/cover-mitos-gregos.jpg";
 import coverLendasMedievais from "@/assets/cover-lendas-medievais.jpg";
+import coverLendasRussas from "@/assets/cover-lendas-russas.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
@@ -245,6 +246,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Lendas Medievais — Edição de Luxo", author: "Rafael S. L. Aguiar", cover: coverLendasMedievais, file: "/lendas-medievais.pdf", description: "Edição de luxo ilustrada com arte medieval. Cavaleiros, dragões, damas encantadas e castelos misteriosos ganham vida nesta coletânea épica de lendas da Idade Média. Do Rei Artur à lenda de São Jorge, uma viagem fascinante pelo imaginário medieval europeu. Edição e seleção Rafael S. L. Aguiar — Blog Letras e Páginas." },
   { title: "Contos de Criaturas Fantásticas", author: "Coletânea Especial", cover: coverContosCriaturasFantasticas, file: "/contos-criaturas-fantasticas.pdf", description: "Dragões, fênix, unicórnios, grifos e outras criaturas lendárias ganham vida nesta coletânea encantadora de contos fantásticos. Uma viagem pelo imaginário de civilizações antigas e modernas. Edição especial Letras e Páginas." },
   { title: "Contos da Carochinha — Versão Especial", author: "Rafael S. L. Aguiar", cover: coverContosCarochinha, file: "/contos-carochinha.pdf", description: "Uma versão especial dos clássicos Contos da Carochinha, com histórias encantadoras que atravessam gerações. Fábulas, contos de fadas e narrativas populares reunidas em uma edição de luxo ilustrada. Edição especial Letras e Páginas." },
+  { title: "Lendas Russas — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasRussas, file: "/lendas-russas.pdf", description: "Uma coletânea encantadora de lendas e contos populares russos, com histórias de Baba Yaga, o Pássaro de Fogo, cavaleiros e princesas. Ilustrações em aquarela trazem vida ao rico folclore eslavo. Edição especial Letras e Páginas." },
 ];
 
 const talesColors = [

@@ -1,7 +1,10 @@
 import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image } from "lucide-react";
 import { useState, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
-const ClassicsModal = lazy(() => import("./ClassicsModal"));
+const ClassicsModal = lazy(() => import("./ClassicsModal").catch(() => {
+  window.location.reload();
+  return import("./ClassicsModal");
+}));
 import SupportAuthorModal from "./SupportAuthorModal";
 
 const Header = () => {

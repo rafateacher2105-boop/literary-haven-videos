@@ -467,13 +467,13 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
               <Library className="w-4 h-4" />
               Clássicos
             </TabsTrigger>
-            <TabsTrigger value="distopias" className="flex-1 gap-1.5 text-xs sm:text-sm">
-              <Skull className="w-4 h-4" />
-              Distopias
-            </TabsTrigger>
             <TabsTrigger value="contos" className="flex-1 gap-1.5 text-xs sm:text-sm">
               <BookOpenText className="w-4 h-4" />
               Contos e Lendas
+            </TabsTrigger>
+            <TabsTrigger value="distopias" className="flex-1 gap-1.5 text-xs sm:text-sm">
+              <Skull className="w-4 h-4" />
+              Distopias
             </TabsTrigger>
           </TabsList>
 

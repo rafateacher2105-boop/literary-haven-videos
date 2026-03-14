@@ -117,6 +117,7 @@ import coverDomQuixoteCriancas from "@/assets/cover-dom-quixote-criancas.jpg";
 import coverAritmeticaEmilia from "@/assets/cover-aritmetica-emilia.jpg";
 import coverViagemAoCeu from "@/assets/cover-viagem-ao-ceu.jpg";
 import coverContosCriaturasFantasticas from "@/assets/cover-contos-criaturas-fantasticas.jpg";
+import coverContosCarochinha from "@/assets/cover-contos-carochinha.jpg";
 import {
   Dialog,
   DialogContent,

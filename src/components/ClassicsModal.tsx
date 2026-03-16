@@ -71,6 +71,7 @@ import coverMitosGregos from "@/assets/cover-mitos-gregos.jpg";
 import coverLendasMedievais from "@/assets/cover-lendas-medievais.jpg";
 import coverLendasRussas from "@/assets/cover-lendas-russas.jpg";
 import coverContosJudaicos from "@/assets/cover-contos-judaicos.jpg";
+import coverContosPescador from "@/assets/cover-contos-pescador.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
@@ -249,6 +250,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos da Carochinha — Versão Especial", author: "Rafael S. L. Aguiar", cover: coverContosCarochinha, file: "/contos-carochinha.pdf", description: "Uma versão especial dos clássicos Contos da Carochinha, com histórias encantadoras que atravessam gerações. Fábulas, contos de fadas e narrativas populares reunidas em uma edição de luxo ilustrada. Edição especial Letras e Páginas." },
   { title: "Lendas Russas — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasRussas, file: "/lendas-russas.pdf", description: "Uma coletânea encantadora de lendas e contos populares russos, com histórias de Baba Yaga, o Pássaro de Fogo, cavaleiros e princesas. Ilustrações em aquarela trazem vida ao rico folclore eslavo. Edição especial Letras e Páginas." },
   { title: "Contos Judaicos Antigos e Ilustrados", author: "Rafael S. L. Aguiar", cover: coverContosJudaicos, file: "/contos-judaicos.pdf", description: "Uma coletânea encantadora de contos judaicos antigos, com histórias de sabedoria, fé e tradição. Edição especial com ilustrações exclusivas. Edição Letras e Páginas por Rafael S. L. Aguiar." },
+  { title: "Contos de Pescador", author: "Rafael S. L. Aguiar", cover: coverContosPescador, file: "/contos-pescador.pdf", description: "Uma coletânea ilustrada com xilogravuras de contos clássicos de pescador, reunindo histórias de aventura, mistério e fantasia nas águas. Edição e seleção de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
 ];
 
 const talesColors = [

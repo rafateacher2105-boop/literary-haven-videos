@@ -139,7 +139,10 @@ interface ClassicBook {
   description?: string;
   file?: string;
   cover?: string;
+  isPaid?: boolean;
 }
+
+const PIX_KEY = "rafateacher2105@gmail.com";
 
 const classicBooks: ClassicBook[] = [
   { title: "A Divina Comédia", author: "Dante Alighieri", cover: coverDivinaComedia, file: "/divina-comedia.pdf" },

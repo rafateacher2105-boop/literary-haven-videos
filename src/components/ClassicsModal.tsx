@@ -454,8 +454,71 @@ const LeadCaptureForm = ({ book, onSuccess, onCancel }: { book: ClassicBook; onS
   );
 };
 
+const DonationGateModal = ({ book, onSuccess, onCancel }: { book: ClassicBook; onSuccess: () => void; onCancel: () => void }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyPix = async () => {
+    await navigator.clipboard.writeText(PIX_KEY);
+    setCopied(true);
+    toast.success("Chave PIX copiada!");
+    setTimeout(() => setCopied(false), 3000);
+  };
+
+  const handleConfirmDonation = () => {
+    toast.success("Obrigado pela doação! Seu download começará em breve. ❤️");
+    onSuccess();
+  };
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50" onClick={onCancel}>
+      <div className="bg-card rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl border border-border" onClick={(e) => e.stopPropagation()}>
+        <h3 className="font-display text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
+          <Coffee className="w-5 h-5 text-primary" />
+          Pague um café e baixe o livro
+        </h3>
+        <p className="font-body text-sm text-muted-foreground mb-4">
+          Esta é uma edição especial com curadoria de <strong>Rafael S. L. Aguiar</strong>. Apoie o autor com uma doação de <strong>R$ 5,00</strong> via PIX para baixar <strong>{book.title}</strong>.
+        </p>
+
+        <div className="bg-primary/10 rounded-lg p-4 text-center space-y-1 mb-4">
+          <Coffee className="w-8 h-8 text-primary mx-auto" />
+          <p className="font-display text-2xl font-bold text-primary">R$ 5,00</p>
+          <p className="font-body text-xs text-muted-foreground">Pague um café ☕</p>
+        </div>
+
+        <div className="space-y-2 mb-4">
+          <p className="font-body text-sm font-medium text-foreground">Chave PIX (e-mail):</p>
+          <div className="flex items-center gap-2">
+            <code className="flex-1 bg-muted px-3 py-2 rounded text-xs font-mono break-all">
+              {PIX_KEY}
+            </code>
+            <Button variant="outline" size="icon" onClick={handleCopyPix} title="Copiar chave PIX" className="shrink-0">
+              {copied ? <Check className="w-4 h-4 text-primary" /> : <Copy className="w-4 h-4" />}
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex gap-2">
+          <Button type="button" variant="outline" size="sm" className="flex-1" onClick={onCancel}>
+            Cancelar
+          </Button>
+          <Button size="sm" className="flex-1 gap-1.5" onClick={handleConfirmDonation}>
+            <Download className="w-3 h-3" />
+            Já doei, baixar!
+          </Button>
+        </div>
+
+        <p className="font-body text-[10px] text-center text-muted-foreground mt-3">
+          Obrigado pelo apoio! Cada café nos ajuda a continuar produzindo conteúdo de qualidade. ❤️
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
   const [selectedBook, setSelectedBook] = useState<ClassicBook | null>(null);
+  const [paidBook, setPaidBook] = useState<ClassicBook | null>(null);
 
   const handleDownloadSuccess = () => {
     if (selectedBook?.file) {
@@ -465,6 +528,16 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
       a.click();
     }
     setSelectedBook(null);
+  };
+
+  const handlePaidDownloadSuccess = () => {
+    if (paidBook?.file) {
+      const a = document.createElement("a");
+      a.href = paidBook.file;
+      a.download = "";
+      a.click();
+    }
+    setPaidBook(null);
   };
 
   return (
@@ -498,17 +571,17 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
 
           <TabsContent value="classicos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} />
+              <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
           <TabsContent value="distopias" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} />
+              <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
           <TabsContent value="contos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} />
+              <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
         </Tabs>
@@ -519,6 +592,14 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
           book={selectedBook}
           onSuccess={handleDownloadSuccess}
           onCancel={() => setSelectedBook(null)}
+        />
+      )}
+
+      {paidBook && (
+        <DonationGateModal
+          book={paidBook}
+          onSuccess={handlePaidDownloadSuccess}
+          onCancel={() => setPaidBook(null)}
         />
       )}
     </Dialog>

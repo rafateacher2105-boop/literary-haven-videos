@@ -71,6 +71,7 @@ import coverMitosGregos from "@/assets/cover-mitos-gregos.jpg";
 import coverLendasMedievais from "@/assets/cover-lendas-medievais.jpg";
 import coverLendasRussas from "@/assets/cover-lendas-russas.jpg";
 import coverContosJudaicos from "@/assets/cover-contos-judaicos.jpg";
+import coverContosPescador from "@/assets/cover-contos-pescador.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";

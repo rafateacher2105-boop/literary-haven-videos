@@ -1,4 +1,4 @@
-import { Download, Library, Mail, Skull, BookOpenText } from "lucide-react";
+import { Download, Library, Mail, Skull, BookOpenText, Coffee, Copy, Check } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -139,7 +139,10 @@ interface ClassicBook {
   description?: string;
   file?: string;
   cover?: string;
+  isPaid?: boolean;
 }
+
+const PIX_KEY = "rafateacher2105@gmail.com";
 
 const classicBooks: ClassicBook[] = [
   { title: "A Divina Comédia", author: "Dante Alighieri", cover: coverDivinaComedia, file: "/divina-comedia.pdf" },
@@ -235,22 +238,22 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos de Andersen", author: "Hans Christian Andersen", cover: coverContosAndersen, file: "/contos-andersen.pdf", description: "O Patinho Feio, A Pequena Sereia, A Rainha da Neve — histórias encantadoras que misturam fantasia, melancolia e lições atemporais. Edição especial para o Blog Letras e Páginas." },
   { title: "Contos de Perrault", author: "Charles Perrault", cover: coverContosPerrault, file: "/contos-perrault.pdf", description: "O Gato de Botas, A Bela Adormecida, Chapeuzinho Vermelho — os contos que inauguraram a tradição literária dos contos de fadas na Europa. Edição especial com contos escolhidos pelo editor Rafael S.L. Aguiar para o Blog Letras e Páginas." },
   { title: "Lendas Indígenas", author: "Tradição Oral", cover: coverLendasIndigenas, file: "/lendas-indigenas.pdf", description: "Narrativas ancestrais dos povos originários do Brasil: o Curupira, o Boto, a Iara, o Saci-Pererê e outras histórias que explicam o mundo pela sabedoria da floresta." },
-  { title: "Contos Essenciais da África", author: "Rafael S. L. Aguiar", cover: coverLendasAfricanas, file: "/lendas-africanas.pdf", description: "Uma coletânea encantadora dos contos mais fascinantes do continente africano, com histórias de sabedoria, coragem e tradição. Edição e curadoria de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
+  { title: "Contos Essenciais da África", author: "Rafael S. L. Aguiar", cover: coverLendasAfricanas, file: "/lendas-africanas.pdf", isPaid: true, description: "Uma coletânea encantadora dos contos mais fascinantes do continente africano, com histórias de sabedoria, coragem e tradição. Edição e curadoria de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Lendas Urbanas", author: "Folclore Contemporâneo", cover: coverLendasUrbanas, file: "/lendas-urbanas.pdf", description: "A Loira do Banheiro, o Homem do Saco, a Maria Sangrenta — histórias que nascem nas cidades e se espalham de boca em boca, alimentando nossos medos modernos." },
   { title: "Lendas do Folclore Brasileiro", author: "Coletânea Especial", cover: coverLendasFolclore, file: "/lendas-folclore-brasileiro.pdf", description: "Curupira, Saci-Pererê, Iara, Boto Cor-de-Rosa e muito mais — uma coletânea especial das lendas mais fascinantes do folclore brasileiro. Edição especial Letras e Páginas." },
   { title: "Lendas Essenciais da China", author: "Coletânea Especial", cover: coverLendasChina, file: "/lendas-essenciais-china.pdf", description: "Dragões, fênix, o Rei Macaco e muito mais — uma coletânea especial das lendas mais fascinantes da mitologia chinesa. Edição especial Letras e Páginas." },
   { title: "Contos das Mil e Uma Noites", author: "Coletânea Especial", cover: coverMilUmaNoites, file: "/contos-mil-uma-noites.pdf", description: "Aladim, Ali Babá, Simbad e muito mais — uma edição especial das histórias mais encantadoras das Mil e Uma Noites. Edição especial Letras e Páginas." },
   { title: "Mitos e Lendas Ancestrais do Japão", author: "Coletânea Especial", cover: coverLendasJapao, file: "/lendas-japao.pdf", description: "Amaterasu, Kitsune, Tanuki, Raijin e muito mais — uma edição especial de luxo das lendas e mitos mais fascinantes do Japão ancestral. Edição especial Letras e Páginas." },
   { title: "Mitos Nórdicos — Edição Especial", author: "Coletânea Especial", cover: coverMitosNordicos, file: "/mitos-nordicos.pdf", description: "Odin, Thor, Loki, Fenrir e muito mais — uma edição de luxo das lendas e mitos mais épicos da mitologia nórdica. Edição especial Letras e Páginas." },
-  { title: "Lendas do Brasil 2 — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasBrasil, file: "/lendas-brasil.pdf", description: "Uma viagem fascinante pelas lendas de cada região do Brasil: do Saci-Pererê e Curupira no Sudeste, ao Boto Cor-de-Rosa e Iara na Amazônia, passando pela Comadre Florzinha e o Papa-Figo no Nordeste, o Negrinho do Pastoreio no Sul e o Pé de Garrafa no Centro-Oeste. Edição especial de luxo Letras e Páginas." },
-  { title: "Lendas do Brasil — Ilustrado com Xilogravuras", author: "Rafael S. L. Aguiar", cover: coverLendasBrasilIlustrado, file: "/lendas-brasil-ilustrado.pdf", description: "Edição especial completa e ilustrada com xilogravuras artísticas. 20 lendas organizadas por região: Norte (Curupira, Iara, Boto Cor-de-Rosa, Vitória-Régia, Mapinguari), Nordeste (Comadre Fulozinha, Papa-Figo, Boi Uná, Quibungo, Cabeça de Cuia), Centro-Oeste (Papai do Mato, Arranca-Línguas, Onça-Maneta), Sudeste (Mula Sem Cabeça, Corpo-Seco, Mãozinha-Preta, Bradador) e Sul (Negrinho do Pastoreio, Boitatá, Saci-Pererê). Curadoria literária Rafael S. L. Aguiar — Blog Letras e Páginas." },
-  { title: "Mitos Gregos da Antiguidade — Edição de Luxo Ilustrada", author: "Rafael S. L. Aguiar", cover: coverMitosGregos, file: "/mitos-gregos-antiguidade.pdf", description: "Edição de luxo ilustrada com desenhos estilizados no estilo grego. Uma viagem épica pela mitologia grega: Zeus, Poseidon, Atena, Hércules, Perseu, Odisseu e muito mais. Conheça os deuses do Olimpo, os heróis lendários e as criaturas fantásticas que moldaram a cultura ocidental. Curadoria literária Rafael S. L. Aguiar — Blog Letras e Páginas." },
-  { title: "Lendas Medievais — Edição de Luxo", author: "Rafael S. L. Aguiar", cover: coverLendasMedievais, file: "/lendas-medievais.pdf", description: "Edição de luxo ilustrada com arte medieval. Cavaleiros, dragões, damas encantadas e castelos misteriosos ganham vida nesta coletânea épica de lendas da Idade Média. Do Rei Artur à lenda de São Jorge, uma viagem fascinante pelo imaginário medieval europeu. Edição e seleção Rafael S. L. Aguiar — Blog Letras e Páginas." },
+  { title: "Lendas do Brasil 2 — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasBrasil, file: "/lendas-brasil.pdf", isPaid: true, description: "Uma viagem fascinante pelas lendas de cada região do Brasil: do Saci-Pererê e Curupira no Sudeste, ao Boto Cor-de-Rosa e Iara na Amazônia, passando pela Comadre Florzinha e o Papa-Figo no Nordeste, o Negrinho do Pastoreio no Sul e o Pé de Garrafa no Centro-Oeste. Edição especial de luxo Letras e Páginas." },
+  { title: "Lendas do Brasil — Ilustrado com Xilogravuras", author: "Rafael S. L. Aguiar", cover: coverLendasBrasilIlustrado, file: "/lendas-brasil-ilustrado.pdf", isPaid: true, description: "Edição especial completa e ilustrada com xilogravuras artísticas. 20 lendas organizadas por região: Norte (Curupira, Iara, Boto Cor-de-Rosa, Vitória-Régia, Mapinguari), Nordeste (Comadre Fulozinha, Papa-Figo, Boi Uná, Quibungo, Cabeça de Cuia), Centro-Oeste (Papai do Mato, Arranca-Línguas, Onça-Maneta), Sudeste (Mula Sem Cabeça, Corpo-Seco, Mãozinha-Preta, Bradador) e Sul (Negrinho do Pastoreio, Boitatá, Saci-Pererê). Curadoria literária Rafael S. L. Aguiar — Blog Letras e Páginas." },
+  { title: "Mitos Gregos da Antiguidade — Edição de Luxo Ilustrada", author: "Rafael S. L. Aguiar", cover: coverMitosGregos, file: "/mitos-gregos-antiguidade.pdf", isPaid: true, description: "Edição de luxo ilustrada com desenhos estilizados no estilo grego. Uma viagem épica pela mitologia grega: Zeus, Poseidon, Atena, Hércules, Perseu, Odisseu e muito mais. Conheça os deuses do Olimpo, os heróis lendários e as criaturas fantásticas que moldaram a cultura ocidental. Curadoria literária Rafael S. L. Aguiar — Blog Letras e Páginas." },
+  { title: "Lendas Medievais — Edição de Luxo", author: "Rafael S. L. Aguiar", cover: coverLendasMedievais, file: "/lendas-medievais.pdf", isPaid: true, description: "Edição de luxo ilustrada com arte medieval. Cavaleiros, dragões, damas encantadas e castelos misteriosos ganham vida nesta coletânea épica de lendas da Idade Média. Do Rei Artur à lenda de São Jorge, uma viagem fascinante pelo imaginário medieval europeu. Edição e seleção Rafael S. L. Aguiar — Blog Letras e Páginas." },
   { title: "Contos de Criaturas Fantásticas", author: "Coletânea Especial", cover: coverContosCriaturasFantasticas, file: "/contos-criaturas-fantasticas.pdf", description: "Dragões, fênix, unicórnios, grifos e outras criaturas lendárias ganham vida nesta coletânea encantadora de contos fantásticos. Uma viagem pelo imaginário de civilizações antigas e modernas. Edição especial Letras e Páginas." },
-  { title: "Contos da Carochinha — Versão Especial", author: "Rafael S. L. Aguiar", cover: coverContosCarochinha, file: "/contos-carochinha.pdf", description: "Uma versão especial dos clássicos Contos da Carochinha, com histórias encantadoras que atravessam gerações. Fábulas, contos de fadas e narrativas populares reunidas em uma edição de luxo ilustrada. Edição especial Letras e Páginas." },
-  { title: "Lendas Russas — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasRussas, file: "/lendas-russas.pdf", description: "Uma coletânea encantadora de lendas e contos populares russos, com histórias de Baba Yaga, o Pássaro de Fogo, cavaleiros e princesas. Ilustrações em aquarela trazem vida ao rico folclore eslavo. Edição especial Letras e Páginas." },
-  { title: "Contos Judaicos Antigos e Ilustrados", author: "Rafael S. L. Aguiar", cover: coverContosJudaicos, file: "/contos-judaicos.pdf", description: "Uma coletânea encantadora de contos judaicos antigos, com histórias de sabedoria, fé e tradição. Edição especial com ilustrações exclusivas. Edição Letras e Páginas por Rafael S. L. Aguiar." },
-  { title: "Contos de Pescador", author: "Rafael S. L. Aguiar", cover: coverContosPescador, file: "/contos-pescador.pdf", description: "Uma coletânea ilustrada com xilogravuras de contos clássicos de pescador, reunindo histórias de aventura, mistério e fantasia nas águas. Edição e seleção de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
+  { title: "Contos da Carochinha — Versão Especial", author: "Rafael S. L. Aguiar", cover: coverContosCarochinha, file: "/contos-carochinha.pdf", isPaid: true, description: "Uma versão especial dos clássicos Contos da Carochinha, com histórias encantadoras que atravessam gerações. Fábulas, contos de fadas e narrativas populares reunidas em uma edição de luxo ilustrada. Edição especial Letras e Páginas." },
+  { title: "Lendas Russas — Edição Especial", author: "Rafael S. L. Aguiar", cover: coverLendasRussas, file: "/lendas-russas.pdf", isPaid: true, description: "Uma coletânea encantadora de lendas e contos populares russos, com histórias de Baba Yaga, o Pássaro de Fogo, cavaleiros e princesas. Ilustrações em aquarela trazem vida ao rico folclore eslavo. Edição especial Letras e Páginas." },
+  { title: "Contos Judaicos Antigos e Ilustrados", author: "Rafael S. L. Aguiar", cover: coverContosJudaicos, file: "/contos-judaicos.pdf", isPaid: true, description: "Uma coletânea encantadora de contos judaicos antigos, com histórias de sabedoria, fé e tradição. Edição especial com ilustrações exclusivas. Edição Letras e Páginas por Rafael S. L. Aguiar." },
+  { title: "Contos de Pescador", author: "Rafael S. L. Aguiar", cover: coverContosPescador, file: "/contos-pescador.pdf", isPaid: true, description: "Uma coletânea ilustrada com xilogravuras de contos clássicos de pescador, reunindo histórias de aventura, mistério e fantasia nas águas. Edição e seleção de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
 ];
 
 const talesColors = [
@@ -296,7 +299,7 @@ interface ClassicsModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; colors: string[]; onRequestDownload: (book: ClassicBook) => void }) => {
+const BookGrid = ({ books, colors, onRequestDownload, onRequestPaidDownload }: { books: ClassicBook[]; colors: string[]; onRequestDownload: (book: ClassicBook) => void; onRequestPaidDownload?: (book: ClassicBook) => void }) => {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2">
       {books.map((book, idx) => {
@@ -341,17 +344,29 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
                 </p>
               )}
               {book.file ? (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="mt-auto gap-1.5 text-xs"
-                  asChild
-                >
-                  <a href={book.file} download>
-                    <Download className="w-3 h-3" />
-                    Download grátis
-                  </a>
-                </Button>
+                book.isPaid && onRequestPaidDownload ? (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-auto gap-1.5 text-xs border-primary/30 text-primary hover:bg-primary/10"
+                    onClick={() => onRequestPaidDownload(book)}
+                  >
+                    <Coffee className="w-3 h-3" />
+                    Café + Download
+                  </Button>
+                ) : (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-auto gap-1.5 text-xs"
+                    asChild
+                  >
+                    <a href={book.file} download>
+                      <Download className="w-3 h-3" />
+                      Download grátis
+                    </a>
+                  </Button>
+                )
               ) : (
                 <p className="mt-auto font-body text-[10px] text-muted-foreground italic text-center">
                   Em breve
@@ -439,8 +454,71 @@ const LeadCaptureForm = ({ book, onSuccess, onCancel }: { book: ClassicBook; onS
   );
 };
 
+const DonationGateModal = ({ book, onSuccess, onCancel }: { book: ClassicBook; onSuccess: () => void; onCancel: () => void }) => {
+  const [copied, setCopied] = useState(false);
+
+  const handleCopyPix = async () => {
+    await navigator.clipboard.writeText(PIX_KEY);
+    setCopied(true);
+    toast.success("Chave PIX copiada!");
+    setTimeout(() => setCopied(false), 3000);
+  };
+
+  const handleConfirmDonation = () => {
+    toast.success("Obrigado pela doação! Seu download começará em breve. ❤️");
+    onSuccess();
+  };
+
+  return (
+    <div className="fixed inset-0 z-[60] flex items-center justify-center bg-black/50" onClick={onCancel}>
+      <div className="bg-card rounded-lg p-6 max-w-sm w-full mx-4 shadow-xl border border-border" onClick={(e) => e.stopPropagation()}>
+        <h3 className="font-display text-lg font-semibold text-foreground mb-1 flex items-center gap-2">
+          <Coffee className="w-5 h-5 text-primary" />
+          Pague um café e baixe o livro
+        </h3>
+        <p className="font-body text-sm text-muted-foreground mb-4">
+          Esta é uma edição especial com curadoria de <strong>Rafael S. L. Aguiar</strong>. Apoie o autor com uma doação de <strong>R$ 5,00</strong> via PIX para baixar <strong>{book.title}</strong>.
+        </p>
+
+        <div className="bg-primary/10 rounded-lg p-4 text-center space-y-1 mb-4">
+          <Coffee className="w-8 h-8 text-primary mx-auto" />
+          <p className="font-display text-2xl font-bold text-primary">R$ 5,00</p>
+          <p className="font-body text-xs text-muted-foreground">Pague um café ☕</p>
+        </div>
+
+        <div className="space-y-2 mb-4">
+          <p className="font-body text-sm font-medium text-foreground">Chave PIX (e-mail):</p>
+          <div className="flex items-center gap-2">
+            <code className="flex-1 bg-muted px-3 py-2 rounded text-xs font-mono break-all">
+              {PIX_KEY}
+            </code>
+            <Button variant="outline" size="icon" onClick={handleCopyPix} title="Copiar chave PIX" className="shrink-0">
+              {copied ? <Check className="w-4 h-4 text-primary" /> : <Copy className="w-4 h-4" />}
+            </Button>
+          </div>
+        </div>
+
+        <div className="flex gap-2">
+          <Button type="button" variant="outline" size="sm" className="flex-1" onClick={onCancel}>
+            Cancelar
+          </Button>
+          <Button size="sm" className="flex-1 gap-1.5" onClick={handleConfirmDonation}>
+            <Download className="w-3 h-3" />
+            Já doei, baixar!
+          </Button>
+        </div>
+
+        <p className="font-body text-[10px] text-center text-muted-foreground mt-3">
+          Obrigado pelo apoio! Cada café nos ajuda a continuar produzindo conteúdo de qualidade. ❤️
+        </p>
+      </div>
+    </div>
+  );
+};
+
 const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
   const [selectedBook, setSelectedBook] = useState<ClassicBook | null>(null);
+  const [paidBook, setPaidBook] = useState<ClassicBook | null>(null);
 
   const handleDownloadSuccess = () => {
     if (selectedBook?.file) {
@@ -450,6 +528,16 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
       a.click();
     }
     setSelectedBook(null);
+  };
+
+  const handlePaidDownloadSuccess = () => {
+    if (paidBook?.file) {
+      const a = document.createElement("a");
+      a.href = paidBook.file;
+      a.download = "";
+      a.click();
+    }
+    setPaidBook(null);
   };
 
   return (
@@ -483,17 +571,17 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
 
           <TabsContent value="classicos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} />
+              <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
           <TabsContent value="distopias" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} />
+              <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
           <TabsContent value="contos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} />
+              <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
         </Tabs>
@@ -504,6 +592,14 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
           book={selectedBook}
           onSuccess={handleDownloadSuccess}
           onCancel={() => setSelectedBook(null)}
+        />
+      )}
+
+      {paidBook && (
+        <DonationGateModal
+          book={paidBook}
+          onSuccess={handlePaidDownloadSuccess}
+          onCancel={() => setPaidBook(null)}
         />
       )}
     </Dialog>

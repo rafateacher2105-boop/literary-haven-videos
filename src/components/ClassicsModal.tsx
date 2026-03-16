@@ -299,7 +299,7 @@ interface ClassicsModalProps {
   onOpenChange: (open: boolean) => void;
 }
 
-const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; colors: string[]; onRequestDownload: (book: ClassicBook) => void }) => {
+const BookGrid = ({ books, colors, onRequestDownload, onRequestPaidDownload }: { books: ClassicBook[]; colors: string[]; onRequestDownload: (book: ClassicBook) => void; onRequestPaidDownload?: (book: ClassicBook) => void }) => {
   return (
     <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 gap-4 pt-2">
       {books.map((book, idx) => {
@@ -344,17 +344,29 @@ const BookGrid = ({ books, colors, onRequestDownload }: { books: ClassicBook[]; 
                 </p>
               )}
               {book.file ? (
-                <Button
-                  variant="outline"
-                  size="sm"
-                  className="mt-auto gap-1.5 text-xs"
-                  asChild
-                >
-                  <a href={book.file} download>
-                    <Download className="w-3 h-3" />
-                    Download grátis
-                  </a>
-                </Button>
+                book.isPaid && onRequestPaidDownload ? (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-auto gap-1.5 text-xs border-primary/30 text-primary hover:bg-primary/10"
+                    onClick={() => onRequestPaidDownload(book)}
+                  >
+                    <Coffee className="w-3 h-3" />
+                    Café + Download
+                  </Button>
+                ) : (
+                  <Button
+                    variant="outline"
+                    size="sm"
+                    className="mt-auto gap-1.5 text-xs"
+                    asChild
+                  >
+                    <a href={book.file} download>
+                      <Download className="w-3 h-3" />
+                      Download grátis
+                    </a>
+                  </Button>
+                )
               ) : (
                 <p className="mt-auto font-body text-[10px] text-muted-foreground italic text-center">
                   Em breve

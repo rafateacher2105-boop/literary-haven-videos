@@ -72,6 +72,7 @@ import coverLendasMedievais from "@/assets/cover-lendas-medievais.jpg";
 import coverLendasRussas from "@/assets/cover-lendas-russas.jpg";
 import coverContosJudaicos from "@/assets/cover-contos-judaicos.jpg";
 import coverContosPescador from "@/assets/cover-contos-pescador.jpg";
+import coverContosGenioBagda from "@/assets/cover-contos-genio-bagda.jpg";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";

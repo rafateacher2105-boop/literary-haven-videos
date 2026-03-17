@@ -257,6 +257,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos Judaicos Antigos e Ilustrados", author: "Rafael S. L. Aguiar", cover: coverContosJudaicos, file: "/contos-judaicos.pdf", description: "Uma coletânea encantadora de contos judaicos antigos, com histórias de sabedoria, fé e tradição. Edição especial com ilustrações exclusivas. Edição Letras e Páginas por Rafael S. L. Aguiar." },
   { title: "Contos de Pescador", author: "Rafael S. L. Aguiar", cover: coverContosPescador, file: "/contos-pescador.pdf", description: "Uma coletânea ilustrada com xilogravuras de contos clássicos de pescador, reunindo histórias de aventura, mistério e fantasia nas águas. Edição e seleção de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Contos de Gênio pra lá de Bagdá", author: "Rafael S. L. Aguiar", cover: coverContosGenioBagda, file: "/contos-genio-bagda.pdf", description: "Uma coletânea encantadora de contos sobre gênios e lâmpadas mágicas, com histórias que vão além das Mil e Uma Noites. Edição Especial ilustrada por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
+  { title: "Contos sem Pé nem Cabeça", author: "Rafael S. L. Aguiar", cover: coverContosSemPeNemCabeca, file: "/contos-sem-pe-nem-cabeca.pdf", description: "Uma coletânea divertida e nonsense de contos clássicos sem pé nem cabeça, com histórias de João Preguiça, Golden Goose e The Bear Who Wasn't. Edição Especial de Luxo por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
 ];
 
 const talesColors = [

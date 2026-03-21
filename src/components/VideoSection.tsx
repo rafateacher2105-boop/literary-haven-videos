@@ -56,8 +56,9 @@ const videos = [
   {
     title: "Resenha do Clássico: Revolução dos Bichos de George Orwell",
     thumbnail: thumbResenhaRevolucaoBichos,
-    duration: "Em breve",
+    duration: "14:22",
     category: "Resenha",
+    url: "https://www.youtube.com/watch?v=6HtxpnRi3J8",
   },
   {
     title: "Resenha do Clássico: Iracema de José de Alencar",

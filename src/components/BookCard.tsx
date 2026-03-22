@@ -85,6 +85,8 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
               src={cover}
               alt={`Capa do livro ${title}`}
               className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+              loading="lazy"
+              decoding="async"
             />
             {badge && (
               <span className="absolute top-3 left-3 bg-primary text-primary-foreground text-xs font-body px-3 py-1 rounded-full">

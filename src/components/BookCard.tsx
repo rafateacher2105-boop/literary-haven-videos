@@ -110,6 +110,8 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
                 src={backcover}
                 alt={`Contracapa do livro ${title}`}
                 className="w-full h-full object-cover"
+                loading="lazy"
+                decoding="async"
               />
               <div className="absolute inset-0 bg-black/40" />
               <span className="absolute bottom-3 right-3 bg-background/80 text-foreground text-xs font-body px-2 py-1 rounded backdrop-blur-sm">

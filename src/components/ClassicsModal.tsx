@@ -123,6 +123,8 @@ import coverAritmeticaEmilia from "@/assets/cover-aritmetica-emilia.jpg";
 import coverViagemAoCeu from "@/assets/cover-viagem-ao-ceu.jpg";
 import coverContosCriaturasFantasticas from "@/assets/cover-contos-criaturas-fantasticas.jpg";
 import coverContosCarochinha from "@/assets/cover-contos-carochinha.jpg";
+import coverQuartoSabio from "@/assets/cover-quarto-sabio.png";
+import coverDeQuantaTerra from "@/assets/cover-de-quanta-terra.png";
 import {
   Dialog,
   DialogContent,
@@ -232,6 +234,8 @@ const classicBooks: ClassicBook[] = [
   { title: "Dom Quixote das Crianças", author: "Monteiro Lobato", cover: coverDomQuixoteCriancas, file: "/dom-quixote-das-criancas.pdf" },
   { title: "Aritmética da Emília", author: "Monteiro Lobato", cover: coverAritmeticaEmilia, file: "/aritmetica-da-emilia.pdf" },
   { title: "Viagem ao Céu", author: "Monteiro Lobato", cover: coverViagemAoCeu, file: "/viagem-ao-ceu.pdf" },
+  { title: "De Quanta Terra Precisa um Homem? E Outros Contos", author: "Liev Tolstói", cover: coverDeQuantaTerra, description: "Uma das mais profundas parábolas sobre a ganância humana. Contos filosóficos de Tolstói que questionam o sentido da vida e da ambição." },
+  { title: "O Quarto Sábio", author: "Henry Van Dyke", cover: coverQuartoSabio, description: "Um clássico sobre fé e sacrifício. A jornada de Artaban, o quarto mago, em busca do Cristo." },
 ];
 
 const talesBooks: ClassicBook[] = [

@@ -74,6 +74,7 @@ import coverContosJudaicos from "@/assets/cover-contos-judaicos.jpg";
 import coverContosPescador from "@/assets/cover-contos-pescador.jpg";
 import coverContosGenioBagda from "@/assets/cover-contos-genio-bagda.jpg";
 import coverContosSemPeNemCabeca from "@/assets/cover-contos-sem-pe-nem-cabeca.jpg";
+import coverOndeEstaOAmor from "@/assets/cover-onde-esta-o-amor.png";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";

@@ -74,6 +74,7 @@ import coverContosJudaicos from "@/assets/cover-contos-judaicos.jpg";
 import coverContosPescador from "@/assets/cover-contos-pescador.jpg";
 import coverContosGenioBagda from "@/assets/cover-contos-genio-bagda.jpg";
 import coverContosSemPeNemCabeca from "@/assets/cover-contos-sem-pe-nem-cabeca.jpg";
+import coverOndeEstaOAmor from "@/assets/cover-onde-esta-o-amor.png";
 import coverPeterPan from "@/assets/cover-peter-pan.png";
 import coverLivroSelva from "@/assets/cover-livro-selva.png";
 import coverPinoquio from "@/assets/cover-pinoquio.png";
@@ -262,6 +263,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos de Pescador", author: "Rafael S. L. Aguiar", cover: coverContosPescador, file: "/contos-pescador.pdf", description: "Uma coletânea ilustrada com xilogravuras de contos clássicos de pescador, reunindo histórias de aventura, mistério e fantasia nas águas. Edição e seleção de Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Contos de Gênio pra lá de Bagdá", author: "Rafael S. L. Aguiar", cover: coverContosGenioBagda, file: "/contos-genio-bagda.pdf", description: "Uma coletânea encantadora de contos sobre gênios e lâmpadas mágicas, com histórias que vão além das Mil e Uma Noites. Edição Especial ilustrada por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Contos sem Pé nem Cabeça", author: "Rafael S. L. Aguiar", cover: coverContosSemPeNemCabeca, file: "/contos-sem-pe-nem-cabeca.pdf", description: "Uma coletânea divertida e nonsense de contos clássicos sem pé nem cabeça, com histórias de João Preguiça, Golden Goose e The Bear Who Wasn't. Edição Especial de Luxo por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
+  { title: "Onde Está o Amor, Ali Deus Está", author: "Rafael Aguiar", cover: coverOndeEstaOAmor, description: "Coletânea de contos clássicos sobre o verdadeiro amor. Uma seleção inspiradora organizada por Rafael Aguiar para o Blog Letras e Páginas." },
 ];
 
 const talesColors = [

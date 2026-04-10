@@ -25,7 +25,7 @@ const books = [
     author: "Rafael S. L. Aguiar",
     cover: coverMemoriasAndroid,
     backcover: backcoverMemoriasAndroid,
-    description: "Um romance de costumes contemporâneo onde um Android herda a fortuna de seu marido bilionário e, com sinceridade algorítmica, expõe as hipocrisias da alta sociedade. Uma sátira afiada inspirada em Machado de Assis, ambientada em 2045.",
+    description: "Quando uma cientista obcecada pelo marido morto decide trazer suas memórias de volta em um Android que não copia a hipocrisia da família, verdades inconvenientes serão reveladas.",
     badge: "Novo",
     price: "R$ 15,00",
     pdfFile: "/memorias-sinceras-de-um-android.pdf",

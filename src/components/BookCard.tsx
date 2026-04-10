@@ -208,7 +208,7 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
           </div>
         )}
         {/* Paid books without preview */}
-        {price && (!previewSlug || !proseDataMap[previewSlug || '']) && !slug && (
+        {price && !pdfFile && (!previewSlug || !proseDataMap[previewSlug || '']) && !slug && (
           <div className="mt-4">
             <Button
               variant="default"

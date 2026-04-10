@@ -170,7 +170,7 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
             </Button>
           </div>
         )}
-        {previewSlug && price && proseDataMap[previewSlug] && (
+        {previewSlug && price && !pdfFile && proseDataMap[previewSlug] && (
           <div className="mt-4 flex gap-2">
             {externalUrl ? (
               <a href={externalUrl} target="_blank" rel="noopener noreferrer" className="flex-1">

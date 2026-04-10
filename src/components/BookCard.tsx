@@ -40,7 +40,7 @@ const proseDataMap: Record<string, { info: any; chapters: any[] }> = {
   "atividades-ingles": { info: atividadesInglesInfo, chapters: atividadesInglesChapters },
 };
 
-const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug, externalUrl }: BookCardProps) => {
+const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug, externalUrl, pdfFile }: BookCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [showPaidModal, setShowPaidModal] = useState(false);

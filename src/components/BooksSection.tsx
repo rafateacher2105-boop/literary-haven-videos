@@ -22,7 +22,9 @@ const books = [
     author: "Rafael S. L. Aguiar",
     cover: coverObsoletos,
     description: "Em um futuro onde a humanidade se tornou obsoleta diante da tecnologia, um grupo de sobreviventes desperta para uma nova era. Uma jornada épica de resistência e redescoberta do que significa ser humano.",
-    badge: "Em breve",
+    badge: "Novo",
+    price: "R$ 15,00",
+    pdfFile: "/obsoletos.pdf",
   },
   {
     title: "Impacto 2070, o Recomeço",

@@ -24,6 +24,7 @@ interface BookCardProps {
   price?: string;
   previewSlug?: string;
   externalUrl?: string;
+  pdfFile?: string;
 }
 
 const booksDataMap: Record<string, { info: any; poems: any[] }> = {
@@ -39,7 +40,7 @@ const proseDataMap: Record<string, { info: any; chapters: any[] }> = {
   "atividades-ingles": { info: atividadesInglesInfo, chapters: atividadesInglesChapters },
 };
 
-const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug, externalUrl }: BookCardProps) => {
+const BookCard = ({ title, author, cover, backcover, description, badge, slug, price, previewSlug, externalUrl, pdfFile }: BookCardProps) => {
   const [flipped, setFlipped] = useState(false);
   const [showDownloadModal, setShowDownloadModal] = useState(false);
   const [showPaidModal, setShowPaidModal] = useState(false);
@@ -149,8 +150,27 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
             </Button>
           </div>
         )}
-        {/* Paid books: preview + paid download */}
-        {previewSlug && price && proseDataMap[previewSlug] && (
+        {/* Books with PDF file: free online reading + paid download */}
+        {pdfFile && price && (
+          <div className="mt-4 flex gap-2">
+            <a href={pdfFile} target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button variant="outline" size="sm" className="w-full gap-1.5">
+                <BookOpen className="w-3.5 h-3.5" />
+                Ler online
+              </Button>
+            </a>
+            <Button
+              variant="default"
+              size="sm"
+              className="gap-1.5"
+              onClick={() => setShowPaidModal(true)}
+            >
+              <ShoppingCart className="w-3.5 h-3.5" />
+              {price}
+            </Button>
+          </div>
+        )}
+        {previewSlug && price && !pdfFile && proseDataMap[previewSlug] && (
           <div className="mt-4 flex gap-2">
             {externalUrl ? (
               <a href={externalUrl} target="_blank" rel="noopener noreferrer" className="flex-1">
@@ -188,7 +208,7 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
           </div>
         )}
         {/* Paid books without preview */}
-        {price && (!previewSlug || !proseDataMap[previewSlug || '']) && !slug && (
+        {price && !pdfFile && (!previewSlug || !proseDataMap[previewSlug || '']) && !slug && (
           <div className="mt-4">
             <Button
               variant="default"

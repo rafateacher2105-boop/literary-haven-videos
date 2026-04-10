@@ -21,6 +21,16 @@ import backcoverMemoriasAndroid from "@/assets/backcover-memorias-android.jpg";
 
 const books = [
   {
+    title: "Memórias Sinceras de um Android",
+    author: "Rafael S. L. Aguiar",
+    cover: coverMemoriasAndroid,
+    backcover: backcoverMemoriasAndroid,
+    description: "Um romance de costumes contemporâneo onde um Android herda a fortuna de seu marido bilionário e, com sinceridade algorítmica, expõe as hipocrisias da alta sociedade. Uma sátira afiada inspirada em Machado de Assis, ambientada em 2045.",
+    badge: "Novo",
+    price: "R$ 15,00",
+    pdfFile: "/memorias-sinceras-de-um-android.pdf",
+  },
+  {
     title: "Obsoletos — O Despertar da Nova Era",
     author: "Rafael S. L. Aguiar",
     cover: coverObsoletos,

@@ -14,8 +14,16 @@ import backcoverPoesiaNatureza from "@/assets/backcover-poesia-da-natureza.jpg";
 import coverPoesiaSocial from "@/assets/cover-poesia-social.jpg";
 import backcoverPoesiaSocial from "@/assets/backcover-poesia-social.jpg";
 import coverAtividadesIngles from "@/assets/cover-atividades-ingles.jpg";
+import coverObsoletos from "@/assets/cover-obsoletos.jpg";
 
 const books = [
+  {
+    title: "Obsoletos — O Despertar da Nova Era",
+    author: "Rafael S. L. Aguiar",
+    cover: coverObsoletos,
+    description: "Em um futuro onde a humanidade se tornou obsoleta diante da tecnologia, um grupo de sobreviventes desperta para uma nova era. Uma jornada épica de resistência e redescoberta do que significa ser humano.",
+    badge: "Em breve",
+  },
   {
     title: "Impacto 2070, o Recomeço",
     author: "Rafael S. L. Aguiar",

@@ -16,6 +16,8 @@ import backcoverPoesiaSocial from "@/assets/backcover-poesia-social.jpg";
 import coverAtividadesIngles from "@/assets/cover-atividades-ingles.jpg";
 import coverObsoletos from "@/assets/cover-obsoletos.jpg";
 import backcoverObsoletos from "@/assets/backcover-obsoletos.jpg";
+import coverMemoriasAndroid from "@/assets/cover-memorias-android.jpg";
+import backcoverMemoriasAndroid from "@/assets/backcover-memorias-android.jpg";
 
 const books = [
   {

@@ -15,13 +15,15 @@ import coverPoesiaSocial from "@/assets/cover-poesia-social.jpg";
 import backcoverPoesiaSocial from "@/assets/backcover-poesia-social.jpg";
 import coverAtividadesIngles from "@/assets/cover-atividades-ingles.jpg";
 import coverObsoletos from "@/assets/cover-obsoletos.jpg";
+import backcoverObsoletos from "@/assets/backcover-obsoletos.jpg";
 
 const books = [
   {
     title: "Obsoletos — O Despertar da Nova Era",
     author: "Rafael S. L. Aguiar",
     cover: coverObsoletos,
-    description: "Em um futuro onde a humanidade se tornou obsoleta diante da tecnologia, um grupo de sobreviventes desperta para uma nova era. Uma jornada épica de resistência e redescoberta do que significa ser humano.",
+    backcover: backcoverObsoletos,
+    description: "Quando as máquinas decidiram que a humanidade era descartável, restou apenas um punhado de sobreviventes. Escondidos nas ruínas de uma civilização que eles próprios criaram, precisam enfrentar uma escolha impossível: render-se à nova ordem digital ou arriscar tudo numa última e desesperada revolução.",
     badge: "Novo",
     price: "R$ 15,00",
     pdfFile: "/obsoletos.pdf",

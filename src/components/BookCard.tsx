@@ -150,7 +150,26 @@ const BookCard = ({ title, author, cover, backcover, description, badge, slug, p
             </Button>
           </div>
         )}
-        {/* Paid books: preview + paid download */}
+        {/* Books with PDF file: free online reading + paid download */}
+        {pdfFile && price && (
+          <div className="mt-4 flex gap-2">
+            <a href={pdfFile} target="_blank" rel="noopener noreferrer" className="flex-1">
+              <Button variant="outline" size="sm" className="w-full gap-1.5">
+                <BookOpen className="w-3.5 h-3.5" />
+                Ler online
+              </Button>
+            </a>
+            <Button
+              variant="default"
+              size="sm"
+              className="gap-1.5"
+              onClick={() => setShowPaidModal(true)}
+            >
+              <ShoppingCart className="w-3.5 h-3.5" />
+              {price}
+            </Button>
+          </div>
+        )}
         {previewSlug && price && proseDataMap[previewSlug] && (
           <div className="mt-4 flex gap-2">
             {externalUrl ? (

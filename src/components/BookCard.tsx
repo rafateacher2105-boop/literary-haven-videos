@@ -24,6 +24,7 @@ interface BookCardProps {
   price?: string;
   previewSlug?: string;
   externalUrl?: string;
+  pdfFile?: string;
 }
 
 const booksDataMap: Record<string, { info: any; poems: any[] }> = {

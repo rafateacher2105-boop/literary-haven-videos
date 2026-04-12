@@ -126,6 +126,7 @@ import coverContosCriaturasFantasticas from "@/assets/cover-contos-criaturas-fan
 import coverContosCarochinha from "@/assets/cover-contos-carochinha.jpg";
 import coverQuartoSabio from "@/assets/cover-quarto-sabio.png";
 import coverDeQuantaTerra from "@/assets/cover-de-quanta-terra.png";
+import coverJornadaOeste from "@/assets/cover-jornada-oeste.jpg";
 import {
   Dialog,
   DialogContent,
@@ -264,6 +265,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos de Gênio pra lá de Bagdá", author: "Rafael S. L. Aguiar", cover: coverContosGenioBagda, file: "/contos-genio-bagda.pdf", description: "Uma coletânea encantadora de contos sobre gênios e lâmpadas mágicas, com histórias que vão além das Mil e Uma Noites. Edição Especial ilustrada por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Contos sem Pé nem Cabeça", author: "Rafael S. L. Aguiar", cover: coverContosSemPeNemCabeca, file: "/contos-sem-pe-nem-cabeca.pdf", description: "Uma coletânea divertida e nonsense de contos clássicos sem pé nem cabeça, com histórias de João Preguiça, Golden Goose e The Bear Who Wasn't. Edição Especial de Luxo por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Onde Está o Amor, Ali Deus Está", author: "Rafael Aguiar", cover: coverOndeEstaOAmor, file: "/onde-esta-o-amor.pdf", description: "Coletânea de contos clássicos sobre o verdadeiro amor. Uma seleção inspiradora organizada por Rafael Aguiar para o Blog Letras e Páginas." },
+  { title: "A Jornada para o Oeste — A Lenda do Rei Macaco", author: "Rafael S. L. Aguiar", cover: coverJornadaOeste, file: "/jornada-oeste.pdf", description: "Uma das maiores epopeias da literatura mundial. Acompanhe Sun Wukong, o Rei Macaco, nascido de uma pedra mágica, em sua jornada épica de redenção ao lado do Monge Tripitaka rumo ao Oeste em busca das escrituras sagradas. Edição especial Letras e Páginas." },
 ];
 
 const talesColors = [

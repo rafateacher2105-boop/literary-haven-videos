@@ -21,7 +21,7 @@ import backcoverMemoriasAndroid from "@/assets/backcover-memorias-android.jpg";
 
 const books = [
   {
-    title: "Memórias Sinceras de um Android",
+    title: "Memórias Ácidas de Bryan Kubrick",
     author: "Rafael S. L. Aguiar",
     cover: coverMemoriasAndroid,
     backcover: backcoverMemoriasAndroid,

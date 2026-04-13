@@ -127,6 +127,7 @@ import coverContosCarochinha from "@/assets/cover-contos-carochinha.jpg";
 import coverQuartoSabio from "@/assets/cover-quarto-sabio.png";
 import coverDeQuantaTerra from "@/assets/cover-de-quanta-terra.png";
 import coverJornadaOeste from "@/assets/cover-jornada-oeste.jpg";
+import cover12TrabalhosHercules from "@/assets/cover-12-trabalhos-hercules.jpg";
 import {
   Dialog,
   DialogContent,

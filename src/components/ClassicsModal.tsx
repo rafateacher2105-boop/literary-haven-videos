@@ -128,6 +128,7 @@ import coverQuartoSabio from "@/assets/cover-quarto-sabio.png";
 import coverDeQuantaTerra from "@/assets/cover-de-quanta-terra.png";
 import coverJornadaOeste from "@/assets/cover-jornada-oeste.jpg";
 import cover12TrabalhosHercules from "@/assets/cover-12-trabalhos-hercules.jpg";
+import coverJornadaUlisses from "@/assets/cover-jornada-ulisses.jpg";
 import {
   Dialog,
   DialogContent,
@@ -268,6 +269,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Onde Está o Amor, Ali Deus Está", author: "Rafael Aguiar", cover: coverOndeEstaOAmor, file: "/onde-esta-o-amor.pdf", description: "Coletânea de contos clássicos sobre o verdadeiro amor. Uma seleção inspiradora organizada por Rafael Aguiar para o Blog Letras e Páginas." },
   { title: "A Jornada para o Oeste — A Lenda do Rei Macaco", author: "Rafael S. L. Aguiar", cover: coverJornadaOeste, file: "/jornada-oeste.pdf", description: "Uma das maiores epopeias da literatura mundial. Acompanhe Sun Wukong, o Rei Macaco, nascido de uma pedra mágica, em sua jornada épica de redenção ao lado do Monge Tripitaka rumo ao Oeste em busca das escrituras sagradas. Edição especial Letras e Páginas." },
   { title: "Os 12 Trabalhos de Hércules", author: "Rafael S. L. Aguiar", cover: cover12TrabalhosHercules, file: "/os-12-trabalhos-de-hercules.pdf", description: "A saga do maior herói da mitologia grega. Acompanhe Hércules em seus doze trabalhos impossíveis: do Leão de Nemeia à captura de Cérbero, cada desafio testa os limites da força e da coragem humana. Edição especial Letras e Páginas." },
+  { title: "A Incrível Jornada de Ulisses", author: "Rafael S. L. Aguiar", cover: coverJornadaUlisses, file: "/a-incrivel-jornada-de-ulisses.pdf", description: "A épica jornada do herói grego Ulisses, desde a criação do lendário Cavalo de Troia até seu triunfante retorno à ilha de Ítaca. Edição especial ilustrada com aquarelas exclusivas. Curadoria Letras e Páginas." },
 ];
 
 const talesColors = [

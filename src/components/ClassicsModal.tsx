@@ -267,6 +267,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Contos sem Pé nem Cabeça", author: "Rafael S. L. Aguiar", cover: coverContosSemPeNemCabeca, file: "/contos-sem-pe-nem-cabeca.pdf", description: "Uma coletânea divertida e nonsense de contos clássicos sem pé nem cabeça, com histórias de João Preguiça, Golden Goose e The Bear Who Wasn't. Edição Especial de Luxo por Rafael S. L. Aguiar para o Blog Letras e Páginas." },
   { title: "Onde Está o Amor, Ali Deus Está", author: "Rafael Aguiar", cover: coverOndeEstaOAmor, file: "/onde-esta-o-amor.pdf", description: "Coletânea de contos clássicos sobre o verdadeiro amor. Uma seleção inspiradora organizada por Rafael Aguiar para o Blog Letras e Páginas." },
   { title: "A Jornada para o Oeste — A Lenda do Rei Macaco", author: "Rafael S. L. Aguiar", cover: coverJornadaOeste, file: "/jornada-oeste.pdf", description: "Uma das maiores epopeias da literatura mundial. Acompanhe Sun Wukong, o Rei Macaco, nascido de uma pedra mágica, em sua jornada épica de redenção ao lado do Monge Tripitaka rumo ao Oeste em busca das escrituras sagradas. Edição especial Letras e Páginas." },
+  { title: "Os 12 Trabalhos de Hércules", author: "Rafael S. L. Aguiar", cover: cover12TrabalhosHercules, file: "/os-12-trabalhos-de-hercules.pdf", description: "A saga do maior herói da mitologia grega. Acompanhe Hércules em seus doze trabalhos impossíveis: do Leão de Nemeia à captura de Cérbero, cada desafio testa os limites da força e da coragem humana. Edição especial Letras e Páginas." },
 ];
 
 const talesColors = [

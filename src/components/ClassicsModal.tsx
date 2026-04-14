@@ -627,8 +627,8 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     title: "A Revolução dos Bichos",
                     author: "George Orwell",
                     cover: coverRevolucaoBichos,
-                    subtitle: "Análise crítica e resenha completa",
-                    published: false,
+                    subtitle: "O chicote mudou de mãos, mas o peso continua o mesmo",
+                    published: true,
                   },
                   {
                     title: "O Médico e o Monstro",
@@ -649,7 +649,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     key={idx}
                     className={`group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer ${!artigo.published ? 'opacity-60' : ''}`}
                     onClick={() => {
-                      if (artigo.published && artigo.title === "A Metamorfose") {
+                      if (artigo.published) {
                         setSelectedArticle(artigo.title);
                       }
                     }}
@@ -707,6 +707,57 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                       <p className="font-display text-xs font-semibold text-foreground mb-1">No próximo post...</p>
                       <p className="text-xs text-muted-foreground">
                         Se em A Metamorfose o indivíduo é descartado quando deixa de ser produtivo, o que acontece quando uma sociedade inteira decide que todos devem ser iguais, mas alguns acabam se tornando "mais iguais que os outros"? Na próxima semana, mergulharemos no pasto político de George Orwell para analisar A Revolução dos Bichos. Prepare-se: o chicote mudou de mãos, mas o peso nas costas continua o mesmo.
+                      </p>
+                      <p className="text-xs text-primary font-medium mt-2 italic">
+                        Não perca a próxima análise aqui no Letras & Páginas!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {selectedArticle === "A Revolução dos Bichos" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    A Revolução dos Bichos: O Chicote Mudou de Mãos, mas o Peso Continua o Mesmo
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Por Professor Rafael S. L. Aguiar · 14/04/2026
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Se em A Metamorfose de Kafka discutimos o descarte do indivíduo pela utilidade, na obra-prima de George Orwell, A Revolução dos Bichos, o cenário se expande: o que acontece quando a promessa de liberdade se torna uma nova forma de escravidão?
+                    </p>
+                    <p>
+                      A premissa é universal. Cansados da exploração humana, os animais da Granja do Solar expulsam seu opressor sob a bandeira do Animalismo. O sonho era lindo: "Todos os bichos são iguais". Mas, conforme o tempo passa, a utopia apodrece. A inteligência dos porcos, que deveria servir à coletividade, torna-se a ferramenta de sua própria ascensão ao privilégio.
+                    </p>
+                    <p>
+                      Orwell nos entrega uma anatomia da corrupção. Vemos Napoleão e sua cúpula reescreverem o passado e as leis para justificar seus excessos. O cavalo Sansão (Boxer), o trabalhador mais leal, ilustra a face mais cruel do sistema: ele trabalha até a exaustão e, quando não serve mais, é enviado ao abatedouro pelos próprios "companheiros".
+                    </p>
+                    <p>
+                      A frase que encerra o livro é, talvez, a mais triste da literatura política: "Todos os bichos são iguais, mas alguns bichos são mais iguais que os outros". No final das contas, quando os porcos começam a andar sobre duas pernas e a vestir roupas, quem ainda consegue distinguir o porco do homem?
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Assista nossas resenhas no blog Letras & Páginas:{" "}
+                      <a href="https://www.youtube.com/@letrasepaginas" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+                        Clique aqui
+                      </a>
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#literatura", "#GeorgeOrwell", "#RevoluçãodosBichos", "#Distopia", "#Política", "#LetrasEPáginas", "#AnáliseLiterária"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                    <div className="mt-4 p-4 rounded-md bg-muted/50 border border-border">
+                      <p className="font-display text-xs font-semibold text-foreground mb-1">No próximo post...</p>
+                      <p className="text-xs text-muted-foreground">
+                        Depois de observarmos como o poder corrompe o coletivo em Orwell, vamos mergulhar na dualidade do indivíduo. O que acontece quando a ciência tenta separar o bem do mal dentro de um único homem? Na próxima semana, exploraremos os segredos sombrios de O Médico e o Monstro, de Robert Louis Stevenson. Até onde vai a sua sombra quando ninguém está olhando?
                       </p>
                       <p className="text-xs text-primary font-medium mt-2 italic">
                         Não perca a próxima análise aqui no Letras & Páginas!

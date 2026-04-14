@@ -1,4 +1,4 @@
-import { Download, Library, Mail, Skull, BookOpenText, Coffee, Copy, Check, BookOpen } from "lucide-react";
+import { Download, Library, Mail, Skull, BookOpenText, Coffee, Copy, Check, BookOpen, FileText } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -596,6 +596,10 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
               <Skull className="w-4 h-4" />
               Distopias
             </TabsTrigger>
+            <TabsTrigger value="artigos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+              <FileText className="w-4 h-4" />
+              Artigos do Blog
+            </TabsTrigger>
           </TabsList>
 
           <TabsContent value="classicos" className="mt-0">
@@ -611,6 +615,17 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
           <TabsContent value="contos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
               <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="artigos" className="mt-0">
+            <ScrollArea className="h-[58vh] pr-3">
+              <div className="flex flex-col items-center justify-center py-16 text-center">
+                <FileText className="w-12 h-12 text-muted-foreground/50 mb-4" />
+                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Artigos do Blog</h3>
+                <p className="font-body text-sm text-muted-foreground max-w-md">
+                  Em breve, artigos e análises literárias do Blog Letras & Páginas estarão disponíveis aqui.
+                </p>
+              </div>
             </ScrollArea>
           </TabsContent>
         </Tabs>

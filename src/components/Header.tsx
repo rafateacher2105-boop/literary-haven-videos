@@ -10,6 +10,7 @@ import SupportAuthorModal from "./SupportAuthorModal";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [classicsOpen, setClassicsOpen] = useState(false);
+  const [classicsDefaultTab, setClassicsDefaultTab] = useState("classicos");
   const [supportOpen, setSupportOpen] = useState(false);
   const navigate = useNavigate();
 

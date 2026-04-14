@@ -620,12 +620,46 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
           </TabsContent>
           <TabsContent value="artigos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <div className="flex flex-col items-center justify-center py-16 text-center">
-                <FileText className="w-12 h-12 text-muted-foreground/50 mb-4" />
-                <h3 className="font-display text-lg font-semibold text-foreground mb-2">Artigos do Blog</h3>
-                <p className="font-body text-sm text-muted-foreground max-w-md">
-                  Em breve, artigos e análises literárias do Blog Letras & Páginas estarão disponíveis aqui.
-                </p>
+              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
+                {[
+                  {
+                    title: "A Revolução dos Bichos",
+                    author: "George Orwell",
+                    cover: coverRevolucaoBichos,
+                    subtitle: "Análise crítica e resenha completa",
+                  },
+                  {
+                    title: "O Médico e o Monstro",
+                    author: "Robert L. Stevenson",
+                    cover: coverMedicoMonstro,
+                    subtitle: "Análise crítica e resenha completa",
+                  },
+                  {
+                    title: "A Metamorfose",
+                    author: "Franz Kafka",
+                    cover: coverMetamorfose,
+                    subtitle: "Análise crítica e resenha completa",
+                  },
+                ].map((artigo, idx) => (
+                  <div
+                    key={idx}
+                    className="group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300"
+                  >
+                    <div className="aspect-[2/3] overflow-hidden">
+                      <img src={artigo.cover} alt={artigo.title} loading="lazy" decoding="async" className="w-full h-full object-cover opacity-60" />
+                    </div>
+                    <div className="p-3 flex flex-col gap-2 flex-1">
+                      <h4 className="font-display text-xs font-semibold text-foreground leading-tight line-clamp-2">
+                        {artigo.title}
+                      </h4>
+                      <p className="font-body text-[10px] text-muted-foreground">{artigo.author}</p>
+                      <p className="font-body text-[10px] text-muted-foreground/80">{artigo.subtitle}</p>
+                      <p className="mt-auto font-body text-[10px] text-primary font-medium italic text-center">
+                        Em breve
+                      </p>
+                    </div>
+                  </div>
+                ))}
               </div>
             </ScrollArea>
           </TabsContent>

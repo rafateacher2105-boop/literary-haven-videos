@@ -1,4 +1,4 @@
-import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image } from "lucide-react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText } from "lucide-react";
 import { useState, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 const ClassicsModal = lazy(() => import("./ClassicsModal").catch(() => {

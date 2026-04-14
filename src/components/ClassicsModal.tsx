@@ -627,26 +627,34 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     author: "George Orwell",
                     cover: coverRevolucaoBichos,
                     subtitle: "Análise crítica e resenha completa",
+                    published: false,
                   },
                   {
                     title: "O Médico e o Monstro",
                     author: "Robert L. Stevenson",
                     cover: coverMedicoMonstro,
                     subtitle: "Análise crítica e resenha completa",
+                    published: false,
                   },
                   {
                     title: "A Metamorfose",
                     author: "Franz Kafka",
                     cover: coverMetamorfose,
-                    subtitle: "Análise crítica e resenha completa",
+                    subtitle: "Quem é o monstro: Gregor ou a família?",
+                    published: true,
                   },
                 ].map((artigo, idx) => (
                   <div
                     key={idx}
-                    className="group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300"
+                    className={`group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer ${!artigo.published ? 'opacity-60' : ''}`}
+                    onClick={() => {
+                      if (artigo.published && artigo.title === "A Metamorfose") {
+                        setSelectedArticle(artigo.title);
+                      }
+                    }}
                   >
                     <div className="aspect-[2/3] overflow-hidden">
-                      <img src={artigo.cover} alt={artigo.title} loading="lazy" decoding="async" className="w-full h-full object-cover opacity-60" />
+                      <img src={artigo.cover} alt={artigo.title} loading="lazy" decoding="async" className="w-full h-full object-cover" />
                     </div>
                     <div className="p-3 flex flex-col gap-2 flex-1">
                       <h4 className="font-display text-xs font-semibold text-foreground leading-tight line-clamp-2">
@@ -654,13 +662,58 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                       </h4>
                       <p className="font-body text-[10px] text-muted-foreground">{artigo.author}</p>
                       <p className="font-body text-[10px] text-muted-foreground/80">{artigo.subtitle}</p>
-                      <p className="mt-auto font-body text-[10px] text-primary font-medium italic text-center">
-                        Em breve
+                      <p className={`mt-auto font-body text-[10px] font-medium italic text-center ${artigo.published ? 'text-green-600' : 'text-primary'}`}>
+                        {artigo.published ? "Ler artigo" : "Em breve"}
                       </p>
                     </div>
                   </div>
                 ))}
               </div>
+
+              {selectedArticle === "A Metamorfose" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    Quem é o monstro: Gregor ou a família?
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Por Professor Rafael S. L. Aguiar · 14/04/2026
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Imagine acordar em uma manhã comum e descobrir que você se transformou em um inseto monstruoso. Logo você, o pilar da casa, o provedor que sustenta a família e cujo valor é medido estritamente pela sua capacidade de trabalho. De repente, você está reduzido a um ser asqueroso que "não serve para muita coisa".
+                    </p>
+                    <p>
+                      Diante desse absurdo, o que aconteceria? Será que sua família cuidaria de você com compaixão? Estenderiam uma mão amiga ou o rejeitariam como um erro da natureza?
+                    </p>
+                    <p>
+                      Franz Kafka utiliza essa premissa brilhante em um livro curto, mas com a densidade de um calhamaço. A obra é uma crítica feroz ao utilitarismo: a ideia de que o indivíduo só tem valor enquanto tem algo a oferecer à engrenagem da sociedade ou ao conforto do lar. No momento em que essa capacidade produtiva cessa, o sujeito torna-se descartável.
+                    </p>
+                    <p>
+                      Ao fechar o livro, a pergunta que fica é um verdadeiro soco no estômago: se hoje você ficasse doente e deixasse de prover, sua família cuidaria de você pelo que você é, ou descartariam você assim como fizeram com Gregor Samsa?
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#literatura", "#Kafka", "#Ametamorfose", "#criticasocial", "#filosofia", "#analiseliterária"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                    <div className="mt-4 p-4 rounded-md bg-muted/50 border border-border">
+                      <p className="font-display text-xs font-semibold text-foreground mb-1">No próximo post...</p>
+                      <p className="text-xs text-muted-foreground">
+                        Se em A Metamorfose o indivíduo é descartado quando deixa de ser produtivo, o que acontece quando uma sociedade inteira decide que todos devem ser iguais, mas alguns acabam se tornando "mais iguais que os outros"? Na próxima semana, mergulharemos no pasto político de George Orwell para analisar A Revolução dos Bichos. Prepare-se: o chicote mudou de mãos, mas o peso nas costas continua o mesmo.
+                      </p>
+                      <p className="text-xs text-primary font-medium mt-2 italic">
+                        Não perca a próxima análise aqui no Letras & Páginas!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
             </ScrollArea>
           </TabsContent>
         </Tabs>

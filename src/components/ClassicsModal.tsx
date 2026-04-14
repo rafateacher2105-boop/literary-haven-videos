@@ -313,6 +313,7 @@ const dystopiaColors = [
 interface ClassicsModalProps {
   open: boolean;
   onOpenChange: (open: boolean) => void;
+  defaultTab?: string;
 }
 
 const BookGrid = ({ books, colors, onRequestDownload, onRequestPaidDownload }: { books: ClassicBook[]; colors: string[]; onRequestDownload: (book: ClassicBook) => void; onRequestPaidDownload?: (book: ClassicBook) => void }) => {
@@ -545,7 +546,7 @@ const DonationGateModal = ({ book, onSuccess, onCancel }: { book: ClassicBook; o
   );
 };
 
-const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
+const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: ClassicsModalProps) => {
   const [selectedBook, setSelectedBook] = useState<ClassicBook | null>(null);
   const [paidBook, setPaidBook] = useState<ClassicBook | null>(null);
 
@@ -582,7 +583,7 @@ const ClassicsModal = ({ open, onOpenChange }: ClassicsModalProps) => {
           </DialogDescription>
         </DialogHeader>
 
-        <Tabs defaultValue="classicos" className="px-6 pb-6">
+        <Tabs defaultValue={defaultTab} key={defaultTab} className="px-6 pb-6">
           <TabsList className="w-full mb-4">
             <TabsTrigger value="classicos" className="flex-1 gap-1.5 text-xs sm:text-sm">
               <Library className="w-4 h-4" />

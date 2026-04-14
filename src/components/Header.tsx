@@ -1,4 +1,4 @@
-import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image } from "lucide-react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText } from "lucide-react";
 import { useState, lazy, Suspense } from "react";
 import { useNavigate } from "react-router-dom";
 const ClassicsModal = lazy(() => import("./ClassicsModal").catch(() => {
@@ -10,6 +10,7 @@ import SupportAuthorModal from "./SupportAuthorModal";
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [classicsOpen, setClassicsOpen] = useState(false);
+  const [classicsDefaultTab, setClassicsDefaultTab] = useState("classicos");
   const [supportOpen, setSupportOpen] = useState(false);
   const navigate = useNavigate();
 
@@ -42,7 +43,7 @@ const Header = () => {
             </a>
           ))}
           <button
-            onClick={() => setClassicsOpen(true)}
+            onClick={() => { setClassicsDefaultTab("classicos"); setClassicsOpen(true); }}
             className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Library className="w-4 h-4" />
@@ -68,6 +69,13 @@ const Header = () => {
           >
             <Image className="w-4 h-4" />
             Infográficos
+          </button>
+          <button
+            onClick={() => { setClassicsDefaultTab("artigos"); setClassicsOpen(true); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Artigos
           </button>
         </nav>
 
@@ -95,7 +103,7 @@ const Header = () => {
             </a>
           ))}
           <button
-            onClick={() => { setClassicsOpen(true); setMenuOpen(false); }}
+            onClick={() => { setClassicsDefaultTab("classicos"); setClassicsOpen(true); setMenuOpen(false); }}
             className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Library className="w-4 h-4" />
@@ -122,12 +130,19 @@ const Header = () => {
             <Image className="w-4 h-4" />
             Infográficos
           </button>
+          <button
+            onClick={() => { setClassicsDefaultTab("artigos"); setClassicsOpen(true); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Artigos
+          </button>
         </nav>
       )}
 
       {classicsOpen && (
         <Suspense fallback={null}>
-          <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} />
+          <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} defaultTab={classicsDefaultTab} />
         </Suspense>
       )}
       <SupportAuthorModal open={supportOpen} onOpenChange={setSupportOpen} />

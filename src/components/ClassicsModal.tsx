@@ -634,8 +634,8 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     title: "O Médico e o Monstro",
                     author: "Robert L. Stevenson",
                     cover: coverMedicoMonstro,
-                    subtitle: "Análise crítica e resenha completa",
-                    published: false,
+                    subtitle: "A droga da dualidade e o álibi do mal",
+                    published: true,
                   },
                   {
                     title: "A Metamorfose",
@@ -783,7 +783,58 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
           onSuccess={handleDownloadSuccess}
           onCancel={() => setSelectedBook(null)}
         />
-      )}
+              )}
+
+              {selectedArticle === "O Médico e o Monstro" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    O Médico e o Monstro: A Droga da Dualidade e o Alibi do Mal
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Por Professor Rafael S. L. Aguiar · 14/04/2026
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Até onde você iria para libertar seus desejos mais sombrios sem sentir o peso da culpa? Na puritana sociedade vitoriana, onde as aparências eram a moeda de troca mais valiosa, Robert Louis Stevenson nos apresentou um espelho perturbador da alma humana em O Médico e o Monstro.
+                    </p>
+                    <p>
+                      A trama nos confronta com uma questão visceral: o uso de uma substância que não apenas transforma o corpo, mas revela o que há de pior no indivíduo. Dr. Jekyll, um homem respeitável e acima de qualquer suspeita, cria uma fórmula que dá vida ao Sr. Hyde — uma criatura asquerosa que personifica seus instintos mais baixos.
+                    </p>
+                    <p>
+                      Mas fica a provocação: seria isso apenas o efeito de uma droga ou a hipocrisia de quem deseja externalizar sua maldade sem assumir a responsabilidade? Hyde não é um invasor; ele é uma parte de Jekyll que foi destrancada. O médico utiliza o monstro como um álibi moral, uma forma de soltar seu eu interior e cometer atrocidades sem se culpabilizar pelas consequências causadas ao próximo.
+                    </p>
+                    <p>
+                      A transformação de um indivíduo comum em um monstro à solta nos faz pensar sobre as nossas próprias "substâncias" e máscaras sociais. Afinal, as aparências podem enganar o mundo, mas o que sobra de nós quando as luzes se apagam e a nossa essência — por mais terrível que seja — ganha a liberdade?
+                    </p>
+                    <p className="text-xs text-muted-foreground">
+                      Assista nossas resenhas no blog Letras & Páginas:{" "}
+                      <a href="https://youtu.be/pzSPEXzLino?si=GsxS3gs8R5E4t70z" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+                        Clique aqui
+                      </a>
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#literatura", "#Stevenson", "#OMédicoeoMonstro", "#DualidadeHumana", "#Filosofia", "#LetrasEPáginas", "#AnáliseLiterária"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                    <div className="mt-4 p-4 rounded-md bg-muted/50 border border-border">
+                      <p className="font-display text-xs font-semibold text-foreground mb-1">No próximo post...</p>
+                      <p className="text-xs text-muted-foreground">
+                        Depois de explorarmos a luta entre o bem e o mal dentro de um só homem, o que acontece quando o mal é institucionalizado e o Estado se torna o próprio monstro? Na próxima semana, fecharemos nosso ciclo de reflexões com o olhar vigilante de 1984, de George Orwell. Onde termina a sua privacidade e começa o controle do Grande Irmão?
+                      </p>
+                      <p className="text-xs text-primary font-medium mt-2 italic">
+                        Não perca a próxima análise aqui no Letras & Páginas!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
 
       {paidBook && (
         <DonationGateModal

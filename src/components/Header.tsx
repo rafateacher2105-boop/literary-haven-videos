@@ -70,6 +70,13 @@ const Header = () => {
             <Image className="w-4 h-4" />
             Infográficos
           </button>
+          <button
+            onClick={() => { setClassicsDefaultTab("artigos"); setClassicsOpen(true); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Artigos
+          </button>
         </nav>
 
         {/* Mobile toggle */}

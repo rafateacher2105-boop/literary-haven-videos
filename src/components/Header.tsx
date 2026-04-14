@@ -43,7 +43,7 @@ const Header = () => {
             </a>
           ))}
           <button
-            onClick={() => setClassicsOpen(true)}
+            onClick={() => { setClassicsDefaultTab("classicos"); setClassicsOpen(true); }}
             className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Library className="w-4 h-4" />
@@ -103,7 +103,7 @@ const Header = () => {
             </a>
           ))}
           <button
-            onClick={() => { setClassicsOpen(true); setMenuOpen(false); }}
+            onClick={() => { setClassicsDefaultTab("classicos"); setClassicsOpen(true); setMenuOpen(false); }}
             className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
           >
             <Library className="w-4 h-4" />
@@ -130,12 +130,19 @@ const Header = () => {
             <Image className="w-4 h-4" />
             Infográficos
           </button>
+          <button
+            onClick={() => { setClassicsDefaultTab("artigos"); setClassicsOpen(true); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <FileText className="w-4 h-4" />
+            Artigos
+          </button>
         </nav>
       )}
 
       {classicsOpen && (
         <Suspense fallback={null}>
-          <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} />
+          <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} defaultTab={classicsDefaultTab} />
         </Suspense>
       )}
       <SupportAuthorModal open={supportOpen} onOpenChange={setSupportOpen} />

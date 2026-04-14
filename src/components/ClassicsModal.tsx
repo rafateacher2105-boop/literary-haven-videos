@@ -698,6 +698,12 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     <p>
                       Ao fechar o livro, a pergunta que fica é um verdadeiro soco no estômago: se hoje você ficasse doente e deixasse de prover, sua família cuidaria de você pelo que você é, ou descartariam você assim como fizeram com Gregor Samsa?
                     </p>
+                    <p className="text-xs text-muted-foreground">
+                      Assista a resenha no blog Letras & Páginas:{" "}
+                      <a href="https://www.youtube.com/watch?v=MGL_DhMl_KY" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80">
+                        Clique aqui
+                      </a>
+                    </p>
                     <div className="flex flex-wrap gap-2 mt-2">
                       {["#literatura", "#Kafka", "#Ametamorfose", "#criticasocial", "#filosofia", "#analiseliterária"].map(tag => (
                         <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>

@@ -549,6 +549,7 @@ const DonationGateModal = ({ book, onSuccess, onCancel }: { book: ClassicBook; o
 const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: ClassicsModalProps) => {
   const [selectedBook, setSelectedBook] = useState<ClassicBook | null>(null);
   const [paidBook, setPaidBook] = useState<ClassicBook | null>(null);
+  const [selectedArticle, setSelectedArticle] = useState<string | null>(null);
 
   const handleDownloadSuccess = () => {
     if (selectedBook?.file) {

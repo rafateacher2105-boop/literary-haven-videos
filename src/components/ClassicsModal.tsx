@@ -627,8 +627,8 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     title: "A Revolução dos Bichos",
                     author: "George Orwell",
                     cover: coverRevolucaoBichos,
-                    subtitle: "Análise crítica e resenha completa",
-                    published: false,
+                    subtitle: "O chicote mudou de mãos, mas o peso continua o mesmo",
+                    published: true,
                   },
                   {
                     title: "O Médico e o Monstro",
@@ -649,7 +649,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     key={idx}
                     className={`group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer ${!artigo.published ? 'opacity-60' : ''}`}
                     onClick={() => {
-                      if (artigo.published && artigo.title === "A Metamorfose") {
+                      if (artigo.published) {
                         setSelectedArticle(artigo.title);
                       }
                     }}

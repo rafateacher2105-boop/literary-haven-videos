@@ -1,4 +1,4 @@
-import { Download, Library, Mail, Skull, BookOpenText, Coffee, Copy, Check, BookOpen, FileText } from "lucide-react";
+import { Download, Library, Mail, Skull, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";

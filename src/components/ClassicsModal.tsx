@@ -621,7 +621,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
           </TabsContent>
           <TabsContent value="artigos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
+              {!selectedArticle && <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">
                 {[
                   {
                     title: "A Revolução dos Bichos",
@@ -669,7 +669,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     </div>
                   </div>
                 ))}
-              </div>
+              </div>}
 
               {selectedArticle === "A Metamorfose" && (
                 <div className="mt-6 p-5 rounded-lg border border-border bg-card">
@@ -772,18 +772,6 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                   </div>
                 </div>
               )}
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </DialogContent>
-
-      {selectedBook && (
-        <LeadCaptureForm
-          book={selectedBook}
-          onSuccess={handleDownloadSuccess}
-          onCancel={() => setSelectedBook(null)}
-        />
-              )}
 
               {selectedArticle === "O Médico e o Monstro" && (
                 <div className="mt-6 p-5 rounded-lg border border-border bg-card">
@@ -847,6 +835,18 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                   </div>
                 </div>
               )}
+            </ScrollArea>
+          </TabsContent>
+        </Tabs>
+      </DialogContent>
+
+      {selectedBook && (
+        <LeadCaptureForm
+          book={selectedBook}
+          onSuccess={handleDownloadSuccess}
+          onCancel={() => setSelectedBook(null)}
+        />
+      )}
       {paidBook && (
         <DonationGateModal
           book={paidBook}

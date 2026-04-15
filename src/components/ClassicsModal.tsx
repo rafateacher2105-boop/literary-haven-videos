@@ -826,7 +826,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     <div className="mt-4 p-4 rounded-md bg-accent/30 border border-primary/20 flex items-center gap-3">
                       <Image className="w-5 h-5 text-primary flex-shrink-0" />
                       <p className="text-sm text-foreground">
-                        Veja nosso infográfico de <span className="font-semibold">O Médico e o Monstro</span> na seção{" "}
+                        Confira também nossos infográficos do clássico <span className="font-semibold">O Médico e o Monstro</span> na seção{" "}
                         <a href="/infograficos" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 font-medium">
                           Infográficos
                         </a>

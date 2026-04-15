@@ -794,10 +794,10 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     ← Voltar aos artigos
                   </button>
                   <h3 className="font-display text-lg font-bold text-foreground mb-1">
-                    O Médico e o Monstro: A Droga da Dualidade e o Alibi do Mal
+                    O Médico e o Monstro: A Droga da Dualidade e o Álibi do Mal
                   </h3>
                   <p className="font-body text-[10px] text-muted-foreground mb-4">
-                    Por Professor Rafael S. L. Aguiar · 14/04/2026
+                    Por Professor Rafael S. L. Aguiar · 15/04/2026
                   </p>
                   <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
                     <p>
@@ -835,7 +835,10 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     <div className="mt-4 p-4 rounded-md bg-muted/50 border border-border">
                       <p className="font-display text-xs font-semibold text-foreground mb-1">No próximo post...</p>
                       <p className="text-xs text-muted-foreground">
-                        Depois de explorarmos a luta entre o bem e o mal dentro de um só homem, o que acontece quando o mal é institucionalizado e o Estado se torna o próprio monstro? Na próxima semana, fecharemos nosso ciclo de reflexões com o olhar vigilante de 1984, de George Orwell. Onde termina a sua privacidade e começa o controle do Grande Irmão?
+                        Depois de conhecermos um médico que criou um monstro dentro de si mesmo, vamos analisar outro médico e outro monstro que mudaram a história da literatura. O que acontece quando o homem decide brincar de Deus e abandona sua criação à própria sorte? Na próxima semana, vamos desbravar as páginas geladas e melancólicas de Frankenstein, de Mary Shelley.
+                      </p>
+                      <p className="text-xs text-muted-foreground mt-2 italic">
+                        Quem é o verdadeiro vilão: a criatura que busca amor ou o criador que a rejeita?
                       </p>
                       <p className="text-xs text-primary font-medium mt-2 italic">
                         Não perca a próxima análise aqui no Letras & Páginas!
@@ -844,7 +847,6 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                   </div>
                 </div>
               )}
-
       {paidBook && (
         <DonationGateModal
           book={paidBook}

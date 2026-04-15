@@ -669,7 +669,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     </div>
                   </div>
                 ))}
-              </div>
+              </div>}
 
               {selectedArticle === "A Metamorfose" && (
                 <div className="mt-6 p-5 rounded-lg border border-border bg-card">

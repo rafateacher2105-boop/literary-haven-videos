@@ -772,18 +772,6 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                   </div>
                 </div>
               )}
-            </ScrollArea>
-          </TabsContent>
-        </Tabs>
-      </DialogContent>
-
-      {selectedBook && (
-        <LeadCaptureForm
-          book={selectedBook}
-          onSuccess={handleDownloadSuccess}
-          onCancel={() => setSelectedBook(null)}
-        />
-              )}
 
               {selectedArticle === "O Médico e o Monstro" && (
                 <div className="mt-6 p-5 rounded-lg border border-border bg-card">
@@ -847,6 +835,18 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                   </div>
                 </div>
               )}
+            </ScrollArea>
+          </TabsContent>
+        </Tabs>
+      </DialogContent>
+
+      {selectedBook && (
+        <LeadCaptureForm
+          book={selectedBook}
+          onSuccess={handleDownloadSuccess}
+          onCancel={() => setSelectedBook(null)}
+        />
+      )}
       {paidBook && (
         <DonationGateModal
           book={paidBook}

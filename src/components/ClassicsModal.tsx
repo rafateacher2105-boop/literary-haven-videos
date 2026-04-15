@@ -823,6 +823,15 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                         <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
                       ))}
                     </div>
+                    <div className="mt-4 p-4 rounded-md bg-accent/30 border border-primary/20 flex items-center gap-3">
+                      <Image className="w-5 h-5 text-primary flex-shrink-0" />
+                      <p className="text-sm text-foreground">
+                        Veja nosso infográfico de <span className="font-semibold">O Médico e o Monstro</span> na seção{" "}
+                        <a href="/infograficos" target="_blank" rel="noopener noreferrer" className="text-primary underline hover:text-primary/80 font-medium">
+                          Infográficos
+                        </a>
+                      </p>
+                    </div>
                     <div className="mt-4 p-4 rounded-md bg-muted/50 border border-border">
                       <p className="font-display text-xs font-semibold text-foreground mb-1">No próximo post...</p>
                       <p className="text-xs text-muted-foreground">

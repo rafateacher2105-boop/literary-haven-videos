@@ -651,6 +651,13 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     published: true,
                   },
                   {
+                    title: "Série Heróis Épicos",
+                    author: "Rafael S. L. Aguiar",
+                    cover: coverHeroisEpicos,
+                    subtitle: "Mergulhando na Mitologia — 22/04/2026",
+                    published: true,
+                  },
+                  {
                     title: "A Metamorfose",
                     author: "Franz Kafka",
                     cover: coverMetamorfose,

@@ -691,6 +691,62 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                 ))}
               </div>}
 
+              {selectedArticle === "Série Heróis Épicos" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    Mergulhando na Mitologia: Série Heróis Épicos
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Por Rafael S. L. Aguiar · 22/04/2026
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Neste mês de abril, o Letras &amp; Páginas convida seus leitores para uma experiência literária sem precedentes. Iniciamos a publicação de uma série exclusiva de histórias que resgatam o fôlego das grandes epopeias, agora recontadas em uma estrutura de contos em versões de luxo.
+                    </p>
+                    <p>
+                      Cada herói terá sua trajetória dividida em capítulos fundamentais, permitindo uma imersão profunda nos momentos decisivos de suas vidas — desde o chamado ao desafio até o encontro final com o destino.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Uma Curadoria de Excelência</h4>
+                    <p>
+                      Este projeto é fruto de uma pesquisa e curadoria profunda realizada por Rafael S. L. Aguiar, que buscou a essência das fontes clássicas para preservar a força narrativa de cada mito. O objetivo é honrar os grandes poetas que, ao longo dos séculos, cantaram as glórias e tragédias desses personagens imortais.
+                    </p>
+                    <p>
+                      Para elevar a experiência sensorial, cada capítulo é acompanhado por ilustrações exclusivas em aquarela, que traduzem em cores e formas a dramaticidade das batalhas, a vastidão das grandes navegações e o mistério dos monstros enfrentados.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Os Protagonistas da Jornada</h4>
+                    <p>
+                      Na seção <strong>Contos e Lendas</strong> do blog, você encontrará as jornadas épicas de:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1.5">
+                      <li><strong>Hércules e Aquiles:</strong> A força, a fúria e o peso da imortalidade.</li>
+                      <li><strong>Ulisses e Vasco da Gama:</strong> Os mestres das grandes navegações e do desconhecido.</li>
+                      <li><strong>Siegfried e Gilgamesh:</strong> O heroísmo que desafia o tempo e a própria morte.</li>
+                      <li><strong>Eneias e Dante:</strong> As missões de fundação e a descida aos abismos da alma.</li>
+                      <li><strong>Jasão e os Argonautas, Perseu e Teseu:</strong> A coragem diante de monstros e a busca por glória.</li>
+                    </ul>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Destino, Glória e Tragédia</h4>
+                    <p>
+                      Estes heróis buscaram fama, conhecimento e a salvação de seus povos. Alguns alcançaram o ápice da glória; outros foram abraçados por fins trágicos. Contudo, todos tiveram seus nomes eternizados. Através desta versão de luxo, o Letras &amp; Páginas garante que o eco dessas vozes continue a ressoar com a dignidade que a grande literatura exige.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Onde Ler?</h4>
+                    <p>
+                      Todo o conteúdo está disponível na nossa seção dedicada: <strong>Contos e Lendas</strong>. Prepare-se para folhear, digitalmente, capítulos de pura arte e heroísmo. Embarque conosco nestas jornadas que definiram o mundo e a própria ideia de ser humano.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#mitologia", "#heróisépicos", "#contoselendas", "#literatura", "#LetrasEPáginas", "#RafaelAguiar"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
               {selectedArticle === "A Metamorfose" && (
                 <div className="mt-6 p-5 rounded-lg border border-border bg-card">
                   <button

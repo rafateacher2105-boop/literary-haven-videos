@@ -131,6 +131,7 @@ import cover12TrabalhosHercules from "@/assets/cover-12-trabalhos-hercules.jpg";
 import coverJornadaUlisses from "@/assets/cover-jornada-ulisses.jpg";
 import coverAquiles from "@/assets/cover-aquiles.jpg";
 import coverSiegfried from "@/assets/cover-siegfried.jpg";
+import coverJasao from "@/assets/cover-jasao.jpg";
 import {
   Dialog,
   DialogContent,
@@ -280,6 +281,7 @@ const talesBooks: ClassicBook[] = [
   { title: "A Incrível Jornada de Ulisses", author: "Rafael S. L. Aguiar", cover: coverJornadaUlisses, file: "/a-incrivel-jornada-de-ulisses.pdf", description: "A épica jornada do herói grego Ulisses, desde a criação do lendário Cavalo de Troia até seu triunfante retorno à ilha de Ítaca. Edição especial ilustrada com aquarelas exclusivas. Curadoria Letras e Páginas." },
   { title: "Heróis Épicos: Aquiles — A Ira do Herói de Troia", author: "Rafael S. L. Aguiar", cover: coverAquiles, file: "/herois-epicos-aquiles.pdf", description: "A saga do maior guerreiro da Guerra de Troia. Acompanhe Aquiles em sua jornada épica: a fúria contra Agamenon, a perda de Pátroclo, o duelo lendário com Heitor e o destino traçado pelos deuses. Edição ilustrada de luxo da série Heróis Épicos. Curadoria Letras e Páginas." },
   { title: "Heróis Épicos: Siegfried — Saga Livro II", author: "Rafael S. L. Aguiar", cover: coverSiegfried, file: "/siegfried-saga-livro-ii.pdf", description: "A lendária saga do herói germânico Siegfried: o duelo com o dragão Fafnir, a conquista do tesouro dos Nibelungos, a espada Balmung e o amor por Krimilda. Uma jornada épica pelas florestas e montanhas nórdicas. Edição ilustrada de luxo da série Heróis Épicos. Curadoria Letras e Páginas." },
+  { title: "Heróis Épicos: Jasão e os Argonautas — Livro III", author: "Rafael S. L. Aguiar", cover: coverJasao, file: "/jasao-argonautas-livro-iii.pdf", description: "A lendária expedição de Jasão e os Argonautas a bordo do navio Argo em busca do Velocino de Ouro. Enfrente monstros marinhos, harpias, dragões e os mistérios da Cólquida nesta épica jornada pela mitologia grega. Edição premium ilustrada da série Heróis Épicos. Curadoria Letras e Páginas." },
 ];
 
 const talesColors = [

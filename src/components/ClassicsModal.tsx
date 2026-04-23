@@ -130,6 +130,7 @@ import coverJornadaOeste from "@/assets/cover-jornada-oeste.jpg";
 import cover12TrabalhosHercules from "@/assets/cover-12-trabalhos-hercules.jpg";
 import coverJornadaUlisses from "@/assets/cover-jornada-ulisses.jpg";
 import coverAquiles from "@/assets/cover-aquiles.jpg";
+import coverSiegfried from "@/assets/cover-siegfried.jpg";
 import {
   Dialog,
   DialogContent,
@@ -278,6 +279,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Os 12 Trabalhos de Hércules", author: "Rafael S. L. Aguiar", cover: cover12TrabalhosHercules, file: "/os-12-trabalhos-de-hercules.pdf", description: "A saga do maior herói da mitologia grega. Acompanhe Hércules em seus doze trabalhos impossíveis: do Leão de Nemeia à captura de Cérbero, cada desafio testa os limites da força e da coragem humana. Edição especial Letras e Páginas." },
   { title: "A Incrível Jornada de Ulisses", author: "Rafael S. L. Aguiar", cover: coverJornadaUlisses, file: "/a-incrivel-jornada-de-ulisses.pdf", description: "A épica jornada do herói grego Ulisses, desde a criação do lendário Cavalo de Troia até seu triunfante retorno à ilha de Ítaca. Edição especial ilustrada com aquarelas exclusivas. Curadoria Letras e Páginas." },
   { title: "Heróis Épicos: Aquiles — A Ira do Herói de Troia", author: "Rafael S. L. Aguiar", cover: coverAquiles, file: "/herois-epicos-aquiles.pdf", description: "A saga do maior guerreiro da Guerra de Troia. Acompanhe Aquiles em sua jornada épica: a fúria contra Agamenon, a perda de Pátroclo, o duelo lendário com Heitor e o destino traçado pelos deuses. Edição ilustrada de luxo da série Heróis Épicos. Curadoria Letras e Páginas." },
+  { title: "Heróis Épicos: Siegfried — Saga Livro II", author: "Rafael S. L. Aguiar", cover: coverSiegfried, file: "/siegfried-saga-livro-ii.pdf", description: "A lendária saga do herói germânico Siegfried: o duelo com o dragão Fafnir, a conquista do tesouro dos Nibelungos, a espada Balmung e o amor por Krimilda. Uma jornada épica pelas florestas e montanhas nórdicas. Edição ilustrada de luxo da série Heróis Épicos. Curadoria Letras e Páginas." },
 ];
 
 const talesColors = [

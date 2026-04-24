@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, BookOpen, Tag } from "lucide-react";
 import { authors, getAuthorThemes } from "@/data/authors";
 import { Button } from "@/components/ui/button";
+import ReaderTestimonials from "@/components/ReaderTestimonials";
 
 const Autor = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -144,6 +145,9 @@ const Autor = () => {
             </div>
           </section>
         ))}
+
+        {/* Bloco de avaliações e alcance */}
+        <ReaderTestimonials authorSlug={author.slug} />
 
         <div className="text-center mt-16">
           <Link to="/#livros">

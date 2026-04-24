@@ -1,6 +1,5 @@
 import { useEffect, useState } from "react";
 import { AlertCircle, CheckCircle2, RefreshCw, X } from "lucide-react";
-import coverPerseu from "@/assets/cover-perseu.jpg";
 
 /**
  * Validador de Capas Publicadas
@@ -9,15 +8,18 @@ import coverPerseu from "@/assets/cover-perseu.jpg";
  * servidas pelo domínio publicado (literary-haven-videos.lovable.app).
  * Avisa quando há divergência — útil antes de publicar uma nova versão.
  *
- * A comparação é feita por tamanho (Content-Length) + hash SHA-256 dos bytes,
+ * A comparação é feita por hash SHA-256 dos bytes,
  * o que detecta qualquer mudança binária na imagem.
+ *
+ * As capas devem estar em public/ (não em src/assets/) para manter
+ * URLs estáveis entre preview e produção.
  */
 
 const PUBLISHED_ORIGIN = "https://literary-haven-videos.lovable.app";
 
 // Lista de capas a monitorar. Acrescente novas entradas conforme necessário.
-const COVERS_TO_CHECK: { label: string; localUrl: string }[] = [
-  { label: "O Legado de Perseu", localUrl: coverPerseu },
+const COVERS_TO_CHECK: { label: string; localPath: string }[] = [
+  { label: "O Legado de Perseu", localPath: "/cover-perseu.jpg" },
 ];
 
 type Status = "idle" | "checking" | "match" | "diff" | "error";

@@ -1,3 +1,4 @@
+import { Helmet } from "react-helmet-async";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import infograficoMedicoMonstro from "@/assets/infografico-medico-monstro.jpg";
@@ -19,6 +20,22 @@ const infograficos: Infografico[] = [
 const Infograficos = () => {
   return (
     <div className="min-h-screen bg-background">
+      <Helmet>
+        <title>Infográficos Literários — Resumos Visuais | Letras & Páginas</title>
+        <meta name="description" content="Galeria de infográficos com resumos visuais das resenhas críticas dos grandes clássicos da literatura. Material didático ideal para estudantes." />
+        <link rel="canonical" href="https://literary-haven-videos.lovable.app/infograficos" />
+        <meta property="og:type" content="website" />
+        <meta property="og:title" content="Infográficos Literários — Resumos Visuais" />
+        <meta property="og:description" content="Resumos visuais das resenhas críticas dos clássicos da literatura." />
+        <meta property="og:url" content="https://literary-haven-videos.lovable.app/infograficos" />
+        <meta property="og:site_name" content="Letras & Páginas" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content="Infográficos Literários — Resumos Visuais" />
+        <meta name="twitter:description" content="Resumos visuais das resenhas críticas dos clássicos." />
+        <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+      </Helmet>
       <Header />
       <main className="pt-24 pb-16">
         <div className="container mx-auto px-6">

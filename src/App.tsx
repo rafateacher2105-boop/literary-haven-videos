@@ -5,6 +5,7 @@ import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
 import UpdatesBanner from "./components/UpdatesBanner";
+import PublishCoverValidator from "./components/PublishCoverValidator";
 import Index from "./pages/Index";
 import BookReader from "./pages/BookReader";
 import Indicacoes from "./pages/Indicacoes";
@@ -22,6 +23,7 @@ const App = () => (
         <Sonner />
         <BrowserRouter>
           <UpdatesBanner />
+          <PublishCoverValidator />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/livro/:slug" element={<BookReader />} />

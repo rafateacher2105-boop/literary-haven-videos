@@ -13,8 +13,27 @@ import { generateEpub, generateProseEpub } from "@/lib/epub-generator";
 import DownloadGateModal from "@/components/DownloadGateModal";
 import PaidDownloadModal from "@/components/PaidDownloadModal";
 import RelatedBooks from "@/components/RelatedBooks";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import { bookToAuthor, authors } from "@/data/authors";
 import type { Poem } from "@/data/poesia-da-alma";
 import type { Chapter } from "@/data/os-atribulados";
+
+const SITE = "https://literary-haven-videos.lovable.app";
+
+function buildBookCrumbs(slug: string, bookTitle: string, theme: string) {
+  const authorSlug = bookToAuthor[slug];
+  const author = authorSlug ? authors[authorSlug] : undefined;
+  const crumbs = [
+    { name: "Início", url: `${SITE}/` },
+    { name: "Meus Livros", url: `${SITE}/#livros` },
+  ];
+  if (author) {
+    crumbs.push({ name: author.name, url: `${SITE}/autor/${author.slug}` });
+  }
+  crumbs.push({ name: theme, url: `${SITE}/#livros` });
+  crumbs.push({ name: bookTitle, url: `${SITE}/livro/${slug}` });
+  return crumbs;
+}
 
 const booksMap: Record<string, { info: typeof poesiaDaAlmaInfo; poems: Poem[] }> = {
   "poesia-da-alma": { info: poesiaDaAlmaInfo, poems: poesiaDaAlmaPoems },
@@ -131,6 +150,18 @@ const BookReader = () => {
             </div>
           </div>
         </header>
+
+        {slug && (
+          <BreadcrumbJsonLd
+            items={buildBookCrumbs(
+              slug,
+              info.title,
+              authors[bookToAuthor[slug] ?? ""]?.books.find(
+                (b) => b.previewSlug === slug || b.slug === slug
+              )?.theme ?? "Livros"
+            )}
+          />
+        )}
 
         <main className="flex-1 flex flex-col items-center py-12 px-4">
           <div className="max-w-2xl w-full">
@@ -250,6 +281,18 @@ const BookReader = () => {
           </div>
         </div>
       </header>
+
+      {slug && (
+        <BreadcrumbJsonLd
+          items={buildBookCrumbs(
+            slug,
+            info.title,
+            authors[bookToAuthor[slug] ?? ""]?.books.find(
+              (b) => b.previewSlug === slug || b.slug === slug
+            )?.theme ?? "Livros"
+          )}
+        />
+      )}
 
       <div className="flex">
         {showToc && (

@@ -1,11 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, BookOpen, Tag, HelpCircle } from "lucide-react";
+import { ArrowLeft, BookOpen, Tag, HelpCircle, ChevronRight } from "lucide-react";
 import { authors, getAuthorThemes } from "@/data/authors";
 import { Button } from "@/components/ui/button";
 import ReaderTestimonials from "@/components/ReaderTestimonials";
 import { rafaelTestimonials, getRafaelStats } from "@/data/testimonials";
 import { authorFaqs } from "@/data/author-faqs";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
   Accordion,
   AccordionContent,
@@ -292,7 +293,28 @@ const Autor = () => {
         </div>
       </header>
 
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Início", url: "https://literary-haven-videos.lovable.app/" },
+          { name: "Autores", url: "https://literary-haven-videos.lovable.app/#livros" },
+          { name: author.name, url: pageUrl },
+        ]}
+      />
+
       <main className="container mx-auto px-6 py-12 max-w-6xl">
+        <nav aria-label="Breadcrumb" className="mb-8">
+          <ol className="flex items-center flex-wrap gap-1.5 text-sm font-body text-muted-foreground">
+            <li>
+              <Link to="/" className="hover:text-primary transition-colors">Início</Link>
+            </li>
+            <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+            <li>
+              <Link to="/#livros" className="hover:text-primary transition-colors">Autores</Link>
+            </li>
+            <ChevronRight className="w-3.5 h-3.5" aria-hidden="true" />
+            <li className="text-foreground font-medium" aria-current="page">{author.name}</li>
+          </ol>
+        </nav>
         {/* Cabeçalho do autor */}
         <section className="text-center mb-12">
           <p className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-3">Autor</p>

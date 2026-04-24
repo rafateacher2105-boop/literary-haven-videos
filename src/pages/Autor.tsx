@@ -43,7 +43,7 @@ const Autor = () => {
   const hasReviews = author.slug === "rafael-s-l-aguiar";
   const stats = hasReviews ? getRafaelStats() : null;
 
-  // Grafo schema.org: Person + (AggregateRating + Reviews) + FAQPage
+  // Grafo schema.org: Person + ItemList + Book[] + (AggregateRating + Reviews) + FAQPage
   const jsonLdGraph: Record<string, unknown>[] = [
     {
       "@type": "Person",
@@ -55,6 +55,126 @@ const Autor = () => {
       knowsAbout: themes,
     },
   ];
+
+  // ---- Book markup por livro do catálogo do autor ----
+  const SITE = "https://literary-haven-videos.lovable.app";
+  const bookIdFor = (slug: string) => `${SITE}/livro/${slug}#book`;
+
+  // Indexa avaliações por slug do livro para anexar reviews/aggregateRating ao Book.
+  const reviewsBySlug = new Map<string, typeof rafaelTestimonials>();
+  if (hasReviews) {
+    rafaelTestimonials.forEach((t) => {
+      if (!t.bookSlug) return;
+      const list = reviewsBySlug.get(t.bookSlug) ?? [];
+      list.push(t);
+      reviewsBySlug.set(t.bookSlug, list);
+    });
+  }
+
+  // Constrói cada Book como nó nomeado e coleta @ids para o ItemList.
+  const bookNodes: Record<string, unknown>[] = [];
+  const itemListElements: Record<string, unknown>[] = [];
+
+  author.books.forEach((b, idx) => {
+    const linkSlug = b.slug || b.previewSlug;
+    const bookUrl = linkSlug ? `${SITE}/livro/${linkSlug}` : pageUrl;
+    const bookId = linkSlug ? bookIdFor(linkSlug) : `${pageUrl}#book-${idx}`;
+    const imageUrl = b.cover.startsWith("http") ? b.cover : `${SITE}${b.cover}`;
+
+    const bookNode: Record<string, unknown> = {
+      "@type": "Book",
+      "@id": bookId,
+      name: b.title,
+      url: bookUrl,
+      image: imageUrl,
+      inLanguage: "pt-BR",
+      genre: b.theme,
+      author: { "@id": `${pageUrl}#author` },
+      bookFormat: "https://schema.org/EBook",
+    };
+    if (b.year) bookNode.datePublished = String(b.year);
+
+    // Oferta: parseia "R$ 15,00" -> 15.00 BRL
+    if (b.price) {
+      const priceNum = Number(
+        b.price.replace(/[^\d,]/g, "").replace(",", ".")
+      );
+      if (!Number.isNaN(priceNum)) {
+        bookNode.offers = {
+          "@type": "Offer",
+          price: priceNum.toFixed(2),
+          priceCurrency: "BRL",
+          availability: "https://schema.org/InStock",
+          url: bookUrl,
+        };
+      }
+    }
+
+    // Anexa reviews/aggregateRating do livro, se houver depoimentos para o slug.
+    if (linkSlug && reviewsBySlug.has(linkSlug)) {
+      const list = reviewsBySlug.get(linkSlug)!;
+      const avg =
+        Math.round(
+          (list.reduce((a, t) => a + t.rating, 0) / list.length) * 10
+        ) / 10;
+      bookNode.aggregateRating = {
+        "@type": "AggregateRating",
+        ratingValue: avg,
+        reviewCount: list.length,
+        bestRating: 5,
+        worstRating: 1,
+      };
+      bookNode.review = list.map((t, i) => ({
+        "@type": "Review",
+        "@id": `${bookId}-review-${i + 1}`,
+        name: t.headline,
+        reviewBody: t.text,
+        datePublished: t.datePublished,
+        inLanguage: t.language ?? "pt-BR",
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: t.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+        author: {
+          "@type": "Person",
+          name: t.reader,
+          ...(t.reviewerJobTitle ? { jobTitle: t.reviewerJobTitle } : {}),
+          ...(t.location
+            ? {
+                address: {
+                  "@type": "PostalAddress",
+                  addressLocality: t.location,
+                  addressCountry: "BR",
+                },
+              }
+            : {}),
+        },
+      }));
+    }
+
+    bookNodes.push(bookNode);
+    itemListElements.push({
+      "@type": "ListItem",
+      position: idx + 1,
+      url: bookUrl,
+      item: { "@id": bookId },
+    });
+  });
+
+  // ItemList do catálogo do autor
+  jsonLdGraph.push({
+    "@type": "ItemList",
+    "@id": `${pageUrl}#catalog`,
+    name: `Catálogo de ${author.name}`,
+    numberOfItems: author.books.length,
+    itemListOrder: "https://schema.org/ItemListOrderDescending",
+    itemListElement: itemListElements,
+  });
+
+  // Adiciona todos os Books ao grafo
+  jsonLdGraph.push(...bookNodes);
 
   if (hasReviews && stats) {
     jsonLdGraph.push({

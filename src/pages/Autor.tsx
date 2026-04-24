@@ -122,7 +122,7 @@ const Autor = () => {
         <meta name="twitter:title" content={`${author.name} — Autor`} />
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
-        <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">

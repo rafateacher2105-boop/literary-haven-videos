@@ -13,4 +13,11 @@ Allow: /
 User-agent: *
 Allow: /
 
+# Sitemap index principal
 Sitemap: https://literary-haven-videos.lovable.app/sitemap.xml
+
+# Sub-sitemaps por categoria (também listados no index)
+Sitemap: https://literary-haven-videos.lovable.app/sitemap-main.xml
+Sitemap: https://literary-haven-videos.lovable.app/sitemap-autores.xml
+Sitemap: https://literary-haven-videos.lovable.app/sitemap-temas.xml
+Sitemap: https://literary-haven-videos.lovable.app/sitemap-classicos.xml

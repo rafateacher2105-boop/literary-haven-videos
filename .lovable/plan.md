@@ -1,35 +1,47 @@
 
 
-## Garantir que o preview sempre abra com a versão mais recente
+## Refinar a notificação de novidades: animação suave + acessibilidade completa
 
-Hoje o site é um PWA com Service Worker (`vite-plugin-pwa`). Quando você publica uma atualização, o navegador às vezes ainda mostra a versão antiga em cache até que você feche e reabra a aba algumas vezes. Vamos corrigir isso para que **toda vez que o chat/preview abrir, a versão mais nova seja exibida imediatamente**.
+Vou aprimorar o `UpdatesBanner` para que ele apareça com uma transição elegante e seja totalmente utilizável por teclado e leitores de tela.
 
 ### O que vou alterar
 
-**1. `vite.config.ts` — Forçar o novo Service Worker a assumir o controle na hora**
-- Adicionar `skipWaiting: true` e `clientsClaim: true` no Workbox.
-- Definir `cleanupOutdatedCaches: true` para remover caches antigos automaticamente.
-- Adicionar uma regra `NetworkFirst` para HTML/navegação (a página principal sempre busca da rede primeiro, com fallback ao cache se estiver offline).
-- Manter `CacheFirst` apenas para PDF/EPUB (leitura offline continua funcionando).
+**1. Animação suave de entrada e saída (`src/components/UpdatesBanner.tsx`)**
+- Adicionar slide-down + fade-in ao montar (em vez de aparecer instantaneamente).
+- Animar a saída ao fechar (slide-up + fade-out) antes de desmontar, usando um pequeno timeout (~250ms).
+- Substituir o `animate-pulse` agressivo do sino por uma animação `bell-ring` mais discreta (leve oscilação a cada 4s), respeitando `prefers-reduced-motion` (sem movimento quando o usuário pediu menos animação).
 
-**2. `src/main.tsx` — Verificação robusta de atualização**
-- Substituir o registro manual atual por um listener que:
-  - Detecta quando há um novo Service Worker em `waiting`.
-  - Envia mensagem `SKIP_WAITING` para ativá-lo.
-  - Recarrega a página automaticamente (uma única vez, com guarda anti-loop).
-- Verifica atualizações a cada vez que a aba ganha foco (`visibilitychange`), garantindo que reabrir o preview sempre busque a versão nova.
+**2. Acessibilidade completa**
+- Trocar o container por um `<aside>` com `role="region"` e `aria-label="Novidades do site"` — mais semântico que `role="status"` para conteúdo persistente com ações.
+- Manter `aria-live="polite"` apenas no anúncio inicial, para o leitor de tela ler o título quando o banner aparece, sem repetir a cada interação.
+- **Foco gerenciado**: ao abrir, mover o foco para o link principal (de forma não intrusiva — só após pequeno delay) e armazenar o elemento previamente focado para devolvê-lo ao fechar.
+- **Navegação por teclado**:
+  - `Tab` percorre: link da novidade → botão "Fechar".
+  - `Esc` fecha o banner (atalho global enquanto o banner está visível).
+  - `Enter` / `Espaço` no link e no botão funcionam normalmente (já nativo).
+- **Foco visível**: adicionar `focus-visible:outline` com cor de contraste forte sobre o fundo `bg-primary` (anel `ring-2 ring-primary-foreground`).
+- **Rótulos descritivos**:
+  - Link: `aria-label="Abrir novidade: <título>"`.
+  - Botão fechar: `aria-label="Fechar notificação de novidades"`.
+  - Contador "+N novidades" envolvido em `<span aria-label="mais N novidades disponíveis">`.
+- **Ícone decorativo**: manter `aria-hidden="true"` no `<Bell>`.
 
-**3. `index.html` — Meta tags anti-cache para o documento HTML**
-- Adicionar `<meta http-equiv="Cache-Control" content="no-cache">` para o shell HTML, evitando que o navegador sirva HTML obsoleto.
-- Os assets versionados (JS/CSS com hash) continuam podendo ser cacheados normalmente — o Vite já faz isso.
+**3. Tokens de animação reutilizáveis (`tailwind.config.ts` + `src/index.css`)**
+- Adicionar keyframes:
+  - `slide-down-fade` (entrada): `translateY(-8px)` + `opacity 0` → `translateY(0)` + `opacity 1`, 280ms ease-out.
+  - `slide-up-fade` (saída): inverso, 220ms ease-in.
+  - `bell-ring`: leve rotação ±10° em 4s infinito.
+- Registrar `animation: { "slide-down-fade": "...", "slide-up-fade": "...", "bell-ring": "..." }`.
+- No `src/index.css`, adicionar regra `@media (prefers-reduced-motion: reduce)` que neutraliza essas animações (apenas opacidade, sem movimento, e bell estático).
 
-### Resultado esperado
-- Ao reabrir o preview ou voltar para a aba, o site verifica se há nova versão e a aplica automaticamente.
-- A leitura offline de livros (PDF/EPUB) continua funcionando exatamente como antes.
-- Não há mais necessidade de Ctrl+F5 / limpar cache para ver as últimas alterações.
+### Comportamento final
+- Banner desliza suavemente do topo ao surgir, com leitor de tela anunciando: "Novidades do site: Novo livro: Memórias Ácidas de Bryan Kubrick. +1 novidade".
+- Usuário pode pressionar `Tab` para focar o link, `Esc` para fechar, ou usar mouse normalmente.
+- Ao fechar, o banner some com animação reversa e o foco retorna ao elemento anterior.
+- Quem ativou "reduzir movimento" no SO vê apenas fade simples, sem deslizamento.
 
 ### Arquivos afetados
-- `vite.config.ts` (editado)
-- `src/main.tsx` (editado)
-- `index.html` (editado)
+- `src/components/UpdatesBanner.tsx` (refatorado)
+- `tailwind.config.ts` (novos keyframes/animations)
+- `src/index.css` (regra `prefers-reduced-motion`)
 

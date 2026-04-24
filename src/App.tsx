@@ -4,6 +4,7 @@ import { TooltipProvider } from "@/components/ui/tooltip";
 import { QueryClient, QueryClientProvider } from "@tanstack/react-query";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { HelmetProvider } from "react-helmet-async";
+import UpdatesBanner from "./components/UpdatesBanner";
 import Index from "./pages/Index";
 import BookReader from "./pages/BookReader";
 import Indicacoes from "./pages/Indicacoes";
@@ -20,6 +21,7 @@ const App = () => (
         <Toaster />
         <Sonner />
         <BrowserRouter>
+          <UpdatesBanner />
           <Routes>
             <Route path="/" element={<Index />} />
             <Route path="/livro/:slug" element={<BookReader />} />

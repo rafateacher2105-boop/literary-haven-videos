@@ -7,6 +7,7 @@ import ReaderTestimonials from "@/components/ReaderTestimonials";
 import { rafaelTestimonials, getRafaelStats } from "@/data/testimonials";
 import { authorFaqs } from "@/data/author-faqs";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebPageJsonLd from "@/components/WebPageJsonLd";
 import {
   Accordion,
   AccordionContent,

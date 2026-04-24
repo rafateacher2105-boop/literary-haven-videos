@@ -1,8 +1,8 @@
 import { useEffect, useRef, useState } from "react";
 import { Bell, X } from "lucide-react";
 import { siteUpdates, latestUpdateId } from "@/data/site-updates";
+import { getSeenIds, markAllSeen, markSeen } from "@/lib/updates-storage";
 
-const STORAGE_KEY = "site:lastSeenUpdateId";
 const EXIT_DURATION = 250;
 
 const UpdatesBanner = () => {
@@ -14,19 +14,11 @@ const UpdatesBanner = () => {
 
   useEffect(() => {
     if (!latestUpdateId) return;
-    try {
-      const lastSeen = localStorage.getItem(STORAGE_KEY);
-      if (lastSeen === latestUpdateId) return;
-
-      const lastIndex = lastSeen ? siteUpdates.findIndex((u) => u.id === lastSeen) : -1;
-      const fresh = lastIndex === -1 ? siteUpdates.slice(0, 3) : siteUpdates.slice(0, lastIndex);
-      if (fresh.length === 0) return;
-
-      setNewItems(fresh);
-      setMounted(true);
-    } catch {
-      // ignore localStorage errors
-    }
+    const seen = getSeenIds();
+    const fresh = siteUpdates.filter((u) => !seen.has(u.id)).slice(0, 3);
+    if (fresh.length === 0) return;
+    setNewItems(fresh);
+    setMounted(true);
   }, []);
 
   // Save previously focused element when banner mounts
@@ -49,13 +41,19 @@ const UpdatesBanner = () => {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [mounted, exiting]);
 
-  const dismiss = () => {
+  const dismissOnly = () => {
+    // Marca apenas o item primário como visto; restantes ficam no histórico.
+    if (newItems[0]) markSeen(newItems[0].id);
+    closeWithAnimation();
+  };
+
+  const dismissAll = () => {
+    markAllSeen();
+    closeWithAnimation();
+  };
+
+  const closeWithAnimation = () => {
     if (exiting) return;
-    try {
-      localStorage.setItem(STORAGE_KEY, latestUpdateId);
-    } catch {
-      // ignore
-    }
     setExiting(true);
     window.setTimeout(() => {
       setMounted(false);

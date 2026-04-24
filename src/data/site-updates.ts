@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "perseu-legado-livro-iv",
+    title: "Novo na Biblioteca: Heróis Épicos — Perseu, Livro IV",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-04-24",
+  },
+  {
     id: "memorias-bryan-kubrick",
     title: "Novo livro: Memórias Ácidas de Bryan Kubrick",
     type: "livro",

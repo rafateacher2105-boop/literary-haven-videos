@@ -60,12 +60,10 @@ const PublishCoverValidator = () => {
     const out: Result[] = [];
     for (const cover of COVERS_TO_CHECK) {
       try {
-        // Caminho público equivalente: tira o hash do bundle do nome.
-        // Como assets do Vite são hashados, comparamos o arquivo carregado no
-        // preview (localUrl) com o asset servido na mesma URL no publicado.
-        // Se o publicado tiver outro hash, retornará 404 → divergência.
-        const localHash = await fetchHash(cover.localUrl);
-        const publishedUrl = PUBLISHED_ORIGIN + new URL(cover.localUrl, window.location.origin).pathname;
+        // As capas devem estar em public/ para URLs estáveis.
+        const localUrl = window.location.origin + cover.localPath;
+        const localHash = await fetchHash(localUrl);
+        const publishedUrl = PUBLISHED_ORIGIN + cover.localPath;
         let publishedHash = "";
         try {
           publishedHash = await fetchHash(publishedUrl);

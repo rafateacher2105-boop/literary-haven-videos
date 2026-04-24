@@ -12,6 +12,7 @@ import { impacto2070Info, impacto2070Chapters } from "@/data/impacto-2070";
 import { generateEpub, generateProseEpub } from "@/lib/epub-generator";
 import DownloadGateModal from "@/components/DownloadGateModal";
 import PaidDownloadModal from "@/components/PaidDownloadModal";
+import RelatedBooks from "@/components/RelatedBooks";
 import type { Poem } from "@/data/poesia-da-alma";
 import type { Chapter } from "@/data/os-atribulados";
 
@@ -180,6 +181,8 @@ const BookReader = () => {
               </Button>
             </div>
           )}
+
+          {slug && <RelatedBooks currentSlug={slug} />}
         </main>
 
         {slug && (
@@ -304,6 +307,8 @@ const BookReader = () => {
               <ChevronRight className="w-5 h-5" />
             </Button>
           </div>
+
+          {slug && <RelatedBooks currentSlug={slug} />}
         </main>
       </div>
       {slug && (

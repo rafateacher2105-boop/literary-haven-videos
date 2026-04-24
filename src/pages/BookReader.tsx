@@ -207,8 +207,28 @@ const BookReader = () => {
     );
   };
 
+  const pageUrl = `https://literary-haven-videos.lovable.app/livro/${slug}`;
+  const pageDesc = `Leia online "${info.title}" — coletânea de poemas por ${info.author}. ${poems.length} poemas disponíveis em EPUB.`;
+
   return (
     <div className="min-h-screen bg-parchment">
+      <Helmet>
+        <title>{`${info.title} — ${info.author} | Letras & Páginas`}</title>
+        <meta name="description" content={pageDesc} />
+        <link rel="canonical" href={pageUrl} />
+        <meta property="og:type" content="book" />
+        <meta property="og:title" content={`${info.title} — ${info.author}`} />
+        <meta property="og:description" content={pageDesc} />
+        <meta property="og:url" content={pageUrl} />
+        <meta property="og:site_name" content="Letras & Páginas" />
+        <meta property="og:locale" content="pt_BR" />
+        <meta property="og:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta property="book:author" content={info.author} />
+        <meta name="twitter:card" content="summary_large_image" />
+        <meta name="twitter:title" content={`${info.title} — ${info.author}`} />
+        <meta name="twitter:description" content={pageDesc} />
+        <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+      </Helmet>
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
           <Link to="/#livros" className="flex items-center gap-2 text-muted-foreground hover:text-foreground transition-colors">

@@ -3,6 +3,7 @@ import { Helmet } from "react-helmet-async";
 import { ArrowLeft, BookOpen, Tag } from "lucide-react";
 import { authors, getAuthorThemes } from "@/data/authors";
 import { Button } from "@/components/ui/button";
+import ReaderTestimonials from "@/components/ReaderTestimonials";
 
 const Autor = () => {
   const { slug } = useParams<{ slug: string }>();

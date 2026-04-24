@@ -151,6 +151,18 @@ const BookReader = () => {
           </div>
         </header>
 
+        {slug && (
+          <BreadcrumbJsonLd
+            items={buildBookCrumbs(
+              slug,
+              info.title,
+              authors[bookToAuthor[slug] ?? ""]?.books.find(
+                (b) => b.previewSlug === slug || b.slug === slug
+              )?.theme ?? "Livros"
+            )}
+          />
+        )}
+
         <main className="flex-1 flex flex-col items-center py-12 px-4">
           <div className="max-w-2xl w-full">
             <div className="bg-primary/10 rounded-lg px-4 py-2 mb-6 text-center">
@@ -269,6 +281,18 @@ const BookReader = () => {
           </div>
         </div>
       </header>
+
+      {slug && (
+        <BreadcrumbJsonLd
+          items={buildBookCrumbs(
+            slug,
+            info.title,
+            authors[bookToAuthor[slug] ?? ""]?.books.find(
+              (b) => b.previewSlug === slug || b.slug === slug
+            )?.theme ?? "Livros"
+          )}
+        />
+      )}
 
       <div className="flex">
         {showToc && (

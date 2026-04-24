@@ -11,11 +11,16 @@ export interface Crumb {
 
 interface Props {
   items: Crumb[];
+  /**
+   * @id estável do BreadcrumbList. Necessário se outro nó (ex.: WebPage)
+   * for referenciá-lo via { "@id": ... }.
+   */
+  id?: string;
 }
 
-const BreadcrumbJsonLd = ({ items }: Props) => {
+const BreadcrumbJsonLd = ({ items, id }: Props) => {
   if (!items.length) return null;
-  const data = {
+  const data: Record<string, unknown> = {
     "@context": "https://schema.org",
     "@type": "BreadcrumbList",
     itemListElement: items.map((c, i) => ({
@@ -25,6 +30,7 @@ const BreadcrumbJsonLd = ({ items }: Props) => {
       item: c.url,
     })),
   };
+  if (id) data["@id"] = id;
   return (
     <Helmet>
       <script type="application/ld+json">{JSON.stringify(data)}</script>

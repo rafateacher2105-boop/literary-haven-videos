@@ -7,6 +7,7 @@ import ReaderTestimonials from "@/components/ReaderTestimonials";
 import { rafaelTestimonials, getRafaelStats } from "@/data/testimonials";
 import { authorFaqs } from "@/data/author-faqs";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebPageJsonLd from "@/components/WebPageJsonLd";
 import {
   Accordion,
   AccordionContent,
@@ -294,11 +295,24 @@ const Autor = () => {
       </header>
 
       <BreadcrumbJsonLd
+        id={`${pageUrl}#breadcrumb`}
         items={[
           { name: "Início", url: "https://literary-haven-videos.lovable.app/" },
           { name: "Autores", url: "https://literary-haven-videos.lovable.app/#livros" },
           { name: author.name, url: pageUrl },
         ]}
+      />
+      <WebPageJsonLd
+        type="ProfilePage"
+        url={pageUrl}
+        name={`${author.name} — Autor`}
+        headline={author.name}
+        description={pageDesc}
+        primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+        breadcrumbId={`${pageUrl}#breadcrumb`}
+        authorName={author.name}
+        mainEntityId={`${pageUrl}#author`}
+        about={themes}
       />
 
       <main className="container mx-auto px-6 py-12 max-w-6xl">

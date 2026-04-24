@@ -14,6 +14,7 @@ import DownloadGateModal from "@/components/DownloadGateModal";
 import PaidDownloadModal from "@/components/PaidDownloadModal";
 import RelatedBooks from "@/components/RelatedBooks";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
+import WebPageJsonLd from "@/components/WebPageJsonLd";
 import { bookToAuthor, authors } from "@/data/authors";
 import type { Poem } from "@/data/poesia-da-alma";
 import type { Chapter } from "@/data/os-atribulados";
@@ -152,15 +153,33 @@ const BookReader = () => {
         </header>
 
         {slug && (
-          <BreadcrumbJsonLd
-            items={buildBookCrumbs(
-              slug,
-              info.title,
-              authors[bookToAuthor[slug] ?? ""]?.books.find(
-                (b) => b.previewSlug === slug || b.slug === slug
-              )?.theme ?? "Livros"
-            )}
-          />
+          <>
+            <BreadcrumbJsonLd
+              id={`${pageUrl}#breadcrumb`}
+              items={buildBookCrumbs(
+                slug,
+                info.title,
+                authors[bookToAuthor[slug] ?? ""]?.books.find(
+                  (b) => b.previewSlug === slug || b.slug === slug
+                )?.theme ?? "Livros"
+              )}
+            />
+            <WebPageJsonLd
+              type="ItemPage"
+              url={pageUrl}
+              name={`${info.title} — ${info.author}`}
+              headline={info.title}
+              description={pageDesc}
+              primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+              breadcrumbId={`${pageUrl}#breadcrumb`}
+              authorName={info.author}
+              about={[
+                authors[bookToAuthor[slug] ?? ""]?.books.find(
+                  (b) => b.previewSlug === slug || b.slug === slug
+                )?.theme ?? "Livros",
+              ]}
+            />
+          </>
         )}
 
         <main className="flex-1 flex flex-col items-center py-12 px-4">
@@ -283,15 +302,29 @@ const BookReader = () => {
       </header>
 
       {slug && (
-        <BreadcrumbJsonLd
-          items={buildBookCrumbs(
-            slug,
-            info.title,
-            authors[bookToAuthor[slug] ?? ""]?.books.find(
-              (b) => b.previewSlug === slug || b.slug === slug
-            )?.theme ?? "Livros"
-          )}
-        />
+        <>
+          <BreadcrumbJsonLd
+            id={`${pageUrl}#breadcrumb`}
+            items={buildBookCrumbs(
+              slug,
+              info.title,
+              authors[bookToAuthor[slug] ?? ""]?.books.find(
+                (b) => b.previewSlug === slug || b.slug === slug
+              )?.theme ?? "Livros"
+            )}
+          />
+          <WebPageJsonLd
+            type="ItemPage"
+            url={pageUrl}
+            name={`${info.title} — ${info.author}`}
+            headline={info.title}
+            description={pageDesc}
+            primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+            breadcrumbId={`${pageUrl}#breadcrumb`}
+            authorName={info.author}
+            about={["Poesia"]}
+          />
+        </>
       )}
 
       <div className="flex">

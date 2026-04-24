@@ -215,6 +215,36 @@ const Autor = () => {
         {/* Bloco de avaliações e alcance */}
         <ReaderTestimonials authorSlug={author.slug} />
 
+        {/* FAQ — exibido visualmente e exposto como FAQPage no JSON-LD */}
+        {faqs.length > 0 && (
+          <section aria-label="Perguntas frequentes" className="mt-16 max-w-3xl mx-auto">
+            <header className="text-center mb-8">
+              <p className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                Dúvidas comuns
+              </p>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 flex items-center justify-center gap-2">
+                <HelpCircle className="w-7 h-7 text-primary" />
+                Perguntas frequentes
+              </h3>
+              <p className="font-body text-muted-foreground max-w-xl mx-auto">
+                Tudo o que você precisa saber sobre o autor e suas obras.
+              </p>
+            </header>
+            <Accordion type="single" collapsible className="bg-card border border-border rounded-lg px-6">
+              {faqs.map((f, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="font-display text-left text-foreground hover:text-primary">
+                    {f.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="font-body text-muted-foreground leading-relaxed">
+                    {f.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </section>
+        )}
+
         <div className="text-center mt-16">
           <Link to="/#livros">
             <Button variant="outline" className="gap-2">

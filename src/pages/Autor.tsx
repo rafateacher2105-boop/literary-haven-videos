@@ -1,9 +1,17 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, BookOpen, Tag } from "lucide-react";
+import { ArrowLeft, BookOpen, Tag, HelpCircle } from "lucide-react";
 import { authors, getAuthorThemes } from "@/data/authors";
 import { Button } from "@/components/ui/button";
 import ReaderTestimonials from "@/components/ReaderTestimonials";
+import { rafaelTestimonials, getRafaelStats } from "@/data/testimonials";
+import { authorFaqs } from "@/data/author-faqs";
+import {
+  Accordion,
+  AccordionContent,
+  AccordionItem,
+  AccordionTrigger,
+} from "@/components/ui/accordion";
 
 const Autor = () => {
   const { slug } = useParams<{ slug: string }>();
@@ -30,13 +38,71 @@ const Autor = () => {
     books: author.books.filter((b) => b.theme === t),
   }));
 
-  // JSON-LD para o autor
-  const personJsonLd = {
+  // FAQs e estatísticas para enriquecer o JSON-LD com Reviews/AggregateRating/FAQ.
+  const faqs = authorFaqs[author.slug] ?? [];
+  const hasReviews = author.slug === "rafael-s-l-aguiar";
+  const stats = hasReviews ? getRafaelStats() : null;
+
+  // Grafo schema.org: Person + (AggregateRating + Reviews) + FAQPage
+  const jsonLdGraph: Record<string, unknown>[] = [
+    {
+      "@type": "Person",
+      "@id": `${pageUrl}#author`,
+      name: author.name,
+      description: author.bio,
+      url: pageUrl,
+      jobTitle: "Escritor",
+      knowsAbout: themes,
+    },
+  ];
+
+  if (hasReviews && stats) {
+    jsonLdGraph.push({
+      "@type": "AggregateRating",
+      "@id": `${pageUrl}#rating`,
+      itemReviewed: { "@id": `${pageUrl}#author` },
+      ratingValue: stats.averageRating,
+      reviewCount: stats.totalRatings,
+      bestRating: 5,
+      worstRating: 1,
+    });
+
+    rafaelTestimonials.forEach((t, i) => {
+      jsonLdGraph.push({
+        "@type": "Review",
+        "@id": `${pageUrl}#review-${i + 1}`,
+        itemReviewed: {
+          "@type": "Book",
+          name: t.bookTitle,
+          author: { "@id": `${pageUrl}#author` },
+        },
+        reviewRating: {
+          "@type": "Rating",
+          ratingValue: t.rating,
+          bestRating: 5,
+          worstRating: 1,
+        },
+        author: { "@type": "Person", name: t.reader },
+        reviewBody: t.text,
+      });
+    });
+  }
+
+  if (faqs.length > 0) {
+    jsonLdGraph.push({
+      "@type": "FAQPage",
+      "@id": `${pageUrl}#faq`,
+      mainEntity: faqs.map((f) => ({
+        "@type": "Question",
+        name: f.question,
+        acceptedAnswer: { "@type": "Answer", text: f.answer },
+      })),
+    });
+  }
+
+  const jsonLd = {
     "@context": "https://schema.org",
-    "@type": "Person",
-    name: author.name,
-    description: author.bio,
-    url: pageUrl,
+    "@graph": jsonLdGraph,
   };
 
   return (
@@ -56,7 +122,7 @@ const Autor = () => {
         <meta name="twitter:title" content={`${author.name} — Autor`} />
         <meta name="twitter:description" content={pageDesc} />
         <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
-        <script type="application/ld+json">{JSON.stringify(personJsonLd)}</script>
+        <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
@@ -148,6 +214,36 @@ const Autor = () => {
 
         {/* Bloco de avaliações e alcance */}
         <ReaderTestimonials authorSlug={author.slug} />
+
+        {/* FAQ — exibido visualmente e exposto como FAQPage no JSON-LD */}
+        {faqs.length > 0 && (
+          <section aria-label="Perguntas frequentes" className="mt-16 max-w-3xl mx-auto">
+            <header className="text-center mb-8">
+              <p className="font-body text-sm uppercase tracking-[0.2em] text-muted-foreground mb-3">
+                Dúvidas comuns
+              </p>
+              <h3 className="font-display text-3xl md:text-4xl font-bold text-foreground mb-3 flex items-center justify-center gap-2">
+                <HelpCircle className="w-7 h-7 text-primary" />
+                Perguntas frequentes
+              </h3>
+              <p className="font-body text-muted-foreground max-w-xl mx-auto">
+                Tudo o que você precisa saber sobre o autor e suas obras.
+              </p>
+            </header>
+            <Accordion type="single" collapsible className="bg-card border border-border rounded-lg px-6">
+              {faqs.map((f, i) => (
+                <AccordionItem key={i} value={`faq-${i}`}>
+                  <AccordionTrigger className="font-display text-left text-foreground hover:text-primary">
+                    {f.question}
+                  </AccordionTrigger>
+                  <AccordionContent className="font-body text-muted-foreground leading-relaxed">
+                    {f.answer}
+                  </AccordionContent>
+                </AccordionItem>
+              ))}
+            </Accordion>
+          </section>
+        )}
 
         <div className="text-center mt-16">
           <Link to="/#livros">

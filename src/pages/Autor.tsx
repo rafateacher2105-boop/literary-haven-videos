@@ -146,6 +146,9 @@ const Autor = () => {
           </section>
         ))}
 
+        {/* Bloco de avaliações e alcance */}
+        <ReaderTestimonials authorSlug={author.slug} />
+
         <div className="text-center mt-16">
           <Link to="/#livros">
             <Button variant="outline" className="gap-2">

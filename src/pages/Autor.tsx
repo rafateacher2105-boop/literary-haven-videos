@@ -1,11 +1,12 @@
 import { useParams, Link } from "react-router-dom";
 import { Helmet } from "react-helmet-async";
-import { ArrowLeft, BookOpen, Tag, HelpCircle } from "lucide-react";
+import { ArrowLeft, BookOpen, Tag, HelpCircle, ChevronRight } from "lucide-react";
 import { authors, getAuthorThemes } from "@/data/authors";
 import { Button } from "@/components/ui/button";
 import ReaderTestimonials from "@/components/ReaderTestimonials";
 import { rafaelTestimonials, getRafaelStats } from "@/data/testimonials";
 import { authorFaqs } from "@/data/author-faqs";
+import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import {
   Accordion,
   AccordionContent,

@@ -21,28 +21,25 @@ const UpdatesBanner = () => {
     setMounted(true);
   }, []);
 
-  // Save previously focused element when banner mounts
   useEffect(() => {
     if (!mounted) return;
     previousFocusRef.current = document.activeElement as HTMLElement | null;
   }, [mounted]);
 
-  // Esc to dismiss
-  useEffect(() => {
-    if (!mounted || exiting) return;
-    const onKey = (e: KeyboardEvent) => {
-      if (e.key === "Escape") {
-        e.stopPropagation();
-        dismiss();
+  const closeWithAnimation = () => {
+    if (exiting) return;
+    setExiting(true);
+    window.setTimeout(() => {
+      setMounted(false);
+      const prev = previousFocusRef.current;
+      if (prev && typeof prev.focus === "function" && document.contains(prev)) {
+        prev.focus();
       }
-    };
-    window.addEventListener("keydown", onKey);
-    return () => window.removeEventListener("keydown", onKey);
-    // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [mounted, exiting]);
+    }, EXIT_DURATION);
+  };
 
   const dismissOnly = () => {
-    // Marca apenas o item primário como visto; restantes ficam no histórico.
+    // Marca apenas o item primário como visto (clique no link); restantes ficam no histórico.
     if (newItems[0]) markSeen(newItems[0].id);
     closeWithAnimation();
   };
@@ -52,18 +49,18 @@ const UpdatesBanner = () => {
     closeWithAnimation();
   };
 
-  const closeWithAnimation = () => {
-    if (exiting) return;
-    setExiting(true);
-    window.setTimeout(() => {
-      setMounted(false);
-      // Restore focus to previously focused element
-      const prev = previousFocusRef.current;
-      if (prev && typeof prev.focus === "function" && document.contains(prev)) {
-        prev.focus();
+  useEffect(() => {
+    if (!mounted || exiting) return;
+    const onKey = (e: KeyboardEvent) => {
+      if (e.key === "Escape") {
+        e.stopPropagation();
+        dismissAll();
       }
-    }, EXIT_DURATION);
-  };
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+    // eslint-disable-next-line react-hooks/exhaustive-deps
+  }, [mounted, exiting]);
 
   if (!mounted) return null;
 
@@ -90,7 +87,7 @@ const UpdatesBanner = () => {
           <a
             ref={linkRef}
             href={primary.href ?? "#livros"}
-            onClick={dismiss}
+            onClick={dismissOnly}
             aria-label={`Abrir novidade: ${primary.title}`}
             className="underline-offset-2 hover:underline truncate inline-block max-w-full align-middle rounded-sm focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
           >
@@ -106,7 +103,7 @@ const UpdatesBanner = () => {
           )}
         </div>
         <button
-          onClick={dismiss}
+          onClick={dismissAll}
           aria-label="Fechar notificação de novidades"
           className="shrink-0 p-1 rounded hover:bg-primary-foreground/10 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-primary-foreground focus-visible:ring-offset-2 focus-visible:ring-offset-primary"
         >

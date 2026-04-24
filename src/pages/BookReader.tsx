@@ -1,5 +1,6 @@
 import { useParams, Link } from "react-router-dom";
 import { useState } from "react";
+import { Helmet } from "react-helmet-async";
 import { ArrowLeft, Download, ChevronLeft, ChevronRight, BookOpen, List, ShoppingCart } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { poesiaDaAlmaInfo, poesiaDaAlmaPoems } from "@/data/poesia-da-alma";

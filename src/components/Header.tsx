@@ -1,4 +1,4 @@
-import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText } from "lucide-react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText, User } from "lucide-react";
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ClassicsModal from "./ClassicsModal";
@@ -68,6 +68,13 @@ const Header = () => {
             Infográficos
           </button>
           <button
+            onClick={() => navigate("/autor/rafael-s-l-aguiar")}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <User className="w-4 h-4" />
+            Autor
+          </button>
+          <button
             onClick={() => { setClassicsDefaultTab("artigos"); setClassicsOpen(true); }}
             className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
           >
@@ -126,6 +133,13 @@ const Header = () => {
           >
             <Image className="w-4 h-4" />
             Infográficos
+          </button>
+          <button
+            onClick={() => { navigate("/autor/rafael-s-l-aguiar"); setMenuOpen(false); }}
+            className="flex items-center gap-1.5 font-body text-sm text-muted-foreground hover:text-primary transition-colors"
+          >
+            <User className="w-4 h-4" />
+            Autor
           </button>
           <button
             onClick={() => { setClassicsDefaultTab("artigos"); setClassicsOpen(true); setMenuOpen(false); }}

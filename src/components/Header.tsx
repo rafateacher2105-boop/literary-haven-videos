@@ -3,6 +3,7 @@ import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import ClassicsModal from "./ClassicsModal";
 import SupportAuthorModal from "./SupportAuthorModal";
+import UpdatesHistoryButton from "./UpdatesHistoryButton";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
@@ -83,14 +84,22 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Mobile toggle */}
-        <button
-          className="md:hidden text-foreground"
-          onClick={() => setMenuOpen(!menuOpen)}
-          aria-label="Menu"
-        >
-          {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
-        </button>
+        {/* Desktop history bell (next to nav) */}
+        <div className="hidden md:flex items-center ml-2">
+          <UpdatesHistoryButton variant="icon" />
+        </div>
+
+        {/* Mobile actions: history bell + menu toggle */}
+        <div className="flex items-center gap-1 md:hidden">
+          <UpdatesHistoryButton variant="icon" onNavigate={() => setMenuOpen(false)} />
+          <button
+            className="text-foreground p-1"
+            onClick={() => setMenuOpen(!menuOpen)}
+            aria-label="Menu"
+          >
+            {menuOpen ? <X className="w-6 h-6" /> : <Menu className="w-6 h-6" />}
+          </button>
+        </div>
       </div>
 
       {/* Mobile nav */}

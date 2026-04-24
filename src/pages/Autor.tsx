@@ -68,23 +68,59 @@ const Autor = () => {
     });
 
     rafaelTestimonials.forEach((t, i) => {
-      jsonLdGraph.push({
+      // Item revisado: Book com URL canônica quando o slug for conhecido.
+      const itemReviewed: Record<string, unknown> = {
+        "@type": "Book",
+        name: t.bookTitle,
+        author: { "@id": `${pageUrl}#author` },
+        inLanguage: "pt-BR",
+      };
+      if (t.bookSlug) {
+        itemReviewed.url = `https://literary-haven-videos.lovable.app/livro/${t.bookSlug}`;
+      }
+
+      // Reviewer enriquecido: address (cidade), jobTitle e nationality.
+      const reviewer: Record<string, unknown> = {
+        "@type": t.reviewerType ?? "Person",
+        name: t.reader,
+      };
+      if (t.reviewerJobTitle) reviewer.jobTitle = t.reviewerJobTitle;
+      if (t.location) {
+        reviewer.address = {
+          "@type": "PostalAddress",
+          addressLocality: t.location,
+          addressCountry: "BR",
+        };
+      }
+
+      const review: Record<string, unknown> = {
         "@type": "Review",
         "@id": `${pageUrl}#review-${i + 1}`,
-        itemReviewed: {
-          "@type": "Book",
-          name: t.bookTitle,
-          author: { "@id": `${pageUrl}#author` },
-        },
+        itemReviewed,
         reviewRating: {
           "@type": "Rating",
           ratingValue: t.rating,
           bestRating: 5,
           worstRating: 1,
         },
-        author: { "@type": "Person", name: t.reader },
+        author: reviewer,
         reviewBody: t.text,
-      });
+        publisher: {
+          "@type": "Organization",
+          name: "Letras & Páginas",
+          url: "https://literary-haven-videos.lovable.app",
+        },
+      };
+
+      if (t.headline) review.name = t.headline;
+      if (t.datePublished) review.datePublished = t.datePublished;
+      if (t.language) review.inLanguage = t.language;
+      if (t.verifiedPurchase !== undefined) {
+        // Marcador adicional usado por agregadores de review.
+        review.reviewAspect = "Leitor verificado";
+      }
+
+      jsonLdGraph.push(review);
     });
   }
 

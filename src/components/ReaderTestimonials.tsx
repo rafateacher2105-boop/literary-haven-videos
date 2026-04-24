@@ -23,19 +23,48 @@ const Stars = ({ rating }: { rating: number }) => (
   </div>
 );
 
+const formatDate = (iso?: string) => {
+  if (!iso) return "";
+  const d = new Date(iso);
+  return d.toLocaleDateString("pt-BR", { month: "short", year: "numeric" });
+};
+
 const TestimonialCard = ({ t }: { t: Testimonial }) => (
   <article className="bg-card border border-border rounded-lg p-5 flex flex-col h-full">
-    <Stars rating={t.rating} />
-    <p className="font-body text-sm text-foreground leading-relaxed mt-3 mb-4 flex-1">
+    <div className="flex items-center justify-between gap-2">
+      <Stars rating={t.rating} />
+      {t.verifiedPurchase && (
+        <span className="font-body text-[10px] uppercase tracking-wider bg-primary/10 text-primary px-2 py-0.5 rounded-full">
+          ✓ Leitor verificado
+        </span>
+      )}
+    </div>
+    {t.headline && (
+      <h4 className="font-display text-sm font-semibold text-foreground mt-3">
+        {t.headline}
+      </h4>
+    )}
+    <p className="font-body text-sm text-foreground leading-relaxed mt-2 mb-4 flex-1">
       “{t.text}”
     </p>
     <div className="border-t border-border pt-3">
       <p className="font-display text-sm font-semibold text-foreground">{t.reader}</p>
       <p className="font-body text-xs text-muted-foreground">{t.role}</p>
-      <p className="font-body text-xs text-primary mt-1">sobre {t.bookTitle}</p>
+      <div className="flex items-center justify-between mt-1">
+        <p className="font-body text-xs text-primary">sobre {t.bookTitle}</p>
+        {t.datePublished && (
+          <time
+            dateTime={t.datePublished}
+            className="font-body text-[10px] text-muted-foreground"
+          >
+            {formatDate(t.datePublished)}
+          </time>
+        )}
+      </div>
     </div>
   </article>
 );
+
 
 const ReaderTestimonials = ({ authorSlug }: ReaderTestimonialsProps) => {
   // Por enquanto só temos depoimentos do Rafael; outros autores: nada a renderizar.

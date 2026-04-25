@@ -139,16 +139,18 @@ const PaidDownloadModal = ({ open, onOpenChange, bookTitle, bookSlug, price, onD
                 </div>
               </div>
 
-              <div className="bg-secondary/50 rounded-lg p-3">
-                <p className="font-body text-xs text-muted-foreground">
-                  Após o pagamento, clique no botão abaixo para baixar o livro. O comprovante pode ser enviado para <strong>{PIX_KEY}</strong>.
+              <div className="bg-secondary/50 rounded-lg p-3 space-y-2">
+                <p className="font-body text-xs text-muted-foreground flex items-start gap-2">
+                  <Mail className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
+                  <span>
+                    Após o pagamento, envie o comprovante para <strong>{PIX_KEY}</strong>. O arquivo EPUB de <strong>{bookTitle}</strong> será enviado para o e-mail informado em até 24h.
+                  </span>
                 </p>
               </div>
 
               <div className="border-t border-border pt-4">
-                <Button onClick={handleDownload} className="w-full gap-2">
-                  <Download className="w-4 h-4" />
-                  Baixar {bookTitle}
+                <Button onClick={() => handleClose(false)} className="w-full">
+                  Entendi, fechar
                 </Button>
               </div>
             </div>

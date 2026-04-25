@@ -3,15 +3,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Download, Copy, Check, ShoppingCart } from "lucide-react";
+import { Copy, Check, ShoppingCart, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-
-// Map of book slugs to their static EPUB files (stored in /public)
-const EPUB_FILES: Record<string, string> = {
-  "crime-antecipado": "/O_Crime_Antecipado.epub",
-  "impacto-2070": "/Impacto_2070.epub",
-};
 
 interface PaidDownloadModalProps {
   open: boolean;

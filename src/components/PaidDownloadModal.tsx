@@ -3,15 +3,9 @@ import { Dialog, DialogContent, DialogHeader, DialogTitle, DialogDescription } f
 import { Button } from "@/components/ui/button";
 import { Input } from "@/components/ui/input";
 import { Label } from "@/components/ui/label";
-import { Download, Copy, Check, ShoppingCart } from "lucide-react";
+import { Copy, Check, ShoppingCart, Mail } from "lucide-react";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
-
-// Map of book slugs to their static EPUB files (stored in /public)
-const EPUB_FILES: Record<string, string> = {
-  "crime-antecipado": "/O_Crime_Antecipado.epub",
-  "impacto-2070": "/Impacto_2070.epub",
-};
 
 interface PaidDownloadModalProps {
   open: boolean;
@@ -59,25 +53,6 @@ const PaidDownloadModal = ({ open, onOpenChange, bookTitle, bookSlug, price, onD
     setCopied(true);
     toast.success("Chave PIX copiada!");
     setTimeout(() => setCopied(false), 3000);
-  };
-
-  const handleDownload = () => {
-    const staticEpub = EPUB_FILES[bookSlug];
-    if (staticEpub) {
-      // Direct download of the static EPUB file
-      const a = document.createElement("a");
-      a.href = staticEpub;
-      a.download = `${bookTitle}.epub`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    } else {
-      onDownload();
-    }
-    onOpenChange(false);
-    setStep("email");
-    setEmail("");
-    setName("");
   };
 
   const handleClose = (value: boolean) => {
@@ -164,16 +139,18 @@ const PaidDownloadModal = ({ open, onOpenChange, bookTitle, bookSlug, price, onD
                 </div>
               </div>
 
-              <div className="bg-secondary/50 rounded-lg p-3">
-                <p className="font-body text-xs text-muted-foreground">
-                  Após o pagamento, clique no botão abaixo para baixar o livro. O comprovante pode ser enviado para <strong>{PIX_KEY}</strong>.
+              <div className="bg-secondary/50 rounded-lg p-3 space-y-2">
+                <p className="font-body text-xs text-muted-foreground flex items-start gap-2">
+                  <Mail className="w-4 h-4 mt-0.5 shrink-0 text-primary" />
+                  <span>
+                    Após o pagamento, envie o comprovante para <strong>{PIX_KEY}</strong>. O arquivo EPUB de <strong>{bookTitle}</strong> será enviado para o e-mail informado em até 24h.
+                  </span>
                 </p>
               </div>
 
               <div className="border-t border-border pt-4">
-                <Button onClick={handleDownload} className="w-full gap-2">
-                  <Download className="w-4 h-4" />
-                  Baixar {bookTitle}
+                <Button onClick={() => handleClose(false)} className="w-full">
+                  Entendi, fechar
                 </Button>
               </div>
             </div>

@@ -55,25 +55,6 @@ const PaidDownloadModal = ({ open, onOpenChange, bookTitle, bookSlug, price, onD
     setTimeout(() => setCopied(false), 3000);
   };
 
-  const handleDownload = () => {
-    const staticEpub = EPUB_FILES[bookSlug];
-    if (staticEpub) {
-      // Direct download of the static EPUB file
-      const a = document.createElement("a");
-      a.href = staticEpub;
-      a.download = `${bookTitle}.epub`;
-      document.body.appendChild(a);
-      a.click();
-      document.body.removeChild(a);
-    } else {
-      onDownload();
-    }
-    onOpenChange(false);
-    setStep("email");
-    setEmail("");
-    setName("");
-  };
-
   const handleClose = (value: boolean) => {
     if (!value) {
       setStep("email");

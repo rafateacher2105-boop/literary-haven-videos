@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { AlertCircle, CheckCircle2, RefreshCw, X } from "lucide-react";
+import coverPerseu from "@/assets/cover-perseu.jpg";
 
 /**
  * Validador de Capas Publicadas
@@ -8,18 +9,15 @@ import { AlertCircle, CheckCircle2, RefreshCw, X } from "lucide-react";
  * servidas pelo domínio publicado (literary-haven-videos.lovable.app).
  * Avisa quando há divergência — útil antes de publicar uma nova versão.
  *
- * A comparação é feita por hash SHA-256 dos bytes,
+ * A comparação é feita por tamanho (Content-Length) + hash SHA-256 dos bytes,
  * o que detecta qualquer mudança binária na imagem.
- *
- * As capas devem estar em public/ (não em src/assets/) para manter
- * URLs estáveis entre preview e produção.
  */
 
 const PUBLISHED_ORIGIN = "https://literary-haven-videos.lovable.app";
 
 // Lista de capas a monitorar. Acrescente novas entradas conforme necessário.
-const COVERS_TO_CHECK: { label: string; localPath: string }[] = [
-  { label: "O Legado de Perseu", localPath: "/cover-perseu.jpg" },
+const COVERS_TO_CHECK: { label: string; localUrl: string }[] = [
+  { label: "O Legado de Perseu", localUrl: coverPerseu },
 ];
 
 type Status = "idle" | "checking" | "match" | "diff" | "error";
@@ -60,10 +58,12 @@ const PublishCoverValidator = () => {
     const out: Result[] = [];
     for (const cover of COVERS_TO_CHECK) {
       try {
-        // As capas devem estar em public/ para URLs estáveis.
-        const localUrl = window.location.origin + cover.localPath;
-        const localHash = await fetchHash(localUrl);
-        const publishedUrl = PUBLISHED_ORIGIN + cover.localPath;
+        // Caminho público equivalente: tira o hash do bundle do nome.
+        // Como assets do Vite são hashados, comparamos o arquivo carregado no
+        // preview (localUrl) com o asset servido na mesma URL no publicado.
+        // Se o publicado tiver outro hash, retornará 404 → divergência.
+        const localHash = await fetchHash(cover.localUrl);
+        const publishedUrl = PUBLISHED_ORIGIN + new URL(cover.localUrl, window.location.origin).pathname;
         let publishedHash = "";
         try {
           publishedHash = await fetchHash(publishedUrl);

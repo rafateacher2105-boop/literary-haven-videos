@@ -1,4 +1,5 @@
 import { BookOpen } from "lucide-react";
+import ForceUpdateButton from "./ForceUpdateButton";
 
 const Footer = () => {
   return (
@@ -11,9 +12,12 @@ const Footer = () => {
               Letras & Páginas
             </span>
           </div>
-          <p className="font-body text-sm text-muted-foreground">
-            © 2026 Letras & Páginas. Feito com amor pela literatura.
-          </p>
+          <div className="flex flex-col md:flex-row items-center gap-3 md:gap-6">
+            <p className="font-body text-sm text-muted-foreground">
+              © 2026 Letras & Páginas. Feito com amor pela literatura.
+            </p>
+            <ForceUpdateButton />
+          </div>
         </div>
       </div>
     </footer>

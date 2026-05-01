@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "herois-epicos-aquiles-livro-iv",
+    title: "Novo na Biblioteca: Heróis Épicos — Aquiles, Livro IV",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-01",
+  },
+  {
     id: "perseu-legado-livro-iv",
     title: "Novo na Biblioteca: Heróis Épicos — Perseu, Livro IV",
     type: "livro",

@@ -29,7 +29,7 @@ export default defineConfig(({ mode }) => ({
             urlPattern: ({ request }) => request.mode === "navigate",
             handler: "NetworkFirst",
             options: {
-              cacheName: "html-cache-v2",
+              cacheName: "html-cache",
               networkTimeoutSeconds: 5,
               expiration: {
                 maxEntries: 20,

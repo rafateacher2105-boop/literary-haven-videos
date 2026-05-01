@@ -387,30 +387,42 @@ const BookGrid = ({ books, colors, onRequestDownload, onRequestPaidDownload }: {
                     Café + Download
                   </Button>
                 ) : (
-                  <div className="mt-auto flex flex-col gap-1.5">
-                    <Button
-                      variant="default"
-                      size="sm"
-                      className="gap-1.5 text-xs"
-                      asChild
-                    >
-                      <a href={book.file} target="_blank" rel="noopener noreferrer">
-                        <BookOpen className="w-3 h-3" />
-                        Ler online
-                      </a>
-                    </Button>
-                    <Button
-                      variant="outline"
-                      size="sm"
-                      className="gap-1.5 text-xs"
-                      asChild
-                    >
-                      <a href={book.file} download>
-                        <Download className="w-3 h-3" />
-                        Download
-                      </a>
-                    </Button>
-                  </div>
+                  (() => {
+                    const isExternal = /^https?:\/\//i.test(book.file);
+                    return (
+                      <div className="mt-auto flex flex-col gap-1.5">
+                        <Button
+                          variant="default"
+                          size="sm"
+                          className="gap-1.5 text-xs"
+                          asChild
+                        >
+                          <a href={book.file} target="_blank" rel="noopener noreferrer">
+                            <BookOpen className="w-3 h-3" />
+                            Ler online
+                          </a>
+                        </Button>
+                        <Button
+                          variant="outline"
+                          size="sm"
+                          className="gap-1.5 text-xs"
+                          asChild
+                        >
+                          {isExternal ? (
+                            <a href={book.file} target="_blank" rel="noopener noreferrer">
+                              <Download className="w-3 h-3" />
+                              Abrir no Drive
+                            </a>
+                          ) : (
+                            <a href={book.file} download>
+                              <Download className="w-3 h-3" />
+                              Download
+                            </a>
+                          )}
+                        </Button>
+                      </div>
+                    );
+                  })()
                 )
               ) : (
                 <p className="mt-auto font-body text-[10px] text-muted-foreground italic text-center">

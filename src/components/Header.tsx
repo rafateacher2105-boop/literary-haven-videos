@@ -1,16 +1,30 @@
-import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText, User } from "lucide-react";
-import { useState } from "react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText, User, Search } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ClassicsModal from "./ClassicsModal";
 import SupportAuthorModal from "./SupportAuthorModal";
 import UpdatesHistoryButton from "./UpdatesHistoryButton";
+import SearchDialog from "./SearchDialog";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [classicsOpen, setClassicsOpen] = useState(false);
   const [classicsDefaultTab, setClassicsDefaultTab] = useState("classicos");
   const [supportOpen, setSupportOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
+
+  // Atalho Ctrl/Cmd+K abre a busca
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const navItems = [
     { label: "Início", href: "#inicio" },
@@ -84,13 +98,28 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Desktop history bell (next to nav) */}
-        <div className="hidden md:flex items-center ml-2">
+        {/* Desktop history bell + search (next to nav) */}
+        <div className="hidden md:flex items-center gap-1 ml-2">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Buscar livro ou autor"
+            title="Buscar (Ctrl+K)"
+            className="p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+          >
+            <Search className="w-5 h-5" />
+          </button>
           <UpdatesHistoryButton variant="icon" />
         </div>
 
-        {/* Mobile actions: history bell + menu toggle */}
+        {/* Mobile actions: search + history bell + menu toggle */}
         <div className="flex items-center gap-1 md:hidden">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Buscar livro ou autor"
+            className="p-1 text-foreground"
+          >
+            <Search className="w-6 h-6" />
+          </button>
           <UpdatesHistoryButton variant="icon" onNavigate={() => setMenuOpen(false)} />
           <button
             className="text-foreground p-1"
@@ -162,6 +191,7 @@ const Header = () => {
 
       <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} defaultTab={classicsDefaultTab} />
       <SupportAuthorModal open={supportOpen} onOpenChange={setSupportOpen} />
+      <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
     </header>
   );
 };

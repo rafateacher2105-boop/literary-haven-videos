@@ -134,6 +134,7 @@ import coverAquiles from "@/assets/cover-aquiles.jpg";
 import coverSiegfried from "@/assets/cover-siegfried.jpg";
 import coverJasao from "@/assets/cover-jasao.jpg";
 import coverPerseu from "@/assets/cover-perseu.jpg";
+import coverEneida from "@/assets/cover-eneida.jpg";
 import {
   Dialog,
   DialogContent,
@@ -285,6 +286,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Heróis Épicos: Siegfried — Saga Livro II", author: "Rafael S. L. Aguiar", cover: coverSiegfried, file: "/siegfried-saga-livro-ii.pdf", description: "A lendária saga do herói germânico Siegfried: o duelo com o dragão Fafnir, a conquista do tesouro dos Nibelungos, a espada Balmung e o amor por Krimilda. Uma jornada épica pelas florestas e montanhas nórdicas. Edição ilustrada de luxo da série Heróis Épicos. Curadoria Letras e Páginas." },
   { title: "Heróis Épicos: Jasão e os Argonautas — Livro III", author: "Rafael S. L. Aguiar", cover: coverJasao, file: "/jasao-argonautas-livro-iii.pdf", description: "A lendária expedição de Jasão e os Argonautas a bordo do navio Argo em busca do Velocino de Ouro. Enfrente monstros marinhos, harpias, dragões e os mistérios da Cólquida nesta épica jornada pela mitologia grega. Edição premium ilustrada da série Heróis Épicos. Curadoria Letras e Páginas." },
   { title: "Heróis Épicos: Perseu — O Legado de Perseu, Livro IV", author: "Rafael S. L. Aguiar", cover: coverPerseu, file: "https://drive.google.com/drive/folders/1O4xlG7fNMagIv_Mp2WhCN6hxeVDr2XLn", description: "A jornada do herói filho de Zeus e Dânae: a profecia que o destinou à glória, a decapitação da Medusa com a espada harpe e o escudo espelhado, o resgate de Andrômeda das garras do monstro marinho e a fundação de Micenas. Uma saga sobre coragem, destino e o legado eterno de um semideus. Edição premium ilustrada da série Heróis Épicos — Livro IV. Curadoria Letras e Páginas." },
+  { title: "A Eneida — A Jornada de Eneias", author: "Rafael S. L. Aguiar", cover: coverEneida, file: "/eneida-jornada-eneias.pdf", description: "A epopeia do herói troiano Eneias, filho de Vênus, em sua fuga de Troia em chamas e na longa travessia pelo Mediterrâneo até as terras do Lácio, onde fundaria a estirpe de Roma. Tempestades, o amor trágico de Dido em Cartago, a descida ao mundo dos mortos e as guerras pela nova pátria compõem esta jornada épica inspirada na obra-prima de Virgílio. Edição ilustrada de luxo. Curadoria Letras e Páginas." },
 ];
 
 const talesColors = [

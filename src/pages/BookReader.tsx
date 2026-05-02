@@ -167,7 +167,7 @@ const BookReader = () => {
               name={`${info.title} — ${info.author}`}
               headline={info.title}
               description={pageDesc}
-              primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+              primaryImageUrl={primaryImage}
               breadcrumbId={`${pageUrl}#breadcrumb`}
               authorName={info.author}
               about={[

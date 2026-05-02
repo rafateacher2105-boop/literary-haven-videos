@@ -15,6 +15,8 @@ import PaidDownloadModal from "@/components/PaidDownloadModal";
 import RelatedBooks from "@/components/RelatedBooks";
 import BreadcrumbJsonLd from "@/components/BreadcrumbJsonLd";
 import WebPageJsonLd from "@/components/WebPageJsonLd";
+import BookSeo from "@/components/BookSeo";
+import { getBookSeo, toAbsoluteUrl } from "@/data/book-seo";
 import { bookToAuthor, authors } from "@/data/authors";
 import type { Poem } from "@/data/poesia-da-alma";
 import type { Chapter } from "@/data/os-atribulados";

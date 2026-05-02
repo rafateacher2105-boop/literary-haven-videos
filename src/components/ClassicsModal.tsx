@@ -159,7 +159,7 @@ interface ClassicBook {
 
 const PIX_KEY = "rafateacher2105@gmail.com";
 
-const classicBooks: ClassicBook[] = [
+export const classicBooks: ClassicBook[] = [
   // === Obras Internacionais ===
   { title: "A Divina Comédia", author: "Dante Alighieri", cover: coverDivinaComedia, file: "/divina-comedia.pdf" },
   { title: "As Viagens de Gulliver", author: "Jonathan Swift", cover: coverViagensGulliver, file: "/as-viagens-de-gulliver.pdf" },
@@ -255,7 +255,7 @@ const classicBooks: ClassicBook[] = [
   { title: "O Quarto Sábio", author: "Henry Van Dyke", cover: coverQuartoSabio, description: "Um clássico sobre fé e sacrifício. A jornada de Artaban, o quarto mago, em busca do Cristo." },
 ];
 
-const talesBooks: ClassicBook[] = [
+export const talesBooks: ClassicBook[] = [
   { title: "Contos de Poe", author: "Edgar Allan Poe", cover: coverContosPoe, file: "/contos-poe.pdf", description: "Mestre do terror e do mistério, Poe nos leva a labirintos psicológicos sombrios com contos como 'O Gato Preto', 'O Coração Delator' e 'A Queda da Casa de Usher'. Edição especial para o Blog Letras e Páginas." },
   { title: "Contos dos Irmãos Grimm — Edição de Luxo", author: "Irmãos Grimm", cover: coverContosGrimm, file: "/contos-grimm.pdf", description: "Edição de luxo ilustrada dos contos que definiram os contos de fadas modernos: Branca de Neve, Cinderela, Rapunzel, João e Maria e dezenas de outros clássicos imortais. Edição especial exclusiva para o Blog Letras e Páginas." },
   { title: "Contos de Andersen", author: "Hans Christian Andersen", cover: coverContosAndersen, file: "/contos-andersen.pdf", description: "O Patinho Feio, A Pequena Sereia, A Rainha da Neve — histórias encantadoras que misturam fantasia, melancolia e lições atemporais. Edição especial para o Blog Letras e Páginas." },
@@ -299,7 +299,7 @@ const talesColors = [
   "from-[hsl(100,35%,18%)] to-[hsl(80,40%,32%)]",
 ];
 
-const dystopiaBooks: ClassicBook[] = [
+export const dystopiaBooks: ClassicBook[] = [
   { title: "O Cromossomo de Ferro (O Tacão de Ferro)", author: "Jack London", year: "1908", description: "Uma das primeiras distopias modernas. Retrata a ascensão de uma oligarquia tirânica nos EUA que esmaga a liberdade individual.", cover: coverTacaoFerro },
   { title: "A Máquina Parou", author: "E.M. Forster", year: "1909", description: "A humanidade vive no subsolo, isolada em quartos individuais, comunicando-se apenas por telas. Todas as necessidades são supridas por 'A Máquina'.", cover: coverMaquinaParou },
   { title: "Nós", author: "Yevgeny Zamyatin", year: "1924", description: "No 'Estado Único', as paredes são de vidro para que ninguém tenha privacidade. A individualidade é uma doença.", cover: coverNos },

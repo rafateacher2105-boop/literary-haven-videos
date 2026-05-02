@@ -19,7 +19,7 @@ import backcoverObsoletos from "@/assets/backcover-obsoletos.jpg";
 import coverMemoriasAndroid from "@/assets/cover-memorias-android.jpg";
 import backcoverMemoriasAndroid from "@/assets/backcover-memorias-android.jpg";
 
-export const books = [
+const books = [
   {
     title: "Memórias Ácidas de Bryan Kubrick",
     author: "Rafael S. L. Aguiar",

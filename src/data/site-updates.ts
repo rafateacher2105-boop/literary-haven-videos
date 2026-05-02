@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "gilgamesh-epopeia-livro-vi",
+    title: "Novo na Biblioteca: Heróis Épicos — A Epopeia de Gilgamesh, Livro VI",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-02",
+  },
+  {
     id: "eneida-jornada-livro-v",
     title: "Novo na Biblioteca: Heróis Épicos — A Eneida, Livro V",
     type: "livro",

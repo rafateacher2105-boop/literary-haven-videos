@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "eneida-jornada-livro-v",
+    title: "Novo na Biblioteca: Heróis Épicos — A Eneida, Livro V",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-02",
+  },
+  {
     id: "perseu-legado-livro-iv",
     title: "Novo na Biblioteca: Heróis Épicos — Perseu, Livro IV",
     type: "livro",

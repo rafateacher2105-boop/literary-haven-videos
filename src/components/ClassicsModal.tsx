@@ -658,16 +658,40 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                 }
                 return (
                   <div className="mb-4 p-3 rounded-lg border border-primary/30 bg-primary/5">
-                    <p className="font-display text-xs font-semibold text-foreground mb-1.5">
+                    <p className="font-display text-xs font-semibold text-foreground mb-2">
                       📚 Série Heróis Épicos — {mythHeroes.length} {mythHeroes.length === 1 ? "livro carregado" : "livros carregados"}
                     </p>
                     {mythHeroes.length > 0 ? (
-                      <div className="flex flex-wrap gap-1.5">
-                        {mythHeroes.map((b) => (
-                          <span key={b.title} className="text-[10px] bg-primary/15 text-primary px-2 py-0.5 rounded-full font-body">
-                            ✓ {b.title.replace("Heróis Épicos: ", "").split(" — ")[0]}
-                          </span>
-                        ))}
+                      <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
+                        {mythHeroes.map((b) => {
+                          const shortTitle = b.title.replace("Heróis Épicos: ", "").split(" — ")[0];
+                          return (
+                            <div
+                              key={b.title}
+                              className="flex gap-2 p-1.5 rounded-md bg-background/60 border border-primary/15 hover:border-primary/40 hover:bg-background/80 transition-colors"
+                            >
+                              {b.cover && (
+                                <img
+                                  src={b.cover}
+                                  alt={`Capa: ${shortTitle}`}
+                                  loading="lazy"
+                                  decoding="async"
+                                  className="w-10 h-14 object-cover rounded-sm shadow-sm flex-shrink-0"
+                                />
+                              )}
+                              <div className="flex flex-col min-w-0 flex-1">
+                                <span className="font-display text-[11px] font-semibold text-foreground leading-tight line-clamp-2">
+                                  ✓ {shortTitle}
+                                </span>
+                                {b.description && (
+                                  <span className="font-body text-[9.5px] text-muted-foreground leading-snug line-clamp-3 mt-0.5">
+                                    {b.description}
+                                  </span>
+                                )}
+                              </div>
+                            </div>
+                          );
+                        })}
                       </div>
                     ) : (
                       <p className="text-[11px] text-muted-foreground font-body italic">Nenhum livro da série Heróis Épicos disponível ainda.</p>

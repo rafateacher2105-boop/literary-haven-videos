@@ -98,13 +98,28 @@ const Header = () => {
           </button>
         </nav>
 
-        {/* Desktop history bell (next to nav) */}
-        <div className="hidden md:flex items-center ml-2">
+        {/* Desktop history bell + search (next to nav) */}
+        <div className="hidden md:flex items-center gap-1 ml-2">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Buscar livro ou autor"
+            title="Buscar (Ctrl+K)"
+            className="p-2 rounded-md text-muted-foreground hover:text-primary hover:bg-primary/10 transition-colors"
+          >
+            <Search className="w-5 h-5" />
+          </button>
           <UpdatesHistoryButton variant="icon" />
         </div>
 
-        {/* Mobile actions: history bell + menu toggle */}
+        {/* Mobile actions: search + history bell + menu toggle */}
         <div className="flex items-center gap-1 md:hidden">
+          <button
+            onClick={() => setSearchOpen(true)}
+            aria-label="Buscar livro ou autor"
+            className="p-1 text-foreground"
+          >
+            <Search className="w-6 h-6" />
+          </button>
           <UpdatesHistoryButton variant="icon" onNavigate={() => setMenuOpen(false)} />
           <button
             className="text-foreground p-1"

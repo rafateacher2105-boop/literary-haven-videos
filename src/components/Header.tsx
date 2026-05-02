@@ -191,6 +191,7 @@ const Header = () => {
 
       <ClassicsModal open={classicsOpen} onOpenChange={setClassicsOpen} defaultTab={classicsDefaultTab} />
       <SupportAuthorModal open={supportOpen} onOpenChange={setSupportOpen} />
+      <SearchDialog open={searchOpen} onOpenChange={setSearchOpen} />
     </header>
   );
 };

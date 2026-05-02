@@ -1,16 +1,30 @@
-import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText, User } from "lucide-react";
-import { useState } from "react";
+import { BookOpen, Library, Menu, X, Heart, ShoppingBag, Image, FileText, User, Search } from "lucide-react";
+import { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import ClassicsModal from "./ClassicsModal";
 import SupportAuthorModal from "./SupportAuthorModal";
 import UpdatesHistoryButton from "./UpdatesHistoryButton";
+import SearchDialog from "./SearchDialog";
 
 const Header = () => {
   const [menuOpen, setMenuOpen] = useState(false);
   const [classicsOpen, setClassicsOpen] = useState(false);
   const [classicsDefaultTab, setClassicsDefaultTab] = useState("classicos");
   const [supportOpen, setSupportOpen] = useState(false);
+  const [searchOpen, setSearchOpen] = useState(false);
   const navigate = useNavigate();
+
+  // Atalho Ctrl/Cmd+K abre a busca
+  useEffect(() => {
+    const onKey = (e: KeyboardEvent) => {
+      if ((e.ctrlKey || e.metaKey) && e.key.toLowerCase() === "k") {
+        e.preventDefault();
+        setSearchOpen(true);
+      }
+    };
+    window.addEventListener("keydown", onKey);
+    return () => window.removeEventListener("keydown", onKey);
+  }, []);
 
   const navItems = [
     { label: "Início", href: "#inicio" },

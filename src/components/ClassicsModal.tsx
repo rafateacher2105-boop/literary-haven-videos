@@ -136,6 +136,7 @@ import coverJasao from "@/assets/cover-jasao.jpg";
 import coverPerseu from "@/assets/cover-perseu.jpg";
 import coverEneida from "@/assets/cover-eneida.jpg";
 import coverGilgamesh from "@/assets/cover-gilgamesh.jpg";
+import coverTeseu from "@/assets/cover-teseu.jpg";
 import {
   Dialog,
   DialogContent,

@@ -384,7 +384,24 @@ const BookGrid = ({ books, colors, onRequestDownload, onRequestPaidDownload }: {
                 <p className="font-body text-[10px] text-muted-foreground/80 line-clamp-3 leading-relaxed">
                   {book.description}
                 </p>
-              )}
+              {book.file && /Édipo Rei/i.test(book.title) && (() => {
+                const m = book.file.match(/\/file\/d\/([^/]+)/);
+                if (!m) return null;
+                return (
+                  <div className="rounded-md overflow-hidden border border-border/60 bg-muted/30 shadow-sm">
+                    <iframe
+                      src={`https://drive.google.com/file/d/${m[1]}/preview`}
+                      title={`Prévia — ${book.title}`}
+                      className="w-full h-48"
+                      allow="autoplay"
+                      loading="lazy"
+                    />
+                    <p className="text-[9px] text-muted-foreground italic text-center py-1 px-1.5">
+                      Prévia embutida do Drive — use os botões abaixo para leitura completa.
+                    </p>
+                  </div>
+                );
+              })()}
               {book.file ? (
                 book.isPaid && onRequestPaidDownload ? (
                   <Button

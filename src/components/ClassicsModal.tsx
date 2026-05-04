@@ -138,6 +138,7 @@ import coverEneida from "@/assets/cover-eneida.jpg";
 import coverGilgamesh from "@/assets/cover-gilgamesh.jpg";
 import coverTeseu from "@/assets/cover-teseu.jpg";
 import coverAntigona from "@/assets/cover-antigona.jpg";
+import coverEdipo from "@/assets/cover-edipo.jpg";
 import {
   Dialog,
   DialogContent,
@@ -293,6 +294,7 @@ const talesBooks: ClassicBook[] = [
   { title: "Heróis Épicos: A Epopeia de Gilgamesh, Livro VI", author: "Rafael S. L. Aguiar", cover: coverGilgamesh, file: "/gilgamesh-epopeia.pdf", description: "A mais antiga epopeia da humanidade revisitada: Gilgamesh, o rei-tirano de Uruk, encontra em Enkidu o amigo que humaniza seu coração. Juntos enfrentam Humbaba no Bosque dos Cedros e o Touro Celeste enviado por Ishtar. Diante da morte do companheiro, Gilgamesh parte em busca da imortalidade e descobre, nas águas do dilúvio e nas tábuas de argila, a sabedoria sobre o que torna uma vida eterna. Edição premium ilustrada da série Heróis Épicos — Livro VI. Curadoria Letras e Páginas." },
     { title: "Heróis Épicos: Teseu e o Minotauro, Livro VII", author: "Rafael S. L. Aguiar", cover: coverTeseu, file: "https://drive.google.com/file/d/1R_6Yr4zyU1dAgtiNS277Vt7DohG8r6YD/view?usp=drivesdk", description: "A lendária jornada do herói ateniense Teseu: filho do rei Egeu, ele se oferece como tributo a Creta para enfrentar o Minotauro no labirinto construído por Dédalo. Com o fio de Ariadne guiando seu caminho e a coragem como única arma diante da fera, Teseu encara o monstro de cabeça de touro e o destino de toda Atenas. Uma saga sobre engenho, amor e o preço da glória. Edição premium ilustrada da série Heróis Épicos — Livro VII. Curadoria Letras e Páginas." },
     { title: "Heróis Épicos: Antígona de Sófocles, Livro VIII", author: "Sófocles", cover: coverAntigona, file: "https://docs.google.com/document/d/1kXp5x4PnuPeVjpG8Uo3H939kwVq39Clv/edit?usp=drivesdk&ouid=108194703313871147127&rtpof=true&sd=true", description: "A imortal tragédia de Sófocles: Antígona desafia o decreto do rei Creonte para honrar seu irmão Polinices com o sepultamento sagrado. Entre a lei dos homens e a lei dos deuses, a heroína tebana enfrenta o tirano e o próprio destino, num confronto que ecoa por séculos como símbolo da consciência diante da injustiça. Edição da série Heróis Épicos — Livro VIII. Curadoria Letras e Páginas." },
+    { title: "Heróis Épicos: Édipo Rei de Sófocles, Livro IX", author: "Sófocles", cover: coverEdipo, file: "https://drive.google.com/file/d/1-b7aWbB9y4cuhDN8DTQmECbCA6oOvQs6/view?usp=drivesdk", description: "A trágica história de Édipo, rei de Tebas: diante da peste que assola a cidade, ele jura desvendar o assassino do rei Laio sem saber que persegue a si mesmo. Entre a profecia do oráculo de Delfos, o enigma da Esfinge e a verdade insuportável sobre suas origens, Édipo encarna o herói que cega os próprios olhos para enxergar o destino. Edição da série Heróis Épicos — Livro IX. Curadoria Letras e Páginas." },
 ];
 
 const talesColors = [

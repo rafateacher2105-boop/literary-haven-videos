@@ -20,7 +20,8 @@ const HeroSection = () => {
             Letras & Páginas
           </h1>
           <p className="font-body text-lg text-muted-foreground leading-relaxed max-w-lg mb-10">
-            Cada livro provoca uma nova emoção e reflexão, fazendo entender melhor o mundo e a sociedade que nos rodeia.
+            Livros em PDF grátis, edições especiais dos clássicos e e-books autorais de
+            Rafael S. L. Aguiar — autor, editor, curador e pesquisador literário.
           </p>
           <div className="flex gap-4 flex-wrap">
             <a

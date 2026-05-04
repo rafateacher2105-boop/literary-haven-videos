@@ -77,6 +77,12 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
+        <title>Blog Letras & Páginas — Livros em PDF Grátis, Edições Especiais | Rafael S. L. Aguiar</title>
+        <meta
+          name="description"
+          content="Blog Letras & Páginas: livros em PDF grátis, edições especiais dos clássicos, resenhas e e-books autorais de Rafael S. L. Aguiar — autor, editor, curador e pesquisador literário."
+        />
+        <link rel="canonical" href="https://literary-haven-videos.lovable.app/" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Header />

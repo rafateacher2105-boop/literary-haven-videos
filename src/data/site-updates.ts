@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "antigona-sofocles-livro-viii",
+    title: "Novo na Biblioteca: Heróis Épicos — Antígona de Sófocles, Livro VIII",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-04",
+  },
+  {
     id: "teseu-minotauro-livro-vii",
     title: "Novo na Biblioteca: Heróis Épicos — Teseu e o Minotauro, Livro VII",
     type: "livro",

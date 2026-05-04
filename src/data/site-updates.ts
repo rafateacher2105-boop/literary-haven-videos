@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "beowulf-livro-x",
+    title: "Novo na Biblioteca: Heróis Épicos — A Lenda de Beowulf, Livro X",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-04",
+  },
+  {
     id: "antigona-sofocles-livro-viii",
     title: "Novo na Biblioteca: Heróis Épicos — Antígona de Sófocles, Livro VIII",
     type: "livro",

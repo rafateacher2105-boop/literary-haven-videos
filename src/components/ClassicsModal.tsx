@@ -384,6 +384,7 @@ const BookGrid = ({ books, colors, onRequestDownload, onRequestPaidDownload }: {
                 <p className="font-body text-[10px] text-muted-foreground/80 line-clamp-3 leading-relaxed">
                   {book.description}
                 </p>
+              )}
               {book.file && /Édipo Rei/i.test(book.title) && (() => {
                 const m = book.file.match(/\/file\/d\/([^/]+)/);
                 if (!m) return null;

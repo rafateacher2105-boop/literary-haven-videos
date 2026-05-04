@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "sansao-heroi-hebreu-livro-xi",
+    title: "Novo na Biblioteca: Heróis Épicos — Sansão, Livro XI",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-04",
+  },
+  {
     id: "beowulf-livro-x",
     title: "Novo na Biblioteca: Heróis Épicos — A Lenda de Beowulf, Livro X",
     type: "livro",

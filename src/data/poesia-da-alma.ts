@@ -5,7 +5,7 @@ export interface Poem {
 }
 
 export const poesiaDaAlmaInfo = {
-  title: "Poesia da Alma",
+  title: "Sentimento da Alma",
   subtitle: "Produção (2010 a 2019)",
   author: "Rafael Silveira Lima Aguiar",
   authorShort: "Rafael S. L. Aguiar",

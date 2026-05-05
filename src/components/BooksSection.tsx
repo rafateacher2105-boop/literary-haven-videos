@@ -78,7 +78,7 @@ const books = [
     description: "O colapso total da rede elétrica em 2040 apaga não apenas as luzes, mas toda a estrutura econômica da civilização moderna. Sem moedas físicas e com o dinheiro digital evaporado, a humanidade assiste à queda instantânea dos mercados.",
   },
   {
-    title: "Poesia da Alma",
+    title: "Sentimento da Alma",
     author: "Rafael S. L. Aguiar",
     cover: coverPoesiaAlma,
     backcover: backcoverPoesiaAlma,

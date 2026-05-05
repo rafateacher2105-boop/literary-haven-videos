@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "blackout-2040-luz-fim-tunel",
+    title: "Novo livro: Blackout 2040 — Uma luz no fim do túnel",
+    type: "livro",
+    href: "/#livros",
+    publishedAt: "2026-05-05",
+  },
+  {
     id: "persival-busca-graal",
     title: "Novo na Biblioteca: Persival e a Busca pelo Graal — Edição Especial de Luxo",
     type: "livro",

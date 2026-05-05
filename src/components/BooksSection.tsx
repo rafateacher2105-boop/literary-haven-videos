@@ -71,11 +71,14 @@ const books = [
     price: "R$ 15,00",
   },
   {
-    title: "Blackout 2040",
+    title: "Blackout 2040 — Uma luz no fim do túnel",
     author: "Rafael S. L. Aguiar",
     cover: coverBlackout,
     backcover: backcoverBlackout,
-    description: "O colapso total da rede elétrica em 2040 apaga não apenas as luzes, mas toda a estrutura econômica da civilização moderna. Sem moedas físicas e com o dinheiro digital evaporado, a humanidade assiste à queda instantânea dos mercados.",
+    description: "Em 2040, o mundo digital colapsa em um único segundo. Sem energia, sem moedas, sem redes — a família Gasparini é arrancada do conforto da megalópole e forçada a buscar abrigo no campo, onde reaprende o valor da terra, do suor e dos laços humanos. Uma jornada distópica sobre o reencontro com o essencial e a luz que renasce após a escuridão.",
+    badge: "Novo",
+    pdfFile: "/blackout-2040.pdf",
+    price: "R$ 15,00",
   },
   {
     title: "Sentimento da Alma",

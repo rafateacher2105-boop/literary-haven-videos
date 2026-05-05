@@ -141,6 +141,7 @@ import coverAntigona from "@/assets/cover-antigona.jpg";
 import coverEdipo from "@/assets/cover-edipo.jpg";
 import coverBeowulf from "@/assets/cover-beowulf.jpg";
 import coverSansao from "@/assets/cover-sansao.jpg";
+import coverDavi from "@/assets/cover-davi.jpg";
 import {
   Dialog,
   DialogContent,
@@ -299,6 +300,7 @@ const talesBooks: ClassicBook[] = [
     { title: "Heróis Épicos: Édipo Rei de Sófocles, Livro IX", author: "Sófocles", cover: coverEdipo, file: "https://drive.google.com/file/d/1-b7aWbB9y4cuhDN8DTQmECbCA6oOvQs6/view?usp=drivesdk", description: "A trágica história de Édipo, rei de Tebas: diante da peste que assola a cidade, ele jura desvendar o assassino do rei Laio sem saber que persegue a si mesmo. Entre a profecia do oráculo de Delfos, o enigma da Esfinge e a verdade insuportável sobre suas origens, Édipo encarna o herói que cega os próprios olhos para enxergar o destino. Edição da série Heróis Épicos — Livro IX. Curadoria Letras e Páginas." },
     { title: "Heróis Épicos: A Lenda de Beowulf, Livro X", author: "Rafael S. L. Aguiar", cover: coverBeowulf, file: "/A_Lenda_de_Beowulf.pdf", description: "A mais antiga epopeia da língua inglesa em edição completa de luxo: Beowulf, o herói dos gautas, atravessa o mar para libertar o salão de Heorot do monstro Grendel. Após vencer a fera e sua mãe vingativa nas profundezas do pântano, retorna como rei e, décadas depois, encara seu destino final no duelo contra o dragão que ameaça seu povo. Uma saga nórdica sobre coragem, honra, lealdade e a glória eterna conquistada na batalha. Edição premium ilustrada da série Heróis Épicos — Livro X. Curadoria Letras e Páginas." },
     { title: "Heróis Épicos: Sansão — O Herói Hebreu e a Força do Deus Vivo, Livro XI", author: "Rafael S. L. Aguiar", cover: coverSansao, file: "/sansao-heroi-hebreu.pdf", description: "A poderosa saga de Sansão em edição especial de luxo: escolhido desde o ventre para ser nazireu do Senhor, ele enfrenta leões, exércitos e a própria fraqueza humana até o momento supremo no templo dos filisteus. Entre vitórias prodigiosas, quedas dolorosas e redenção final, esta narrativa exalta a força que vem do Deus vivo. Edição e adaptação de Rafael S. L. Aguiar para a série Heróis Épicos — Livro XI. Curadoria Letras e Páginas." },
+    { title: "Heróis Épicos: Davi — O Homem Segundo o Coração de Deus, Livro XII", author: "Rafael S. L. Aguiar", cover: coverDavi, file: "/davi-homem-segundo-coracao-deus.pdf", description: "Edição Especial Premium dedicada a Davi, o pastor de Belém ungido por Samuel para ser rei de Israel. Da coragem juvenil ao enfrentar o gigante Golias no Vale de Elá — armado apenas com fé, funda e cinco pedras lisas — às harpas que aquietavam o espírito de Saul, das fugas no deserto às vitórias do reinado em Jerusalém, dos salmos de adoração às quedas e arrependimento profundo. Uma narrativa sobre fé, coragem e o coração que busca a Deus. Edição e adaptação de Rafael S. L. Aguiar para a série Heróis Épicos — Livro XII. Curadoria Letras e Páginas." },
 ];
 
 const talesColors = [

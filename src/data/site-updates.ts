@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "davi-coracao-de-deus-livro-xii",
+    title: "Novo na Biblioteca: Heróis Épicos — Davi, Livro XII (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-05",
+  },
+  {
     id: "sansao-heroi-hebreu-livro-xi",
     title: "Novo na Biblioteca: Heróis Épicos — Sansão, Livro XI",
     type: "livro",

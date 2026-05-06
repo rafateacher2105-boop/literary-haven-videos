@@ -722,14 +722,21 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     subtitle: "Mergulhando na Mitologia — 22/04/2026",
                     published: true,
                   },
-                  {
-                    title: "A Metamorfose",
-                    author: "Franz Kafka",
-                    cover: coverMetamorfose,
-                    subtitle: "Quem é o monstro: Gregor ou a família?",
-                    published: true,
-                  },
-                ].map((artigo, idx) => (
+                   {
+                     title: "A Metamorfose",
+                     author: "Franz Kafka",
+                     cover: coverMetamorfose,
+                     subtitle: "Quem é o monstro: Gregor ou a família?",
+                     published: true,
+                   },
+                   {
+                     title: "Pare de Procrastinar",
+                     author: "Rafael S. L. Aguiar",
+                     cover: coverPareDeProcrastinar,
+                     subtitle: "O manual definitivo para vencer a procrastinação",
+                     published: true,
+                   },
+                 ].map((artigo, idx) => (
                   <div
                     key={idx}
                     className={`group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer ${!artigo.published ? 'opacity-60' : ''}`}
@@ -971,6 +978,78 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                       </p>
                       <p className="text-xs text-primary font-medium mt-2 italic">
                         Não perca a próxima análise aqui no Letras & Páginas!
+                      </p>
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {selectedArticle === "Pare de Procrastinar" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    Pare de Procrastinar: O Manual Definitivo para Quem Quer Vencer o "Depois Eu Faço"
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Resenha · Por Letras &amp; Páginas · 2025
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Existem livros que entretêm. Existem livros que ensinam. E existem livros que, sem cerimônia, sentam ao seu lado, olham nos seus olhos e dizem: <em>"Chega. Levante e faça."</em> <strong>Pare de Procrastinar — O manual para fazer o que deve ser feito</strong>, segundo livro de <strong>Rafael S. L. Aguiar</strong>, pertence à terceira categoria — e essa é, justamente, a sua maior virtude.
+                    </p>
+                    <p>
+                      Publicada em 2025, a obra chega ao catálogo do Letras &amp; Páginas como um divisor de águas no projeto literário do autor. Conhecido por sua ficção distópica e por seus mergulhos poéticos, Rafael agora se desnuda como educador. Não por acaso: são <strong>quinze anos de sala de aula</strong>, somados à atuação como editor, curador literário e escritor. Toda essa bagagem se converte em páginas de um manual prático, direto e profundamente humano.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Um livro que conversa, não sermoneia</h4>
+                    <p>
+                      O grande mérito de <em>Pare de Procrastinar</em> está no tom. Rafael não escreve do alto de um pedestal motivacional — escreve do banco da frente, ao lado do leitor, como quem já andou pelos mesmos atalhos do adiamento e voltou para contar. Há acolhimento em cada capítulo, mas há também uma firmeza serena: a de quem sabe que <strong>compaixão sem ação não transforma ninguém</strong>.
+                    </p>
+                    <p>
+                      O resultado é um texto que evita os clichês da autoajuda barata. Em vez de promessas mágicas, o livro entrega <strong>estratégias concretas para reprogramar o cérebro</strong>, desmontar o ciclo do "amanhã eu começo" e converter intenção em hábito.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Procrastinar é mais do que preguiça</h4>
+                    <p>
+                      Uma das contribuições mais valiosas do livro é desmistificar a procrastinação. Rafael deixa claro logo nos primeiros capítulos: adiar não é, na maioria das vezes, falta de vontade — é <strong>medo, perfeccionismo, exaustão e ruído mental</strong>. Ao reconhecer isso, o leitor para de se culpar e começa a se entender. E é nesse ponto que o livro deixa de ser apenas um manual e passa a ser uma espécie de espelho — daqueles que devolvem coragem.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Cinco frentes da vida, um só compromisso</h4>
+                    <p>
+                      O autor organiza a obra em torno de cinco áreas essenciais: <strong>saúde, educação, finanças, vida emocional e desenvolvimento pessoal</strong>. Em cada uma, traz histórias reais, reflexões breves e exercícios aplicáveis no mesmo dia. Nada é abstrato. Tudo é convidativo a virar prática.
+                    </p>
+                    <p>
+                      É leitura para quem quer parar de adiar a academia, retomar os estudos, sair das dívidas, cuidar do que sente e, sobretudo, recuperar a autoria da própria vida. Um livro que, lido com lápis na mão, vira um plano de ação.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">A maturidade de um segundo livro</h4>
+                    <p>
+                      Como segunda obra de Rafael, <em>Pare de Procrastinar</em> mostra a evolução de um escritor que passou a confiar mais na voz do educador. Há ali um amadurecimento autoral: frases mais limpas, capítulos curtos, ritmo de quem respeita o tempo do leitor moderno — sem nunca abdicar da profundidade.
+                    </p>
+                    <p>
+                      Quem acompanha o blog Letras &amp; Páginas reconhecerá a marca da casa: cuidado editorial, português impecável e uma ética de comunicação que privilegia clareza acima de qualquer ostentação intelectual.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Para quem é este livro?</h4>
+                    <p>
+                      Para todos. E isso não é exagero. É para o estudante que sabota o estudo, para o profissional que adia o projeto da vida, para o pai ou mãe que diz "depois eu volto a treinar", para o jovem que sonha mas não começa, para o adulto que reconhece a urgência de mudar mas não dá o primeiro passo. Se você se reconheceu em alguma dessas frases, <strong>este livro foi escrito para você</strong>.
+                    </p>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Veredicto</h4>
+                    <p>
+                      <em>Pare de Procrastinar</em> é, sem rodeios, um dos lançamentos mais úteis do ano — e provavelmente um daqueles títulos que ficarão por muito tempo na cabeceira de quem o ler. Não é um livro para ser apenas lido: é um livro para ser <strong>aplicado</strong>.
+                    </p>
+                    <p>
+                      Indicação enfática do Letras &amp; Páginas: leia, releia, sublinhe e, principalmente, <strong>aja</strong>. Porque, como o próprio Rafael lembra ao longo da obra, <em>a vida não premia quem planeja melhor — premia quem começa hoje</em>.
+                    </p>
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#PareDeProcrastinar", "#RafaelAguiar", "#Autoajuda", "#Produtividade", "#Hábitos", "#LetrasEPáginas", "#Resenha"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                    <div className="mt-4 p-4 rounded-md bg-muted/50 border border-border">
+                      <p className="font-display text-xs font-semibold text-foreground mb-1">Onde encontrar?</p>
+                      <p className="text-xs text-muted-foreground">
+                        O livro <strong>Pare de Procrastinar — O manual para fazer o que deve ser feito</strong> está disponível na <strong>Biblioteca Pública</strong> do Letras &amp; Páginas, na aba <strong>Autoajuda</strong>. Leitura imperdível para quem decidiu que o "depois" virou "agora".
                       </p>
                     </div>
                   </div>

@@ -11,6 +11,7 @@ import coverPoesiaSocial from "@/assets/cover-poesia-social.jpg";
 import coverAtividadesIngles from "@/assets/cover-atividades-ingles.jpg";
 import coverObsoletos from "@/assets/cover-obsoletos.jpg";
 import coverMemoriasAndroid from "@/assets/cover-memorias-android.jpg";
+import coverPareDeProcrastinar from "@/assets/cover-pare-de-procrastinar.jpg";
 
 export interface AuthorBook {
   slug?: string;          // página de leitura (poesia)
@@ -49,6 +50,7 @@ export const authors: Record<string, Author> = {
       { slug: "poesia-da-natureza", title: "Poesia da Natureza", cover: coverPoesiaNatureza, theme: "Poesia" },
       { slug: "poesia-social", title: "Poesia Social", cover: coverPoesiaSocial, theme: "Poesia" },
       { previewSlug: "atividades-ingles", title: "Activity — Creative Minds at Play", cover: coverAtividadesIngles, theme: "Didático", price: "R$ 20,00" },
+      { title: "Pare de Procrastinar", cover: coverPareDeProcrastinar, theme: "Autoajuda", year: "2025", price: "R$ 15,00" },
     ],
   },
 };

@@ -1,4 +1,5 @@
-import { Download, Library, Mail, Skull, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image } from "lucide-react";
+import { Download, Library, Mail, Sparkles, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image } from "lucide-react";
+import coverPareDeProcrastinar from "@/assets/cover-pare-de-procrastinar.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -311,6 +312,10 @@ const talesColors = [
   "from-[hsl(200,40%,22%)] to-[hsl(210,35%,38%)]",
   "from-[hsl(30,50%,22%)] to-[hsl(40,45%,38%)]",
   "from-[hsl(100,35%,18%)] to-[hsl(80,40%,32%)]",
+];
+
+const selfHelpBooks: ClassicBook[] = [
+  { title: "Pare de Procrastinar — O manual para fazer o que deve ser feito", author: "Rafael S. L. Aguiar", year: "2026", description: "Um manual prático e acolhedor para vencer a procrastinação em todas as áreas da vida — saúde, educação, finanças, emocional e desenvolvimento pessoal. Com histórias reais, reflexões e estratégias para reprogramar o cérebro, transformar ideias em ação e parar de adiar o que realmente importa. Por Rafael S. L. Aguiar.", cover: coverPareDeProcrastinar, file: "/pare-de-procrastinar.pdf" },
 ];
 
 const dystopiaBooks: ClassicBook[] = [
@@ -640,8 +645,8 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
               Contos e Lendas
             </TabsTrigger>
             <TabsTrigger value="distopias" className="flex-1 gap-1.5 text-xs sm:text-sm">
-              <Skull className="w-4 h-4" />
-              Distopias
+              <Sparkles className="w-4 h-4" />
+              Autoajuda
             </TabsTrigger>
             <TabsTrigger value="artigos" className="flex-1 gap-1.5 text-xs sm:text-sm">
               <FileText className="w-4 h-4" />
@@ -656,7 +661,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
           </TabsContent>
           <TabsContent value="distopias" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={dystopiaBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
+              <BookGrid books={selfHelpBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
           <TabsContent value="contos" className="mt-0">

@@ -722,14 +722,21 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     subtitle: "Mergulhando na Mitologia — 22/04/2026",
                     published: true,
                   },
-                  {
-                    title: "A Metamorfose",
-                    author: "Franz Kafka",
-                    cover: coverMetamorfose,
-                    subtitle: "Quem é o monstro: Gregor ou a família?",
-                    published: true,
-                  },
-                ].map((artigo, idx) => (
+                   {
+                     title: "A Metamorfose",
+                     author: "Franz Kafka",
+                     cover: coverMetamorfose,
+                     subtitle: "Quem é o monstro: Gregor ou a família?",
+                     published: true,
+                   },
+                   {
+                     title: "Pare de Procrastinar",
+                     author: "Rafael S. L. Aguiar",
+                     cover: coverPareDeProcrastinar,
+                     subtitle: "O manual definitivo para vencer a procrastinação",
+                     published: true,
+                   },
+                 ].map((artigo, idx) => (
                   <div
                     key={idx}
                     className={`group flex flex-col rounded-lg overflow-hidden border border-border bg-card hover:shadow-lg transition-all duration-300 cursor-pointer ${!artigo.published ? 'opacity-60' : ''}`}

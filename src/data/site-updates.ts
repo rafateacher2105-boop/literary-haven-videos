@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "arthur-livro-xiii",
+    title: "Novo na Biblioteca: Heróis Épicos — A Lenda de Arthur, Livro XIII",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-06",
+  },
+  {
     id: "blackout-2040-luz-fim-tunel",
     title: "Novo livro: Blackout 2040 — Uma luz no fim do túnel",
     type: "livro",

@@ -12,6 +12,20 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "el-cid-campeador-livro-xv",
+    title: "Novo na Biblioteca: Heróis Épicos — El Cid, O Campeador, Livro XV (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-07",
+  },
+  {
+    id: "musashi-minamoto-livro-xiv",
+    title: "Novo na Biblioteca: Heróis Épicos — Musashi Minamoto, Livro XIV",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-07",
+  },
+  {
     id: "arthur-livro-xiii",
     title: "Novo na Biblioteca: Heróis Épicos — A Lenda de Arthur, Livro XIII",
     type: "livro",

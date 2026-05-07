@@ -146,6 +146,7 @@ import coverDavi from "@/assets/cover-davi.jpg";
 import coverPersival from "@/assets/cover-persival-graal.jpg";
 import coverArthur from "@/assets/cover-arthur.jpg";
 import coverMusashi from "@/assets/cover-musashi.jpg";
+import coverElCid from "@/assets/cover-el-cid.jpg";
 import {
   Dialog,
   DialogContent,

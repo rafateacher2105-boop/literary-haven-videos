@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "arjuna-arqueiro-infinito-livro-xvi",
+    title: "Novo na Biblioteca: Heróis Épicos — Arjuna, O Arqueiro do Infinito, Livro XVI (Edição de Luxo)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-08",
+  },
+  {
     id: "el-cid-campeador-livro-xv",
     title: "Novo na Biblioteca: Heróis Épicos — El Cid, O Campeador, Livro XV (Edição Premium)",
     type: "livro",

@@ -149,6 +149,7 @@ import coverMusashi from "@/assets/cover-musashi.jpg";
 import coverElCid from "@/assets/cover-el-cid.jpg";
 import coverArjuna from "@/assets/cover-arjuna.jpg";
 import coverRostan from "@/assets/cover-rostan.jpg";
+import cover300FeFerro from "@/assets/cover-300-fe-ferro.jpg";
 import {
   Dialog,
   DialogContent,

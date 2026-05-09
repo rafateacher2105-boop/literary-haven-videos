@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "triunfo-300-fe-ferro-livro-xviii",
+    title: "Novo na Biblioteca: Heróis Épicos — O Triunfo dos 300: Fé e Ferro (Gideão & Leônidas), Livro XVIII",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-09",
+  },
+  {
     id: "rostan-escudo-persia-livro-xvii",
     title: "Novo na Biblioteca: Heróis Épicos — Rostan, O Escudo Indestrutível da Pérsia, Livro XVII",
     type: "livro",

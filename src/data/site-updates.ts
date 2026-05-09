@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "sundiata-keita-leao-mali-livro-xix",
+    title: "Novo na Biblioteca: Heróis Épicos — Sundiata Keita, O Leão do Mali, Livro XIX",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-09",
+  },
+  {
     id: "triunfo-300-fe-ferro-livro-xviii",
     title: "Novo na Biblioteca: Heróis Épicos — O Triunfo dos 300: Fé e Ferro (Gideão & Leônidas), Livro XVIII",
     type: "livro",

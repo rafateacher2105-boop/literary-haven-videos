@@ -667,9 +667,9 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
               <BookOpenText className="w-4 h-4" />
               Contos e Lendas
             </TabsTrigger>
-            <TabsTrigger value="distopias" className="flex-1 gap-1.5 text-xs sm:text-sm">
-              <Sparkles className="w-4 h-4" />
-              Autoajuda
+            <TabsTrigger value="herois" className="flex-1 gap-1.5 text-xs sm:text-sm">
+              <Sword className="w-4 h-4" />
+              Heróis Épicos
             </TabsTrigger>
             <TabsTrigger value="artigos" className="flex-1 gap-1.5 text-xs sm:text-sm">
               <FileText className="w-4 h-4" />
@@ -682,41 +682,25 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
               <BookGrid books={classicBooks} colors={classicColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
-          <TabsContent value="distopias" className="mt-0">
+          <TabsContent value="herois" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              <BookGrid books={selfHelpBooks} colors={dystopiaColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
+              <div className="mb-4 p-3 rounded-lg border border-primary/30 bg-primary/5">
+                <p className="font-display text-xs font-semibold text-foreground mb-1.5">
+                  ⚔️ Série Heróis Épicos — {heroesBooks.length} {heroesBooks.length === 1 ? "livro" : "livros"} disponíveis
+                </p>
+                <div className="flex flex-wrap gap-1.5">
+                  {heroesBooks.map((b) => (
+                    <span key={b.title} className="text-[10px] bg-primary/15 text-primary px-2 py-0.5 rounded-full font-body">
+                      ✓ {b.title.replace("Heróis Épicos: ", "").split(" — ")[0]}
+                    </span>
+                  ))}
+                </div>
+              </div>
+              <BookGrid books={heroesBooks} colors={heroesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
           <TabsContent value="contos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
-              {(() => {
-                const mythHeroes = talesBooks.filter((b) => b.title.startsWith("Heróis Épicos:"));
-                if (talesBooks.length === 0) {
-                  return (
-                    <div className="mb-4 p-4 rounded-lg border border-destructive/40 bg-destructive/10 text-destructive text-sm font-body">
-                      ⚠️ Nenhum livro carregado nesta seção no momento. Tente atualizar a página.
-                    </div>
-                  );
-                }
-                return (
-                  <div className="mb-4 p-3 rounded-lg border border-primary/30 bg-primary/5">
-                    <p className="font-display text-xs font-semibold text-foreground mb-1.5">
-                      📚 Série Heróis Épicos — {mythHeroes.length} {mythHeroes.length === 1 ? "livro carregado" : "livros carregados"}
-                    </p>
-                    {mythHeroes.length > 0 ? (
-                      <div className="flex flex-wrap gap-1.5">
-                        {mythHeroes.map((b) => (
-                          <span key={b.title} className="text-[10px] bg-primary/15 text-primary px-2 py-0.5 rounded-full font-body">
-                            ✓ {b.title.replace("Heróis Épicos: ", "").split(" — ")[0]}
-                          </span>
-                        ))}
-                      </div>
-                    ) : (
-                      <p className="text-[11px] text-muted-foreground font-body italic">Nenhum livro da série Heróis Épicos disponível ainda.</p>
-                    )}
-                  </div>
-                );
-              })()}
               <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>

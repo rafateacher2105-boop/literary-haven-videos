@@ -1,4 +1,4 @@
-import { Download, Library, Mail, Sparkles, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image } from "lucide-react";
+import { Download, Library, Mail, Sparkles, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image, Sword } from "lucide-react";
 import coverPareDeProcrastinar from "@/assets/cover-pare-de-procrastinar.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";

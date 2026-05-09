@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "rostan-escudo-persia-livro-xvii",
+    title: "Novo na Biblioteca: Heróis Épicos — Rostan, O Escudo Indestrutível da Pérsia, Livro XVII",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-09",
+  },
+  {
     id: "arjuna-arqueiro-infinito-livro-xvi",
     title: "Novo na Biblioteca: Heróis Épicos — Arjuna, O Arqueiro do Infinito, Livro XVI (Edição de Luxo)",
     type: "livro",

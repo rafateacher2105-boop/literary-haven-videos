@@ -730,7 +730,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     title: "Série Heróis Épicos",
                     author: "Rafael S. L. Aguiar",
                     cover: coverHeroisEpicos,
-                    subtitle: "Mergulhando na Mitologia — 22/04/2026",
+                    subtitle: "O maior catálogo de heróis da literatura universal — atualizado 10/05/2026",
                     published: true,
                   },
                    {

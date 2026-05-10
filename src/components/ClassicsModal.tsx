@@ -750,6 +750,13 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                      subtitle: "O manual definitivo para vencer a procrastinação",
                      published: true,
                    },
+                   {
+                     title: "Literatura Futurística",
+                     author: "Rafael S. L. Aguiar",
+                     cover: coverLiteraturaFuturistica,
+                     subtitle: "Distopias, utopias, sci-fi e cyberpunk no Letras & Páginas",
+                     published: true,
+                   },
                  ].map((artigo, idx) => (
                   <div
                     key={idx}

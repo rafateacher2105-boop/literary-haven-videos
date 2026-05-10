@@ -783,46 +783,59 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                     ← Voltar aos artigos
                   </button>
                   <h3 className="font-display text-lg font-bold text-foreground mb-1">
-                    Mergulhando na Mitologia: Série Heróis Épicos
+                    Série Heróis Épicos: o maior catálogo de heróis da literatura universal — um presente de aniversário aos leitores
                   </h3>
                   <p className="font-body text-[10px] text-muted-foreground mb-4">
-                    Por Rafael S. L. Aguiar · 22/04/2026
+                    Por Rafael S. L. Aguiar · Atualizado em 10/05/2026
                   </p>
                   <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
                     <p>
-                      Neste mês de abril, o Letras &amp; Páginas convida seus leitores para uma experiência literária sem precedentes. Iniciamos a publicação de uma série exclusiva de histórias que resgatam o fôlego das grandes epopeias, agora recontadas em uma estrutura de contos em versões de luxo.
+                      Há livros que nascem de um projeto. Outros, de uma obsessão. A <strong>Série Heróis Épicos</strong> nasceu das duas coisas — e, neste mês de maio, em que completo <strong>40 anos de vida</strong>, ela se transforma em algo ainda maior: um presente que ofereço aos leitores do <em>Letras &amp; Páginas</em>. Hoje, com orgulho e gratidão, posso afirmar que reunimos <strong>o maior catálogo de livros de heróis épicos da literatura universal e das culturas ao redor do mundo</strong> publicado em língua portuguesa, em edições ilustradas com aquarelas originais e diagramação de luxo.
                     </p>
                     <p>
-                      Cada herói terá sua trajetória dividida em capítulos fundamentais, permitindo uma imersão profunda nos momentos decisivos de suas vidas — desde o chamado ao desafio até o encontro final com o destino.
+                      Cada volume foi pesquisado nas fontes clássicas, recontado com fôlego de epopeia e ilustrado à mão para que o leitor sinta, ao virar cada página, o peso dos escudos, o brilho das espadas e o silêncio dos templos. É a literatura como ela merece ser tratada: com elegância, carinho e respeito pelos séculos que sustentam cada história.
                     </p>
-                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Uma Curadoria de Excelência</h4>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Vinte volumes, vinte civilizações</h4>
                     <p>
-                      Este projeto é fruto de uma pesquisa e curadoria profunda realizada por Rafael S. L. Aguiar, que buscou a essência das fontes clássicas para preservar a força narrativa de cada mito. O objetivo é honrar os grandes poetas que, ao longo dos séculos, cantaram as glórias e tragédias desses personagens imortais.
-                    </p>
-                    <p>
-                      Para elevar a experiência sensorial, cada capítulo é acompanhado por ilustrações exclusivas em aquarela, que traduzem em cores e formas a dramaticidade das batalhas, a vastidão das grandes navegações e o mistério dos monstros enfrentados.
-                    </p>
-                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Os Protagonistas da Jornada</h4>
-                    <p>
-                      Na seção <strong>Contos e Lendas</strong> do blog, você encontrará as jornadas épicas de:
+                      A série atravessa continentes e milênios. Da Mesopotâmia à Mali, de Tebas a Camelot, do Mediterrâneo ao Japão feudal — nenhum outro catálogo brasileiro reúne tantos heróis sob a mesma curadoria editorial:
                     </p>
                     <ul className="list-disc pl-5 space-y-1.5">
-                      <li><strong>Hércules e Aquiles:</strong> A força, a fúria e o peso da imortalidade.</li>
-                      <li><strong>Ulisses e Vasco da Gama:</strong> Os mestres das grandes navegações e do desconhecido.</li>
-                      <li><strong>Siegfried e Gilgamesh:</strong> O heroísmo que desafia o tempo e a própria morte.</li>
-                      <li><strong>Eneias e Dante:</strong> As missões de fundação e a descida aos abismos da alma.</li>
-                      <li><strong>Jasão e os Argonautas, Perseu e Teseu:</strong> A coragem diante de monstros e a busca por glória.</li>
+                      <li><strong>Grécia clássica:</strong> Aquiles (a ira de Troia), Hércules (os doze trabalhos), Ulisses (o regresso a Ítaca), Jasão e os Argonautas (o Velocino de Ouro), Perseu (a Medusa e Andrômeda), Teseu (o Minotauro no labirinto) e <strong>Atalanta — Uma Flecha de Ouro</strong>, a heroína que correu mais rápido que os homens e abateu o javali de Cálidon.</li>
+                      <li><strong>Tragédia grega:</strong> Antígona e Édipo Rei, de Sófocles, em edições que preservam o vigor do teatro ateniense.</li>
+                      <li><strong>Roma:</strong> Eneias e a fundação mítica do Império, na <em>Eneida</em>.</li>
+                      <li><strong>Mesopotâmia:</strong> Gilgamesh, a mais antiga epopeia da humanidade, e a busca pela imortalidade.</li>
+                      <li><strong>Tradição hebraica e bíblica:</strong> Sansão, o nazireu da força sobrenatural, e Davi, o pastor que enfrentou Golias com fé, funda e cinco pedras lisas — além do <strong>Triunfo dos 300: Fé e Ferro</strong>, que aproxima Gideão e Leônidas em uma só meditação sobre coragem.</li>
+                      <li><strong>Norte da Europa:</strong> Beowulf, herói dos gautas contra Grendel e o dragão, e Siegfried, o matador do dragão Fafnir nas florestas germânicas.</li>
+                      <li><strong>Mundo arturiano:</strong> A Lenda de Arthur, com Excalibur, Merlin e a Távola Redonda, e <em>Persival e a Busca pelo Graal</em> em edição especial de luxo.</li>
+                      <li><strong>Ibéria medieval:</strong> El Cid Campeador, com Tizona e Colada, cavalgando Babieca entre cristãos e mouros.</li>
+                      <li><strong>Pérsia:</strong> Rostan, o escudo indestrutível do <em>Shahnameh</em>.</li>
+                      <li><strong>Índia:</strong> Arjuna, o arqueiro do infinito, herói do <em>Mahabharata</em>, em edição premium.</li>
+                      <li><strong>Japão feudal:</strong> Musashi Minamoto, o samurai das duas espadas, autor do <em>Livro dos Cinco Anéis</em>.</li>
+                      <li><strong>África:</strong> <strong>Sundiata Keita, o Leão do Mali</strong>, fundador do maior império da África Ocidental — uma voz épica que faltava nas estantes brasileiras.</li>
                     </ul>
-                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Destino, Glória e Tragédia</h4>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Por que reunir tantos heróis?</h4>
                     <p>
-                      Estes heróis buscaram fama, conhecimento e a salvação de seus povos. Alguns alcançaram o ápice da glória; outros foram abraçados por fins trágicos. Contudo, todos tiveram seus nomes eternizados. Através desta versão de luxo, o Letras &amp; Páginas garante que o eco dessas vozes continue a ressoar com a dignidade que a grande literatura exige.
+                      Porque o herói épico é uma linguagem que toda cultura humana inventou — e, até hoje, nenhuma editora havia reunido tantas dessas vozes em um único catálogo, com o mesmo padrão de cuidado. Quis mostrar que <strong>o herói grego e o herói africano, o samurai e o cavaleiro, o pastor de Belém e o arqueiro indiano</strong> dialogam entre si: todos enfrentam o medo, o destino, a perda e a tentação da glória. Mudam os deuses, mudam os cenários — a coragem é a mesma.
                     </p>
-                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Onde Ler?</h4>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Edições de luxo, ilustradas em aquarela</h4>
                     <p>
-                      Todo o conteúdo está disponível na nossa seção dedicada: <strong>Contos e Lendas</strong>. Prepare-se para folhear, digitalmente, capítulos de pura arte e heroísmo. Embarque conosco nestas jornadas que definiram o mundo e a própria ideia de ser humano.
+                      Cada livro recebeu tratamento de obra-prima: capas em estilo serigrafia ou aquarela de luxo, miolo diagramado com tipografia clássica, capítulos abertos por ilustrações originais que traduzem em cor e gesto a dramaticidade de cada cena — o brilho do escudo de Aquiles, o ouro do arco de Atalanta, o céu vermelho sobre Niani, o silêncio zen de Musashi. Nada foi terceirizado: tudo foi pensado, editado e revisado com o mesmo carinho com que se folheia um livro raro.
                     </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Um presente de 40 anos</h4>
+                    <p>
+                      Faço 40 anos este mês. E, em vez de pedir presentes, prefiro oferecer um. Toda a Série Heróis Épicos está disponível na <strong>Biblioteca Pública</strong> do <em>Letras &amp; Páginas</em> — para ler online, baixar e compartilhar. Que estes vinte volumes sejam, para cada leitor, o que sempre foram para mim: um lembrete de que ainda vale a pena ser corajoso, fiel e generoso, mesmo num mundo que parece ter esquecido seus heróis.
+                    </p>
+                    <p className="italic text-foreground/80">
+                      Boa leitura — e que a jornada dos heróis seja também a sua.<br />
+                      <strong>Rafael S. L. Aguiar</strong>, editor e curador do Blog Letras &amp; Páginas.
+                    </p>
+
                     <div className="flex flex-wrap gap-2 mt-2">
-                      {["#mitologia", "#heróisépicos", "#contoselendas", "#literatura", "#LetrasEPáginas", "#RafaelAguiar"].map(tag => (
+                      {["#heróisépicos", "#mitologia", "#literaturauniversal", "#aquarela", "#ediçãodeluxo", "#bibliotecapública", "#LetrasEPáginas", "#RafaelAguiar", "#40anos"].map(tag => (
                         <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
                       ))}
                     </div>

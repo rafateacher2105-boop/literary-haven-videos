@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "joana-darc-fogo-liberdade-livro-xxii",
+    title: "Novo na Biblioteca: Heróis Épicos — Joana D'Arc, Fogo e Liberdade, Livro XXII (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-10",
+  },
+  {
     id: "mulan-familia-honra-lealdade-livro-xxi",
     title: "Novo na Biblioteca: Heróis Épicos — Mulan, Família, Honra e Lealdade, Livro XXI",
     type: "livro",

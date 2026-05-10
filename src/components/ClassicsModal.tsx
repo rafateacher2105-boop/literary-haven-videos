@@ -798,9 +798,9 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                       Cada volume foi pesquisado nas fontes clássicas, recontado com fôlego de epopeia e ilustrado à mão para que o leitor sinta, ao virar cada página, o peso dos escudos, o brilho das espadas e o silêncio dos templos. É a literatura como ela merece ser tratada: com elegância, carinho e respeito pelos séculos que sustentam cada história.
                     </p>
 
-                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Vinte volumes, vinte civilizações</h4>
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Vinte e um volumes, vinte e uma civilizações</h4>
                     <p>
-                      A série atravessa continentes e milênios. Da Mesopotâmia à Mali, de Tebas a Camelot, do Mediterrâneo ao Japão feudal — nenhum outro catálogo brasileiro reúne tantos heróis sob a mesma curadoria editorial:
+                      A série atravessa continentes e milênios. Da Mesopotâmia à Mali, de Tebas a Camelot, do Mediterrâneo ao Japão feudal, da China imperial ao Mahabharata indiano — nenhum outro catálogo brasileiro reúne tantos heróis sob a mesma curadoria editorial:
                     </p>
                     <ul className="list-disc pl-5 space-y-1.5">
                       <li><strong>Grécia clássica:</strong> Aquiles (a ira de Troia), Hércules (os doze trabalhos), Ulisses (o regresso a Ítaca), Jasão e os Argonautas (o Velocino de Ouro), Perseu (a Medusa e Andrômeda), Teseu (o Minotauro no labirinto) e <strong>Atalanta — Uma Flecha de Ouro</strong>, a heroína que correu mais rápido que os homens e abateu o javali de Cálidon.</li>
@@ -814,6 +814,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                       <li><strong>Pérsia:</strong> Rostan, o escudo indestrutível do <em>Shahnameh</em>.</li>
                       <li><strong>Índia:</strong> Arjuna, o arqueiro do infinito, herói do <em>Mahabharata</em>, em edição premium.</li>
                       <li><strong>Japão feudal:</strong> Musashi Minamoto, o samurai das duas espadas, autor do <em>Livro dos Cinco Anéis</em>.</li>
+                      <li><strong>China imperial:</strong> <strong>Mulan — Família, Honra e Lealdade</strong>, a guerreira que tomou o lugar do pai na guerra e serviu doze anos disfarçada nos exércitos do imperador, transformando a devoção filial em epopeia.</li>
                       <li><strong>África:</strong> <strong>Sundiata Keita, o Leão do Mali</strong>, fundador do maior império da África Ocidental — uma voz épica que faltava nas estantes brasileiras.</li>
                     </ul>
 

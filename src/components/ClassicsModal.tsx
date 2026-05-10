@@ -937,6 +937,7 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                 </div>
               )}
 
+              {selectedArticle === "A Metamorfose" && (
                 <div className="mt-6 p-5 rounded-lg border border-border bg-card">
                   <button
                     onClick={() => setSelectedArticle(null)}

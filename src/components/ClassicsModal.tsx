@@ -154,6 +154,7 @@ import cover300FeFerro from "@/assets/cover-300-fe-ferro.jpg";
 import coverSundiataKeita from "@/assets/cover-sundiata-keita.jpg";
 import coverAtalanta from "@/assets/cover-atalanta.jpg";
 import coverMulan from "@/assets/cover-mulan.jpg";
+import coverJoanaDarc from "@/assets/cover-joana-darc.jpg";
 import {
   Dialog,
   DialogContent,

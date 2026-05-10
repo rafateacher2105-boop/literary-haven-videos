@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "atalanta-flecha-de-ouro-livro-xx",
+    title: "Novo na Biblioteca: Heróis Épicos — Atalanta, Uma Flecha de Ouro, Livro XX",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-10",
+  },
+  {
     id: "sundiata-keita-leao-mali-livro-xix",
     title: "Novo na Biblioteca: Heróis Épicos — Sundiata Keita, O Leão do Mali, Livro XIX",
     type: "livro",

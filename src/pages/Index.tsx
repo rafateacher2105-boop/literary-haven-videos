@@ -77,10 +77,10 @@ const Index = () => {
   return (
     <div className="min-h-screen bg-background">
       <Helmet>
-        <title>Blog Letras & Páginas — Livros em PDF Grátis, Edições Especiais | Rafael S. L. Aguiar</title>
+        <title>Letras & Páginas — Maior Catálogo de Heróis Épicos, Livros em PDF Grátis | Rafael S. L. Aguiar</title>
         <meta
           name="description"
-          content="Blog Letras & Páginas: livros em PDF grátis, edições especiais dos clássicos, resenhas e e-books autorais de Rafael S. L. Aguiar — autor, editor, curador e pesquisador literário."
+          content="Blog Letras & Páginas: o maior catálogo brasileiro de heróis épicos da literatura universal (Mulan, Atalanta, Aquiles, Sundiata, Arjuna, Beowulf, Arthur, Musashi), clássicos em PDF grátis, edições de luxo ilustradas em aquarela e e-books autorais de Rafael S. L. Aguiar."
         />
         <link rel="canonical" href="https://literary-haven-videos.lovable.app/" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>

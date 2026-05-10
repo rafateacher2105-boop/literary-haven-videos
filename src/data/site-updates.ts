@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "mulan-familia-honra-lealdade-livro-xxi",
+    title: "Novo na Biblioteca: Heróis Épicos — Mulan, Família, Honra e Lealdade, Livro XXI",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-10",
+  },
+  {
     id: "atalanta-flecha-de-ouro-livro-xx",
     title: "Novo na Biblioteca: Heróis Épicos — Atalanta, Uma Flecha de Ouro, Livro XX",
     type: "livro",

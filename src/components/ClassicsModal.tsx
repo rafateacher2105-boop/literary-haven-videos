@@ -151,6 +151,7 @@ import coverArjuna from "@/assets/cover-arjuna.jpg";
 import coverRostan from "@/assets/cover-rostan.jpg";
 import cover300FeFerro from "@/assets/cover-300-fe-ferro.jpg";
 import coverSundiataKeita from "@/assets/cover-sundiata-keita.jpg";
+import coverAtalanta from "@/assets/cover-atalanta.jpg";
 import {
   Dialog,
   DialogContent,

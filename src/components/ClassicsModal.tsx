@@ -1,5 +1,6 @@
 import { Download, Library, Mail, Sparkles, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image, Sword } from "lucide-react";
 import coverPareDeProcrastinar from "@/assets/cover-pare-de-procrastinar.jpg";
+import coverLiteraturaFuturistica from "@/assets/cover-literatura-futuristica.jpg";
 import { supabase } from "@/integrations/supabase/client";
 import { toast } from "sonner";
 import { useState } from "react";
@@ -749,6 +750,13 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                      subtitle: "O manual definitivo para vencer a procrastinação",
                      published: true,
                    },
+                   {
+                     title: "Literatura Futurística",
+                     author: "Rafael S. L. Aguiar",
+                     cover: coverLiteraturaFuturistica,
+                     subtitle: "Distopias, utopias, sci-fi e cyberpunk no Letras & Páginas",
+                     published: true,
+                   },
                  ].map((artigo, idx) => (
                   <div
                     key={idx}
@@ -839,6 +847,89 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
 
                     <div className="flex flex-wrap gap-2 mt-2">
                       {["#heróisépicos", "#mitologia", "#literaturauniversal", "#aquarela", "#ediçãodeluxo", "#bibliotecapública", "#LetrasEPáginas", "#RafaelAguiar", "#40anos"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
+
+              {selectedArticle === "Literatura Futurística" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    Literatura Futurística: Distopias, Utopias, Sci-Fi e Cyberpunk — quando a ficção pensa o amanhã
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Por Rafael S. L. Aguiar · Publicado em 10/05/2026
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Toda grande época precisa de uma literatura que olhe de frente para o seu próprio futuro. A nossa não é diferente. <strong>Inteligência artificial, vigilância de massa, mudança climática, redes sociais, biotecnologia, colapso de instituições</strong> — tudo isso já é matéria de romance antes mesmo de ser manchete. É aí que entram a <strong>literatura futurística</strong>, as <strong>distopias</strong>, as <strong>utopias</strong> e a <strong>literatura especulativa</strong>: gêneros que não tentam adivinhar o amanhã, mas sim <em>pensar</em> o amanhã antes que ele nos atropele.
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">O que é, afinal, literatura especulativa?</h4>
+                    <p>
+                      Chamamos de <strong>literatura especulativa</strong> o grande guarda-chuva que abriga ficção científica, distopia, utopia, cyberpunk, pós-apocalíptico, ucronias e fantasias filosóficas. O que une todos esses gêneros é uma única pergunta: <em>"e se?"</em>. E se um algoritmo prendesse pessoas pelos seus pensamentos? E se a humanidade tivesse uma única chance de recomeçar depois de quase se destruir? E se a esperança virasse mercadoria? Cada livro é um experimento mental — uma utopia testando o melhor de nós, uma distopia testando o pior.
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Distopia: o espelho deformado do presente</h4>
+                    <p>
+                      A distopia não é uma profecia: é um diagnóstico. Quando Orwell escreveu <em>1984</em> e <em>A Revolução dos Bichos</em>, não estava prevendo o futuro — estava radicalizando o presente até a caricatura. É essa mesma tradição que move duas das obras autorais publicadas aqui no <em>Letras &amp; Páginas</em>:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1.5">
+                      <li>
+                        <strong>Os Atribulados</strong> — uma distopia social brasileira sobre famílias esmagadas pela burocracia, pela violência institucional e por um sistema que aprende a normalizar o sofrimento. Um livro sobre <em>resiliência ordinária</em> num país onde sobreviver já é um ato político.
+                      </li>
+                      <li>
+                        <strong>O Crime Antecipado</strong> — Rio de Janeiro, 2050. Uma inteligência artificial pública prende cidadãos com base na <em>intenção</em> criminal: 99,8% de probabilidade já basta para a contenção preventiva. O livro pergunta o que sobra do livre-arbítrio quando o pensamento vira prova, e o que acontece com a justiça quando a margem de erro é tratada como falha de sistema. <em>Minority Report</em> encontra Foucault sob o céu carioca.
+                      </li>
+                    </ul>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Pós-apocalíptico e ficção científica: o recomeço como tema</h4>
+                    <p>
+                      Onde a distopia mostra a queda, a ficção científica pós-apocalíptica mostra o que se faz com os escombros. É o terreno de:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1.5">
+                      <li>
+                        <strong>Impacto 2070, o Recomeço</strong> — uma fábula científica sobre a colisão entre tecnologia, fé e sobrevivência. Quando o mundo conhecido desaba, o que decide quem reconstrói: o poder, a esperança ou a memória? Sci-fi com alma humanista, na melhor tradição de Bradbury, Asimov e Saramago.
+                      </li>
+                    </ul>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Cyberpunk: neon, algoritmo e desigualdade</h4>
+                    <p>
+                      O cyberpunk é a estética visual desse pensamento crítico: cidades hiperconectadas, megacorporações no lugar do Estado, identidades híbridas entre carne e código, e ruas onde a chuva ácida brilha contra letreiros de neon. <strong>O Crime Antecipado</strong> bebe diretamente desse imaginário ao desenhar um Rio futuro em que drones substituem PMs, painéis holográficos julgam emoções e a "ordem pública" é mantida por uma IA que não conhece dúvida — só probabilidade.
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">E a utopia?</h4>
+                    <p>
+                      A utopia anda fora de moda — e talvez seja exatamente por isso que ela seja necessária. Toda distopia honesta carrega, em silêncio, a saudade de uma utopia possível: famílias inteiras, cidades justas, tecnologias a serviço da vida. Os livros do <em>Letras &amp; Páginas</em> não fingem que essa utopia é fácil; eles convidam o leitor a desejá-la com lucidez. <strong>Imaginar o melhor é o primeiro ato de resistência contra o pior.</strong>
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Convite ao leitor</h4>
+                    <p>
+                      Tudo isso está aqui, ao alcance de um clique. Você pode <strong>ler online gratuitamente</strong> ou <strong>baixar em PDF</strong> os livros autorais de futurismo e distopia diretamente no blog:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1.5">
+                      <li><em>Os Atribulados</em> — distopia social brasileira</li>
+                      <li><em>O Crime Antecipado</em> — cyberpunk jurídico no Rio de 2050</li>
+                      <li><em>Impacto 2070, o Recomeço</em> — ficção científica pós-apocalíptica</li>
+                    </ul>
+                    <p>
+                      Basta abrir a aba <strong>"Os meus livros"</strong> ou a <strong>Biblioteca Pública</strong> aqui no <em>Letras &amp; Páginas</em>, escolher o título e clicar em <em>"Ler online"</em> ou <em>"Baixar PDF"</em>. Leitura livre, partilha incentivada — porque pensar o futuro não pode ser privilégio de poucos.
+                    </p>
+                    <p className="italic text-foreground/80">
+                      Que estes livros sejam, para você, o que sempre foram para mim: uma forma de imaginar o amanhã com coragem — e de exigir dele algo melhor.<br />
+                      <strong>Rafael S. L. Aguiar</strong>, autor e curador do Blog Letras &amp; Páginas.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#literaturafuturística", "#distopia", "#utopia", "#ficçãocientífica", "#cyberpunk", "#pósapocalíptico", "#literaturaespeculativa", "#OsAtribulados", "#OCrimeAntecipado", "#Impacto2070", "#RafaelAguiar", "#LetrasEPáginas", "#livrosgrátis", "#PDFgrátis", "#bibliotecapública"].map(tag => (
                         <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
                       ))}
                     </div>

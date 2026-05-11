@@ -31,7 +31,7 @@ const Autor = () => {
   }
 
   const themes = getAuthorThemes(author.slug);
-  const pageUrl = `https://literary-haven-videos.lovable.app/autor/${author.slug}`;
+  const pageUrl = `https://letrasepaginas-blog.lovable.app/autor/${author.slug}`;
   const pageDesc = `Conheça as obras de ${author.name}: ${author.books.length} livros disponíveis. ${author.bio}`;
 
   // Agrupa livros por tema para exibição organizada
@@ -59,7 +59,7 @@ const Autor = () => {
   ];
 
   // ---- Book markup por livro do catálogo do autor ----
-  const SITE = "https://literary-haven-videos.lovable.app";
+  const SITE = "https://letrasepaginas-blog.lovable.app";
   const bookIdFor = (slug: string) => `${SITE}/livro/${slug}#book`;
 
   // Indexa avaliações por slug do livro para anexar reviews/aggregateRating ao Book.
@@ -198,7 +198,7 @@ const Autor = () => {
         inLanguage: "pt-BR",
       };
       if (t.bookSlug) {
-        itemReviewed.url = `https://literary-haven-videos.lovable.app/livro/${t.bookSlug}`;
+        itemReviewed.url = `https://letrasepaginas-blog.lovable.app/livro/${t.bookSlug}`;
       }
 
       // Reviewer enriquecido: address (cidade), jobTitle e nationality.
@@ -230,7 +230,7 @@ const Autor = () => {
         publisher: {
           "@type": "Organization",
           name: "Letras & Páginas",
-          url: "https://literary-haven-videos.lovable.app",
+          url: "https://letrasepaginas-blog.lovable.app",
         },
       };
 
@@ -275,11 +275,11 @@ const Autor = () => {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:site_name" content="Letras & Páginas" />
         <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta property="og:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${author.name} — Autor`} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta name="twitter:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
 
@@ -297,8 +297,8 @@ const Autor = () => {
       <BreadcrumbJsonLd
         id={`${pageUrl}#breadcrumb`}
         items={[
-          { name: "Início", url: "https://literary-haven-videos.lovable.app/" },
-          { name: "Autores", url: "https://literary-haven-videos.lovable.app/#livros" },
+          { name: "Início", url: "https://letrasepaginas-blog.lovable.app/" },
+          { name: "Autores", url: "https://letrasepaginas-blog.lovable.app/#livros" },
           { name: author.name, url: pageUrl },
         ]}
       />
@@ -308,7 +308,7 @@ const Autor = () => {
         name={`${author.name} — Autor`}
         headline={author.name}
         description={pageDesc}
-        primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+        primaryImageUrl="https://letrasepaginas-blog.lovable.app/og-image.jpg"
         breadcrumbId={`${pageUrl}#breadcrumb`}
         authorName={author.name}
         mainEntityId={`${pageUrl}#author`}

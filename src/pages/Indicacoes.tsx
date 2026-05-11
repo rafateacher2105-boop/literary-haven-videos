@@ -205,18 +205,18 @@ const Indicacoes = () => {
       <Helmet>
         <title>Minhas Indicações — Livros Recomendados | Letras & Páginas</title>
         <meta name="description" content="Curadoria de mais de 100 livros recomendados pelo escritor Rafael Aguiar: distopias, fantasia, suspense, contos, clássicos e poesia. Compre direto na Amazon." />
-        <link rel="canonical" href="https://literary-haven-videos.lovable.app/indicacoes" />
+        <link rel="canonical" href="https://letrasepaginas-blog.lovable.app/indicacoes" />
         <meta property="og:type" content="website" />
         <meta property="og:title" content="Minhas Indicações — Livros Recomendados" />
         <meta property="og:description" content="Curadoria de livros recomendados em 8 categorias: distopia, fantasia, suspense, clássicos e mais." />
-        <meta property="og:url" content="https://literary-haven-videos.lovable.app/indicacoes" />
+        <meta property="og:url" content="https://letrasepaginas-blog.lovable.app/indicacoes" />
         <meta property="og:site_name" content="Letras & Páginas" />
         <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta property="og:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content="Minhas Indicações — Livros Recomendados" />
         <meta name="twitter:description" content="Curadoria de livros recomendados pelo escritor Rafael Aguiar." />
-        <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta name="twitter:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
       </Helmet>
       <Header />
       <main className="flex-1 container mx-auto px-6 pt-28 pb-16">

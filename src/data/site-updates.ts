@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "guilherme-tell-seta-liberdade-livro-xxiii",
+    title: "Novo na Biblioteca: Heróis Épicos — Guilherme Tell, A Seta da Liberdade, Livro XXIII (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-11",
+  },
+  {
     id: "joana-darc-fogo-liberdade-livro-xxii",
     title: "Novo na Biblioteca: Heróis Épicos — Joana D'Arc, Fogo e Liberdade, Livro XXII (Edição Premium)",
     type: "livro",

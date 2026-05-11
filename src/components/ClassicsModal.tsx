@@ -155,6 +155,7 @@ import coverSundiataKeita from "@/assets/cover-sundiata-keita.jpg";
 import coverAtalanta from "@/assets/cover-atalanta.jpg";
 import coverMulan from "@/assets/cover-mulan.jpg";
 import coverJoanaDarc from "@/assets/cover-joana-darc.jpg";
+import coverGuilhermeTell from "@/assets/cover-guilherme-tell.jpg";
 import {
   Dialog,
   DialogContent,

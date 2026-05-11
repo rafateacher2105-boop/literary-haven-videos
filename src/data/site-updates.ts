@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "bradamante-dama-de-prata-livro-xxiv",
+    title: "Novo na Biblioteca: Heróis Épicos — Bradamante, A Dama de Prata, Livro XXIV (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-11",
+  },
+  {
     id: "guilherme-tell-seta-liberdade-livro-xxiii",
     title: "Novo na Biblioteca: Heróis Épicos — Guilherme Tell, A Seta da Liberdade, Livro XXIII (Edição Premium)",
     type: "livro",

@@ -6,7 +6,7 @@ import VideoSection from "@/components/VideoSection";
 import AboutSection from "@/components/AboutSection";
 import Footer from "@/components/Footer";
 
-const SITE = "https://literary-haven-videos.lovable.app";
+const SITE = "https://letrasepaginas-blog.lovable.app";
 
 const jsonLd = {
   "@context": "https://schema.org",
@@ -82,7 +82,7 @@ const Index = () => {
           name="description"
           content="Blog Letras & Páginas: o maior catálogo brasileiro de heróis épicos da literatura universal (Mulan, Atalanta, Aquiles, Sundiata, Arjuna, Beowulf, Arthur, Musashi), clássicos em PDF grátis, edições de luxo ilustradas em aquarela e e-books autorais de Rafael S. L. Aguiar."
         />
-        <link rel="canonical" href="https://literary-haven-videos.lovable.app/" />
+        <link rel="canonical" href="https://letrasepaginas-blog.lovable.app/" />
         <script type="application/ld+json">{JSON.stringify(jsonLd)}</script>
       </Helmet>
       <Header />

@@ -22,7 +22,7 @@ export interface WebPageJsonLdProps {
   about?: string[];            // tópicos / categorias
 }
 
-const SITE = "https://literary-haven-videos.lovable.app";
+const SITE = "https://letrasepaginas-blog.lovable.app";
 const SITE_NAME = "Letras & Páginas";
 
 const WebPageJsonLd = ({

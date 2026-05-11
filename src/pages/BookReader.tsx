@@ -19,7 +19,7 @@ import { bookToAuthor, authors } from "@/data/authors";
 import type { Poem } from "@/data/poesia-da-alma";
 import type { Chapter } from "@/data/os-atribulados";
 
-const SITE = "https://literary-haven-videos.lovable.app";
+const SITE = "https://letrasepaginas-blog.lovable.app";
 
 function buildBookCrumbs(slug: string, bookTitle: string, theme: string) {
   const authorSlug = bookToAuthor[slug];
@@ -114,7 +114,7 @@ const BookReader = () => {
       );
     };
 
-    const pageUrl = `https://literary-haven-videos.lovable.app/livro/${slug}`;
+    const pageUrl = `https://letrasepaginas-blog.lovable.app/livro/${slug}`;
     const pageDesc = `Leia uma prévia gratuita de "${info.title}" por ${info.author}. ${chapters.length} capítulos disponíveis em EPUB por ${price}.`;
 
     return (
@@ -129,12 +129,12 @@ const BookReader = () => {
           <meta property="og:url" content={pageUrl} />
           <meta property="og:site_name" content="Letras & Páginas" />
           <meta property="og:locale" content="pt_BR" />
-          <meta property="og:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+          <meta property="og:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
           <meta property="book:author" content={info.author} />
           <meta name="twitter:card" content="summary_large_image" />
           <meta name="twitter:title" content={`${info.title} — ${info.author}`} />
           <meta name="twitter:description" content={pageDesc} />
-          <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+          <meta name="twitter:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
         </Helmet>
         <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
           <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -170,7 +170,7 @@ const BookReader = () => {
               name={`${info.title} — ${info.author}`}
               headline={info.title}
               description={pageDesc}
-              primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+              primaryImageUrl="https://letrasepaginas-blog.lovable.app/og-image.jpg"
               breadcrumbId={`${pageUrl}#breadcrumb`}
               authorName={info.author}
               about={[
@@ -260,7 +260,7 @@ const BookReader = () => {
     );
   };
 
-  const pageUrl = `https://literary-haven-videos.lovable.app/livro/${slug}`;
+  const pageUrl = `https://letrasepaginas-blog.lovable.app/livro/${slug}`;
   const pageDesc = `Leia online "${info.title}" — coletânea de poemas por ${info.author}. ${poems.length} poemas disponíveis em EPUB.`;
 
   return (
@@ -275,12 +275,12 @@ const BookReader = () => {
         <meta property="og:url" content={pageUrl} />
         <meta property="og:site_name" content="Letras & Páginas" />
         <meta property="og:locale" content="pt_BR" />
-        <meta property="og:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta property="og:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
         <meta property="book:author" content={info.author} />
         <meta name="twitter:card" content="summary_large_image" />
         <meta name="twitter:title" content={`${info.title} — ${info.author}`} />
         <meta name="twitter:description" content={pageDesc} />
-        <meta name="twitter:image" content="https://literary-haven-videos.lovable.app/og-image.jpg" />
+        <meta name="twitter:image" content="https://letrasepaginas-blog.lovable.app/og-image.jpg" />
       </Helmet>
       <header className="sticky top-0 z-50 bg-background/95 backdrop-blur border-b border-border">
         <div className="container mx-auto px-4 py-3 flex items-center justify-between">
@@ -319,7 +319,7 @@ const BookReader = () => {
             name={`${info.title} — ${info.author}`}
             headline={info.title}
             description={pageDesc}
-            primaryImageUrl="https://literary-haven-videos.lovable.app/og-image.jpg"
+            primaryImageUrl="https://letrasepaginas-blog.lovable.app/og-image.jpg"
             breadcrumbId={`${pageUrl}#breadcrumb`}
             authorName={info.author}
             about={["Poesia"]}

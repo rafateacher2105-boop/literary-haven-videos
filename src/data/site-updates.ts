@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "sir-roland-cavaleiro-escudo-prata-livro-xxvi",
+    title: "Novo na Biblioteca: Heróis Épicos — Sir Roland, O Cavaleiro do Escudo de Prata, Livro XXVI (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-12",
+  },
+  {
     id: "dante-busca-por-beatrice-livro-xxv",
     title: "Novo na Biblioteca: Heróis Épicos — Dante, A Busca por Beatrice, Livro XXV (Edição Premium)",
     type: "livro",

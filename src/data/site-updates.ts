@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "tristao-balada-livro-xxvii",
+    title: "Novo na Biblioteca: Heróis Épicos — Tristão, A Balada de Tristão, Livro XXVII (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-12",
+  },
+  {
     id: "sir-roland-cavaleiro-escudo-prata-livro-xxvi",
     title: "Novo na Biblioteca: Heróis Épicos — Sir Roland, O Cavaleiro do Escudo de Prata, Livro XXVI (Edição Premium)",
     type: "livro",

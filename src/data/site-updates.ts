@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "dante-busca-por-beatrice-livro-xxv",
+    title: "Novo na Biblioteca: Heróis Épicos — Dante, A Busca por Beatrice, Livro XXV (Edição Premium)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-12",
+  },
+  {
     id: "bradamante-dama-de-prata-livro-xxiv",
     title: "Novo na Biblioteca: Heróis Épicos — Bradamante, A Dama de Prata, Livro XXIV (Edição Premium)",
     type: "livro",

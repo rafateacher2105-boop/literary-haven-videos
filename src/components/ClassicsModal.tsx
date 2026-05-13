@@ -1,4 +1,4 @@
-import { Download, Library, Mail, Sparkles, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image, Sword } from "lucide-react";
+import { Download, Library, Mail, Sparkles, BookOpenText, Coffee, Copy, Check, BookOpen, FileText, Image, Sword, Compass } from "lucide-react";
 import coverPareDeProcrastinar from "@/assets/cover-pare-de-procrastinar.jpg";
 import coverLiteraturaFuturistica from "@/assets/cover-literatura-futuristica.jpg";
 import { supabase } from "@/integrations/supabase/client";
@@ -356,9 +356,20 @@ const talesColors = [
   "from-[hsl(100,35%,18%)] to-[hsl(80,40%,32%)]",
 ];
 
+const voyagesBooks: ClassicBook[] = [];
+
+const voyagesColors = [
+  "from-[hsl(200,55%,22%)] to-[hsl(190,60%,40%)]",
+  "from-[hsl(210,50%,20%)] to-[hsl(195,55%,38%)]",
+  "from-[hsl(190,45%,18%)] to-[hsl(180,50%,35%)]",
+  "from-[hsl(220,50%,22%)] to-[hsl(200,55%,40%)]",
+  "from-[hsl(170,40%,20%)] to-[hsl(190,50%,36%)]",
+];
+
 const selfHelpBooks: ClassicBook[] = [
   { title: "Pare de Procrastinar — O manual para fazer o que deve ser feito", author: "Rafael S. L. Aguiar", year: "2026", description: "Um manual prático e acolhedor para vencer a procrastinação em todas as áreas da vida — saúde, educação, finanças, emocional e desenvolvimento pessoal. Com histórias reais, reflexões e estratégias para reprogramar o cérebro, transformar ideias em ação e parar de adiar o que realmente importa. Por Rafael S. L. Aguiar.", cover: coverPareDeProcrastinar, file: "/pare-de-procrastinar.pdf" },
 ];
+
 
 const dystopiaBooks: ClassicBook[] = [
   { title: "O Cromossomo de Ferro (O Tacão de Ferro)", author: "Jack London", year: "1908", description: "Uma das primeiras distopias modernas. Retrata a ascensão de uma oligarquia tirânica nos EUA que esmaga a liberdade individual.", cover: coverTacaoFerro },
@@ -677,20 +688,24 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
         </DialogHeader>
 
         <Tabs defaultValue={defaultTab} key={defaultTab} className="px-6 pb-6">
-          <TabsList className="w-full mb-4">
-            <TabsTrigger value="classicos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+          <TabsList className="w-full mb-4 flex-wrap h-auto gap-1">
+            <TabsTrigger value="classicos" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <Library className="w-4 h-4" />
               Clássicos
             </TabsTrigger>
-            <TabsTrigger value="contos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+            <TabsTrigger value="contos" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <BookOpenText className="w-4 h-4" />
               Contos e Lendas
             </TabsTrigger>
-            <TabsTrigger value="herois" className="flex-1 gap-1.5 text-xs sm:text-sm">
+            <TabsTrigger value="herois" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <Sword className="w-4 h-4" />
               Heróis Épicos
             </TabsTrigger>
-            <TabsTrigger value="artigos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+            <TabsTrigger value="viagens" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
+              <Compass className="w-4 h-4" />
+              Viagens Extraordinárias
+            </TabsTrigger>
+            <TabsTrigger value="artigos" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <FileText className="w-4 h-4" />
               Artigos do Blog
             </TabsTrigger>
@@ -721,6 +736,30 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
           <TabsContent value="contos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
               <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
+            </ScrollArea>
+          </TabsContent>
+          <TabsContent value="viagens" className="mt-0">
+            <ScrollArea className="h-[58vh] pr-3">
+              <div className="mb-4 p-4 rounded-lg border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5">
+                <p className="font-display text-sm font-semibold text-foreground mb-1.5 flex items-center gap-2">
+                  <Compass className="w-4 h-4 text-primary" />
+                  Viagens Extraordinárias — Edições de Luxo Ilustradas em Aquarela
+                </p>
+                <p className="font-body text-xs text-muted-foreground leading-relaxed">
+                  Nova série autoral por <strong>Rafael S. L. Aguiar</strong>: as viagens mais fantásticas da literatura universal — terras desconhecidas, mares profundos, ilhas perdidas, centros da Terra, voltas ao mundo e jornadas pelo tempo — em adaptações premium com aquarelas originais e diagramação editorial de luxo. Em breve, os primeiros volumes desta coleção.
+                </p>
+              </div>
+              {voyagesBooks.length === 0 ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <Compass className="w-12 h-12 text-primary/40 mb-4" aria-hidden="true" />
+                  <p className="font-display text-base text-foreground mb-1">Coleção em preparação</p>
+                  <p className="font-body text-sm text-muted-foreground max-w-md">
+                    Os primeiros títulos da série <em>Viagens Extraordinárias</em> serão publicados em breve. Acompanhe as novidades pelo sino no topo da página.
+                  </p>
+                </div>
+              ) : (
+                <BookGrid books={voyagesBooks} colors={voyagesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
+              )}
             </ScrollArea>
           </TabsContent>
           <TabsContent value="artigos" className="mt-0">

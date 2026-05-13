@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "gulliver-viagem-proporcoes-livro-i",
+    title: "Nova série na Biblioteca: Viagens Extraordinárias — Gulliver, Uma Viagem pelas Proporções, Livro I (Edição de Luxo)",
+    type: "livro",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-13",
+  },
+  {
     id: "tristao-balada-livro-xxvii",
     title: "Novo na Biblioteca: Heróis Épicos — Tristão, A Balada de Tristão, Livro XXVII (Edição Premium)",
     type: "livro",

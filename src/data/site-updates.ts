@@ -12,6 +12,13 @@ export type SiteUpdate = {
 
 export const siteUpdates: SiteUpdate[] = [
   {
+    id: "viagens-extraordinarias-artigo-lancamento",
+    title: "Novo artigo no Blog: Viagens Extraordinárias — As Aventuras Mais Fantásticas da Literatura Universal em Edições de Luxo",
+    type: "artigo",
+    href: "/#biblioteca",
+    publishedAt: "2026-05-13",
+  },
+  {
     id: "gulliver-viagem-proporcoes-livro-i",
     title: "Nova série na Biblioteca: Viagens Extraordinárias — Gulliver, Uma Viagem pelas Proporções, Livro I (Edição de Luxo)",
     type: "livro",

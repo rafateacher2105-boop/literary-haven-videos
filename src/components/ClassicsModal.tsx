@@ -805,11 +805,18 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                      subtitle: "O manual definitivo para vencer a procrastinação",
                      published: true,
                    },
-                   {
+                    {
                      title: "Literatura Futurística",
                      author: "Rafael S. L. Aguiar",
                      cover: coverLiteraturaFuturistica,
                      subtitle: "Distopias, utopias, sci-fi e cyberpunk no Letras & Páginas",
+                     published: true,
+                   },
+                   {
+                     title: "Viagens Extraordinárias",
+                     author: "Rafael S. L. Aguiar",
+                     cover: coverViagensExtraordinariasArtigo,
+                     subtitle: "As viagens mais fantásticas da literatura universal — em edições de luxo ilustradas em aquarela",
                      published: true,
                    },
                  ].map((artigo, idx) => (

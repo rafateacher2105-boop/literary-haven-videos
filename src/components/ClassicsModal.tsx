@@ -160,6 +160,7 @@ import coverBradamante from "@/assets/cover-bradamante.jpg";
 import coverDante from "@/assets/cover-dante.jpg";
 import coverSirRoland from "@/assets/cover-sir-roland.jpg";
 import coverTristao from "@/assets/cover-tristao.jpg";
+import coverGulliver from "@/assets/cover-gulliver.jpg";
 import {
   Dialog,
   DialogContent,
@@ -356,7 +357,9 @@ const talesColors = [
   "from-[hsl(100,35%,18%)] to-[hsl(80,40%,32%)]",
 ];
 
-const voyagesBooks: ClassicBook[] = [];
+const voyagesBooks: ClassicBook[] = [
+  { title: "Viagens Extraordinárias: Gulliver — Uma Viagem pelas Proporções, Livro I", author: "Rafael S. L. Aguiar", cover: coverGulliver, file: "/books/gulliver-viagem-proporcoes.pdf", description: "Edição de Luxo em aquarela ilustrada que abre a série Viagens Extraordinárias com a obra-prima de Jonathan Swift. Acompanhe Lemuel Gulliver, cirurgião e navegador inglês, em sua jornada por mundos onde a escala humana se desfaz: a minúscula Lilliput, onde gigantes são acorrentados por exércitos diminutos; a colossal Brobdingnag, onde o herói se torna brinquedo nas mãos de gigantes; a flutuante Laputa, ilha de filósofos absurdos; e o reino racional dos Houyhnhnms, cavalos sábios que julgam a humanidade. Uma sátira luminosa sobre política, ciência, vaidade e a verdadeira medida do homem. Adaptação de Rafael S. L. Aguiar — Edição Premium da série Viagens Extraordinárias — Livro I. Curadoria Letras e Páginas." },
+];
 
 const voyagesColors = [
   "from-[hsl(200,55%,22%)] to-[hsl(190,60%,40%)]",

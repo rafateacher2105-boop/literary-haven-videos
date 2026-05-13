@@ -161,6 +161,7 @@ import coverDante from "@/assets/cover-dante.jpg";
 import coverSirRoland from "@/assets/cover-sir-roland.jpg";
 import coverTristao from "@/assets/cover-tristao.jpg";
 import coverGulliver from "@/assets/cover-gulliver.jpg";
+import coverViagensExtraordinariasArtigo from "@/assets/cover-viagens-extraordinarias-artigo.jpg";
 import {
   Dialog,
   DialogContent,

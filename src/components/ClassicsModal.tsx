@@ -738,6 +738,30 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
               <BookGrid books={talesBooks} colors={talesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
             </ScrollArea>
           </TabsContent>
+          <TabsContent value="viagens" className="mt-0">
+            <ScrollArea className="h-[58vh] pr-3">
+              <div className="mb-4 p-4 rounded-lg border border-primary/30 bg-gradient-to-br from-primary/5 to-accent/5">
+                <p className="font-display text-sm font-semibold text-foreground mb-1.5 flex items-center gap-2">
+                  <Compass className="w-4 h-4 text-primary" />
+                  Viagens Extraordinárias — Edições de Luxo Ilustradas em Aquarela
+                </p>
+                <p className="font-body text-xs text-muted-foreground leading-relaxed">
+                  Nova série autoral por <strong>Rafael S. L. Aguiar</strong>: as viagens mais fantásticas da literatura universal — terras desconhecidas, mares profundos, ilhas perdidas, centros da Terra, voltas ao mundo e jornadas pelo tempo — em adaptações premium com aquarelas originais e diagramação editorial de luxo. Em breve, os primeiros volumes desta coleção.
+                </p>
+              </div>
+              {voyagesBooks.length === 0 ? (
+                <div className="flex flex-col items-center justify-center py-16 text-center">
+                  <Compass className="w-12 h-12 text-primary/40 mb-4" aria-hidden="true" />
+                  <p className="font-display text-base text-foreground mb-1">Coleção em preparação</p>
+                  <p className="font-body text-sm text-muted-foreground max-w-md">
+                    Os primeiros títulos da série <em>Viagens Extraordinárias</em> serão publicados em breve. Acompanhe as novidades pelo sino no topo da página.
+                  </p>
+                </div>
+              ) : (
+                <BookGrid books={voyagesBooks} colors={voyagesColors} onRequestDownload={setSelectedBook} onRequestPaidDownload={setPaidBook} />
+              )}
+            </ScrollArea>
+          </TabsContent>
           <TabsContent value="artigos" className="mt-0">
             <ScrollArea className="h-[58vh] pr-3">
               {!selectedArticle && <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4 pt-2">

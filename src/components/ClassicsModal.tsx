@@ -356,9 +356,20 @@ const talesColors = [
   "from-[hsl(100,35%,18%)] to-[hsl(80,40%,32%)]",
 ];
 
+const voyagesBooks: ClassicBook[] = [];
+
+const voyagesColors = [
+  "from-[hsl(200,55%,22%)] to-[hsl(190,60%,40%)]",
+  "from-[hsl(210,50%,20%)] to-[hsl(195,55%,38%)]",
+  "from-[hsl(190,45%,18%)] to-[hsl(180,50%,35%)]",
+  "from-[hsl(220,50%,22%)] to-[hsl(200,55%,40%)]",
+  "from-[hsl(170,40%,20%)] to-[hsl(190,50%,36%)]",
+];
+
 const selfHelpBooks: ClassicBook[] = [
   { title: "Pare de Procrastinar — O manual para fazer o que deve ser feito", author: "Rafael S. L. Aguiar", year: "2026", description: "Um manual prático e acolhedor para vencer a procrastinação em todas as áreas da vida — saúde, educação, finanças, emocional e desenvolvimento pessoal. Com histórias reais, reflexões e estratégias para reprogramar o cérebro, transformar ideias em ação e parar de adiar o que realmente importa. Por Rafael S. L. Aguiar.", cover: coverPareDeProcrastinar, file: "/pare-de-procrastinar.pdf" },
 ];
+
 
 const dystopiaBooks: ClassicBook[] = [
   { title: "O Cromossomo de Ferro (O Tacão de Ferro)", author: "Jack London", year: "1908", description: "Uma das primeiras distopias modernas. Retrata a ascensão de uma oligarquia tirânica nos EUA que esmaga a liberdade individual.", cover: coverTacaoFerro },

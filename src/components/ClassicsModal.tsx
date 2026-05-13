@@ -688,20 +688,24 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
         </DialogHeader>
 
         <Tabs defaultValue={defaultTab} key={defaultTab} className="px-6 pb-6">
-          <TabsList className="w-full mb-4">
-            <TabsTrigger value="classicos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+          <TabsList className="w-full mb-4 flex-wrap h-auto gap-1">
+            <TabsTrigger value="classicos" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <Library className="w-4 h-4" />
               Clássicos
             </TabsTrigger>
-            <TabsTrigger value="contos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+            <TabsTrigger value="contos" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <BookOpenText className="w-4 h-4" />
               Contos e Lendas
             </TabsTrigger>
-            <TabsTrigger value="herois" className="flex-1 gap-1.5 text-xs sm:text-sm">
+            <TabsTrigger value="herois" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <Sword className="w-4 h-4" />
               Heróis Épicos
             </TabsTrigger>
-            <TabsTrigger value="artigos" className="flex-1 gap-1.5 text-xs sm:text-sm">
+            <TabsTrigger value="viagens" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
+              <Compass className="w-4 h-4" />
+              Viagens Extraordinárias
+            </TabsTrigger>
+            <TabsTrigger value="artigos" className="flex-1 min-w-[120px] gap-1.5 text-xs sm:text-sm">
               <FileText className="w-4 h-4" />
               Artigos do Blog
             </TabsTrigger>

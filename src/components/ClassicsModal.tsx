@@ -1235,6 +1235,99 @@ const ClassicsModal = ({ open, onOpenChange, defaultTab = "classicos" }: Classic
                   </div>
                 </div>
               )}
+
+              {selectedArticle === "Viagens Extraordinárias" && (
+                <div className="mt-6 p-5 rounded-lg border border-border bg-card">
+                  <button
+                    onClick={() => setSelectedArticle(null)}
+                    className="text-xs text-muted-foreground hover:text-foreground mb-4 underline"
+                  >
+                    ← Voltar aos artigos
+                  </button>
+                  <h3 className="font-display text-lg font-bold text-foreground mb-1">
+                    Viagens Extraordinárias: As Aventuras Mais Fantásticas da Literatura Universal — Agora em Edições de Luxo Ilustradas em Aquarela
+                  </h3>
+                  <p className="font-body text-[10px] text-muted-foreground mb-4">
+                    Por Rafael S. L. Aguiar · Publicado em 13/05/2026
+                  </p>
+                  <div className="font-body text-sm text-foreground/90 space-y-4 leading-relaxed">
+                    <p>
+                      Há leituras que nos transportam. Não apenas para outros mundos, mas para <strong>outras dimensões do possível</strong> — onde o mapa ainda tem bordas em branco, onde o oceano esconde civilizações perdidas, onde um homem pode ser gigante numa terra e anão em outra, e onde a volta ao mundo pode ser dada em oitenta dias se houver coragem (e um relógio) suficientes.
+                    </p>
+                    <p>
+                      É nesse território da literatura — o das <strong>viagens extraordinárias</strong> — que o <em>Letras &amp; Páginas</em> inaugura sua mais nova série autoral: <strong>Viagens Extraordinárias</strong>, uma coleção de edições de luxo que resgata as jornadas mais fantásticas da literatura universal, recriadas com aquarelas originais e curadoria editorial de Rafael S. L. Aguiar.
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Por que uma série sobre viagens?</h4>
+                    <p>
+                      Desde <em>A Odisseia</em> de Homero, a literatura ocidental nasceu do desejo de ir além — além da ilha, além do horizonte, além do conhecido. A jornada é um dos arquétipos mais poderosos da narrativa humana: o herói parte, enfrenta provações, transforma-se e retorna (ou não) com algo que o mundo deixou de ter: <strong>a memória de lugares que ninguém mais viu</strong>.
+                    </p>
+                    <p>
+                      Mas há um tipo específico de viagem que fascina de um modo particular: <strong>a viagem impossível</strong>. Aquela que desafia não apenas os limites geográficos, mas os limites da própria realidade. E é exatamente essa tradição que a nova série celebra.
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Livro I: Gulliver — Uma Viagem pelas Proporções</h4>
+                    <p>
+                      A série estreia com uma das obras mais ousadas da sátira universal: <strong>Gulliver, uma Viagem pelas Proporções</strong>, adaptação de Rafael S. L. Aguiar a partir de Jonathan Swift. O livro já está disponível na aba <strong>Viagens Extraordinárias</strong> da Biblioteca Pública.
+                    </p>
+                    <p>
+                      Lembrado muitas vezes apenas como um conto infantil sobre um homem preso por soldados minúsculos, <em>As Viagens de Gulliver</em> é, na verdade, uma das críticas mais feroces já escritas contra o fanatismo político, a vaidade científica e a brutalidade humana disfarçada de civilização. A edição do <em>Letras &amp; Páginas</em> recupera essa densidade com:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1.5">
+                      <li><strong>Capa em aquarela de luxo</strong> retratando as quatro proporções de Gulliver: o gigante entre os lilliputianos, o anão na terra dos brobdingnags, o viajante nas nuvens de Laputa e, por fim, o encontro com os houyhnhnms — cavalos racionais que expõem a irracionalidade do homem.</li>
+                      <li><strong>Prólogo inédito</strong> de Rafael S. L. Aguiar, contextualizando a sátira swiftiana para o leitor do século XXI.</li>
+                      <li><strong>Diagramação editorial premium</strong>, com tipografia clássica, páginas de rosto ornamentadas e ilustrações internas que alternam entre o estilo cartográfico e o onírico.</li>
+                    </ul>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">As próximas escalas da série</h4>
+                    <p>
+                      A série <strong>Viagens Extraordinárias</strong> já tem rota traçada. Cada volume será uma adaptação autoral, com o mesmo cuidado editorial de Gulliver, trazendo de volta clássicos que o tempo transformou em "infantis" ou "obsoletos" — quando, na verdade, são <strong>visões de outro mundo</strong>, escritas por mentes que enxergaram além da época em que viveram.
+                    </p>
+                    <p>
+                      Os próximos destinos incluem:
+                    </p>
+                    <ul className="list-disc pl-5 space-y-1.5">
+                      <li><strong>Viagem ao Centro da Terra</strong> (Júlio Verne) — o descida aos infernos geológicos, onde dinossauros e oceanos subterrâneos desafiam a ciência vitoriana.</li>
+                      <li><strong>A Volta ao Mundo em 80 Dias</strong> (Júlio Verne) — Phileas Fogg e Passepartout contra o relógio, numa corrida que uniu o globo antes do avião existir.</li>
+                      <li><strong>Vinte Mil Léguas Submarinas</strong> (Júlio Verne) — o Capitão Nemo, o Náutilus e a liberdade no fundo do mar.</li>
+                      <li><strong>A Ilha Misteriosa</strong> (Júlio Verne) — Robinson Crusoe com engenharia, solidão e redenção.</li>
+                      <li><strong>A Máquina do Tempo</strong> (H.G. Wells) — quando o viajante descobre que o futuro não é progresso, apenas outra forma de opressão.</li>
+                      <li><strong>Os Primeiros Homens na Lua</strong> (H.G. Wells) — a fantasia lunática que precedeu Apollo 11 em setenta anos.</li>
+                      <li><strong>A Guerra dos Mundos</strong> (H.G. Wells) — a invasão de Marte como metáfora do colonialismo europeu.</li>
+                    </ul>
+                    <p>
+                      Cada edição terá <strong>aquarelas originais</strong> no estilo serigrafia vintage, capas que parecem mapas de bibliotecas antigas e prefácios que mostram por que essas obras ainda incomodam — e por que ainda importam.
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Aquarela, papel e o tato da aventura</h4>
+                    <p>
+                      Num mundo de telas e pixels, há algo revolucionário em segurar um livro que parece ter sido <strong>feito à mão</strong>. A série Viagens Extraordinárias adota a aquarela como linguagem visual principal porque ela traduz exatamente o que esses livros propõem: a fluidez da descoberta, a mancha do desconhecido, a leveza de quem parte sem saber se volta. Cada capa é um mapa. Cada página de rosto, uma porta.
+                    </p>
+                    <p>
+                      Rafael S. L. Aguiar, editor e curador da série, justifica: <em>"Quis que o leitor sentisse, ao tocar cada livro, o mesmo calafrio que sentiu Gulliver ao avistar a costa de Lilliput pela primeira vez. Nenhuma viagem começa na mente: ela começa nas mãos."</em>
+                    </p>
+
+                    <h4 className="font-display text-base font-semibold text-foreground pt-2">Leitura livre, partilha incentivada</h4>
+                    <p>
+                      Como toda a Biblioteca Pública do <em>Letras &amp; Páginas</em>, os livros da série <strong>Viagens Extraordinárias</strong> estão disponíveis para <strong>leitura online gratuita</strong> e <strong>download em PDF</strong>. A única moeda de troca pedida é a mesma de sempre: que o leitor compartilhe, recomende e, se puder, apoie o projeto com um café via PIX.
+                    </p>
+                    <p>
+                      O primeiro volume, <strong>Gulliver — Uma Viagem pelas Proporções</strong>, já pode ser baixado na aba <strong>Viagens Extraordinárias</strong> da Biblioteca. As próximas escalas serão anunciadas pelo sino de notificações no topo da página.
+                    </p>
+
+                    <p className="italic text-foreground/80">
+                      Que cada livro desta série seja, para você, o que sempre foi para mim: um convite a deixar o conhecido para trás — e a descobrir que o extraordinário está bem aqui, dobrado nas páginas.<br />
+                      <strong>Rafael S. L. Aguiar</strong>, editor e curador do Blog Letras &amp; Páginas.
+                    </p>
+
+                    <div className="flex flex-wrap gap-2 mt-2">
+                      {["#ViagensExtraordinárias", "#Gulliver", "#JúlioVerne", "#Swift", "#Wells", "#LiteraturadeViagens", "#Aquarela", "#EdiçãodeLuxo", "#BibliotecaPública", "#LetrasEPáginas", "#RafaelAguiar", "#ClássicosIlustrados"].map(tag => (
+                        <span key={tag} className="text-[10px] bg-primary/10 text-primary px-2 py-0.5 rounded-full">{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </div>
+              )}
             </ScrollArea>
           </TabsContent>
         </Tabs>
